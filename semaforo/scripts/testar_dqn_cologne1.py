@@ -1,0 +1,401 @@
+"""Inferencia congelada em uma copia de cologne1 com fases por aproximacao.
+
+Nao e o benchmark RESCO original. Ruas/rotas permanecem iguais; somente o
+programa semaforico e substituido em uma copia salva na pasta da execucao.
+"""
+
+import argparse
+import csv
+from datetime import datetime, timezone
+import hashlib
+import json
+import os
+from pathlib import Path
+import platform
+import subprocess
+import sys
+from types import SimpleNamespace
+import uuid
+import xml.etree.ElementTree as ET
+
+sys.dont_write_bytecode = True
+PROJETO = Path(__file__).resolve().parents[1]
+REPO = PROJETO.parent
+ENTRADAS_COLONIA = {
+    "N": "27115123#3", "L": "-32038056#3",
+    "S": "23429231#1", "O": "28198821#3",
+}
+
+
+def hash_file(path):
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def escrever_json(path, value):
+    with path.open("x", encoding="utf-8") as f:
+        json.dump(value, f, ensure_ascii=False, indent=2)
+
+
+def programa_derivado(source, destination, ordem, min_green, yellow, all_red):
+    tree = ET.parse(source)
+    root = tree.getroot()
+    logics = root.findall("tlLogic")
+    if len(logics) != 1:
+        raise ValueError("Esperado um unico semaforo no cologne1 auditado")
+    logic = logics[0]
+    tls = logic.get("id")
+    links = [c.attrib for c in root.findall("connection") if c.get("tl") == tls]
+    edges = {e.get("id"): e for e in root.findall("edge")}
+    junction = next(j for j in root.findall("junction") if j.get("type") == "traffic_light")
+    requests = {int(q.get("index")): q.get("foes")[::-1] for q in junction.findall("request")}
+    length = len(logic.find("phase").get("state"))
+    if {int(c["linkIndex"]) for c in links} != set(range(length)):
+        raise ValueError("Links controlados inesperados; nao e seguro gerar fases")
+    if set(c["from"] for c in links) != set(ENTRADAS_COLONIA.values()):
+        raise ValueError("Entradas diferem do cologne1 auditado")
+    fases, faixas, detalhes = [], {}, []
+    for index, aprox in enumerate(ordem):
+        edge = ENTRADAS_COLONIA[aprox]
+        lanes = sorted(edges[edge].findall("lane"), key=lambda l: int(l.get("index")))
+        if len(lanes) != 2:
+            raise ValueError(f"Esperadas duas faixas na entrada {edge}")
+        faixas[aprox] = [l.get("id") for l in lanes]
+        # Confere a rotulacao geografica pela tangente de chegada da faixa.
+        points = [tuple(map(float, p.split(","))) for p in lanes[0].get("shape").split()]
+        dx, dy = points[-2][0] - points[-1][0], points[-2][1] - points[-1][1]
+        cardinal = ("L" if dx > 0 else "O") if abs(dx) > abs(dy) else ("N" if dy > 0 else "S")
+        if cardinal != aprox:
+            raise ValueError(f"Geometria nao confirma {aprox}: {edge}")
+        selected = {int(c["linkIndex"]) for c in links if c["from"] == edge}
+        conflicts = [(i, j) for i in selected for j in selected if requests[i][j] == "1"]
+        if conflicts:
+            raise ValueError(f"Movimentos conflitantes dentro de {aprox}: {conflicts}")
+        state = "".join("G" if i in selected else "r" for i in range(length))
+        fases.append(state)
+        detalhes.append({"acao": index, "aproximacao": aprox, "entrada": edge,
+                         "faixas": faixas[aprox], "fase_xml": 3 * index, "state": state,
+                         "movimentos": [c for c in links if c["from"] == edge],
+                         "foes_entre_movimentos": conflicts})
+    for child in list(logic):
+        logic.remove(child)
+    logic.set("type", "static")
+    logic.set("offset", "0")
+    for aprox, green in zip(ordem, fases):
+        for name, duration, state in [
+            ("verde", min_green, green),
+            ("amarelo", yellow, green.replace("G", "y")),
+            ("vermelho_geral", all_red, "r" * length),
+        ]:
+            ET.SubElement(logic, "phase", duration=str(duration), state=state, name=f"DQN_{aprox}_{name}")
+    with destination.open("xb") as f:
+        tree.write(f, encoding="utf-8", xml_declaration=True)
+    # Garante que a geometria, conexoes e regras de prioridade nao foram alteradas.
+    original_without_logic = ET.parse(source).getroot()
+    original_without_logic.remove(original_without_logic.find("tlLogic"))
+    derived_without_logic = ET.parse(destination).getroot()
+    derived_without_logic.remove(derived_without_logic.find("tlLogic"))
+    if ET.tostring(original_without_logic) != ET.tostring(derived_without_logic):
+        raise AssertionError("A copia alterou conteudo fora do programa semaforico")
+    return tls, fases, faixas, detalhes
+
+
+class RelogioSemaforo:
+    def __init__(self, conn, tls, greens, yellow, all_red, events):
+        self.conn, self.tls, self.greens = conn, tls, greens
+        self.yellow, self.all_red, self.events = yellow, all_red, events
+        self.phase = 0
+        self.target = None
+        self.stage = "verde"
+        self.elapsed = 0
+        self.remaining = None
+        self.decision = None
+        self.history = []
+
+    def aplicar(self, now):
+        if self.stage == "verde":
+            state = self.greens[self.phase]
+        elif self.stage == "amarelo":
+            state = self.greens[self.phase].replace("G", "y")
+        else:
+            state = "r" * len(self.greens[0])
+        self.conn.trafficlight.setRedYellowGreenState(self.tls, state)
+        actual = self.conn.trafficlight.getRedYellowGreenState(self.tls)
+        if actual != state:
+            raise AssertionError("Estado executado difere do solicitado")
+        event = {"segundo": now, "estagio": self.stage, "aproximacao_indice": self.phase,
+                 "alvo": self.target, "state_executado": actual, "decisao_id": self.decision,
+                 "programa_sumo": self.conn.trafficlight.getProgram(self.tls),
+                 "indice_fase_sumo": self.conn.trafficlight.getPhase(self.tls)}
+        self.history.append(event)
+        self.events.write(json.dumps(event) + "\n")
+
+    def escolher(self, action, now, decision):
+        if self.stage != "verde":
+            raise AssertionError("Decisao solicitada durante transicao")
+        self.decision = decision
+        if action != self.phase:
+            self.target = action
+            self.stage, self.remaining = "amarelo", self.yellow
+            self.aplicar(now)
+
+    def avancar(self, now):
+        if self.stage == "verde":
+            self.elapsed += 1
+            return
+        self.remaining -= 1
+        if self.remaining == 0:
+            if self.stage == "amarelo":
+                self.stage, self.remaining = "vermelho_geral", self.all_red
+            else:
+                self.stage, self.phase, self.target = "verde", self.target, None
+                self.elapsed = 0
+                self.remaining = None
+            self.aplicar(now)
+
+    def conferir_tempos(self, minimum):
+        for a, b in zip(self.history, self.history[1:]):
+            duration = b["segundo"] - a["segundo"]
+            expected = {"amarelo": self.yellow, "vermelho_geral": self.all_red}.get(a["estagio"])
+            if expected is not None and duration != expected:
+                raise AssertionError(f"Duracao incorreta: {a['estagio']} = {duration}")
+            if a["estagio"] == "verde" and duration < minimum:
+                raise AssertionError("Verde abaixo do minimo")
+
+
+def resumo_espera(values):
+    ordered = sorted(values)
+    return {"n": len(values), "media_s": sum(values) / len(values) if values else None,
+            "p95_s": ordered[int(round(.95 * (len(ordered) - 1)))] if ordered else None,
+            "max_s": max(values) if values else None}
+
+
+def metricas_tripinfo(path, approach_by_id, ordem):
+    trips = list(ET.parse(path).getroot().findall("tripinfo"))
+    inserted = [t for t in trips if float(t.get("depart", "-1")) >= 0]
+    completed = [t for t in inserted if float(t.get("arrival", "-1")) >= 0]
+    unfinished = [t for t in inserted if float(t.get("arrival", "-1")) < 0]
+    return {
+        "espera_viagem_inseridos_inclui_censurados": resumo_espera([float(t.get("waitingTime")) for t in inserted]),
+        "espera_viagem_concluidos": resumo_espera([float(t.get("waitingTime")) for t in completed]),
+        "espera_viagem_por_aproximacao_inclui_censurados": {
+            a: resumo_espera([float(t.get("waitingTime")) for t in inserted if approach_by_id.get(t.get("id")) == a])
+            for a in [*ordem, "fora_do_cruzamento"]},
+        "atraso_insercao_observado_s": resumo_espera([float(t.get("departDelay", "0")) for t in inserted]),
+        "chegaram_destino_tripinfo": len(completed), "viagens_interrompidas": len(unfinished),
+        "interrompidos_ids": [t.get("id") for t in unfinished],
+    }
+
+
+def executar(args, seed, torch, np, traci, Rede, estado_para_vetor, ordem, tempos):
+    begin = 25200
+    source_dir = args.sumo_rl_source.resolve() / "sumo_rl/nets/RESCO/cologne1"
+    source_net, routes = source_dir / "cologne1.net.xml", source_dir / "cologne1.rou.xml"
+    protected = list((PROJETO / "modelos").glob("*.pt")) + list((PROJETO / "resultados").glob("*.json"))
+    protected += list((PROJETO / "scripts").glob("*.py")) + list(source_dir.glob("*"))
+    before = {str(p): hash_file(p) for p in protected if p.is_file()}
+    run_id = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ") + f"_seed{seed}_" + uuid.uuid4().hex[:8]
+    out = args.output_root.resolve() / run_id
+    out.mkdir(parents=True, exist_ok=False)
+    derived = out / "cologne1_aproximacoes.net.xml"
+    tls, greens, lanes, mapping = programa_derivado(source_net, derived, ordem, **tempos)
+    model = Rede()
+    model.load_state_dict(torch.load(args.checkpoint, map_location="cpu", weights_only=True), strict=True)
+    model.eval()
+    model.requires_grad_(False)
+    frozen = {k: v.clone() for k, v in model.state_dict().items()}
+    if model.training or any(p.requires_grad for p in model.parameters()):
+        raise AssertionError("Modelo nao esta congelado")
+    binary = args.sumo_home.resolve() / "bin" / (("sumo-gui" if args.gui else "sumo") + (".exe" if os.name == "nt" else ""))
+    if not binary.is_file():
+        raise FileNotFoundError(binary)
+    command = [str(binary), "-n", str(derived), "-r", str(routes), "--begin", str(begin),
+        "--end", str(begin + args.duracao + args.escoamento + 1), "--seed", str(seed),
+        "--time-to-teleport", "-1", "--collision.action", "warn", "--collision.check-junctions", "true",
+        "--tripinfo-output", str(out / "tripinfo.xml"), "--tripinfo-output.write-unfinished", "true",
+        "--tripinfo-output.write-undeparted", "true", "--statistic-output", str(out / "estatisticas_sumo.xml"),
+        "--collision-output", str(out / "colisoes.xml"), "--error-log", str(out / "avisos_sumo.log"),
+        "--no-step-log", "true", "--duration-log.disable", "true"]
+    if args.gui:
+        command += ["--start", "--quit-on-end", "--delay", str(args.delay_ms), "--window-size", "1200,850"]
+    schedule = {t.get("id"): float(t.get("depart")) for t in ET.parse(routes).getroot().findall("trip")}
+    metadata = {"experimento": "cologne1_derivado_fases_por_aproximacao", "seed": seed,
+        "checkpoint": str(args.checkpoint.resolve()), "checkpoint_sha256": hash_file(args.checkpoint),
+        "rede_original_sha256": hash_file(source_net), "rotas_sha256": hash_file(routes),
+        "rede_derivada_sha256": hash_file(derived), "python": sys.version, "python_exe": sys.executable,
+        "torch": torch.__version__, "numpy": np.__version__, "platform": platform.platform(),
+        "sumo_version": subprocess.run([str(binary), "--version"], capture_output=True, text=True, check=True).stdout,
+        "command": command, "duracao_demanda_s": args.duracao, "escoamento_max_s": args.escoamento,
+        "modo_eval": True, "exploracao": 0, "treinamento": False, "verde_maximo": None,
+        "tempos": tempos, "intervalo_decisao_s": 5, "mapeamento": mapping,
+        "diferencas_treino": ["Geometria, comprimentos de observacao, demanda e parametros veiculares diferentes",
+            "Contagem temporal corrigida: minimo 10 s, amarelo 3 s e vermelho geral 2 s; treino local possui erro de contagem",
+            "Sem limite maximo de verde e sem protecao adicional contra falta de atendimento"],
+        "fontes_protegidas_antes": before}
+    escrever_json(out / "configuracao.json", metadata)
+    print(f"EXECUCAO {out}", flush=True)
+    conn = None
+    current_time, count_decisions, collided, teleported = begin, 0, 0, 0
+    inserted, arrived, approach_by_id = set(), set(), {}
+    queue_sum = {a: 0 for a in ordem}
+    queue_demand_sum = {a: 0 for a in ordem}
+    samples, samples_demand, max_queue = 0, 0, 0
+    screenshots = []
+    error = None
+    try:
+        traci.start(command, label=run_id, verbose=False)
+        conn = traci.getConnection(run_id)
+        if list(conn.trafficlight.getIDList()) != [tls]:
+            raise AssertionError("Semaforos do runtime diferem da rede auditada")
+        runtime_links = conn.trafficlight.getControlledLinks(tls)
+        for m in mapping:
+            for link in m["movimentos"]:
+                actual = runtime_links[int(link["linkIndex"])]
+                if not any(x[0] == link["from"] + "_" + link["fromLane"] and x[1] == link["to"] + "_" + link["toLane"] for x in actual):
+                    raise AssertionError("Mapeamento de movimento nao confere no SUMO")
+        if args.gui:
+            views = conn.gui.getIDList()
+            junction = next(j for j in ET.parse(derived).getroot().findall("junction") if j.get("type") == "traffic_light")
+            x, y = float(junction.get("x")), float(junction.get("y"))
+            if views:
+                conn.gui.setBoundary(views[0], x - 130, y - 100, x + 130, y + 100)
+        with (out / "decisoes.jsonl").open("x", encoding="utf-8") as decisions, (out / "fases.jsonl").open("x", encoding="utf-8") as events, (out / "serie.csv").open("x", encoding="utf-8", newline="") as series:
+            clock = RelogioSemaforo(conn, tls, greens, tempos["yellow"], tempos["all_red"], events)
+            clock.aplicar(begin)
+            writer = csv.writer(series)
+            writer.writerow(["segundo", "decorrido_s", "estagio_executado", "state_executado", *["fila_" + a for a in ordem], *["carros_" + a for a in ordem]])
+            while current_time < begin + args.duracao + args.escoamento:
+                elapsed = current_time - begin
+                if elapsed >= args.duracao and conn.simulation.getMinExpectedNumber() == 0:
+                    break
+                queue = {a: sum(conn.lane.getLastStepHaltingNumber(l) for l in lanes[a]) for a in ordem}
+                cars = {a: sum(conn.lane.getLastStepVehicleNumber(l) for l in lanes[a]) for a in ordem}
+                if clock.stage == "verde" and clock.elapsed >= tempos["min_green"] and elapsed % 5 == 0:
+                    obs = SimpleNamespace(filas=queue, carros=cars, aprox_verde=ordem[clock.phase], tempo_no_verde=clock.elapsed)
+                    state = estado_para_vetor(obs)
+                    if state.shape != (13,) or not np.isfinite(state).all() or (state < 0).any():
+                        raise AssertionError("Estado invalido para a DQN")
+                    with torch.inference_mode():
+                        qs = model(torch.from_numpy(state).unsqueeze(0)).squeeze(0)
+                    if tuple(qs.shape) != (4,) or not torch.isfinite(qs).all():
+                        raise AssertionError("Valores Q invalidos")
+                    action = int(torch.argmax(qs).item())
+                    phase_before = clock.phase
+                    clock.escolher(action, current_time, count_decisions)
+                    actual = conn.trafficlight.getRedYellowGreenState(tls)
+                    record = {"id": count_decisions, "seed": seed, "segundo": current_time,
+                        "filas": queue, "carros": cars, "verde_antes": phase_before,
+                        "tempo_no_verde": obs.tempo_no_verde, "estado": state.tolist(), "q": qs.tolist(),
+                        "acao_argmax": action, "aproximacao_alvo": ordem[action], "fase_xml_alvo": 3 * action,
+                        "estagio_executado_agora": clock.stage, "state_executado_agora": actual,
+                        "programa_sumo": conn.trafficlight.getProgram(tls), "indice_fase_sumo": conn.trafficlight.getPhase(tls),
+                        "intervencao": False}
+                    decisions.write(json.dumps(record) + "\n")
+                    count_decisions += 1
+                stage_executed = clock.stage
+                state_executed = conn.trafficlight.getRedYellowGreenState(tls)
+                conn.simulationStep()
+                current_time = int(conn.simulation.getTime())
+                collided += conn.simulation.getCollidingVehiclesNumber()
+                teleported += conn.simulation.getStartingTeleportNumber()
+                for vid in conn.simulation.getDepartedIDList():
+                    inserted.add(vid)
+                    route = conn.vehicle.getRoute(vid)
+                    approaches = [a for edge in route for a in ordem if ENTRADAS_COLONIA[a] == edge]
+                    approach_by_id[vid] = approaches[0] if approaches else "fora_do_cruzamento"
+                arrived.update(conn.simulation.getArrivedIDList())
+                queue_after = {a: sum(conn.lane.getLastStepHaltingNumber(l) for l in lanes[a]) for a in ordem}
+                cars_after = {a: sum(conn.lane.getLastStepVehicleNumber(l) for l in lanes[a]) for a in ordem}
+                for a in ordem:
+                    queue_sum[a] += queue_after[a]
+                    if current_time - begin <= args.duracao:
+                        queue_demand_sum[a] += queue_after[a]
+                samples += 1
+                samples_demand += int(current_time - begin <= args.duracao)
+                max_queue = max(max_queue, sum(queue_after.values()))
+                writer.writerow([current_time, current_time - begin, stage_executed, state_executed, *queue_after.values(), *cars_after.values()])
+                if conn.trafficlight.getRedYellowGreenState(tls) != state_executed:
+                    raise AssertionError("SUMO alterou o sinal durante um passo controlado")
+                clock.avancar(current_time)
+                if (current_time - begin) % 300 == 0:
+                    print(f"  {current_time - begin}s | chegadas={len(arrived)} | fila={sum(queue_after.values())} | decisoes={count_decisions}", flush=True)
+                    decisions.flush()
+                if collided or teleported:
+                    raise AssertionError("Colisao ou teletransporte detectado; encerrado para revisao")
+            clock.conferir_tempos(tempos["min_green"])
+            runtime_end = {"veiculos_na_rede": conn.vehicle.getIDCount(),
+                           "pendentes_SUMO_inclui_futuros": conn.simulation.getMinExpectedNumber(),
+                           "veiculos_presentes_ids": list(conn.vehicle.getIDList())}
+    except Exception as exc:
+        error = {"tipo": type(exc).__name__, "mensagem": str(exc)}
+        runtime_end = None
+    finally:
+        if conn is not None:
+            try:
+                conn.close()
+            except Exception as exc:
+                error = error or {"tipo": type(exc).__name__, "mensagem": str(exc)}
+    unchanged = all(torch.equal(frozen[k], v) for k, v in model.state_dict().items())
+    after = {p: hash_file(Path(p)) for p in before}
+    due = {vid for vid, depart in schedule.items() if depart < current_time}
+    result = {"status": "ERRO" if error else "OK", "erro": error, "seed": seed,
+        "cenario": metadata["experimento"], "segundos_simulados": current_time - begin,
+        "escoamento_executado_s": max(0, current_time - begin - args.duracao),
+        "decisoes": count_decisions, "intervencoes": 0, "colisoes_veiculos_contadas": collided,
+        "teletransportes": teleported, "chegaram_destino_api": len(arrived), "veiculos_inseridos": len(inserted),
+        "demanda_programada_total": len(schedule), "demanda_vencida_no_corte": len(due),
+        "demanda_vencida_nao_inserida": len(due - inserted), "demanda_futura_apos_corte": len(set(schedule) - due),
+        "runtime_fim": runtime_end, "fila_media_total": sum(queue_sum.values()) / samples if samples else None,
+        "fila_media_periodo_demanda": sum(queue_demand_sum.values()) / samples_demand if samples_demand else None,
+        "fila_media_por_aproximacao": {a: v / samples if samples else None for a, v in queue_sum.items()},
+        "fila_max_total": max_queue, "parametros_modelo_inalterados": unchanged,
+        "arquivos_preexistentes_preservados": before == after, "fontes_protegidas_depois": after,
+        "screenshots": screenshots,
+        "metrica_por_aproximacao": "Espera da viagem inteira atribuida a primeira aproximacao controlada da rota; inclui viagens interrompidas censuradas",
+        "p95_metodo": "elemento de indice round(0.95*(n-1)) da lista ordenada"}
+    if (out / "tripinfo.xml").is_file():
+        try:
+            result.update(metricas_tripinfo(out / "tripinfo.xml", approach_by_id, ordem))
+        except ET.ParseError as exc:
+            result["status"] = "ERRO"
+            result["erro_tripinfo"] = str(exc)
+    if not unchanged or before != after:
+        result["status"] = "ERRO_PRESERVACAO"
+    escrever_json(out / "resultado.json", result)
+    print(json.dumps({k: result.get(k) for k in ["status", "segundos_simulados", "decisoes", "espera_viagem_concluidos", "viagens_interrompidas", "demanda_vencida_nao_inserida", "colisoes_veiculos_contadas", "parametros_modelo_inalterados"]}, ensure_ascii=False, indent=2), flush=True)
+    return result, out
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--sumo-home", type=Path, required=True)
+    parser.add_argument("--sumo-rl-source", type=Path, default=PROJETO / "referencias/sumo_rl_1.4.5")
+    parser.add_argument("--checkpoint", type=Path, default=PROJETO / "modelos/dqn_fila.pt")
+    parser.add_argument("--output-root", type=Path, default=PROJETO / "resultados/cologne1_derivado")
+    parser.add_argument("--duracao", type=int, default=3600)
+    parser.add_argument("--escoamento", type=int, default=1200)
+    parser.add_argument("--sementes", type=int, nargs="+", default=[1])
+    parser.add_argument("--gui", action="store_true")
+    parser.add_argument("--delay-ms", type=int, default=0)
+    args = parser.parse_args()
+    if not 15 <= args.duracao <= 3600 or not 0 <= args.escoamento <= 1200 or args.delay_ms < 0:
+        parser.error("Duracao deve estar entre 15 e 3600 s; escoamento entre 0 e 1200 s; delay nao negativo")
+    os.environ["SUMO_HOME"] = str(args.sumo_home.resolve())
+    sys.path.insert(0, str(args.sumo_home.resolve() / "tools"))
+    import numpy as np
+    import torch
+    import traci
+    from dqn import Rede, estado_para_vetor
+    from simulacao import APROXIMACOES, AMARELO, VERMELHO_GERAL, VERDE_MINIMO, INTERVALO_DECISAO
+    if APROXIMACOES != ["N", "L", "S", "O"] or INTERVALO_DECISAO != 5:
+        raise ValueError("Contrato de entrada/tempo do projeto mudou; audite novamente")
+    torch.set_num_threads(1)
+    tempos = {"min_green": VERDE_MINIMO, "yellow": AMARELO, "all_red": VERMELHO_GERAL}
+    for seed in args.sementes:
+        result, _ = executar(args, seed, torch, np, traci, Rede, estado_para_vetor, APROXIMACOES, tempos)
+        if result["status"] != "OK":
+            return 1
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

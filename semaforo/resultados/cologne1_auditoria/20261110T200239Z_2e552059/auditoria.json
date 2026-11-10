@@ -1,0 +1,2101 @@
+{
+  "status": "BLOQUEADO_INCOMPATIBILIDADE_ACOES",
+  "inferencia_executada": false,
+  "rodada_completa_executada": false,
+  "protected_before": {
+    "semaforo\\modelos\\dqn_espera.pt": "43bd3c60385a7c04145022f5abc2c0c2c216b4b6749e58f6ded38078dc5f5884",
+    "semaforo\\modelos\\dqn_fila.pt": "4df5afec39207e621f9e1e83a7917153283cce053db1cdb2fd0dac8113596a41",
+    "semaforo\\resultados\\avaliacao_final.json": "e623e9503cf8028cab9936ec76ce5e98ce19d1bd7752dd51181f05ea9bf9bb39",
+    "semaforo\\resultados\\baselines.json": "0b43f43541d345695629e86d52a6107af1d13350150777f0cd84fad6ad2dac5a",
+    "semaforo\\resultados\\treino_espera.json": "572750862a957c6204caee7f99d8021e3af841ab86e2e1836fa01555b3a902ed",
+    "semaforo\\resultados\\treino_fila.json": "b32772482017c9c74259ff56d834e39bae23d3cb1ee65d9a4b31d748577df325"
+  },
+  "python": "C:\\Users\\Ana Paula\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "python_version": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "source": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\tmp\\cologne1_auditoria\\sumo_rl_1.4.5",
+  "pacotes_interpretador": {
+    "torch": null,
+    "sumo-rl": null,
+    "traci": null,
+    "libsumo": null,
+    "numpy": "2.3.5"
+  },
+  "contrato_DQN": {
+    "acoes": [
+      {
+        "indice": 0,
+        "aproximacao": "N",
+        "faixas": [
+          "top0A0_0",
+          "top0A0_1"
+        ]
+      },
+      {
+        "indice": 1,
+        "aproximacao": "L",
+        "faixas": [
+          "right0A0_0",
+          "right0A0_1"
+        ]
+      },
+      {
+        "indice": 2,
+        "aproximacao": "S",
+        "faixas": [
+          "bottom0A0_0",
+          "bottom0A0_1"
+        ]
+      },
+      {
+        "indice": 3,
+        "aproximacao": "O",
+        "faixas": [
+          "left0A0_0",
+          "left0A0_1"
+        ]
+      }
+    ],
+    "entradas": [
+      {
+        "indice": 0,
+        "nome": "fila_N",
+        "divisor": 25.0
+      },
+      {
+        "indice": 1,
+        "nome": "fila_L",
+        "divisor": 25.0
+      },
+      {
+        "indice": 2,
+        "nome": "fila_S",
+        "divisor": 25.0
+      },
+      {
+        "indice": 3,
+        "nome": "fila_O",
+        "divisor": 25.0
+      },
+      {
+        "indice": 4,
+        "nome": "carros_N",
+        "divisor": 35.0
+      },
+      {
+        "indice": 5,
+        "nome": "carros_L",
+        "divisor": 35.0
+      },
+      {
+        "indice": 6,
+        "nome": "carros_S",
+        "divisor": 35.0
+      },
+      {
+        "indice": 7,
+        "nome": "carros_O",
+        "divisor": 35.0
+      },
+      {
+        "indice": 8,
+        "nome": "verde_N",
+        "tipo": "one_hot"
+      },
+      {
+        "indice": 9,
+        "nome": "verde_L",
+        "tipo": "one_hot"
+      },
+      {
+        "indice": 10,
+        "nome": "verde_S",
+        "tipo": "one_hot"
+      },
+      {
+        "indice": 11,
+        "nome": "verde_O",
+        "tipo": "one_hot"
+      },
+      {
+        "indice": 12,
+        "nome": "tempo_no_verde",
+        "divisor": 60.0,
+        "limite_superior": 2.0
+      }
+    ],
+    "vetor_codigo": "def estado_para_vetor(obs):\n    v = []\n    v += [obs.filas[a] / ESCALA_FILA for a in APROXIMACOES]\n    v += [obs.carros[a] / ESCALA_CARROS for a in APROXIMACOES]\n    v += [1.0 if a == obs.aprox_verde else 0.0 for a in APROXIMACOES]\n    v += [min(obs.tempo_no_verde / ESCALA_TEMPO, 2.0)]\n    return np.array(v, dtype=np.float32)",
+    "rede_codigo": "class Rede(nn.Module):\n    \"\"\"A rede neural. Pequena de proposito: o problema tem 13 numeros de\n    entrada e 4 opcoes de saida -- rede grande so acrescentaria instabilidade.\"\"\"\n\n    def __init__(self, n_entrada=TAMANHO_ESTADO, n_saida=N_ACOES, oculta=64):\n        super().__init__()\n        self.camadas = nn.Sequential(\n            nn.Linear(n_entrada, oculta),\n            nn.ReLU(),\n            nn.Linear(oculta, oculta),\n            nn.ReLU(),\n            nn.Linear(oculta, n_saida),\n        )\n\n    def forward(self, x):\n        return self.camadas(x)",
+    "tempos_declarados": {
+      "INTERVALO_DECISAO": 5,
+      "VERDE_MINIMO": 10,
+      "AMARELO": 3,
+      "VERMELHO_GERAL": 2
+    },
+    "verde_maximo_DQN": null,
+    "observacao_tempos": "A rotina original aplica o novo verde antes do ultimo simulationStep do vermelho geral. Conferir relatorio; nao confundir constantes com tempos executados."
+  },
+  "checkpoint": {
+    "path": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\modelos\\dqn_fila.pt",
+    "sha256": "4df5afec39207e621f9e1e83a7917153283cce053db1cdb2fd0dac8113596a41",
+    "tensores": {
+      "camadas.0.weight": {
+        "storage": {
+          "key": "0",
+          "device": "cpu",
+          "count": 832
+        },
+        "offset": 0,
+        "shape": [
+          64,
+          13
+        ],
+        "stride": [
+          13,
+          1
+        ],
+        "requires_grad": false,
+        "storage_count_verificado": true,
+        "todos_finitos": true
+      },
+      "camadas.0.bias": {
+        "storage": {
+          "key": "1",
+          "device": "cpu",
+          "count": 64
+        },
+        "offset": 0,
+        "shape": [
+          64
+        ],
+        "stride": [
+          1
+        ],
+        "requires_grad": false,
+        "storage_count_verificado": true,
+        "todos_finitos": true
+      },
+      "camadas.2.weight": {
+        "storage": {
+          "key": "2",
+          "device": "cpu",
+          "count": 4096
+        },
+        "offset": 0,
+        "shape": [
+          64,
+          64
+        ],
+        "stride": [
+          64,
+          1
+        ],
+        "requires_grad": false,
+        "storage_count_verificado": true,
+        "todos_finitos": true
+      },
+      "camadas.2.bias": {
+        "storage": {
+          "key": "3",
+          "device": "cpu",
+          "count": 64
+        },
+        "offset": 0,
+        "shape": [
+          64
+        ],
+        "stride": [
+          1
+        ],
+        "requires_grad": false,
+        "storage_count_verificado": true,
+        "todos_finitos": true
+      },
+      "camadas.4.weight": {
+        "storage": {
+          "key": "4",
+          "device": "cpu",
+          "count": 256
+        },
+        "offset": 0,
+        "shape": [
+          4,
+          64
+        ],
+        "stride": [
+          64,
+          1
+        ],
+        "requires_grad": false,
+        "storage_count_verificado": true,
+        "todos_finitos": true
+      },
+      "camadas.4.bias": {
+        "storage": {
+          "key": "5",
+          "device": "cpu",
+          "count": 4
+        },
+        "offset": 0,
+        "shape": [
+          4
+        ],
+        "stride": [
+          1
+        ],
+        "requires_grad": false,
+        "storage_count_verificado": true,
+        "todos_finitos": true
+      }
+    },
+    "torch_load_executado": false,
+    "inferencia_executada": false
+  },
+  "rede_original": {
+    "path": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\rede\\cruzamento.net.xml",
+    "sha256": "ef9f1e0440e6cf5e1c0ce2eeabdaa28fa9ae01ae422895063236b990635f4f93",
+    "semaforos": [
+      {
+        "id": "A0",
+        "programa": "0",
+        "fases": [
+          {
+            "indice_xml": 0,
+            "duration": "18",
+            "state": "GGGGGrrrrrrrrrrrrrrr",
+            "verde": true,
+            "movimentos_abertos": [
+              {
+                "from": "top0A0",
+                "to": "A0left0",
+                "fromLane": "0",
+                "toLane": "0",
+                "via": ":A0_0_0",
+                "tl": "A0",
+                "linkIndex": "0",
+                "dir": "r",
+                "state": "O",
+                "luz": "G"
+              },
+              {
+                "from": "top0A0",
+                "to": "A0bottom0",
+                "fromLane": "0",
+                "toLane": "0",
+                "via": ":A0_1_0",
+                "tl": "A0",
+                "linkIndex": "1",
+                "dir": "s",
+                "state": "O",
+                "luz": "G"
+              },
+              {
+                "from": "top0A0",
+                "to": "A0bottom0",
+                "fromLane": "1",
+                "toLane": "1",
+                "via": ":A0_1_1",
+                "tl": "A0",
+                "linkIndex": "2",
+                "dir": "s",
+                "state": "O",
+                "luz": "G"
+              },
+              {
+                "from": "top0A0",
+                "to": "A0right0",
+                "fromLane": "1",
+                "toLane": "1",
+                "via": ":A0_3_0",
+                "tl": "A0",
+                "linkIndex": "3",
+                "dir": "l",
+                "state": "o",
+                "luz": "G"
+              },
+              {
+                "from": "top0A0",
+                "to": "A0top0",
+                "fromLane": "1",
+                "toLane": "1",
+                "via": ":A0_4_0",
+                "tl": "A0",
+                "linkIndex": "4",
+                "dir": "t",
+                "state": "o",
+                "luz": "G"
+              }
+            ],
+            "entradas_abertas": [
+              "top0A0"
+            ]
+          },
+          {
+            "indice_xml": 1,
+            "duration": "3",
+            "state": "yyyyyrrrrrrrrrrrrrrr",
+            "verde": false,
+            "movimentos_abertos": [],
+            "entradas_abertas": []
+          },
+          {
+            "indice_xml": 2,
+            "duration": "20",
+            "state": "rrrrrGGGGGrrrrrrrrrr",
+            "verde": true,
+            "movimentos_abertos": [
+              {
+                "from": "right0A0",
+                "to": "A0top0",
+                "fromLane": "0",
+                "toLane": "0",
+                "via": ":A0_5_0",
+                "tl": "A0",
+                "linkIndex": "5",
+                "dir": "r",
+                "state": "o",
+                "luz": "G"
+              },
+              {
+                "from": "right0A0",
+                "to": "A0left0",
+                "fromLane": "0",
+                "toLane": "0",
+                "via": ":A0_6_0",
+                "tl": "A0",
+                "linkIndex": "6",
+                "dir": "s",
+                "state": "o",
+                "luz": "G"
+              },
+              {
+                "from": "right0A0",
+                "to": "A0left0",
+                "fromLane": "1",
+                "toLane": "1",
+                "via": ":A0_6_1",
+                "tl": "A0",
+                "linkIndex": "7",
+                "dir": "s",
+                "state": "o",
+                "luz": "G"
+              },
+              {
+                "from": "right0A0",
+                "to": "A0bottom0",
+                "fromLane": "1",
+                "toLane": "1",
+                "via": ":A0_8_0",
+                "tl": "A0",
+                "linkIndex": "8",
+                "dir": "l",
+                "state": "o",
+                "luz": "G"
+              },
+              {
+                "from": "right0A0",
+                "to": "A0right0",
+                "fromLane": "1",
+                "toLane": "1",
+                "via": ":A0_9_0",
+                "tl": "A0",
+                "linkIndex": "9",
+                "dir": "t",
+                "state": "o",
+                "luz": "G"
+              }
+            ],
+            "entradas_abertas": [
+              "right0A0"
+            ]
+          },
+          {
+            "indice_xml": 3,
+            "duration": "3",
+            "state": "rrrrryyyyyrrrrrrrrrr",
+            "verde": false,
+            "movimentos_abertos": [],
+            "entradas_abertas": []
+          },
+          {
+            "indice_xml": 4,
+            "duration": "20",
+            "state": "rrrrrrrrrrGGGGGrrrrr",
+            "verde": true,
+            "movimentos_abertos": [
+              {
+                "from": "bottom0A0",
+                "to": "A0right0",
+                "fromLane": "0",
+                "toLane": "0",
+                "via": ":A0_10_0",
+                "tl": "A0",
+                "linkIndex": "10",
+                "dir": "r",
+                "state": "O",
+                "luz": "G"
+              },
+              {
+                "from": "bottom0A0",
+                "to": "A0top0",
+                "fromLane": "0",
+                "toLane": "0",
+                "via": ":A0_11_0",
+                "tl": "A0",
+                "linkIndex": "11",
+                "dir": "s",
+                "state": "O",
+                "luz": "G"
+              },
+              {
+                "from": "bottom0A0",
+                "to": "A0top0",
+                "fromLane": "1",
+                "toLane": "1",
+                "via": ":A0_11_1",
+                "tl": "A0",
+                "linkIndex": "12",
+                "dir": "s",
+                "state": "O",
+                "luz": "G"
+              },
+              {
+                "from": "bottom0A0",
+                "to": "A0left0",
+                "fromLane": "1",
+                "toLane": "1",
+                "via": ":A0_13_0",
+                "tl": "A0",
+                "linkIndex": "13",
+                "dir": "l",
+                "state": "o",
+                "luz": "G"
+              },
+              {
+                "from": "bottom0A0",
+                "to": "A0bottom0",
+                "fromLane": "1",
+                "toLane": "1",
+                "via": ":A0_14_0",
+                "tl": "A0",
+                "linkIndex": "14",
+                "dir": "t",
+                "state": "o",
+                "luz": "G"
+              }
+            ],
+            "entradas_abertas": [
+              "bottom0A0"
+            ]
+          },
+          {
+            "indice_xml": 5,
+            "duration": "3",
+            "state": "rrrrrrrrrryyyyyrrrrr",
+            "verde": false,
+            "movimentos_abertos": [],
+            "entradas_abertas": []
+          },
+          {
+            "indice_xml": 6,
+            "duration": "20",
+            "state": "rrrrrrrrrrrrrrrGGGGG",
+            "verde": true,
+            "movimentos_abertos": [
+              {
+                "from": "left0A0",
+                "to": "A0bottom0",
+                "fromLane": "0",
+                "toLane": "0",
+                "via": ":A0_15_0",
+                "tl": "A0",
+                "linkIndex": "15",
+                "dir": "r",
+                "state": "o",
+                "luz": "G"
+              },
+              {
+                "from": "left0A0",
+                "to": "A0right0",
+                "fromLane": "0",
+                "toLane": "0",
+                "via": ":A0_16_0",
+                "tl": "A0",
+                "linkIndex": "16",
+                "dir": "s",
+                "state": "o",
+                "luz": "G"
+              },
+              {
+                "from": "left0A0",
+                "to": "A0right0",
+                "fromLane": "1",
+                "toLane": "1",
+                "via": ":A0_16_1",
+                "tl": "A0",
+                "linkIndex": "17",
+                "dir": "s",
+                "state": "o",
+                "luz": "G"
+              },
+              {
+                "from": "left0A0",
+                "to": "A0top0",
+                "fromLane": "1",
+                "toLane": "1",
+                "via": ":A0_18_0",
+                "tl": "A0",
+                "linkIndex": "18",
+                "dir": "l",
+                "state": "o",
+                "luz": "G"
+              },
+              {
+                "from": "left0A0",
+                "to": "A0left0",
+                "fromLane": "1",
+                "toLane": "1",
+                "via": ":A0_19_0",
+                "tl": "A0",
+                "linkIndex": "19",
+                "dir": "t",
+                "state": "o",
+                "luz": "G"
+              }
+            ],
+            "entradas_abertas": [
+              "left0A0"
+            ]
+          },
+          {
+            "indice_xml": 7,
+            "duration": "3",
+            "state": "rrrrrrrrrrrrrrryyyyy",
+            "verde": false,
+            "movimentos_abertos": [],
+            "entradas_abertas": []
+          }
+        ],
+        "links": [
+          {
+            "from": "top0A0",
+            "to": "A0left0",
+            "fromLane": "0",
+            "toLane": "0",
+            "via": ":A0_0_0",
+            "tl": "A0",
+            "linkIndex": "0",
+            "dir": "r",
+            "state": "O"
+          },
+          {
+            "from": "top0A0",
+            "to": "A0bottom0",
+            "fromLane": "0",
+            "toLane": "0",
+            "via": ":A0_1_0",
+            "tl": "A0",
+            "linkIndex": "1",
+            "dir": "s",
+            "state": "O"
+          },
+          {
+            "from": "top0A0",
+            "to": "A0bottom0",
+            "fromLane": "1",
+            "toLane": "1",
+            "via": ":A0_1_1",
+            "tl": "A0",
+            "linkIndex": "2",
+            "dir": "s",
+            "state": "O"
+          },
+          {
+            "from": "top0A0",
+            "to": "A0right0",
+            "fromLane": "1",
+            "toLane": "1",
+            "via": ":A0_3_0",
+            "tl": "A0",
+            "linkIndex": "3",
+            "dir": "l",
+            "state": "o"
+          },
+          {
+            "from": "top0A0",
+            "to": "A0top0",
+            "fromLane": "1",
+            "toLane": "1",
+            "via": ":A0_4_0",
+            "tl": "A0",
+            "linkIndex": "4",
+            "dir": "t",
+            "state": "o"
+          },
+          {
+            "from": "right0A0",
+            "to": "A0top0",
+            "fromLane": "0",
+            "toLane": "0",
+            "via": ":A0_5_0",
+            "tl": "A0",
+            "linkIndex": "5",
+            "dir": "r",
+            "state": "o"
+          },
+          {
+            "from": "right0A0",
+            "to": "A0left0",
+            "fromLane": "0",
+            "toLane": "0",
+            "via": ":A0_6_0",
+            "tl": "A0",
+            "linkIndex": "6",
+            "dir": "s",
+            "state": "o"
+          },
+          {
+            "from": "right0A0",
+            "to": "A0left0",
+            "fromLane": "1",
+            "toLane": "1",
+            "via": ":A0_6_1",
+            "tl": "A0",
+            "linkIndex": "7",
+            "dir": "s",
+            "state": "o"
+          },
+          {
+            "from": "right0A0",
+            "to": "A0bottom0",
+            "fromLane": "1",
+            "toLane": "1",
+            "via": ":A0_8_0",
+            "tl": "A0",
+            "linkIndex": "8",
+            "dir": "l",
+            "state": "o"
+          },
+          {
+            "from": "right0A0",
+            "to": "A0right0",
+            "fromLane": "1",
+            "toLane": "1",
+            "via": ":A0_9_0",
+            "tl": "A0",
+            "linkIndex": "9",
+            "dir": "t",
+            "state": "o"
+          },
+          {
+            "from": "bottom0A0",
+            "to": "A0right0",
+            "fromLane": "0",
+            "toLane": "0",
+            "via": ":A0_10_0",
+            "tl": "A0",
+            "linkIndex": "10",
+            "dir": "r",
+            "state": "O"
+          },
+          {
+            "from": "bottom0A0",
+            "to": "A0top0",
+            "fromLane": "0",
+            "toLane": "0",
+            "via": ":A0_11_0",
+            "tl": "A0",
+            "linkIndex": "11",
+            "dir": "s",
+            "state": "O"
+          },
+          {
+            "from": "bottom0A0",
+            "to": "A0top0",
+            "fromLane": "1",
+            "toLane": "1",
+            "via": ":A0_11_1",
+            "tl": "A0",
+            "linkIndex": "12",
+            "dir": "s",
+            "state": "O"
+          },
+          {
+            "from": "bottom0A0",
+            "to": "A0left0",
+            "fromLane": "1",
+            "toLane": "1",
+            "via": ":A0_13_0",
+            "tl": "A0",
+            "linkIndex": "13",
+            "dir": "l",
+            "state": "o"
+          },
+          {
+            "from": "bottom0A0",
+            "to": "A0bottom0",
+            "fromLane": "1",
+            "toLane": "1",
+            "via": ":A0_14_0",
+            "tl": "A0",
+            "linkIndex": "14",
+            "dir": "t",
+            "state": "o"
+          },
+          {
+            "from": "left0A0",
+            "to": "A0bottom0",
+            "fromLane": "0",
+            "toLane": "0",
+            "via": ":A0_15_0",
+            "tl": "A0",
+            "linkIndex": "15",
+            "dir": "r",
+            "state": "o"
+          },
+          {
+            "from": "left0A0",
+            "to": "A0right0",
+            "fromLane": "0",
+            "toLane": "0",
+            "via": ":A0_16_0",
+            "tl": "A0",
+            "linkIndex": "16",
+            "dir": "s",
+            "state": "o"
+          },
+          {
+            "from": "left0A0",
+            "to": "A0right0",
+            "fromLane": "1",
+            "toLane": "1",
+            "via": ":A0_16_1",
+            "tl": "A0",
+            "linkIndex": "17",
+            "dir": "s",
+            "state": "o"
+          },
+          {
+            "from": "left0A0",
+            "to": "A0top0",
+            "fromLane": "1",
+            "toLane": "1",
+            "via": ":A0_18_0",
+            "tl": "A0",
+            "linkIndex": "18",
+            "dir": "l",
+            "state": "o"
+          },
+          {
+            "from": "left0A0",
+            "to": "A0left0",
+            "fromLane": "1",
+            "toLane": "1",
+            "via": ":A0_19_0",
+            "tl": "A0",
+            "linkIndex": "19",
+            "dir": "t",
+            "state": "o"
+          }
+        ],
+        "entradas": {
+          "bottom0A0": [
+            {
+              "id": "bottom0A0_0",
+              "index": "0",
+              "speed": "13.89",
+              "length": "239.60",
+              "shape": "254.80,0.00 254.80,239.60"
+            },
+            {
+              "id": "bottom0A0_1",
+              "index": "1",
+              "speed": "13.89",
+              "length": "239.60",
+              "shape": "251.60,0.00 251.60,239.60"
+            }
+          ],
+          "left0A0": [
+            {
+              "id": "left0A0_0",
+              "index": "0",
+              "speed": "13.89",
+              "length": "239.60",
+              "shape": "0.00,245.20 239.60,245.20"
+            },
+            {
+              "id": "left0A0_1",
+              "index": "1",
+              "speed": "13.89",
+              "length": "239.60",
+              "shape": "0.00,248.40 239.60,248.40"
+            }
+          ],
+          "right0A0": [
+            {
+              "id": "right0A0_0",
+              "index": "0",
+              "speed": "13.89",
+              "length": "239.60",
+              "shape": "500.00,254.80 260.40,254.80"
+            },
+            {
+              "id": "right0A0_1",
+              "index": "1",
+              "speed": "13.89",
+              "length": "239.60",
+              "shape": "500.00,251.60 260.40,251.60"
+            }
+          ],
+          "top0A0": [
+            {
+              "id": "top0A0_0",
+              "index": "0",
+              "speed": "13.89",
+              "length": "239.60",
+              "shape": "245.20,500.00 245.20,260.40"
+            },
+            {
+              "id": "top0A0_1",
+              "index": "1",
+              "speed": "13.89",
+              "length": "239.60",
+              "shape": "248.40,500.00 248.40,260.40"
+            }
+          ]
+        },
+        "ordem_faixas_por_link": [
+          "top0A0_0",
+          "top0A0_1",
+          "right0A0_0",
+          "right0A0_1",
+          "bottom0A0_0",
+          "bottom0A0_1",
+          "left0A0_0",
+          "left0A0_1"
+        ]
+      }
+    ]
+  },
+  "tempos_originais_instrumentados": {
+    "metodo": "laco real rodar() com API falsa; nao e uma rodada SUMO nem inferencia",
+    "duracao_s": 60,
+    "sequencias": [
+      {
+        "inicio": 0,
+        "segundos": 11,
+        "state": "GGGGGrrrrrrrrrrrrrrr"
+      },
+      {
+        "inicio": 11,
+        "segundos": 3,
+        "state": "yyyyyrrrrrrrrrrrrrrr"
+      },
+      {
+        "inicio": 14,
+        "segundos": 1,
+        "state": "rrrrrrrrrrrrrrrrrrrr"
+      },
+      {
+        "inicio": 15,
+        "segundos": 11,
+        "state": "rrrrrGGGGGrrrrrrrrrr"
+      },
+      {
+        "inicio": 26,
+        "segundos": 3,
+        "state": "rrrrryyyyyrrrrrrrrrr"
+      },
+      {
+        "inicio": 29,
+        "segundos": 1,
+        "state": "rrrrrrrrrrrrrrrrrrrr"
+      },
+      {
+        "inicio": 30,
+        "segundos": 11,
+        "state": "rrrrrrrrrrGGGGGrrrrr"
+      },
+      {
+        "inicio": 41,
+        "segundos": 3,
+        "state": "rrrrrrrrrryyyyyrrrrr"
+      },
+      {
+        "inicio": 44,
+        "segundos": 1,
+        "state": "rrrrrrrrrrrrrrrrrrrr"
+      },
+      {
+        "inicio": 45,
+        "segundos": 11,
+        "state": "rrrrrrrrrrrrrrrGGGGG"
+      },
+      {
+        "inicio": 56,
+        "segundos": 3,
+        "state": "rrrrrrrrrrrrrrryyyyy"
+      },
+      {
+        "inicio": 59,
+        "segundos": 1,
+        "state": "rrrrrrrrrrrrrrrrrrrr"
+      }
+    ]
+  },
+  "cologne1": {
+    "path": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\tmp\\cologne1_auditoria\\sumo_rl_1.4.5\\sumo_rl\\nets\\RESCO\\cologne1\\cologne1.net.xml",
+    "sha256": "25b44c0450c8d8e1d13ae5c11e38ef8e55719c98eb76f861ca26f82e044524b5",
+    "semaforos": [
+      {
+        "id": "GS_cluster_357187_359543",
+        "programa": "0",
+        "fases": [
+          {
+            "indice_xml": 0,
+            "duration": "29",
+            "state": "rrrrrGGGggrrrrrGGGgg",
+            "minDur": "5",
+            "maxDur": "50",
+            "verde": true,
+            "movimentos_abertos": [
+              {
+                "from": "23429231#1",
+                "to": "32038056#0",
+                "fromLane": "0",
+                "toLane": "0",
+                "via": ":cluster_357187_359543_5_0",
+                "tl": "GS_cluster_357187_359543",
+                "linkIndex": "5",
+                "dir": "r",
+                "state": "O",
+                "luz": "G"
+              },
+              {
+                "from": "23429231#1",
+                "to": "32038051#0",
+                "fromLane": "0",
+                "toLane": "0",
+                "via": ":cluster_357187_359543_6_0",
+                "tl": "GS_cluster_357187_359543",
+                "linkIndex": "6",
+                "dir": "s",
+                "state": "O",
+                "luz": "G"
+              },
+              {
+                "from": "23429231#1",
+                "to": "32038051#0",
+                "fromLane": "1",
+                "toLane": "1",
+                "via": ":cluster_357187_359543_6_1",
+                "tl": "GS_cluster_357187_359543",
+                "linkIndex": "7",
+                "dir": "s",
+                "state": "O",
+                "luz": "G"
+              },
+              {
+                "from": "23429231#1",
+                "to": "-28198821#4",
+                "fromLane": "1",
+                "toLane": "1",
+                "via": ":cluster_357187_359543_8_0",
+                "tl": "GS_cluster_357187_359543",
+                "linkIndex": "8",
+                "dir": "l",
+                "state": "o",
+                "luz": "g"
+              },
+              {
+                "from": "23429231#1",
+                "to": "32324544#0",
+                "fromLane": "1",
+                "toLane": "1",
+                "via": ":cluster_357187_359543_9_0",
+                "tl": "GS_cluster_357187_359543",
+                "linkIndex": "9",
+                "dir": "t",
+                "state": "o",
+                "luz": "g"
+              },
+              {
+                "from": "27115123#3",
+                "to": "-28198821#4",
+                "fromLane": "0",
+                "toLane": "0",
+                "via": ":cluster_357187_359543_15_0",
+                "tl": "GS_cluster_357187_359543",
+                "linkIndex": "15",
+                "dir": "r",
+                "state": "O",
+                "luz": "G"
+              },
+              {
+                "from": "27115123#3",
+                "to": "32324544#0",
+                "fromLane": "0",
+                "toLane": "0",
+                "via": ":cluster_357187_359543_16_0",
+                "tl": "GS_cluster_357187_359543",
+                "linkIndex": "16",
+                "dir": "s",
+                "state": "O",
+                "luz": "G"
+              },
+              {
+                "from": "27115123#3",
+                "to": "32324544#0",
+                "fromLane": "1",
+                "toLane": "1",
+                "via": ":cluster_357187_359543_16_1",
+                "tl": "GS_cluster_357187_359543",
+                "linkIndex": "17",
+                "dir": "s",
+                "state": "O",
+                "luz": "G"
+              },
+              {
+                "from": "27115123#3",
+                "to": "32038056#0",
+                "fromLane": "1",
+                "toLane": "1",
+                "via": ":cluster_357187_359543_18_0",
+                "tl": "GS_cluster_357187_359543",
+                "linkIndex": "18",
+                "dir": "l",
+                "state": "o",
+                "luz": "g"
+              },
+              {
+                "from": "27115123#3",
+                "to": "32038051#0",
+                "fromLane": "1",
+                "toLane": "1",
+                "via": ":cluster_357187_359543_19_0",
+                "tl": "GS_cluster_357187_359543",
+                "linkIndex": "19",
+                "dir": "t",
+                "state": "o",
+                "luz": "g"
+              }
+            ],
+            "entradas_abertas": [
+              "23429231#1",
+              "27115123#3"
+            ]
+          },
+          {
+            "indice_xml": 1,
+            "duration": "5",
+            "state": "rrrrryyyggrrrrryyygg",
+            "verde": false,
+            "movimentos_abertos": [
+              {
+                "from": "23429231#1",
+                "to": "-28198821#4",
+                "fromLane": "1",
+                "toLane": "1",
+                "via": ":cluster_357187_359543_8_0",
+                "tl": "GS_cluster_357187_359543",
+                "linkIndex": "8",
+                "dir": "l",
+                "state": "o",
+                "luz": "g"
+              },
+              {
+                "from": "23429231#1",
+                "to": "32324544#0",
+                "fromLane": "1",
+                "toLane": "1",
+                "via": ":cluster_357187_359543_9_0",
+                "tl": "GS_cluster_357187_359543",
+                "linkIndex": "9",
+                "dir": "t",
+                "state": "o",
+                "luz": "g"
+              },
+              {
+                "from": "27115123#3",
+                "to": "32038056#0",
+                "fromLane": "1",
+                "toLane": "1",
+                "via": ":cluster_357187_359543_18_0",
+                "tl": "GS_cluster_357187_359543",
+                "linkIndex": "18",
+                "dir": "l",
+                "state": "o",
+                "luz": "g"
+              },
+              {
+                "from": "27115123#3",
+                "to": "32038051#0",
+                "fromLane": "1",
+                "toLane": "1",
+                "via": ":cluster_357187_359543_19_0",
+                "tl": "GS_cluster_357187_359543",
+                "linkIndex": "19",
+                "dir": "t",
+                "state": "o",
+                "luz": "g"
+              }
+            ],
+            "entradas_abertas": [
+              "23429231#1",
+              "27115123#3"
+            ]
+          },
+          {
+            "indice_xml": 2,
+            "duration": "6",
+            "state": "rrrrrrrrGGrrrrrrrrGG",
+            "minDur": "5",
+            "maxDur": "50",
+            "verde": true,
+            "movimentos_abertos": [
+              {
+                "from": "23429231#1",
+                "to": "-28198821#4",
+                "fromLane": "1",
+                "toLane": "1",
+                "via": ":cluster_357187_359543_8_0",
+                "tl": "GS_cluster_357187_359543",
+                "linkIndex": "8",
+                "dir": "l",
+                "state": "o",
+                "luz": "G"
+              },
+              {
+                "from": "23429231#1",
+                "to": "32324544#0",
+                "fromLane": "1",
+                "toLane": "1",
+                "via": ":cluster_357187_359543_9_0",
+                "tl": "GS_cluster_357187_359543",
+                "linkIndex": "9",
+                "dir": "t",
+                "state": "o",
+                "luz": "G"
+              },
+              {
+                "from": "27115123#3",
+                "to": "32038056#0",
+                "fromLane": "1",
+                "toLane": "1",
+                "via": ":cluster_357187_359543_18_0",
+                "tl": "GS_cluster_357187_359543",
+                "linkIndex": "18",
+                "dir": "l",
+                "state": "o",
+                "luz": "G"
+              },
+              {
+                "from": "27115123#3",
+                "to": "32038051#0",
+                "fromLane": "1",
+                "toLane": "1",
+                "via": ":cluster_357187_359543_19_0",
+                "tl": "GS_cluster_357187_359543",
+                "linkIndex": "19",
+                "dir": "t",
+                "state": "o",
+                "luz": "G"
+              }
+            ],
+            "entradas_abertas": [
+              "23429231#1",
+              "27115123#3"
+            ]
+          },
+          {
+            "indice_xml": 3,
+            "duration": "5",
+            "state": "rrrrrrrryyrrrrrrrryy",
+            "verde": false,
+            "movimentos_abertos": [],
+            "entradas_abertas": []
+          },
+          {
+            "indice_xml": 4,
+            "duration": "29",
+            "state": "GGGggrrrrrGGGggrrrrr",
+            "minDur": "5",
+            "maxDur": "50",
+            "verde": true,
+            "movimentos_abertos": [
+              {
+                "from": "-32038056#3",
+                "to": "32038051#0",
+                "fromLane": "0",
+                "toLane": "0",
+                "via": ":cluster_357187_359543_0_0",
+                "tl": "GS_cluster_357187_359543",
+                "linkIndex": "0",
+                "dir": "r",
+                "state": "o",
+                "luz": "G"
+              },
+              {
+                "from": "-32038056#3",
+                "to": "-28198821#4",
+                "fromLane": "0",
+                "toLane": "0",
+                "via": ":cluster_357187_359543_1_0",
+                "tl": "GS_cluster_357187_359543",
+                "linkIndex": "1",
+                "dir": "s",
+                "state": "o",
+                "luz": "G"
+              },
+              {
+                "from": "-32038056#3",
+                "to": "-28198821#4",
+                "fromLane": "1",
+                "toLane": "1",
+                "via": ":cluster_357187_359543_1_1",
+                "tl": "GS_cluster_357187_359543",
+                "linkIndex": "2",
+                "dir": "s",
+                "state": "o",
+                "luz": "G"
+              },
+              {
+                "from": "-32038056#3",
+                "to": "32324544#0",
+                "fromLane": "1",
+                "toLane": "1",
+                "via": ":cluster_357187_359543_3_0",
+                "tl": "GS_cluster_357187_359543",
+                "linkIndex": "3",
+                "dir": "l",
+                "state": "o",
+                "luz": "g"
+              },
+              {
+                "from": "-32038056#3",
+                "to": "32038056#0",
+                "fromLane": "1",
+                "toLane": "1",
+                "via": ":cluster_357187_359543_4_0",
+                "tl": "GS_cluster_357187_359543",
+                "linkIndex": "4",
+                "dir": "t",
+                "state": "o",
+                "luz": "g"
+              },
+              {
+                "from": "28198821#3",
+                "to": "32324544#0",
+                "fromLane": "0",
+                "toLane": "0",
+                "via": ":cluster_357187_359543_10_0",
+                "tl": "GS_cluster_357187_359543",
+                "linkIndex": "10",
+                "dir": "r",
+                "state": "o",
+                "luz": "G"
+              },
+              {
+                "from": "28198821#3",
+                "to": "32038056#0",
+                "fromLane": "0",
+                "toLane": "0",
+                "via": ":cluster_357187_359543_11_0",
+                "tl": "GS_cluster_357187_359543",
+                "linkIndex": "11",
+                "dir": "s",
+                "state": "o",
+                "luz": "G"
+              },
+              {
+                "from": "28198821#3",
+                "to": "32038056#0",
+                "fromLane": "1",
+                "toLane": "1",
+                "via": ":cluster_357187_359543_11_1",
+                "tl": "GS_cluster_357187_359543",
+                "linkIndex": "12",
+                "dir": "s",
+                "state": "o",
+                "luz": "G"
+              },
+              {
+                "from": "28198821#3",
+                "to": "32038051#0",
+                "fromLane": "1",
+                "toLane": "1",
+                "via": ":cluster_357187_359543_13_0",
+                "tl": "GS_cluster_357187_359543",
+                "linkIndex": "13",
+                "dir": "l",
+                "state": "o",
+                "luz": "g"
+              },
+              {
+                "from": "28198821#3",
+                "to": "-28198821#4",
+                "fromLane": "1",
+                "toLane": "1",
+                "via": ":cluster_357187_359543_14_0",
+                "tl": "GS_cluster_357187_359543",
+                "linkIndex": "14",
+                "dir": "t",
+                "state": "o",
+                "luz": "g"
+              }
+            ],
+            "entradas_abertas": [
+              "-32038056#3",
+              "28198821#3"
+            ]
+          },
+          {
+            "indice_xml": 5,
+            "duration": "5",
+            "state": "yyyggrrrrryyyggrrrrr",
+            "verde": false,
+            "movimentos_abertos": [
+              {
+                "from": "-32038056#3",
+                "to": "32324544#0",
+                "fromLane": "1",
+                "toLane": "1",
+                "via": ":cluster_357187_359543_3_0",
+                "tl": "GS_cluster_357187_359543",
+                "linkIndex": "3",
+                "dir": "l",
+                "state": "o",
+                "luz": "g"
+              },
+              {
+                "from": "-32038056#3",
+                "to": "32038056#0",
+                "fromLane": "1",
+                "toLane": "1",
+                "via": ":cluster_357187_359543_4_0",
+                "tl": "GS_cluster_357187_359543",
+                "linkIndex": "4",
+                "dir": "t",
+                "state": "o",
+                "luz": "g"
+              },
+              {
+                "from": "28198821#3",
+                "to": "32038051#0",
+                "fromLane": "1",
+                "toLane": "1",
+                "via": ":cluster_357187_359543_13_0",
+                "tl": "GS_cluster_357187_359543",
+                "linkIndex": "13",
+                "dir": "l",
+                "state": "o",
+                "luz": "g"
+              },
+              {
+                "from": "28198821#3",
+                "to": "-28198821#4",
+                "fromLane": "1",
+                "toLane": "1",
+                "via": ":cluster_357187_359543_14_0",
+                "tl": "GS_cluster_357187_359543",
+                "linkIndex": "14",
+                "dir": "t",
+                "state": "o",
+                "luz": "g"
+              }
+            ],
+            "entradas_abertas": [
+              "-32038056#3",
+              "28198821#3"
+            ]
+          },
+          {
+            "indice_xml": 6,
+            "duration": "6",
+            "state": "rrrGGrrrrrrrrGGrrrrr",
+            "minDur": "5",
+            "maxDur": "50",
+            "verde": true,
+            "movimentos_abertos": [
+              {
+                "from": "-32038056#3",
+                "to": "32324544#0",
+                "fromLane": "1",
+                "toLane": "1",
+                "via": ":cluster_357187_359543_3_0",
+                "tl": "GS_cluster_357187_359543",
+                "linkIndex": "3",
+                "dir": "l",
+                "state": "o",
+                "luz": "G"
+              },
+              {
+                "from": "-32038056#3",
+                "to": "32038056#0",
+                "fromLane": "1",
+                "toLane": "1",
+                "via": ":cluster_357187_359543_4_0",
+                "tl": "GS_cluster_357187_359543",
+                "linkIndex": "4",
+                "dir": "t",
+                "state": "o",
+                "luz": "G"
+              },
+              {
+                "from": "28198821#3",
+                "to": "32038051#0",
+                "fromLane": "1",
+                "toLane": "1",
+                "via": ":cluster_357187_359543_13_0",
+                "tl": "GS_cluster_357187_359543",
+                "linkIndex": "13",
+                "dir": "l",
+                "state": "o",
+                "luz": "G"
+              },
+              {
+                "from": "28198821#3",
+                "to": "-28198821#4",
+                "fromLane": "1",
+                "toLane": "1",
+                "via": ":cluster_357187_359543_14_0",
+                "tl": "GS_cluster_357187_359543",
+                "linkIndex": "14",
+                "dir": "t",
+                "state": "o",
+                "luz": "G"
+              }
+            ],
+            "entradas_abertas": [
+              "-32038056#3",
+              "28198821#3"
+            ]
+          },
+          {
+            "indice_xml": 7,
+            "duration": "5",
+            "state": "rrryyrrrrrrrryyrrrrr",
+            "verde": false,
+            "movimentos_abertos": [],
+            "entradas_abertas": []
+          }
+        ],
+        "links": [
+          {
+            "from": "-32038056#3",
+            "to": "32038051#0",
+            "fromLane": "0",
+            "toLane": "0",
+            "via": ":cluster_357187_359543_0_0",
+            "tl": "GS_cluster_357187_359543",
+            "linkIndex": "0",
+            "dir": "r",
+            "state": "o"
+          },
+          {
+            "from": "-32038056#3",
+            "to": "-28198821#4",
+            "fromLane": "0",
+            "toLane": "0",
+            "via": ":cluster_357187_359543_1_0",
+            "tl": "GS_cluster_357187_359543",
+            "linkIndex": "1",
+            "dir": "s",
+            "state": "o"
+          },
+          {
+            "from": "-32038056#3",
+            "to": "-28198821#4",
+            "fromLane": "1",
+            "toLane": "1",
+            "via": ":cluster_357187_359543_1_1",
+            "tl": "GS_cluster_357187_359543",
+            "linkIndex": "2",
+            "dir": "s",
+            "state": "o"
+          },
+          {
+            "from": "-32038056#3",
+            "to": "32324544#0",
+            "fromLane": "1",
+            "toLane": "1",
+            "via": ":cluster_357187_359543_3_0",
+            "tl": "GS_cluster_357187_359543",
+            "linkIndex": "3",
+            "dir": "l",
+            "state": "o"
+          },
+          {
+            "from": "-32038056#3",
+            "to": "32038056#0",
+            "fromLane": "1",
+            "toLane": "1",
+            "via": ":cluster_357187_359543_4_0",
+            "tl": "GS_cluster_357187_359543",
+            "linkIndex": "4",
+            "dir": "t",
+            "state": "o"
+          },
+          {
+            "from": "23429231#1",
+            "to": "32038056#0",
+            "fromLane": "0",
+            "toLane": "0",
+            "via": ":cluster_357187_359543_5_0",
+            "tl": "GS_cluster_357187_359543",
+            "linkIndex": "5",
+            "dir": "r",
+            "state": "O"
+          },
+          {
+            "from": "23429231#1",
+            "to": "32038051#0",
+            "fromLane": "0",
+            "toLane": "0",
+            "via": ":cluster_357187_359543_6_0",
+            "tl": "GS_cluster_357187_359543",
+            "linkIndex": "6",
+            "dir": "s",
+            "state": "O"
+          },
+          {
+            "from": "23429231#1",
+            "to": "32038051#0",
+            "fromLane": "1",
+            "toLane": "1",
+            "via": ":cluster_357187_359543_6_1",
+            "tl": "GS_cluster_357187_359543",
+            "linkIndex": "7",
+            "dir": "s",
+            "state": "O"
+          },
+          {
+            "from": "23429231#1",
+            "to": "-28198821#4",
+            "fromLane": "1",
+            "toLane": "1",
+            "via": ":cluster_357187_359543_8_0",
+            "tl": "GS_cluster_357187_359543",
+            "linkIndex": "8",
+            "dir": "l",
+            "state": "o"
+          },
+          {
+            "from": "23429231#1",
+            "to": "32324544#0",
+            "fromLane": "1",
+            "toLane": "1",
+            "via": ":cluster_357187_359543_9_0",
+            "tl": "GS_cluster_357187_359543",
+            "linkIndex": "9",
+            "dir": "t",
+            "state": "o"
+          },
+          {
+            "from": "28198821#3",
+            "to": "32324544#0",
+            "fromLane": "0",
+            "toLane": "0",
+            "via": ":cluster_357187_359543_10_0",
+            "tl": "GS_cluster_357187_359543",
+            "linkIndex": "10",
+            "dir": "r",
+            "state": "o"
+          },
+          {
+            "from": "28198821#3",
+            "to": "32038056#0",
+            "fromLane": "0",
+            "toLane": "0",
+            "via": ":cluster_357187_359543_11_0",
+            "tl": "GS_cluster_357187_359543",
+            "linkIndex": "11",
+            "dir": "s",
+            "state": "o"
+          },
+          {
+            "from": "28198821#3",
+            "to": "32038056#0",
+            "fromLane": "1",
+            "toLane": "1",
+            "via": ":cluster_357187_359543_11_1",
+            "tl": "GS_cluster_357187_359543",
+            "linkIndex": "12",
+            "dir": "s",
+            "state": "o"
+          },
+          {
+            "from": "28198821#3",
+            "to": "32038051#0",
+            "fromLane": "1",
+            "toLane": "1",
+            "via": ":cluster_357187_359543_13_0",
+            "tl": "GS_cluster_357187_359543",
+            "linkIndex": "13",
+            "dir": "l",
+            "state": "o"
+          },
+          {
+            "from": "28198821#3",
+            "to": "-28198821#4",
+            "fromLane": "1",
+            "toLane": "1",
+            "via": ":cluster_357187_359543_14_0",
+            "tl": "GS_cluster_357187_359543",
+            "linkIndex": "14",
+            "dir": "t",
+            "state": "o"
+          },
+          {
+            "from": "27115123#3",
+            "to": "-28198821#4",
+            "fromLane": "0",
+            "toLane": "0",
+            "via": ":cluster_357187_359543_15_0",
+            "tl": "GS_cluster_357187_359543",
+            "linkIndex": "15",
+            "dir": "r",
+            "state": "O"
+          },
+          {
+            "from": "27115123#3",
+            "to": "32324544#0",
+            "fromLane": "0",
+            "toLane": "0",
+            "via": ":cluster_357187_359543_16_0",
+            "tl": "GS_cluster_357187_359543",
+            "linkIndex": "16",
+            "dir": "s",
+            "state": "O"
+          },
+          {
+            "from": "27115123#3",
+            "to": "32324544#0",
+            "fromLane": "1",
+            "toLane": "1",
+            "via": ":cluster_357187_359543_16_1",
+            "tl": "GS_cluster_357187_359543",
+            "linkIndex": "17",
+            "dir": "s",
+            "state": "O"
+          },
+          {
+            "from": "27115123#3",
+            "to": "32038056#0",
+            "fromLane": "1",
+            "toLane": "1",
+            "via": ":cluster_357187_359543_18_0",
+            "tl": "GS_cluster_357187_359543",
+            "linkIndex": "18",
+            "dir": "l",
+            "state": "o"
+          },
+          {
+            "from": "27115123#3",
+            "to": "32038051#0",
+            "fromLane": "1",
+            "toLane": "1",
+            "via": ":cluster_357187_359543_19_0",
+            "tl": "GS_cluster_357187_359543",
+            "linkIndex": "19",
+            "dir": "t",
+            "state": "o"
+          }
+        ],
+        "entradas": {
+          "-32038056#3": [
+            {
+              "id": "-32038056#3_0",
+              "index": "0",
+              "disallow": "tram rail_urban rail rail_electric rail_fast ship",
+              "speed": "13.89",
+              "length": "351.23",
+              "shape": "12155.58,13373.15 12126.48,13358.12 12085.10,13346.33 12031.40,13340.16 12008.94,13340.33 11940.59,13345.11 11882.84,13347.03 11852.61,13344.28 11818.30,13337.61 11813.32,13336.65 11811.52,13336.24"
+            },
+            {
+              "id": "-32038056#3_1",
+              "index": "1",
+              "disallow": "tram rail_urban rail rail_electric rail_fast ship",
+              "speed": "13.89",
+              "length": "351.23",
+              "shape": "12157.05,13370.30 12127.67,13355.13 12085.73,13343.18 12031.57,13336.96 12008.81,13337.13 11940.42,13341.92 11882.93,13343.82 11853.06,13341.11 11818.91,13334.47 11813.97,13333.52 11812.22,13333.12"
+            }
+          ],
+          "23429231#1": [
+            {
+              "id": "23429231#1_0",
+              "index": "0",
+              "disallow": "tram rail_urban rail rail_electric rail_fast ship",
+              "speed": "19.44",
+              "length": "96.57",
+              "shape": "11840.56,13228.65 11809.77,13320.15"
+            },
+            {
+              "id": "23429231#1_1",
+              "index": "1",
+              "disallow": "tram rail_urban rail rail_electric rail_fast ship",
+              "speed": "19.44",
+              "length": "96.57",
+              "shape": "11837.52,13227.63 11806.72,13319.18"
+            }
+          ],
+          "27115123#3": [
+            {
+              "id": "27115123#3_0",
+              "index": "0",
+              "disallow": "tram rail_urban rail rail_electric rail_fast ship",
+              "speed": "19.44",
+              "length": "41.48",
+              "shape": "11765.86,13373.29 11782.13,13336.13 11782.39,13335.48"
+            },
+            {
+              "id": "27115123#3_1",
+              "index": "1",
+              "disallow": "tram rail_urban rail rail_electric rail_fast ship",
+              "speed": "19.44",
+              "length": "41.48",
+              "shape": "11768.79,13374.58 11785.09,13337.37 11785.48,13336.37"
+            }
+          ],
+          "28198821#3": [
+            {
+              "id": "28198821#3_0",
+              "index": "0",
+              "disallow": "tram rail_urban rail rail_electric rail_fast ship",
+              "speed": "13.89",
+              "length": "57.19",
+              "shape": "11725.12,13307.13 11776.00,13318.33 11780.98,13319.50"
+            },
+            {
+              "id": "28198821#3_1",
+              "index": "1",
+              "disallow": "tram rail_urban rail rail_electric rail_fast ship",
+              "speed": "13.89",
+              "length": "57.19",
+              "shape": "11724.43,13310.26 11775.29,13321.45 11780.25,13322.61"
+            }
+          ]
+        },
+        "ordem_faixas_por_link": [
+          "-32038056#3_0",
+          "-32038056#3_1",
+          "23429231#1_0",
+          "23429231#1_1",
+          "28198821#3_0",
+          "28198821#3_1",
+          "27115123#3_0",
+          "27115123#3_1"
+        ]
+      }
+    ]
+  },
+  "routes": {
+    "path": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\tmp\\cologne1_auditoria\\sumo_rl_1.4.5\\sumo_rl\\nets\\RESCO\\cologne1\\cologne1.rou.xml",
+    "sha256": "7a3be6818a25b8c2bf48340eeead3e3dd26ed58683cdecd2b42ad3296a9d5eb7"
+  },
+  "proveniencia": {
+    "pypi_version": "1.4.5",
+    "url": "https://files.pythonhosted.org/packages/3e/d3/0cf60a0398f14d508b5bc8b80ab0dac73c6fd3a14a8751b37f6c19d27c30/sumo_rl-1.4.5-py3-none-any.whl",
+    "wheel_sha256": "322d090e6a66d97cc9b265c0b6fa092687bc6b35965fe5f53f678878d1987660",
+    "files": [
+      "sumo_rl/__init__.py",
+      "sumo_rl/environment/env.py",
+      "sumo_rl/environment/observations.py",
+      "sumo_rl/environment/resco_envs.py",
+      "sumo_rl/environment/traffic_signal.py",
+      "sumo_rl/nets/RESCO/cologne1/cologne1.net.xml",
+      "sumo_rl/nets/RESCO/cologne1/cologne1.rou.xml",
+      "sumo_rl/nets/RESCO/cologne1/cologne1.sumocfg",
+      "sumo_rl-1.4.5.dist-info/LICENSE",
+      "sumo_rl-1.4.5.dist-info/METADATA"
+    ],
+    "installed": false
+  },
+  "sumo_rl_defaults": {
+    "begin_time": 0,
+    "num_seconds": 20000,
+    "delta_time": 5,
+    "yellow_time": 2,
+    "min_green": 5,
+    "max_green": 50
+  },
+  "source_hashes": {
+    "proveniencia.json": "c3f3adfbdf2e6ae0172a3229a9505221d44db3cecfec049384b86f190c9ed040",
+    "sumo_rl\\__init__.py": "b176ba18f5088e463ce9bc50dbb21cbf7b66c51d8b40dc7bf574ee6b833181ff",
+    "sumo_rl\\environment\\env.py": "862e08e02b593d9910123ef936687a0856239c6f4dbfda096b4513034f04882c",
+    "sumo_rl\\environment\\observations.py": "66298f32a7d04970f47320857fd4fe7c1f7718b151439757166f958ec449693b",
+    "sumo_rl\\environment\\resco_envs.py": "48f406a82cbff584659ac40aa25d6db6e93e7d115b17a4847130afa3526b5e76",
+    "sumo_rl\\environment\\traffic_signal.py": "9d523852f2931af4d5082e50b2878f76c4977b3bd18f6357609f9f11640140b9",
+    "sumo_rl\\nets\\RESCO\\cologne1\\cologne1.net.xml": "25b44c0450c8d8e1d13ae5c11e38ef8e55719c98eb76f861ca26f82e044524b5",
+    "sumo_rl\\nets\\RESCO\\cologne1\\cologne1.rou.xml": "7a3be6818a25b8c2bf48340eeead3e3dd26ed58683cdecd2b42ad3296a9d5eb7",
+    "sumo_rl\\nets\\RESCO\\cologne1\\cologne1.sumocfg": "5045e1ec607a44d9468b422d248714f6a1388daa6c0c0baa84cc21dd6e785399",
+    "sumo_rl-1.4.5.dist-info\\LICENSE": "58dcbb2ab27c350528de5b61e34938b3601f134d564b25715ae62063ebaa301b",
+    "sumo_rl-1.4.5.dist-info\\METADATA": "dfc47afe60238b3dfb42e04ec6274390fae19835a3623241547e1c50ba4b192f"
+  },
+  "comparacao": {
+    "numero_acoes_DQN": 4,
+    "numero_acoes_cologne1": 4,
+    "acao_cologne1_indice_xml": [
+      0,
+      2,
+      4,
+      6
+    ],
+    "n_faixas_controladas": 8,
+    "dimensao_observacao_padrao": 21,
+    "observacao_padrao_compativel": false,
+    "mapeamento_acoes_por_permutacao_possivel": false,
+    "razao_bloqueio": "Cada acao original libera uma unica entrada; cada fase de cologne1 libera movimentos de duas entradas opostas. Nao existe bijecao que preserve o significado.",
+    "one_hot": "No modelo identifica N/L/S/O; no cologne1 identifica um grupo de movimentos, nao uma unica aproximacao.",
+    "observacoes_fontes": [
+      "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\tmp\\cologne1_auditoria\\sumo_rl_1.4.5\\sumo_rl\\environment\\observations.py",
+      "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\tmp\\cologne1_auditoria\\sumo_rl_1.4.5\\sumo_rl\\environment\\traffic_signal.py"
+    ]
+  },
+  "verificacao_SUMO": {
+    "version": "Eclipse SUMO sumo 1.28.0\n Build features: Windows-10.0.17763 AMD64 MSVC 19.51.36256.0 Release FMI Proj GUI FMT Intl SWIG Parquet Eigen\n Copyright (C) 2001-2026 German Aerospace Center (DLR) and others; https://sumo.dlr.de\n\nEclipse SUMO sumo 1.28.0 is part of SUMO.\nThis program and the accompanying materials\nare made available under the terms of the Eclipse Public License v2.0\nwhich accompanies this distribution, and is available at\nhttp://www.eclipse.org/legal/epl-v20.html\nThis program may also be made available under the following Secondary\nLicenses when the conditions for such availability set forth in the Eclipse\nPublic License 2.0 are satisfied: GNU General Public License, version 2\nor later which is available at\nhttps://www.gnu.org/licenses/old-licenses/gpl-2.0-standalone.html\nSPDX-License-Identifier: EPL-2.0 OR GPL-2.0-or-later\n",
+    "traci_version": [
+      22,
+      "SUMO 1.28.0"
+    ],
+    "seed": 1,
+    "command": [
+      "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\tools\\sumo-win64-1.28.0\\bin\\sumo.exe",
+      "-n",
+      "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\tmp\\cologne1_auditoria\\sumo_rl_1.4.5\\sumo_rl\\nets\\RESCO\\cologne1\\cologne1.net.xml",
+      "-r",
+      "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\tmp\\cologne1_auditoria\\sumo_rl_1.4.5\\sumo_rl\\nets\\RESCO\\cologne1\\cologne1.rou.xml",
+      "--begin",
+      "25200",
+      "--end",
+      "28800",
+      "--seed",
+      "1",
+      "--time-to-teleport",
+      "-1",
+      "--no-step-log",
+      "true",
+      "--log",
+      "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\cologne1_auditoria\\20261110T200239Z_2e552059\\sumo.log"
+    ],
+    "time": 25200.0,
+    "simulation_steps": 0,
+    "semaforos": [
+      {
+        "id": "GS_cluster_357187_359543",
+        "controlled_links": [
+          [
+            [
+              "-32038056#3_0",
+              "32038051#0_0",
+              ":cluster_357187_359543_0_0"
+            ]
+          ],
+          [
+            [
+              "-32038056#3_0",
+              "-28198821#4_0",
+              ":cluster_357187_359543_1_0"
+            ]
+          ],
+          [
+            [
+              "-32038056#3_1",
+              "-28198821#4_1",
+              ":cluster_357187_359543_1_1"
+            ]
+          ],
+          [
+            [
+              "-32038056#3_1",
+              "32324544#0_1",
+              ":cluster_357187_359543_3_0"
+            ]
+          ],
+          [
+            [
+              "-32038056#3_1",
+              "32038056#0_1",
+              ":cluster_357187_359543_4_0"
+            ]
+          ],
+          [
+            [
+              "23429231#1_0",
+              "32038056#0_0",
+              ":cluster_357187_359543_5_0"
+            ]
+          ],
+          [
+            [
+              "23429231#1_0",
+              "32038051#0_0",
+              ":cluster_357187_359543_6_0"
+            ]
+          ],
+          [
+            [
+              "23429231#1_1",
+              "32038051#0_1",
+              ":cluster_357187_359543_6_1"
+            ]
+          ],
+          [
+            [
+              "23429231#1_1",
+              "-28198821#4_1",
+              ":cluster_357187_359543_8_0"
+            ]
+          ],
+          [
+            [
+              "23429231#1_1",
+              "32324544#0_1",
+              ":cluster_357187_359543_9_0"
+            ]
+          ],
+          [
+            [
+              "28198821#3_0",
+              "32324544#0_0",
+              ":cluster_357187_359543_10_0"
+            ]
+          ],
+          [
+            [
+              "28198821#3_0",
+              "32038056#0_0",
+              ":cluster_357187_359543_11_0"
+            ]
+          ],
+          [
+            [
+              "28198821#3_1",
+              "32038056#0_1",
+              ":cluster_357187_359543_11_1"
+            ]
+          ],
+          [
+            [
+              "28198821#3_1",
+              "32038051#0_1",
+              ":cluster_357187_359543_13_0"
+            ]
+          ],
+          [
+            [
+              "28198821#3_1",
+              "-28198821#4_1",
+              ":cluster_357187_359543_14_0"
+            ]
+          ],
+          [
+            [
+              "27115123#3_0",
+              "-28198821#4_0",
+              ":cluster_357187_359543_15_0"
+            ]
+          ],
+          [
+            [
+              "27115123#3_0",
+              "32324544#0_0",
+              ":cluster_357187_359543_16_0"
+            ]
+          ],
+          [
+            [
+              "27115123#3_1",
+              "32324544#0_1",
+              ":cluster_357187_359543_16_1"
+            ]
+          ],
+          [
+            [
+              "27115123#3_1",
+              "32038056#0_1",
+              ":cluster_357187_359543_18_0"
+            ]
+          ],
+          [
+            [
+              "27115123#3_1",
+              "32038051#0_1",
+              ":cluster_357187_359543_19_0"
+            ]
+          ]
+        ],
+        "controlled_lanes": [
+          "-32038056#3_0",
+          "-32038056#3_0",
+          "-32038056#3_1",
+          "-32038056#3_1",
+          "-32038056#3_1",
+          "23429231#1_0",
+          "23429231#1_0",
+          "23429231#1_1",
+          "23429231#1_1",
+          "23429231#1_1",
+          "28198821#3_0",
+          "28198821#3_0",
+          "28198821#3_1",
+          "28198821#3_1",
+          "28198821#3_1",
+          "27115123#3_0",
+          "27115123#3_0",
+          "27115123#3_1",
+          "27115123#3_1",
+          "27115123#3_1"
+        ],
+        "programas": [
+          {
+            "id": "0",
+            "fases": [
+              {
+                "state": "rrrrrGGGggrrrrrGGGgg",
+                "duration": 29.0
+              },
+              {
+                "state": "rrrrryyyggrrrrryyygg",
+                "duration": 5.0
+              },
+              {
+                "state": "rrrrrrrrGGrrrrrrrrGG",
+                "duration": 6.0
+              },
+              {
+                "state": "rrrrrrrryyrrrrrrrryy",
+                "duration": 5.0
+              },
+              {
+                "state": "GGGggrrrrrGGGggrrrrr",
+                "duration": 29.0
+              },
+              {
+                "state": "yyyggrrrrryyyggrrrrr",
+                "duration": 5.0
+              },
+              {
+                "state": "rrrGGrrrrrrrrGGrrrrr",
+                "duration": 6.0
+              },
+              {
+                "state": "rrryyrrrrrrrryyrrrrr",
+                "duration": 5.0
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "xml_confere_com_runtime": true
+  },
+  "protected_after": {
+    "semaforo\\modelos\\dqn_espera.pt": "43bd3c60385a7c04145022f5abc2c0c2c216b4b6749e58f6ded38078dc5f5884",
+    "semaforo\\modelos\\dqn_fila.pt": "4df5afec39207e621f9e1e83a7917153283cce053db1cdb2fd0dac8113596a41",
+    "semaforo\\resultados\\avaliacao_final.json": "e623e9503cf8028cab9936ec76ce5e98ce19d1bd7752dd51181f05ea9bf9bb39",
+    "semaforo\\resultados\\baselines.json": "0b43f43541d345695629e86d52a6107af1d13350150777f0cd84fad6ad2dac5a",
+    "semaforo\\resultados\\treino_espera.json": "572750862a957c6204caee7f99d8021e3af841ab86e2e1836fa01555b3a902ed",
+    "semaforo\\resultados\\treino_fila.json": "b32772482017c9c74259ff56d834e39bae23d3cb1ee65d9a4b31d748577df325"
+  },
+  "pesos_e_resultados_preservados": true
+}

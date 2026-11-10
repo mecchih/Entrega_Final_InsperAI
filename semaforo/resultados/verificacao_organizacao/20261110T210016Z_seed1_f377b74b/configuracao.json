@@ -1,0 +1,366 @@
+{
+  "experimento": "cologne1_derivado_fases_por_aproximacao",
+  "seed": 1,
+  "checkpoint": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\modelos\\dqn_fila.pt",
+  "checkpoint_sha256": "4df5afec39207e621f9e1e83a7917153283cce053db1cdb2fd0dac8113596a41",
+  "rede_original_sha256": "25b44c0450c8d8e1d13ae5c11e38ef8e55719c98eb76f861ca26f82e044524b5",
+  "rotas_sha256": "7a3be6818a25b8c2bf48340eeead3e3dd26ed58683cdecd2b42ad3296a9d5eb7",
+  "rede_derivada_sha256": "6314991daeed795a8025f09ce49e955be982f41da8ab1b3e787c89b03dc31520",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "python_exe": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\.venv-dqn-inferencia\\Scripts\\python.exe",
+  "torch": "2.15.0+cpu",
+  "numpy": "2.5.4",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "sumo_version": "Eclipse SUMO sumo 1.28.0\n Build features: Windows-10.0.17763 AMD64 MSVC 19.51.36256.0 Release FMI Proj GUI FMT Intl SWIG Parquet Eigen\n Copyright (C) 2001-2026 German Aerospace Center (DLR) and others; https://sumo.dlr.de\n\nEclipse SUMO sumo 1.28.0 is part of SUMO.\nThis program and the accompanying materials\nare made available under the terms of the Eclipse Public License v2.0\nwhich accompanies this distribution, and is available at\nhttp://www.eclipse.org/legal/epl-v20.html\nThis program may also be made available under the following Secondary\nLicenses when the conditions for such availability set forth in the Eclipse\nPublic License 2.0 are satisfied: GNU General Public License, version 2\nor later which is available at\nhttps://www.gnu.org/licenses/old-licenses/gpl-2.0-standalone.html\nSPDX-License-Identifier: EPL-2.0 OR GPL-2.0-or-later\n",
+  "command": [
+    "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\tools\\sumo-win64-1.28.0\\bin\\sumo.exe",
+    "-n",
+    "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\verificacao_organizacao\\20261110T210016Z_seed1_f377b74b\\cologne1_aproximacoes.net.xml",
+    "-r",
+    "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\referencias\\sumo_rl_1.4.5\\sumo_rl\\nets\\RESCO\\cologne1\\cologne1.rou.xml",
+    "--begin",
+    "25200",
+    "--end",
+    "25261",
+    "--seed",
+    "1",
+    "--time-to-teleport",
+    "-1",
+    "--collision.action",
+    "warn",
+    "--collision.check-junctions",
+    "true",
+    "--tripinfo-output",
+    "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\verificacao_organizacao\\20261110T210016Z_seed1_f377b74b\\tripinfo.xml",
+    "--tripinfo-output.write-unfinished",
+    "true",
+    "--tripinfo-output.write-undeparted",
+    "true",
+    "--statistic-output",
+    "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\verificacao_organizacao\\20261110T210016Z_seed1_f377b74b\\estatisticas_sumo.xml",
+    "--collision-output",
+    "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\verificacao_organizacao\\20261110T210016Z_seed1_f377b74b\\colisoes.xml",
+    "--error-log",
+    "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\verificacao_organizacao\\20261110T210016Z_seed1_f377b74b\\avisos_sumo.log",
+    "--no-step-log",
+    "true",
+    "--duration-log.disable",
+    "true"
+  ],
+  "duracao_demanda_s": 60,
+  "escoamento_max_s": 0,
+  "modo_eval": true,
+  "exploracao": 0,
+  "treinamento": false,
+  "verde_maximo": null,
+  "tempos": {
+    "min_green": 10,
+    "yellow": 3,
+    "all_red": 2
+  },
+  "intervalo_decisao_s": 5,
+  "mapeamento": [
+    {
+      "acao": 0,
+      "aproximacao": "N",
+      "entrada": "27115123#3",
+      "faixas": [
+        "27115123#3_0",
+        "27115123#3_1"
+      ],
+      "fase_xml": 0,
+      "state": "rrrrrrrrrrrrrrrGGGGG",
+      "movimentos": [
+        {
+          "from": "27115123#3",
+          "to": "-28198821#4",
+          "fromLane": "0",
+          "toLane": "0",
+          "via": ":cluster_357187_359543_15_0",
+          "tl": "GS_cluster_357187_359543",
+          "linkIndex": "15",
+          "dir": "r",
+          "state": "O"
+        },
+        {
+          "from": "27115123#3",
+          "to": "32324544#0",
+          "fromLane": "0",
+          "toLane": "0",
+          "via": ":cluster_357187_359543_16_0",
+          "tl": "GS_cluster_357187_359543",
+          "linkIndex": "16",
+          "dir": "s",
+          "state": "O"
+        },
+        {
+          "from": "27115123#3",
+          "to": "32324544#0",
+          "fromLane": "1",
+          "toLane": "1",
+          "via": ":cluster_357187_359543_16_1",
+          "tl": "GS_cluster_357187_359543",
+          "linkIndex": "17",
+          "dir": "s",
+          "state": "O"
+        },
+        {
+          "from": "27115123#3",
+          "to": "32038056#0",
+          "fromLane": "1",
+          "toLane": "1",
+          "via": ":cluster_357187_359543_18_0",
+          "tl": "GS_cluster_357187_359543",
+          "linkIndex": "18",
+          "dir": "l",
+          "state": "o"
+        },
+        {
+          "from": "27115123#3",
+          "to": "32038051#0",
+          "fromLane": "1",
+          "toLane": "1",
+          "via": ":cluster_357187_359543_19_0",
+          "tl": "GS_cluster_357187_359543",
+          "linkIndex": "19",
+          "dir": "t",
+          "state": "o"
+        }
+      ],
+      "foes_entre_movimentos": []
+    },
+    {
+      "acao": 1,
+      "aproximacao": "L",
+      "entrada": "-32038056#3",
+      "faixas": [
+        "-32038056#3_0",
+        "-32038056#3_1"
+      ],
+      "fase_xml": 3,
+      "state": "GGGGGrrrrrrrrrrrrrrr",
+      "movimentos": [
+        {
+          "from": "-32038056#3",
+          "to": "32038051#0",
+          "fromLane": "0",
+          "toLane": "0",
+          "via": ":cluster_357187_359543_0_0",
+          "tl": "GS_cluster_357187_359543",
+          "linkIndex": "0",
+          "dir": "r",
+          "state": "o"
+        },
+        {
+          "from": "-32038056#3",
+          "to": "-28198821#4",
+          "fromLane": "0",
+          "toLane": "0",
+          "via": ":cluster_357187_359543_1_0",
+          "tl": "GS_cluster_357187_359543",
+          "linkIndex": "1",
+          "dir": "s",
+          "state": "o"
+        },
+        {
+          "from": "-32038056#3",
+          "to": "-28198821#4",
+          "fromLane": "1",
+          "toLane": "1",
+          "via": ":cluster_357187_359543_1_1",
+          "tl": "GS_cluster_357187_359543",
+          "linkIndex": "2",
+          "dir": "s",
+          "state": "o"
+        },
+        {
+          "from": "-32038056#3",
+          "to": "32324544#0",
+          "fromLane": "1",
+          "toLane": "1",
+          "via": ":cluster_357187_359543_3_0",
+          "tl": "GS_cluster_357187_359543",
+          "linkIndex": "3",
+          "dir": "l",
+          "state": "o"
+        },
+        {
+          "from": "-32038056#3",
+          "to": "32038056#0",
+          "fromLane": "1",
+          "toLane": "1",
+          "via": ":cluster_357187_359543_4_0",
+          "tl": "GS_cluster_357187_359543",
+          "linkIndex": "4",
+          "dir": "t",
+          "state": "o"
+        }
+      ],
+      "foes_entre_movimentos": []
+    },
+    {
+      "acao": 2,
+      "aproximacao": "S",
+      "entrada": "23429231#1",
+      "faixas": [
+        "23429231#1_0",
+        "23429231#1_1"
+      ],
+      "fase_xml": 6,
+      "state": "rrrrrGGGGGrrrrrrrrrr",
+      "movimentos": [
+        {
+          "from": "23429231#1",
+          "to": "32038056#0",
+          "fromLane": "0",
+          "toLane": "0",
+          "via": ":cluster_357187_359543_5_0",
+          "tl": "GS_cluster_357187_359543",
+          "linkIndex": "5",
+          "dir": "r",
+          "state": "O"
+        },
+        {
+          "from": "23429231#1",
+          "to": "32038051#0",
+          "fromLane": "0",
+          "toLane": "0",
+          "via": ":cluster_357187_359543_6_0",
+          "tl": "GS_cluster_357187_359543",
+          "linkIndex": "6",
+          "dir": "s",
+          "state": "O"
+        },
+        {
+          "from": "23429231#1",
+          "to": "32038051#0",
+          "fromLane": "1",
+          "toLane": "1",
+          "via": ":cluster_357187_359543_6_1",
+          "tl": "GS_cluster_357187_359543",
+          "linkIndex": "7",
+          "dir": "s",
+          "state": "O"
+        },
+        {
+          "from": "23429231#1",
+          "to": "-28198821#4",
+          "fromLane": "1",
+          "toLane": "1",
+          "via": ":cluster_357187_359543_8_0",
+          "tl": "GS_cluster_357187_359543",
+          "linkIndex": "8",
+          "dir": "l",
+          "state": "o"
+        },
+        {
+          "from": "23429231#1",
+          "to": "32324544#0",
+          "fromLane": "1",
+          "toLane": "1",
+          "via": ":cluster_357187_359543_9_0",
+          "tl": "GS_cluster_357187_359543",
+          "linkIndex": "9",
+          "dir": "t",
+          "state": "o"
+        }
+      ],
+      "foes_entre_movimentos": []
+    },
+    {
+      "acao": 3,
+      "aproximacao": "O",
+      "entrada": "28198821#3",
+      "faixas": [
+        "28198821#3_0",
+        "28198821#3_1"
+      ],
+      "fase_xml": 9,
+      "state": "rrrrrrrrrrGGGGGrrrrr",
+      "movimentos": [
+        {
+          "from": "28198821#3",
+          "to": "32324544#0",
+          "fromLane": "0",
+          "toLane": "0",
+          "via": ":cluster_357187_359543_10_0",
+          "tl": "GS_cluster_357187_359543",
+          "linkIndex": "10",
+          "dir": "r",
+          "state": "o"
+        },
+        {
+          "from": "28198821#3",
+          "to": "32038056#0",
+          "fromLane": "0",
+          "toLane": "0",
+          "via": ":cluster_357187_359543_11_0",
+          "tl": "GS_cluster_357187_359543",
+          "linkIndex": "11",
+          "dir": "s",
+          "state": "o"
+        },
+        {
+          "from": "28198821#3",
+          "to": "32038056#0",
+          "fromLane": "1",
+          "toLane": "1",
+          "via": ":cluster_357187_359543_11_1",
+          "tl": "GS_cluster_357187_359543",
+          "linkIndex": "12",
+          "dir": "s",
+          "state": "o"
+        },
+        {
+          "from": "28198821#3",
+          "to": "32038051#0",
+          "fromLane": "1",
+          "toLane": "1",
+          "via": ":cluster_357187_359543_13_0",
+          "tl": "GS_cluster_357187_359543",
+          "linkIndex": "13",
+          "dir": "l",
+          "state": "o"
+        },
+        {
+          "from": "28198821#3",
+          "to": "-28198821#4",
+          "fromLane": "1",
+          "toLane": "1",
+          "via": ":cluster_357187_359543_14_0",
+          "tl": "GS_cluster_357187_359543",
+          "linkIndex": "14",
+          "dir": "t",
+          "state": "o"
+        }
+      ],
+      "foes_entre_movimentos": []
+    }
+  ],
+  "diferencas_treino": [
+    "Geometria, comprimentos de observacao, demanda e parametros veiculares diferentes",
+    "Contagem temporal corrigida: minimo 10 s, amarelo 3 s e vermelho geral 2 s; treino local possui erro de contagem",
+    "Sem limite maximo de verde e sem protecao adicional contra falta de atendimento"
+  ],
+  "fontes_protegidas_antes": {
+    "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\modelos\\dqn_espera.pt": "43bd3c60385a7c04145022f5abc2c0c2c216b4b6749e58f6ded38078dc5f5884",
+    "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\modelos\\dqn_fila.pt": "4df5afec39207e621f9e1e83a7917153283cce053db1cdb2fd0dac8113596a41",
+    "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\avaliacao_final.json": "e623e9503cf8028cab9936ec76ce5e98ce19d1bd7752dd51181f05ea9bf9bb39",
+    "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\baselines.json": "0b43f43541d345695629e86d52a6107af1d13350150777f0cd84fad6ad2dac5a",
+    "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\treino_espera.json": "572750862a957c6204caee7f99d8021e3af841ab86e2e1836fa01555b3a902ed",
+    "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\treino_fila.json": "b32772482017c9c74259ff56d834e39bae23d3cb1ee65d9a4b31d748577df325",
+    "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\scripts\\auditar_cologne1.py": "1f58ea03919abb1af85d710ca9cb4503258762f2ebd08524e70a47ce12575b6f",
+    "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\scripts\\avaliar.py": "6fc6be4b5c5f73869a9bb647c73925f519e431c66e29068da7d1e9004920b0ad",
+    "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\scripts\\comparar.py": "02a475487e3655a56b794368a1b99d559fb13b91d291fe72fb05c2b99de3d1aa",
+    "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\scripts\\controladores.py": "983061e630b03eede20fcf4fa2d4ab9caf24323bfcd076999a053232fbcb597e",
+    "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\scripts\\dqn.py": "a6f7e8d9fd8c0c159f1e765edaee25a271f556f952e4066d3f21ca6235b18513",
+    "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\scripts\\gerar_demanda.py": "061a0c36e97fa8b3f017d4e5ff6e61881d87902206349598100f2d0a6ba5b52f",
+    "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\scripts\\simulacao.py": "d8f4b6640cfa3f56bfc3b30019cabeee51f2947c32e0440d9286c6cc2c9e995a",
+    "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\scripts\\testar_dqn_cologne1.py": "8b4424af8a8262aa1759cadb2e62cfc58b3213a18658bfc9cb5ab8913bd43e3b",
+    "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\scripts\\treinar_dqn.py": "0a925c295d8bf920dfe73dde2b33ab3d4729084f35ccbcf09b50055ac8df1228",
+    "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\scripts\\verificar_resultados_cologne1.py": "eaf0aedc1329db60e24185c43bcd521a082008bf73acfdaedfe99baa884bbb49",
+    "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\referencias\\sumo_rl_1.4.5\\sumo_rl\\nets\\RESCO\\cologne1\\cologne1.net.xml": "25b44c0450c8d8e1d13ae5c11e38ef8e55719c98eb76f861ca26f82e044524b5",
+    "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\referencias\\sumo_rl_1.4.5\\sumo_rl\\nets\\RESCO\\cologne1\\cologne1.rou.xml": "7a3be6818a25b8c2bf48340eeead3e3dd26ed58683cdecd2b42ad3296a9d5eb7",
+    "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\referencias\\sumo_rl_1.4.5\\sumo_rl\\nets\\RESCO\\cologne1\\cologne1.sumocfg": "5045e1ec607a44d9468b422d248714f6a1388daa6c0c0baa84cc21dd6e785399"
+  }
+}

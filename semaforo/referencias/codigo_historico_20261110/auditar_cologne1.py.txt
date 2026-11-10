@@ -1,0 +1,328 @@
+"""Auditoria sem inferencia: recusa fases sem equivalencia com a DQN pronta.
+
+Usa apenas a biblioteca padrao. Opcionalmente carrega a rede no SUMO via
+TraCI para conferir fases/conexoes, sem avancar o relogio da simulacao.
+Nao importa dqn.py, nao executa pickle arbitrario e nao altera pesos.
+"""
+
+import argparse
+import array
+import ast
+import collections
+from datetime import datetime, timezone
+import hashlib
+import importlib.metadata
+import io
+import json
+import math
+import os
+from pathlib import Path
+import pickle
+import subprocess
+import sys
+from types import SimpleNamespace
+import uuid
+import xml.etree.ElementTree as ET
+import zipfile
+
+sys.dont_write_bytecode = True
+REPO = Path(__file__).resolve().parents[2]
+PROJETO = REPO / "semaforo"
+
+
+def sha256(path):
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def constantes(path):
+    resultado = {}
+    for node in ast.parse(path.read_text(encoding="utf-8")).body:
+        if isinstance(node, ast.Assign):
+            for alvo in node.targets:
+                if isinstance(alvo, ast.Name):
+                    try:
+                        resultado[alvo.id] = ast.literal_eval(node.value)
+                    except (ValueError, TypeError):
+                        pass
+    return resultado
+
+
+def extrair_contrato():
+    dqn = PROJETO / "scripts/dqn.py"
+    sim = PROJETO / "scripts/simulacao.py"
+    c, s = constantes(dqn), constantes(sim)
+    tree = ast.parse(dqn.read_text(encoding="utf-8"))
+    vetor = next(n for n in tree.body if isinstance(n, ast.FunctionDef)
+                 and n.name == "estado_para_vetor")
+    rede = next(n for n in tree.body if isinstance(n, ast.ClassDef)
+                and n.name == "Rede")
+    acoes = []
+    entradas = []
+    for aprox in s["APROXIMACOES"]:
+        acoes.append({"indice": len(acoes), "aproximacao": aprox,
+                      "faixas": s["FAIXAS_ENTRADA"][aprox]})
+    for tipo, escala in [("fila", c["ESCALA_FILA"]),
+                         ("carros", c["ESCALA_CARROS"])]:
+        inicio = len(entradas)
+        entradas.extend({"indice": inicio + i,
+                         "nome": tipo + "_" + aprox, "divisor": escala}
+                        for i, aprox in enumerate(s["APROXIMACOES"]))
+    entradas.extend({"indice": 8 + i, "nome": "verde_" + aprox,
+                     "tipo": "one_hot"}
+                    for i, aprox in enumerate(s["APROXIMACOES"]))
+    entradas.append({"indice": 12, "nome": "tempo_no_verde",
+                     "divisor": c["ESCALA_TEMPO"], "limite_superior": 2.0})
+    return {"acoes": acoes, "entradas": entradas,
+            "vetor_codigo": ast.get_source_segment(dqn.read_text(encoding="utf-8"), vetor),
+            "rede_codigo": ast.get_source_segment(dqn.read_text(encoding="utf-8"), rede),
+            "tempos_declarados": {k: s[k] for k in
+                ["INTERVALO_DECISAO", "VERDE_MINIMO", "AMARELO", "VERMELHO_GERAL"]},
+            "verde_maximo_DQN": None,
+            "observacao_tempos": "A rotina original aplica o novo verde antes do ultimo simulationStep do vermelho geral. Conferir relatorio; nao confundir constantes com tempos executados."}
+
+
+def tensor_metadata(storage, offset, size, stride, requires_grad, hooks, *rest):
+    return {"storage": storage, "offset": offset, "shape": list(size),
+            "stride": list(stride), "requires_grad": requires_grad}
+
+
+class ApenasMetadados(pickle.Unpickler):
+    """Reconhece somente os descritores presentes no state_dict deste projeto."""
+
+    def find_class(self, module, name):
+        permitidos = {
+            ("collections", "OrderedDict"): collections.OrderedDict,
+            ("torch._utils", "_rebuild_tensor_v2"): tensor_metadata,
+            ("torch", "FloatStorage"): "float32_storage",
+        }
+        if (module, name) not in permitidos:
+            raise ValueError(f"Tipo nao permitido na auditoria: {module}.{name}")
+        return permitidos[module, name]
+
+    def persistent_load(self, descritor):
+        if (not isinstance(descritor, tuple) or len(descritor) != 5
+                or descritor[:2] != ("storage", "float32_storage")):
+            raise ValueError("Descritor de storage inesperado")
+        _, _, key, device, count = descritor
+        return {"key": key, "device": device, "count": count}
+
+
+def checkpoint_metadata(path):
+    with zipfile.ZipFile(path) as z:
+        name = next(n for n in z.namelist() if n.endswith("/data.pkl"))
+        prefix = name.rsplit("/", 1)[0]
+        state = ApenasMetadados(io.BytesIO(z.read(name))).load()
+        byteorder = z.read(prefix + "/byteorder").decode().strip()
+        for value in state.values():
+            raw = z.read(prefix + "/data/" + value["storage"]["key"])
+            values = array.array("f")
+            values.frombytes(raw)
+            if byteorder != sys.byteorder:
+                values.byteswap()
+            value["storage_count_verificado"] = len(values) == value["storage"]["count"]
+            value["todos_finitos"] = all(math.isfinite(v) for v in values)
+    return {"path": str(path), "sha256": sha256(path), "tensores": state,
+            "torch_load_executado": False, "inferencia_executada": False}
+
+
+def rede_metadata(path):
+    root = ET.parse(path).getroot()
+    edges = {e.get("id"): e for e in root.findall("edge")}
+    signals = []
+    for logic in root.findall("tlLogic"):
+        links = [dict(c.attrib) for c in root.findall("connection")
+                 if c.get("tl") == logic.get("id")]
+        links.sort(key=lambda c: int(c["linkIndex"]))
+        phases = []
+        for index, phase in enumerate(logic.findall("phase")):
+            state = phase.get("state")
+            movimentos = [{**c, "luz": state[int(c["linkIndex"]) ]}
+                          for c in links if state[int(c["linkIndex"])] in "Gg"]
+            phases.append({"indice_xml": index, **phase.attrib,
+                           "verde": "y" not in state.lower() and bool(movimentos),
+                           "movimentos_abertos": movimentos,
+                           "entradas_abertas": sorted({c["from"] for c in movimentos})})
+        incoming = sorted({c["from"] for c in links})
+        signals.append({"id": logic.get("id"), "programa": logic.get("programID"),
+                        "fases": phases, "links": links,
+                        "entradas": {e: [dict(l.attrib) for l in edges[e].findall("lane")]
+                                     for e in incoming},
+                        "ordem_faixas_por_link": list(dict.fromkeys(
+                            c["from"] + "_" + c["fromLane"] for c in links))})
+    return {"path": str(path.resolve()), "sha256": sha256(path), "semaforos": signals}
+
+
+def defaults_env(path):
+    tree = ast.parse(path.read_text(encoding="utf-8"))
+    cls = next(n for n in tree.body if isinstance(n, ast.ClassDef)
+               and n.name == "SumoEnvironment")
+    init = next(n for n in cls.body if isinstance(n, ast.FunctionDef)
+                and n.name == "__init__")
+    defaults = dict(zip([a.arg for a in init.args.args][-len(init.args.defaults):],
+                        init.args.defaults))
+    return {name: ast.literal_eval(defaults[name]) for name in
+            ["begin_time", "num_seconds", "delta_time", "yellow_time", "min_green", "max_green"]}
+
+
+def verificar_tempos_originais():
+    """Executa somente o laco original contra um SUMO falso, sem rede neural."""
+    path = PROJETO / "scripts/simulacao.py"
+    tree = ast.parse(path.read_text(encoding="utf-8"))
+    names = {"rodar", "_fases_verdes", "_estado_amarelo", "_estado_tudo_vermelho"}
+    funcs = [n for n in tree.body if isinstance(n, ast.FunctionDef) and n.name in names]
+    c = constantes(path)
+    phases = ET.parse(PROJETO / "rede/cruzamento.net.xml").getroot().find("tlLogic").findall("phase")
+    trace = []
+    tls = SimpleNamespace(state=None)
+    tls.getAllProgramLogics = lambda _: [SimpleNamespace(phases=[SimpleNamespace(state=p.get("state")) for p in phases])]
+    tls.setRedYellowGreenState = lambda _, state: setattr(tls, "state", state)
+    fake = SimpleNamespace(trafficlight=tls, start=lambda _: None, close=lambda: None,
+        simulationStep=lambda: trace.append(tls.state),
+        simulation=SimpleNamespace(getMinExpectedNumber=lambda: 0),
+        lane=SimpleNamespace(getLastStepHaltingNumber=lambda _: 0, getWaitingTime=lambda _: 0))
+    # Nenhuma operacao real de arquivo e possivel neste laco instrumentado.
+    fake_os = SimpleNamespace(getpid=lambda: 0,
+        path=SimpleNamespace(join=lambda *parts: "nao_e_um_arquivo", exists=lambda _: False))
+    context = {**c, "trafego": fake, "os": fake_os, "PASTA": "", "REDE": "nao_e_um_arquivo",
+               "_ler_tripinfo": lambda _: {},
+               "_ler_observacao": lambda indice, tempo, *args: SimpleNamespace(
+                   aprox_verde=c["APROXIMACOES"][indice], tempo_no_verde=tempo)}
+    exec(compile(ast.Module(body=funcs, type_ignores=[]), str(path), "exec"), context)
+    controlador = SimpleNamespace(preparar=lambda _: None, reiniciar=lambda: None,
+        decidir=lambda obs: (c["APROXIMACOES"].index(obs.aprox_verde) + 1) % 4)
+    context["rodar"](controlador, "auditoria", "nao_e_um_arquivo", seed=1, duracao=60)
+    runs = []
+    for second, state in enumerate(trace):
+        if runs and runs[-1]["state"] == state:
+            runs[-1]["segundos"] += 1
+        else:
+            runs.append({"inicio": second, "segundos": 1, "state": state})
+    return {"metodo": "laco real rodar() com API falsa; nao e uma rodada SUMO nem inferencia",
+            "duracao_s": 60, "sequencias": runs}
+
+
+def verificar_sumo(home, net, routes, report_dir):
+    binary = home / "bin" / ("sumo.exe" if sys.platform == "win32" else "sumo")
+    if not binary.is_file() or not (home / "tools/traci/__init__.py").is_file():
+        raise ValueError("SUMO_HOME deve conter bin/sumo e tools/traci")
+    os.environ["SUMO_HOME"] = str(home)  # Somente neste processo, sem alterar o sistema.
+    sys.path.insert(0, str(home / "tools"))
+    import traci
+    version = subprocess.run([str(binary), "--version"], check=True,
+                             capture_output=True, text=True).stdout
+    command = [str(binary), "-n", str(net), "-r", str(routes), "--begin", "25200",
+               "--end", "28800", "--seed", "1", "--time-to-teleport", "-1",
+               "--no-step-log", "true", "--log", str(report_dir / "sumo.log")]
+    conn = None
+    try:
+        traci.start(command, label="auditoria_cologne1", verbose=False)
+        conn = traci.getConnection("auditoria_cologne1")
+        signals = []
+        for tls in conn.trafficlight.getIDList():
+            signals.append({"id": tls,
+                            "controlled_links": conn.trafficlight.getControlledLinks(tls),
+                            "controlled_lanes": conn.trafficlight.getControlledLanes(tls),
+                            "programas": [{"id": p.programID,
+                                "fases": [{"state": f.state, "duration": f.duration}
+                                          for f in p.phases]}
+                                for p in conn.trafficlight.getAllProgramLogics(tls)]})
+        return {"version": version, "traci_version": conn.getVersion(),
+                "seed": 1, "command": command, "time": conn.simulation.getTime(),
+                "simulation_steps": 0, "semaforos": signals}
+    finally:
+        if conn is not None:
+            conn.close()
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--sumo-rl-source", required=True, type=Path,
+                        help="Pasta contendo sumo_rl/environment e sumo_rl/nets")
+    parser.add_argument("--checkpoint", type=Path, default=PROJETO / "modelos/dqn_fila.pt")
+    parser.add_argument("--sumo-home", type=Path,
+                        help="Opcional: carrega rede/rotas via TraCI, sem passos ou inferencia")
+    parser.add_argument("--output-root", type=Path, default=PROJETO / "resultados/cologne1_auditoria")
+    args = parser.parse_args()
+    source = args.sumo_rl_source.resolve()
+    scenario = source / "sumo_rl/nets/RESCO/cologne1"
+    net, routes = scenario / "cologne1.net.xml", scenario / "cologne1.rou.xml"
+    for required in [net, routes, source / "sumo_rl/environment/observations.py",
+                     source / "sumo_rl/environment/traffic_signal.py"]:
+        if not required.is_file():
+            parser.error(f"Arquivo ausente: {required}")
+    protected = sorted((PROJETO / "modelos").glob("*.pt")) + sorted((PROJETO / "resultados").glob("*.json"))
+    before = {str(p.relative_to(REPO)): sha256(p) for p in protected}
+    out = args.output_root.resolve() / (datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ") + "_" + uuid.uuid4().hex[:8])
+    out.mkdir(parents=True, exist_ok=False)
+    report = {"status": "AUDITORIA_INCOMPLETA", "inferencia_executada": False,
+              "rodada_completa_executada": False, "protected_before": before,
+              "python": sys.executable, "python_version": sys.version,
+              "source": str(source), "pacotes_interpretador": {}}
+    try:
+        for name in ["torch", "sumo-rl", "traci", "libsumo", "numpy"]:
+            try:
+                report["pacotes_interpretador"][name] = importlib.metadata.version(name)
+            except importlib.metadata.PackageNotFoundError:
+                report["pacotes_interpretador"][name] = None
+        report["contrato_DQN"] = extrair_contrato()
+        report["checkpoint"] = checkpoint_metadata(args.checkpoint.resolve())
+        report["rede_original"] = rede_metadata(PROJETO / "rede/cruzamento.net.xml")
+        report["tempos_originais_instrumentados"] = verificar_tempos_originais()
+        report["cologne1"] = rede_metadata(net)
+        report["routes"] = {"path": str(routes), "sha256": sha256(routes)}
+        provenance = source / "proveniencia.json"
+        report["proveniencia"] = json.loads(provenance.read_text()) if provenance.is_file() else None
+        report["sumo_rl_defaults"] = defaults_env(source / "sumo_rl/environment/env.py")
+        observations = source / "sumo_rl/environment/observations.py"
+        traffic = source / "sumo_rl/environment/traffic_signal.py"
+        report["source_hashes"] = {str(p.relative_to(source)): sha256(p)
+                                   for p in sorted(source.rglob("*")) if p.is_file()}
+        ts = report["cologne1"]["semaforos"]
+        original_ts = report["rede_original"]["semaforos"][0]
+        expected = [p for p in original_ts["fases"] if p["verde"]]
+        phases = [p for p in ts[0]["fases"] if p["verde"]] if len(ts) == 1 else []
+        # Uma permutacao nao transforma atendimento de duas entradas em uma.
+        action_ok = (len(phases) == len(expected) == 4
+                     and all(len(p["entradas_abertas"]) == 1 for p in phases))
+        report["comparacao"] = {
+            "numero_acoes_DQN": len(expected), "numero_acoes_cologne1": len(phases),
+            "acao_cologne1_indice_xml": [p["indice_xml"] for p in phases],
+            "n_faixas_controladas": len(ts[0]["ordem_faixas_por_link"]) if len(ts) == 1 else None,
+            "dimensao_observacao_padrao": len(phases) + 1 + 2 * len(ts[0]["ordem_faixas_por_link"]) if len(ts) == 1 else None,
+            "observacao_padrao_compativel": False,
+            "mapeamento_acoes_por_permutacao_possivel": action_ok,
+            "razao_bloqueio": "Cada acao original libera uma unica entrada; cada fase de cologne1 libera movimentos de duas entradas opostas. Nao existe bijecao que preserve o significado.",
+            "one_hot": "No modelo identifica N/L/S/O; no cologne1 identifica um grupo de movimentos, nao uma unica aproximacao.",
+            "observacoes_fontes": [str(observations), str(traffic)],
+        }
+        if args.sumo_home:
+            runtime = verificar_sumo(args.sumo_home.resolve(), net, routes, out)
+            report["verificacao_SUMO"] = runtime
+            assert {x["id"] for x in runtime["semaforos"]} == {x["id"] for x in ts}
+            for signal in ts:
+                live = next(x for x in runtime["semaforos"] if x["id"] == signal["id"])
+                live_phases = live["programas"][0]["fases"]
+                assert [p["state"] for p in live_phases] == [p["state"] for p in signal["fases"]]
+                expected_links = {(int(c["linkIndex"]), c["from"] + "_" + c["fromLane"],
+                                   c["to"] + "_" + c["toLane"]) for c in signal["links"]}
+                live_links = {(i, link[0], link[1]) for i, links in enumerate(live["controlled_links"]) for link in links}
+                assert live_links == expected_links
+            report["verificacao_SUMO"]["xml_confere_com_runtime"] = True
+        report["status"] = "BLOQUEADO_INCOMPATIBILIDADE_ACOES" if not action_ok else "EXIGE_REVISAO_SEMANTICA_MANUAL"
+    except Exception as exc:
+        report["erro"] = {"tipo": type(exc).__name__, "mensagem": str(exc)}
+        report["status"] = "ERRO_AUDITORIA"
+    finally:
+        report["protected_after"] = {str(p.relative_to(REPO)): sha256(p) for p in protected}
+        report["pesos_e_resultados_preservados"] = before == report["protected_after"]
+        with (out / "auditoria.json").open("x", encoding="utf-8") as f:
+            json.dump(report, f, indent=2, ensure_ascii=False)
+    print(report["status"])
+    print(out / "auditoria.json")
+    if "erro" in report:
+        print(report["erro"])
+    return 2 if report["status"] == "BLOQUEADO_INCOMPATIBILIDADE_ACOES" else 1
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
