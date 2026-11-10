@@ -122,6 +122,13 @@ class AgenteDQN(Controlador):
         self.otimizador = torch.optim.Adam(self.rede.parameters(), lr=lr)
 
         self.memoria = deque(maxlen=memoria)
+        # Em paralelo a memoria (mesma ordem, mesmo tamanho): o que a rede
+        # PEDIU e se a regra de seguranca do simulador trocou o pedido. Fica
+        # separado para nao mudar o formato que _aprender amostra.
+        self.memoria_info = deque(maxlen=memoria)
+        self.intervencoes_total = 0
+        self.intervencoes_episodio = 0
+        self._acao_pedida_anterior = None
         self.epsilon = 1.0
         self.passos = 0
         self.passos_treino = 0
@@ -136,8 +143,27 @@ class AgenteDQN(Controlador):
     def reiniciar(self):
         self._obs_anterior = None
         self._acao_anterior = None
+        self._acao_pedida_anterior = None
         self._segundo_anterior = None
         self.recompensa_episodio = 0.0
+        self.intervencoes_episodio = 0
+
+    def acao_substituida(self, pedida, executada):
+        """Chamado pelo simulador quando a regra de seguranca troca a acao.
+
+        A experiencia guardada passa a usar a acao EXECUTADA: a recompensa e
+        o proximo estado que vierem a seguir sao consequencia dela, nao do
+        pedido. Como o DQN aprende fora da politica (off-policy), uma
+        transicao (estado, acao executada, recompensa, proximo estado) e uma
+        amostra valida do ambiente, nao importa quem escolheu a acao.
+        """
+        if pedida != self._acao_anterior:
+            raise RuntimeError("acao_substituida fora de ordem")
+        self._acao_pedida_anterior = pedida
+        self._acao_anterior = int(executada)
+        self.intervencoes_episodio += 1
+        if self.treinando:  # total = so episodios de treino (nao a validacao)
+            self.intervencoes_total += 1
 
     def decidir(self, obs):
         # 1) fecha a conta da decisao anterior
@@ -153,6 +179,12 @@ class AgenteDQN(Controlador):
                     estado_para_vetor(obs),
                     dt,
                 ))
+                pedida = self._acao_pedida_anterior
+                self.memoria_info.append({
+                    "acao_pedida": self._acao_anterior if pedida is None else pedida,
+                    "acao_executada": self._acao_anterior,
+                    "intervencao": pedida is not None,
+                })
                 self._aprender()
 
         # 2) escolhe a proxima acao
@@ -160,6 +192,7 @@ class AgenteDQN(Controlador):
 
         self._obs_anterior = obs
         self._acao_anterior = acao
+        self._acao_pedida_anterior = None
         self._segundo_anterior = obs.segundo
         self.passos += 1
         return acao
