@@ -1,0 +1,441 @@
+{
+  "data_local": "2026-11-10",
+  "timezone": "America/Sao_Paulo",
+  "branch": "experimento/dqn-cologne1-derivado",
+  "base_commit": "652e773",
+  "execucoes": [
+    {
+      "grupo": "cologne1_auditoria",
+      "pasta": "semaforo/resultados/cologne1_auditoria/20261110T200115Z_4761eba3",
+      "relatorio": "semaforo/resultados/cologne1_auditoria/20261110T200115Z_4761eba3/auditoria.json",
+      "status": "BLOQUEADO_INCOMPATIBILIDADE_ACOES",
+      "rodada_principal": false,
+      "resumo": {},
+      "arquivos": [
+        {
+          "nome": "auditoria.json",
+          "bytes": 63784,
+          "sha256": "c788a79288e9464e9926f4b36fefa1e6fbeb649c9ac3ae08656e18400ce84fcf"
+        },
+        {
+          "nome": "sumo.log",
+          "bytes": 729,
+          "sha256": "6521feefdc61b67ef8f913e3b0e66bbd3d94a0e3187fa5aac26f1331c76c6f36"
+        }
+      ]
+    },
+    {
+      "grupo": "cologne1_auditoria",
+      "pasta": "semaforo/resultados/cologne1_auditoria/20261110T200229Z_e53784e6",
+      "relatorio": "semaforo/resultados/cologne1_auditoria/20261110T200229Z_e53784e6/auditoria.json",
+      "status": "ERRO_AUDITORIA",
+      "rodada_principal": false,
+      "resumo": {
+        "erro": {
+          "tipo": "NameError",
+          "mensagem": "name 'REDE' is not defined"
+        }
+      },
+      "arquivos": [
+        {
+          "nome": "auditoria.json",
+          "bytes": 25618,
+          "sha256": "718376d847a44a4d5ef60877fdafec285dad42aedbdd76d507d2ebf64d4d0cec"
+        }
+      ]
+    },
+    {
+      "grupo": "cologne1_auditoria",
+      "pasta": "semaforo/resultados/cologne1_auditoria/20261110T200239Z_2e552059",
+      "relatorio": "semaforo/resultados/cologne1_auditoria/20261110T200239Z_2e552059/auditoria.json",
+      "status": "BLOQUEADO_INCOMPATIBILIDADE_ACOES",
+      "rodada_principal": false,
+      "resumo": {},
+      "arquivos": [
+        {
+          "nome": "auditoria.json",
+          "bytes": 65254,
+          "sha256": "bd94116e42de9079b519899f45424836a6e06b145d8d521ac878b11510d8e9f7"
+        },
+        {
+          "nome": "sumo.log",
+          "bytes": 728,
+          "sha256": "d4a2c061774808ef55ff4e3ce2dfff1decfc0c05382800c219a091fc815b5ab8"
+        }
+      ]
+    },
+    {
+      "grupo": "preparacao_inferencia",
+      "pasta": "semaforo/resultados/preparacao_inferencia/88daf1ff4102",
+      "relatorio": "semaforo/resultados/preparacao_inferencia/88daf1ff4102/checkpoint_carregado.json",
+      "status": "CHECKPOINT_CARREGADO",
+      "rodada_principal": false,
+      "resumo": {},
+      "arquivos": [
+        {
+          "nome": "checkpoint_carregado.json",
+          "bytes": 685,
+          "sha256": "ce13b21c687b500f83b514f631bcf0b137f65fa3a99d3a4afb873ab104a479dd"
+        }
+      ]
+    },
+    {
+      "grupo": "cologne1_derivado",
+      "pasta": "semaforo/resultados/cologne1_derivado/20261110T204050Z_seed1_56fff472",
+      "relatorio": "semaforo/resultados/cologne1_derivado/20261110T204050Z_seed1_56fff472/resultado.json",
+      "status": "OK",
+      "rodada_principal": false,
+      "resumo": {
+        "segundos_simulados": 300,
+        "decisoes": 33,
+        "chegaram_destino_api": 143,
+        "viagens_interrompidas": 49,
+        "demanda_vencida_nao_inserida": 0,
+        "espera_viagem_concluidos": {
+          "n": 143,
+          "media_s": 6.041958041958042,
+          "p95_s": 21.0,
+          "max_s": 100.0
+        },
+        "erro": null
+      },
+      "arquivos": [
+        {
+          "nome": "avisos_sumo.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "nome": "colisoes.xml",
+          "bytes": 2313,
+          "sha256": "baad4dfef72b215fe02fb4cafb7cd0a25aca595da55ead9ceeb33f5094dfc0fc"
+        },
+        {
+          "nome": "cologne1_aproximacoes.net.xml",
+          "bytes": 38031,
+          "sha256": "6314991daeed795a8025f09ce49e955be982f41da8ab1b3e787c89b03dc31520"
+        },
+        {
+          "nome": "configuracao.json",
+          "bytes": 15105,
+          "sha256": "14b1577418ba9ff201917b22d6d1d720586b3a2767dfef5378c33bd2dcbd4607"
+        },
+        {
+          "nome": "decisoes.jsonl",
+          "bytes": 21524,
+          "sha256": "50f81b7d2ed06648458e91b9785f7facfaf97a1f3f3d44daf5ac5b36190f84a7"
+        },
+        {
+          "nome": "estatisticas_sumo.xml",
+          "bytes": 3255,
+          "sha256": "f2a6cdc2ac062b8da70affe6a1224c8454c4ad6e5e19679c08e49a5f2a4b7377"
+        },
+        {
+          "nome": "fases.jsonl",
+          "bytes": 7658,
+          "sha256": "b0a6df43b2a31d650115d287827386f01471b6d4575377a948f4ee673b5c2b6d"
+        },
+        {
+          "nome": "resultado.json",
+          "bytes": 8074,
+          "sha256": "753d0f4dda616f408dc6fe027dc02f120f23436f352f137ee5353867739900eb"
+        },
+        {
+          "nome": "serie.csv",
+          "bytes": 16703,
+          "sha256": "786d12cba0bfe907a2a5a72f3acbba1e2993409b1377807d3f1ac75f891ba0d9"
+        },
+        {
+          "nome": "tripinfo.xml",
+          "bytes": 86676,
+          "sha256": "6ea1581d4715eff659178ea4e1568e2b841c005ff68fc8a2b58a68c414618d24"
+        }
+      ]
+    },
+    {
+      "grupo": "cologne1_derivado",
+      "pasta": "semaforo/resultados/cologne1_derivado/20261110T204121Z_seed1_7d0f4b46",
+      "relatorio": "semaforo/resultados/cologne1_derivado/20261110T204121Z_seed1_7d0f4b46/falha_gui.json",
+      "status": "TENTATIVA_GUI_INTERROMPIDA",
+      "rodada_principal": false,
+      "resumo": {},
+      "arquivos": [
+        {
+          "nome": "avisos_sumo.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "nome": "colisoes.xml",
+          "bytes": 2321,
+          "sha256": "ec5b1e864ef182fb743c03c50758ba590f37533bcb5b992698f8b368553a39b3"
+        },
+        {
+          "nome": "cologne1_aproximacoes.net.xml",
+          "bytes": 38031,
+          "sha256": "6314991daeed795a8025f09ce49e955be982f41da8ab1b3e787c89b03dc31520"
+        },
+        {
+          "nome": "configuracao.json",
+          "bytes": 15215,
+          "sha256": "59f8c895fd32a805d0a865edaf71dc4bab19b8e45d78e47bbeba4961ffa2d201"
+        },
+        {
+          "nome": "decisoes.jsonl",
+          "bytes": 118344,
+          "sha256": "b563499b1859beafd4fea7260b94f006de8505002bd4d3864fb6d06227353aa3"
+        },
+        {
+          "nome": "estatisticas_sumo.xml",
+          "bytes": 2321,
+          "sha256": "86e87e19a7ac703705c8532573f7296f832101c29739ce17ec46f5882d927fac"
+        },
+        {
+          "nome": "falha_gui.json",
+          "bytes": 436,
+          "sha256": "0469434d8c9ef2daa028fc3942c1588c3741de77305606a99c7cc1af643dc6d5"
+        },
+        {
+          "nome": "fases.jsonl",
+          "bytes": 53387,
+          "sha256": "ceaaa6ff57b5c46ad3810d74adb859ca0d8a1c38d2ff5238a6f4a53873c23e41"
+        },
+        {
+          "nome": "serie.csv",
+          "bytes": 104189,
+          "sha256": "a975f6396e542e2dcb7a81f1065d378c50c1d07e9e0966b1bbba3980c1dc4e82"
+        },
+        {
+          "nome": "tripinfo.xml",
+          "bytes": 461944,
+          "sha256": "3814c69d2bd437c4f43afb6800155ada067d649bacb0c6816e65b4547e20e65e"
+        }
+      ]
+    },
+    {
+      "grupo": "cologne1_derivado",
+      "pasta": "semaforo/resultados/cologne1_derivado/20261110T204534Z_seed1_6369d66d",
+      "relatorio": "semaforo/resultados/cologne1_derivado/20261110T204534Z_seed1_6369d66d/resultado.json",
+      "status": "OK",
+      "rodada_principal": false,
+      "resumo": {
+        "segundos_simulados": 60,
+        "decisoes": 5,
+        "chegaram_destino_api": 7,
+        "viagens_interrompidas": 15,
+        "demanda_vencida_nao_inserida": 1,
+        "espera_viagem_concluidos": {
+          "n": 7,
+          "media_s": 0.2857142857142857,
+          "p95_s": 2.0,
+          "max_s": 2.0
+        },
+        "erro": null
+      },
+      "arquivos": [
+        {
+          "nome": "avisos_sumo.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "nome": "colisoes.xml",
+          "bytes": 2484,
+          "sha256": "19543a5b76303ebc70d71038d50f789d93ba8ddf91a5a54bb9a21b6ff886d65b"
+        },
+        {
+          "nome": "cologne1_aproximacoes.net.xml",
+          "bytes": 38031,
+          "sha256": "6314991daeed795a8025f09ce49e955be982f41da8ab1b3e787c89b03dc31520"
+        },
+        {
+          "nome": "configuracao.json",
+          "bytes": 15209,
+          "sha256": "40c3324480c6826c038ee103047dfc38d4316987a7367f71bb3d9dcfd90d1370"
+        },
+        {
+          "nome": "decisoes.jsonl",
+          "bytes": 3005,
+          "sha256": "41ee6c13761c02ebac2884ac8221515d0d604d593cb33301e4c870ef3537bd50"
+        },
+        {
+          "nome": "estatisticas_sumo.xml",
+          "bytes": 3419,
+          "sha256": "e7ab8a8311d1b4496bf28002efd41c066de5c406edf3ff3e2c7b91f136bd0d2c"
+        },
+        {
+          "nome": "fases.jsonl",
+          "bytes": 1908,
+          "sha256": "d7c92e802658e770fedc255c9b04ca1b52b01beb84d80b1b47449b96bc811559"
+        },
+        {
+          "nome": "resultado.json",
+          "bytes": 6579,
+          "sha256": "614d817d390594d41747be40efc42df4b9169f96692d084f5b6125ba0240fe90"
+        },
+        {
+          "nome": "serie.csv",
+          "bytes": 3362,
+          "sha256": "e8de97efe145cff30c19a461d6df2a3098d617256f754c00c3cebaea9efb1a85"
+        },
+        {
+          "nome": "tripinfo.xml",
+          "bytes": 12721,
+          "sha256": "a156e99bb7a75c1e51a1d745357c248d38d7b1e82f057c8c5213774be76db53b"
+        }
+      ]
+    },
+    {
+      "grupo": "cologne1_derivado",
+      "pasta": "semaforo/resultados/cologne1_derivado/20261110T204551Z_seed1_e699817c",
+      "relatorio": "semaforo/resultados/cologne1_derivado/20261110T204551Z_seed1_e699817c/resultado.json",
+      "status": "OK",
+      "rodada_principal": true,
+      "resumo": {
+        "segundos_simulados": 3644,
+        "decisoes": 339,
+        "chegaram_destino_api": 2015,
+        "viagens_interrompidas": 0,
+        "demanda_vencida_nao_inserida": 0,
+        "espera_viagem_concluidos": {
+          "n": 2015,
+          "media_s": 37.401488833746896,
+          "p95_s": 191.0,
+          "max_s": 383.0
+        },
+        "erro": null
+      },
+      "arquivos": [
+        {
+          "nome": "avisos_sumo.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "nome": "colisoes.xml",
+          "bytes": 2485,
+          "sha256": "90cdead93987e467ada0b598587fd7ad4752b3ef335a589599f00edb51ec7eb2"
+        },
+        {
+          "nome": "cologne1_aproximacoes.net.xml",
+          "bytes": 38031,
+          "sha256": "6314991daeed795a8025f09ce49e955be982f41da8ab1b3e787c89b03dc31520"
+        },
+        {
+          "nome": "configuracao.json",
+          "bytes": 15215,
+          "sha256": "6d77cdcd5201716e5f02a6436b4a8f073c803fa9d6d1c24b4038822e3b475987"
+        },
+        {
+          "nome": "decisoes.jsonl",
+          "bytes": 227151,
+          "sha256": "7dd9a3b4941287fd46ff995067adb462c4abe1dc54215e2f412cbf09cec159cd"
+        },
+        {
+          "nome": "estatisticas_sumo.xml",
+          "bytes": 3435,
+          "sha256": "af6fd107006e5e219c71007187c7efad47b478df020faa3502960e65030d9d6a"
+        },
+        {
+          "nome": "fases.jsonl",
+          "bytes": 112537,
+          "sha256": "acd56ab38cf9d1e9dd23c8e0f62ca1e256aaba5b2bd42ae17ba29769a24b12df"
+        },
+        {
+          "nome": "resultado.json",
+          "bytes": 5990,
+          "sha256": "df4a931e000200822f925fcd8d1b4514c2eb67914ccb388354b791dc1fdc8d0d"
+        },
+        {
+          "nome": "serie.csv",
+          "bytes": 209875,
+          "sha256": "e6ed90c452e2162b5445a55f6e5ae5e1264206488d4f4e3d79b83d685596cd8d"
+        },
+        {
+          "nome": "tripinfo.xml",
+          "bytes": 888472,
+          "sha256": "86b5b4f5ec7142fb4a543cde468d35ff812d53cf9fcd11d0a7670b1ec23bf3c0"
+        },
+        {
+          "nome": "verificacao_final.json",
+          "bytes": 298,
+          "sha256": "43eacfd2cd496c26b304bc3df4025aaa5d458f7b1854ed9e041af43ab3ef3449"
+        }
+      ]
+    },
+    {
+      "grupo": "verificacao_organizacao",
+      "pasta": "semaforo/resultados/verificacao_organizacao/20261110T210016Z_seed1_f377b74b",
+      "relatorio": "semaforo/resultados/verificacao_organizacao/20261110T210016Z_seed1_f377b74b/resultado.json",
+      "status": "OK",
+      "rodada_principal": false,
+      "resumo": {
+        "segundos_simulados": 60,
+        "decisoes": 5,
+        "chegaram_destino_api": 7,
+        "viagens_interrompidas": 15,
+        "demanda_vencida_nao_inserida": 1,
+        "espera_viagem_concluidos": {
+          "n": 7,
+          "media_s": 0.2857142857142857,
+          "p95_s": 2.0,
+          "max_s": 2.0
+        },
+        "erro": null
+      },
+      "arquivos": [
+        {
+          "nome": "avisos_sumo.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "nome": "colisoes.xml",
+          "bytes": 2341,
+          "sha256": "a071bd4df924dd21439482aa8f97e73bc6892aa83bc06c27acfa61482ce4c23e"
+        },
+        {
+          "nome": "cologne1_aproximacoes.net.xml",
+          "bytes": 38031,
+          "sha256": "6314991daeed795a8025f09ce49e955be982f41da8ab1b3e787c89b03dc31520"
+        },
+        {
+          "nome": "configuracao.json",
+          "bytes": 15331,
+          "sha256": "a0397fc2c1b577430e1505e767ed6fbab869f8562f539b87ffe33e62ff33fe79"
+        },
+        {
+          "nome": "decisoes.jsonl",
+          "bytes": 3005,
+          "sha256": "41ee6c13761c02ebac2884ac8221515d0d604d593cb33301e4c870ef3537bd50"
+        },
+        {
+          "nome": "estatisticas_sumo.xml",
+          "bytes": 3277,
+          "sha256": "9e446a21a5c4fbf1f591ec72f01a3258a126e1d8ead2cda1567ae20a4d76eaba"
+        },
+        {
+          "nome": "fases.jsonl",
+          "bytes": 1908,
+          "sha256": "d7c92e802658e770fedc255c9b04ca1b52b01beb84d80b1b47449b96bc811559"
+        },
+        {
+          "nome": "resultado.json",
+          "bytes": 6778,
+          "sha256": "739f74064a71e912ac66cb17a750e844833c73a83bd5e680d97d6d97f9061b22"
+        },
+        {
+          "nome": "serie.csv",
+          "bytes": 3362,
+          "sha256": "e8de97efe145cff30c19a461d6df2a3098d617256f754c00c3cebaea9efb1a85"
+        },
+        {
+          "nome": "tripinfo.xml",
+          "bytes": 12578,
+          "sha256": "41fd436cb243fa120017a59cb525c21cd77d058afc6c6255616352a6b7210c14"
+        }
+      ]
+    }
+  ],
+  "nota": "Historicos preservados; somente a rodada marcada como principal e o resultado integral citado. Nomes de pastas usam timestamps UTC; caminhos absolutos internos sao historicos."
+}

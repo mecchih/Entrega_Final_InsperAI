@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2026-11-10T17:45:52.089647-03:00 by Eclipse SUMO GUI 1.28.0
+<sumoConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+    <input>
+        <net-file value="C:\Users\Ana Paula\Documents\ChatGPT\Insper AI\Entrega_Final_InsperAI\semaforo\resultados\cologne1_derivado\20261110T204551Z_seed1_e699817c\cologne1_aproximacoes.net.xml"/>
+        <route-files value="C:\Users\Ana Paula\Documents\ChatGPT\Insper AI\Entrega_Final_InsperAI\tmp\cologne1_auditoria\sumo_rl_1.4.5\sumo_rl\nets\RESCO\cologne1\cologne1.rou.xml"/>
+    </input>
+
+    <output>
+        <tripinfo-output value="C:\Users\Ana Paula\Documents\ChatGPT\Insper AI\Entrega_Final_InsperAI\semaforo\resultados\cologne1_derivado\20261110T204551Z_seed1_e699817c\tripinfo.xml"/>
+        <tripinfo-output.write-unfinished value="true"/>
+        <tripinfo-output.write-undeparted value="true"/>
+        <collision-output value="C:\Users\Ana Paula\Documents\ChatGPT\Insper AI\Entrega_Final_InsperAI\semaforo\resultados\cologne1_derivado\20261110T204551Z_seed1_e699817c\colisoes.xml"/>
+        <statistic-output value="C:\Users\Ana Paula\Documents\ChatGPT\Insper AI\Entrega_Final_InsperAI\semaforo\resultados\cologne1_derivado\20261110T204551Z_seed1_e699817c\estatisticas_sumo.xml"/>
+    </output>
+
+    <time>
+        <begin value="25200"/>
+        <end value="30001"/>
+    </time>
+
+    <processing>
+        <collision.action value="warn"/>
+        <collision.check-junctions value="true"/>
+        <time-to-teleport value="-1"/>
+    </processing>
+
+    <report>
+        <error-log value="C:\Users\Ana Paula\Documents\ChatGPT\Insper AI\Entrega_Final_InsperAI\semaforo\resultados\cologne1_derivado\20261110T204551Z_seed1_e699817c\avisos_sumo.log"/>
+        <duration-log.disable value="true"/>
+        <no-step-log value="true"/>
+    </report>
+
+    <traci_server>
+        <remote-port value="54388"/>
+    </traci_server>
+
+    <random_number>
+        <seed value="1"/>
+    </random_number>
+
+    <gui_only>
+        <quit-on-end value="true"/>
+        <start value="true"/>
+        <delay value="10"/>
+        <window-size value="1200,850"/>
+    </gui_only>
+
+</sumoConfiguration>
+-->
+
+<statistics xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/statistic_file.xsd">
+    <performance clockBegin="120840.28" clockEnd="120901.98" clockDuration="61.70" traciDuration="0.00" realTimeFactor="59.06" vehicleUpdatesPerSecond="0.00" personUpdatesPerSecond="0.00" begin="25200.00" end="28844.00" duration="3644.00"/>
+    <vehicles loaded="2015" inserted="2015" running="0" waiting="0"/>
+    <teleports total="0" jam="0" yield="0" wrongLane="0"/>
+    <safety collisions="0" emergencyStops="0" emergencyBraking="0"/>
+    <persons loaded="0" running="0" jammed="0"/>
+    <personTeleports total="0" abortWait="0" wrongDest="0"/>
+    <vehicleTripStatistics count="2015" routeLength="337.77" speed="6.70" duration="73.15" waitingTime="37.40" timeLoss="50.38" departDelay="4.36" departDelayWaiting="0.00" totalTravelTime="147407.00" totalDepartDelay="8795.00"/>
+    <pedestrianStatistics number="0" routeLength="0.00" duration="0.00" timeLoss="0.00"/>
+    <rideStatistics number="0"/>
+    <transportStatistics number="0"/>
+</statistics>

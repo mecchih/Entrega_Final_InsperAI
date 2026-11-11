@@ -1,0 +1,11 @@
+# Preservar os bytes das fontes externas e das evidencias experimentais.
+semaforo/referencias/** -text
+semaforo/resultados/cologne1_auditoria/** -text
+semaforo/resultados/cologne1_derivado/** -text
+semaforo/resultados/preparacao_inferencia/** -text
+semaforo/resultados/verificacao_organizacao/** -text
+
+# Os scripts novos usam LF em todas as plataformas.
+semaforo/scripts/auditar_cologne1.py text eol=lf
+semaforo/scripts/testar_dqn_cologne1.py text eol=lf
+semaforo/scripts/verificar_resultados_cologne1.py text eol=lf

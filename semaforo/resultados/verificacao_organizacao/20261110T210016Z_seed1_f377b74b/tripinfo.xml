@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2026-11-10T18:00:16.925508-03:00 by Eclipse SUMO sumo 1.28.0
+<sumoConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+    <input>
+        <net-file value="C:\Users\Ana Paula\Documents\ChatGPT\Insper AI\Entrega_Final_InsperAI\semaforo\resultados\verificacao_organizacao\20261110T210016Z_seed1_f377b74b\cologne1_aproximacoes.net.xml"/>
+        <route-files value="C:\Users\Ana Paula\Documents\ChatGPT\Insper AI\Entrega_Final_InsperAI\semaforo\referencias\sumo_rl_1.4.5\sumo_rl\nets\RESCO\cologne1\cologne1.rou.xml"/>
+    </input>
+
+    <output>
+        <tripinfo-output value="C:\Users\Ana Paula\Documents\ChatGPT\Insper AI\Entrega_Final_InsperAI\semaforo\resultados\verificacao_organizacao\20261110T210016Z_seed1_f377b74b\tripinfo.xml"/>
+        <tripinfo-output.write-unfinished value="true"/>
+        <tripinfo-output.write-undeparted value="true"/>
+        <collision-output value="C:\Users\Ana Paula\Documents\ChatGPT\Insper AI\Entrega_Final_InsperAI\semaforo\resultados\verificacao_organizacao\20261110T210016Z_seed1_f377b74b\colisoes.xml"/>
+        <statistic-output value="C:\Users\Ana Paula\Documents\ChatGPT\Insper AI\Entrega_Final_InsperAI\semaforo\resultados\verificacao_organizacao\20261110T210016Z_seed1_f377b74b\estatisticas_sumo.xml"/>
+    </output>
+
+    <time>
+        <begin value="25200"/>
+        <end value="25261"/>
+    </time>
+
+    <processing>
+        <collision.action value="warn"/>
+        <collision.check-junctions value="true"/>
+        <time-to-teleport value="-1"/>
+    </processing>
+
+    <report>
+        <error-log value="C:\Users\Ana Paula\Documents\ChatGPT\Insper AI\Entrega_Final_InsperAI\semaforo\resultados\verificacao_organizacao\20261110T210016Z_seed1_f377b74b\avisos_sumo.log"/>
+        <duration-log.disable value="true"/>
+        <no-step-log value="true"/>
+    </report>
+
+    <traci_server>
+        <remote-port value="65451"/>
+    </traci_server>
+
+    <random_number>
+        <seed value="1"/>
+    </random_number>
+
+</sumoConfiguration>
+-->
+
+<tripinfos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/tripinfo_file.xsd">
+    <tripinfo id="124779_406_0" depart="25205.00" departLane="28198821#3_1" departPos="4.40" departSpeed="13.89" departDelay="0.00" arrival="25225.00" arrivalLane="32038051#0_1" arrivalPos="89.25" arrivalSpeed="18.71" duration="20.00" routeLength="170.57" waitingTime="2.00" waitingCount="1" stopTime="0.00" timeLoss="9.70" rerouteNo="0" devices="tripinfo_124779_406_0 routing_124779_406_0" vType="pkw" speedFactor="1.02" vaporized=""/>
+    <tripinfo id="98305_395_0" depart="25211.00" departLane="28198821#3_1" departPos="4.40" departSpeed="0.34" departDelay="0.00" arrival="25227.00" arrivalLane="32038051#0_1" arrivalPos="89.25" arrivalSpeed="16.75" duration="16.00" routeLength="170.57" waitingTime="0.00" waitingCount="0" stopTime="0.00" timeLoss="4.41" rerouteNo="0" devices="tripinfo_98305_395_0 routing_98305_395_0" vType="pkw" speedFactor="0.92" vaporized=""/>
+    <tripinfo id="102535_396_0" depart="25218.00" departLane="28198821#3_1" departPos="4.40" departSpeed="9.60" departDelay="0.00" arrival="25230.00" arrivalLane="32038051#0_1" arrivalPos="89.25" arrivalSpeed="18.68" duration="12.00" routeLength="170.57" waitingTime="0.00" waitingCount="0" stopTime="0.00" timeLoss="0.81" rerouteNo="0" devices="tripinfo_102535_396_0 routing_102535_396_0" vType="pkw" speedFactor="0.98" vaporized=""/>
+    <tripinfo id="147209_416_0" depart="25220.00" departLane="28198821#3_1" departPos="4.40" departSpeed="12.84" departDelay="0.00" arrival="25232.00" arrivalLane="32038051#0_1" arrivalPos="89.25" arrivalSpeed="16.84" duration="12.00" routeLength="170.57" waitingTime="0.00" waitingCount="0" stopTime="0.00" timeLoss="0.83" rerouteNo="0" devices="tripinfo_147209_416_0 routing_147209_416_0" vType="pkw" speedFactor="0.92" vaporized=""/>
+    <tripinfo id="123965_406_0" depart="25218.00" departLane="-32038056#3_0" departPos="4.40" departSpeed="12.22" departDelay="0.00" arrival="25256.00" arrivalLane="-28198821#4_0" arrivalPos="57.10" arrivalSpeed="12.10" duration="38.00" routeLength="437.47" waitingTime="0.00" waitingCount="0" stopTime="0.00" timeLoss="1.75" rerouteNo="0" devices="tripinfo_123965_406_0 routing_123965_406_0" vType="pkw" speedFactor="0.88" vaporized=""/>
+    <tripinfo id="91582_392_0" depart="25218.00" departLane="-32038056#3_1" departPos="4.40" departSpeed="12.24" departDelay="0.00" arrival="25256.00" arrivalLane="32324544#0_1" arrivalPos="90.48" arrivalSpeed="16.86" duration="38.00" routeLength="465.51" waitingTime="0.00" waitingCount="0" stopTime="0.00" timeLoss="2.20" rerouteNo="0" devices="tripinfo_91582_392_0 routing_91582_392_0" vType="pkw" speedFactor="0.88" vaporized=""/>
+    <tripinfo id="160150_421_0" depart="25220.00" departLane="-32038056#3_0" departPos="4.40" departSpeed="12.11" departDelay="1.00" arrival="25256.00" arrivalLane="32038051#0_0" arrivalPos="89.25" arrivalSpeed="18.75" duration="36.00" routeLength="446.95" waitingTime="0.00" waitingCount="0" stopTime="0.00" timeLoss="5.59" rerouteNo="0" devices="tripinfo_160150_421_0 routing_160150_421_0" vType="pkw" speedFactor="1.01" vaporized=""/>
+    <tripinfo id="151372_418_0" depart="25207.00" departLane="130165204_0" departPos="4.40" departSpeed="13.10" departDelay="0.00" arrival="-1.00" arrivalLane="" arrivalPos="-1.00" arrivalSpeed="-1.00" duration="53.00" routeLength="297.36" waitingTime="25.00" waitingCount="1" stopTime="0.00" timeLoss="30.32" rerouteNo="1" devices="tripinfo_151372_418_0 routing_151372_418_0" vType="pkw" speedFactor="0.94" vaporized="end"/>
+    <tripinfo id="162814_422_0" depart="25233.00" departLane="-32038056#3_0" departPos="4.40" departSpeed="11.59" departDelay="0.00" arrival="-1.00" arrivalLane="" arrivalPos="-1.00" arrivalSpeed="-1.00" duration="27.00" routeLength="345.80" waitingTime="1.00" waitingCount="1" stopTime="0.00" timeLoss="5.20" rerouteNo="0" devices="tripinfo_162814_422_0 routing_162814_422_0" vType="pkw" speedFactor="1.20" vaporized="end"/>
+    <tripinfo id="149029_417_0" depart="25236.00" departLane="27115123#2_1" departPos="4.40" departSpeed="16.72" departDelay="0.00" arrival="-1.00" arrivalLane="" arrivalPos="-1.00" arrivalSpeed="-1.00" duration="24.00" routeLength="77.94" waitingTime="15.00" waitingCount="1" stopTime="0.00" timeLoss="18.34" rerouteNo="1" devices="tripinfo_149029_417_0 routing_149029_417_0" vType="pkw" speedFactor="0.86" vaporized="end"/>
+    <tripinfo id="121258_405_0" depart="25240.00" departLane="23429231#1_0" departPos="4.40" departSpeed="19.44" departDelay="0.00" arrival="-1.00" arrivalLane="" arrivalPos="-1.00" arrivalSpeed="-1.00" duration="20.00" routeLength="118.72" waitingTime="6.00" waitingCount="1" stopTime="0.00" timeLoss="13.15" rerouteNo="0" devices="tripinfo_121258_405_0 routing_121258_405_0" vType="pkw" speedFactor="1.04" vaporized=""/>
+    <tripinfo id="126742_407_0" depart="25242.00" departLane="23429231#1_0" departPos="4.40" departSpeed="18.54" departDelay="2.00" arrival="-1.00" arrivalLane="" arrivalPos="-1.00" arrivalSpeed="-1.00" duration="18.00" routeLength="102.40" waitingTime="4.00" waitingCount="1" stopTime="0.00" timeLoss="11.48" rerouteNo="0" devices="tripinfo_126742_407_0 routing_126742_407_0" vType="pkw" speedFactor="0.95" vaporized="end"/>
+    <tripinfo id="102501_396_0" depart="25244.00" departLane="23429231#1_1" departPos="4.40" departSpeed="19.44" departDelay="0.00" arrival="-1.00" arrivalLane="" arrivalPos="-1.00" arrivalSpeed="-1.00" duration="16.00" routeLength="116.92" waitingTime="2.00" waitingCount="1" stopTime="0.00" timeLoss="9.13" rerouteNo="0" devices="tripinfo_102501_396_0 routing_102501_396_0" vType="pkw" speedFactor="1.03" vaporized=""/>
+    <tripinfo id="120663_405_0" depart="25246.00" departLane="23429231#1_0" departPos="4.40" departSpeed="10.13" departDelay="0.00" arrival="-1.00" arrivalLane="" arrivalPos="-1.00" arrivalSpeed="-1.00" duration="14.00" routeLength="88.17" waitingTime="1.00" waitingCount="1" stopTime="0.00" timeLoss="7.11" rerouteNo="0" devices="tripinfo_120663_405_0 routing_120663_405_0" vType="pkw" speedFactor="0.77" vaporized="end"/>
+    <tripinfo id="113509_402_0" depart="25248.00" departLane="23429231#1_1" departPos="4.40" departSpeed="14.96" departDelay="0.00" arrival="-1.00" arrivalLane="" arrivalPos="-1.00" arrivalSpeed="-1.00" duration="12.00" routeLength="101.39" waitingTime="0.00" waitingCount="0" stopTime="0.00" timeLoss="6.45" rerouteNo="0" devices="tripinfo_113509_402_0 routing_113509_402_0" vType="pkw" speedFactor="1.17" vaporized="end"/>
+    <tripinfo id="130147_409_0" depart="25251.00" departLane="23429231#1_0" departPos="4.40" departSpeed="3.97" departDelay="0.00" arrival="-1.00" arrivalLane="" arrivalPos="-1.00" arrivalSpeed="-1.00" duration="9.00" routeLength="74.95" waitingTime="0.00" waitingCount="0" stopTime="0.00" timeLoss="3.88" rerouteNo="0" devices="tripinfo_130147_409_0 routing_130147_409_0" vType="pkw" speedFactor="0.93" vaporized="end"/>
+    <tripinfo id="102630_396_0" depart="25252.00" departLane="23429231#1_1" departPos="4.40" departSpeed="7.34" departDelay="0.00" arrival="-1.00" arrivalLane="" arrivalPos="-1.00" arrivalSpeed="-1.00" duration="8.00" routeLength="82.30" waitingTime="0.00" waitingCount="0" stopTime="0.00" timeLoss="3.11" rerouteNo="0" devices="tripinfo_102630_396_0 routing_102630_396_0" vType="pkw" speedFactor="1.09" vaporized="end"/>
+    <tripinfo id="122376_406_0" depart="25254.00" departLane="23429231#1_0" departPos="4.40" departSpeed="2.50" departDelay="0.00" arrival="-1.00" arrivalLane="" arrivalPos="-1.00" arrivalSpeed="-1.00" duration="6.00" routeLength="45.07" waitingTime="0.00" waitingCount="0" stopTime="0.00" timeLoss="2.62" rerouteNo="0" devices="tripinfo_122376_406_0 routing_122376_406_0" vType="pkw" speedFactor="0.97" vaporized="end"/>
+    <tripinfo id="122194_406_0" depart="25255.00" departLane="23429231#1_1" departPos="4.40" departSpeed="7.10" departDelay="0.00" arrival="-1.00" arrivalLane="" arrivalPos="-1.00" arrivalSpeed="-1.00" duration="5.00" routeLength="46.12" waitingTime="0.00" waitingCount="0" stopTime="0.00" timeLoss="2.01" rerouteNo="0" devices="tripinfo_122194_406_0 routing_122194_406_0" vType="pkw" speedFactor="1.19" vaporized="end"/>
+    <tripinfo id="135103_411_0" depart="25256.00" departLane="23429231#1_0" departPos="4.40" departSpeed="5.44" departDelay="0.00" arrival="-1.00" arrivalLane="" arrivalPos="-1.00" arrivalSpeed="-1.00" duration="4.00" routeLength="21.73" waitingTime="0.00" waitingCount="0" stopTime="0.00" timeLoss="1.96" rerouteNo="0" devices="tripinfo_135103_411_0 routing_135103_411_0" vType="pkw" speedFactor="1.08" vaporized="end"/>
+    <tripinfo id="152958_419_0" depart="25259.00" departLane="23429231#1_0" departPos="4.40" departSpeed="8.42" departDelay="2.00" arrival="-1.00" arrivalLane="" arrivalPos="-1.00" arrivalSpeed="-1.00" duration="1.00" routeLength="0.00" waitingTime="0.00" waitingCount="0" stopTime="0.00" timeLoss="0.00" rerouteNo="0" devices="tripinfo_152958_419_0 routing_152958_419_0" vType="pkw" speedFactor="0.91" vaporized="end"/>
+    <tripinfo id="125613_406_0" depart="25259.00" departLane="23429231#1_1" departPos="4.40" departSpeed="11.44" departDelay="1.00" arrival="-1.00" arrivalLane="" arrivalPos="-1.00" arrivalSpeed="-1.00" duration="1.00" routeLength="0.00" waitingTime="0.00" waitingCount="0" stopTime="0.00" timeLoss="0.00" rerouteNo="0" devices="tripinfo_125613_406_0 routing_125613_406_0" vType="pkw" speedFactor="0.92" vaporized="end"/>
+    <tripinfo id="133955_411_0" depart="-1" departLane="" departPos="-1.00" departSpeed="-1.00" departDelay="1.00" arrival="-1.00" arrivalLane="" arrivalPos="-1.00" arrivalSpeed="-1.00" duration="0.00" routeLength="4.40" waitingTime="0.00" waitingCount="0" stopTime="0.00" timeLoss="0.00" rerouteNo="0" devices="tripinfo_133955_411_0 routing_133955_411_0" vType="pkw" speedFactor="1.05" vaporized="end"/>
+    <tripinfo id="129253_408_0" depart="-1" departLane="" departPos="-1.00" departSpeed="-1.00" departDelay="0.00" arrival="-1.00" arrivalLane="" arrivalPos="-1.00" arrivalSpeed="-1.00" duration="0.00" routeLength="0.00" waitingTime="0.00" waitingCount="0" stopTime="0.00" timeLoss="0.00" rerouteNo="0" devices="tripinfo_129253_408_0 routing_129253_408_0" vType="pkw" speedFactor="1.02" vaporized="end"/>
+</tripinfos>
