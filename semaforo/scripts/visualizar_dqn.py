@@ -16,7 +16,14 @@ Uso (de dentro de scripts/):
   python visualizar_dqn.py --modelo dqn_fila_C_seed1.pt --cenario saturado
   python visualizar_dqn.py --controlador webster --cenario pico
   python visualizar_dqn.py --controlador max-pressure --velocidade 10
+  python visualizar_dqn.py --modelo dqn_fila_excesso_17_C_seed0 --cenario girado
+  python visualizar_dqn.py --modelo dqn_fila_C_seed0 --comparar-com dqn_fila_excesso_17_C_seed0
+        (duas janelas lado a lado, mesmo cenario e mesma semente de transito)
   python visualizar_dqn.py --listar
+
+Redes de 13 ou 17 entradas: o numero de entradas e lido do proprio
+checkpoint (dqn.ler_checkpoint); as de 17 recebem a maior espera por
+aproximacao, com a mesma escala do treino (dqn.ESCALA_ESPERA / TETO_ESPERA).
 
 Velocidade: --velocidade 1 = tempo real, 10 = dez vezes mais rapido,
 0 = o mais rapido possivel. Durante a rodada da para deixar ainda mais
@@ -26,6 +33,7 @@ simulado) e pausar/continuar no botao de pause/play.
 
 import argparse
 import os
+import subprocess
 import sys
 import time
 
@@ -47,6 +55,7 @@ CONTROLADORES = {
     "max-pressure-teto-recal": "Max-Pressure teto (recal. C)",
 }
 NOME_FASE = {"N": "Norte", "L": "Leste", "S": "Sul", "O": "Oeste"}
+RETORNO_SEGUNDA = None
 
 
 def _sumo_gui():
@@ -90,7 +99,8 @@ class Painel:
     decisao: fase verde, tempo de verde, filas e o que o controlador fez.
     """
 
-    def __init__(self, atraso_ms, inicio, parar_em, silencioso, agente=None):
+    def __init__(self, atraso_ms, inicio, parar_em, silencioso, agente=None, prefixo=""):
+        self.prefixo = prefixo
         self.atraso_s = atraso_ms / 1000.0
         self._proximo = None  # quando liberar o proximo segundo simulado
         self.inicio_s = inicio
@@ -113,7 +123,7 @@ class Painel:
         traci.gui.setOffset(vista, 250, 250)  # centro do cruzamento
         traci.gui.setZoom(vista, 350)
         if not self.silencioso:
-            print(f"{'tempo':>7} | {'verde':6} {'ha':>4} | "
+            print(f"{self.prefixo}{'tempo':>7} | {'verde':6} {'ha':>4} | "
                   + " ".join(f"{a:>3}" for a in APROXIMACOES)
                   + " (filas) | decisao", flush=True)
 
@@ -150,26 +160,27 @@ class Painel:
         q = ""
         if self.agente is not None:
             import torch
-            from dqn import estado_para_vetor
-            with torch.no_grad():
+            with torch.no_grad():  # a mesma entrada que a rede usou (13 ou 17 numeros)
                 valores = self.agente.rede(
-                    torch.from_numpy(estado_para_vetor(obs)).unsqueeze(0))[0]
+                    torch.from_numpy(self.agente.vetor(obs)).unsqueeze(0))[0]
             q = "  Q: " + " ".join(f"{a}={v:+.2f}" for a, v in zip(APROXIMACOES, valores.tolist()))
-        print(f"{fase:>7} | {NOME_FASE[obs.aprox_verde]:6} {obs.tempo_no_verde:>3}s | "
+        if obs.maior_espera is not None:  # rede de 17 entradas: o que ela ve de espera
+            q += "  maior espera: " + " ".join(f"{a}={obs.maior_espera[a]:.0f}s" for a in APROXIMACOES)
+        print(f"{self.prefixo}{fase:>7} | {NOME_FASE[obs.aprox_verde]:6} {obs.tempo_no_verde:>3}s | "
               + " ".join(f"{obs.filas[a]:>3}" for a in APROXIMACOES)
               + f"         | {acao}{q}", flush=True)
 
 
 def fabricar(apelido, modelo):
     if apelido == "dqn":
-        from dqn import AgenteDQN
+        from dqn import AgenteDQN, PASTA_MODELOS
         nome = modelo[:-3] if modelo.endswith(".pt") else modelo
-        caminho = os.path.join(simulacao.PASTA, "modelos", f"{nome}.pt")
+        caminho = os.path.join(PASTA_MODELOS, f"{nome}.pt")
         if not os.path.exists(caminho):
             sys.exit(f"Modelo nao encontrado: {caminho}  (veja --listar)")
         agente = AgenteDQN(treinando=False).carregar(nome)  # so leitura
         agente.rede.eval()
-        return agente, f"DQN ({nome}.pt)"
+        return agente, f"DQN ({nome}.pt, {agente.n_entradas} entradas)"
     import avaliar_C  # mesmos controladores (e ajustes) da avaliacao na dinamica C
     rotulo = CONTROLADORES[apelido]
     return avaliar_C.fabricar(rotulo), rotulo
@@ -195,30 +206,61 @@ def main(argv=None):
     ap.add_argument("--manter-aberto", action="store_true",
                     help="nao fecha a janela no fim (feche-a para encerrar o programa)")
     ap.add_argument("--listar", action="store_true", help="lista modelos e controladores e sai")
+    ap.add_argument("--comparar-com", default=None, metavar="MODELO_OU_CONTROLADOR",
+                    help="abre uma 2a janela com outro modelo (ex.: dqn_fila_excesso_17_C_seed0) "
+                         "ou controlador (ex.: webster), mesmo cenario e semente")
+    ap.add_argument("--posicao", choices=["unica", "esquerda", "direita"], default="unica",
+                    help=argparse.SUPPRESS)
+    ap.add_argument("--prefixo", default="", help=argparse.SUPPRESS)
     args = ap.parse_args(argv)
+    argv_lista = list(sys.argv[1:] if argv is None else argv)
 
     if args.listar:
-        pasta = os.path.join(simulacao.PASTA, "modelos")
+        from dqn import PASTA_MODELOS, ler_checkpoint
         print("Modelos (--controlador dqn --modelo <arquivo>):")
-        for f in sorted(os.listdir(pasta)):
+        for f in sorted(os.listdir(PASTA_MODELOS)):
             if f.endswith(".pt"):
-                print("  ", f)
+                print(f"   {f}  ({ler_checkpoint(os.path.join(PASTA_MODELOS, f))[0]} entradas)")
         print("Controladores:", ", ".join(CONTROLADORES))
         print("Cenarios:", ", ".join(CENARIOS))
         return None
+
+    segunda = None
+    if args.comparar_com:
+        # 2a janela = outro processo deste mesmo script, mesmos argumentos
+        # (cenario, semente, velocidade...), so trocando o controlador
+        outro = args.comparar_com
+        alvo = (["--controlador", outro] if outro in CONTROLADORES and outro != "dqn"
+                else ["--controlador", "dqn", "--modelo", outro])
+        resto, pular = [], 0
+        for a in argv_lista:
+            if pular:
+                pular -= 1
+                continue
+            if a in ("--comparar-com", "--controlador", "--modelo", "--posicao", "--prefixo"):
+                pular = 1
+                continue
+            resto.append(a)
+        segunda = subprocess.Popen([sys.executable, os.path.abspath(__file__)] + resto + alvo
+                                   + ["--posicao", "direita", "--prefixo", "[B] "])
+        args.posicao, args.prefixo = "esquerda", "[A] "
 
     ctrl, rotulo = fabricar(args.controlador, args.modelo)
     atraso = 0 if args.velocidade <= 0 else int(round(1000 / args.velocidade))
     # o ritmo e controlado pelo Painel; o "Delay" da janela comeca em 0 e pode
     # ser aumentado na hora para deixar ainda mais lento
-    opcoes = ["--start", "--window-size", "1100,850", "--delay", "0"]
+    janela = {"unica": ["--window-size", "1100,850"],
+              "esquerda": ["--window-size", "940,800", "--window-pos", "0,30"],
+              "direita": ["--window-size", "940,800", "--window-pos", "950,30"]}[args.posicao]
+    opcoes = ["--start", "--delay", "0"] + janela
     if not args.manter_aberto:
         opcoes.append("--quit-on-end")
 
     painel = Painel(atraso, args.inicio, args.parar_em, args.silencioso,
-                    agente=ctrl if args.controlador == "dqn" and not args.sem_q else None)
+                    agente=ctrl if args.controlador == "dqn" and not args.sem_q else None,
+                    prefixo=args.prefixo)
     rotas = gerar_demanda.gerar(args.cenario)  # mesmo arquivo de sempre
-    print(f"Controlador: {rotulo} | cenario: {args.cenario} | semente: {args.semente} | "
+    print(f"{args.prefixo}Controlador: {rotulo} | cenario: {args.cenario} | semente: {args.semente} | "
           f"dinamica {DINAMICAS['C'].nome} | velocidade: "
           f"{'maxima' if atraso == 0 else f'{args.velocidade:g}x'}", flush=True)
 
@@ -242,13 +284,16 @@ def main(argv=None):
         if os.path.exists(tmp):  # tripinfo temporario de rodada interrompida
             os.remove(tmp)
 
-    print(f"\nTrocas de fase: {painel.trocas} | intervencoes da regra de seguranca: "
-          f"{painel.intervencoes}")
+    print(f"\n{args.prefixo}{rotulo}: trocas de fase: {painel.trocas} | "
+          f"intervencoes da regra de seguranca: {painel.intervencoes}")
     if m is not None:
-        print(f"Espera media: {m['espera_media']:.1f} s | P95: {m['espera_p95']:.0f} s | "
+        print(f"{args.prefixo}Espera media: {m['espera_media']:.1f} s | P95: {m['espera_p95']:.0f} s | "
               f"maxima: {m['espera_max']:.0f} s | carros: {m['n_carros']} | "
               f"escoamento: {m['segundos_escoamento']} s | "
               f"maior verde executado: {m['verde_max_executado_total']} s")
+    if segunda is not None:
+        global RETORNO_SEGUNDA
+        RETORNO_SEGUNDA = segunda.wait()  # codigo de saida da 2a janela (usado nos testes)
     return m
 
 

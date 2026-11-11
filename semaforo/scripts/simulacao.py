@@ -67,7 +67,8 @@ class Observacao:
     """
 
     def __init__(self, filas, carros, espera, aprox_verde, tempo_no_verde,
-                 filas_saida, segundo, fila_acumulada=0.0, espera_acumulada=0.0):
+                 filas_saida, segundo, fila_acumulada=0.0, espera_acumulada=0.0,
+                 excesso_acumulado=0.0, maior_espera=None):
         self.filas = filas  # carros parados por aproximacao
         self.carros = carros  # carros presentes por aproximacao
         self.espera = espera  # espera acumulada (s) por aproximacao
@@ -81,6 +82,18 @@ class Observacao:
         # durante o amarelo e o vermelho geral ninguem anda, e a conta sobe.
         self.fila_acumulada = fila_acumulada
         self.espera_acumulada = espera_acumulada
+        # (so para controladores com espera_limite, ex.: recompensa
+        # fila_excesso) soma, segundo a segundo, dos carros parados nas vias
+        # de entrada cuja espera acumulada ja passou do limite W. A
+        # diferenca entre duas decisoes = "segundos parados alem de W".
+        # Fica 0 para todos os outros controladores.
+        self.excesso_acumulado = excesso_acumulado
+        # (so para controladores com observa_espera = True, ex.: DQN de 17
+        # entradas) por aproximacao, a MAIOR espera acumulada (s) entre os
+        # carros presentes nas faixas de entrada -- getAccumulatedWaitingTime,
+        # que nao zera quando o carro anda um pouco. 0 se a aproximacao esta
+        # vazia. None para todos os outros controladores.
+        self.maior_espera = maior_espera
 
 
 class Controlador:
@@ -177,6 +190,45 @@ DINAMICAS = {
 
 VIAS_ENTRADA = {f.rsplit("_", 1)[0] for faixas in FAIXAS_ENTRADA.values() for f in faixas}
 
+# Janela da espera acumulada do SUMO (--waiting-time-memory). O padrao do
+# SUMO e 100 s: a espera "esquece" o que passou de 100 s atras, e um carro
+# parado ha 150 s apareceria com 100. Com 10000 s (mais que uma rodada
+# inteira, 3600 + ate 1200 s), getAccumulatedWaitingTime e o total de
+# segundos parado desde que o carro entrou -- o mesmo waitingTime do tripinfo.
+MEMORIA_ESPERA = 10000
+
+
+class MedidorExcesso:
+    """Mede, segundo a segundo, o excesso de espera: para cada carro numa via
+    de entrada, max(0, espera acumulada - W). Soma so os AUMENTOS desse valor,
+    ou seja, cada segundo que um carro ja acima de W passa parado vale 1.
+
+    So le o SUMO (assinatura de variaveis dos veiculos), nao muda nada da
+    simulacao. A espera acumulada nao zera quando o carro anda um pouco na
+    fila (getWaitingTime zera; getAccumulatedWaitingTime, nao).
+    """
+
+    def __init__(self, limite):
+        import traci.constants as tc
+        self.limite = float(limite)
+        self._vars = (tc.VAR_ROAD_ID, tc.VAR_ACCUMULATED_WAITING_TIME)
+        self.total = 0.0
+        self._por_carro = {}
+
+    def passo(self):
+        """Chamar logo depois de cada simulationStep."""
+        via_id, espera_id = self._vars
+        for v in trafego.simulation.getDepartedIDList():
+            trafego.vehicle.subscribe(v, list(self._vars))
+        for v, r in trafego.vehicle.getAllSubscriptionResults().items():
+            if r.get(via_id) not in VIAS_ENTRADA:
+                continue
+            novo = max(0.0, r[espera_id] - self.limite)
+            antigo = self._por_carro.get(v, 0.0)
+            if novo > antigo:
+                self.total += novo - antigo
+            self._por_carro[v] = novo
+
 
 def rodar(controlador, cenario, arquivo_rotas, seed, duracao=3600,
           guardar_serie=False, instrumentacao=None, dinamica=None):
@@ -210,7 +262,7 @@ def rodar(controlador, cenario, arquivo_rotas, seed, duracao=3600,
         "--tripinfo-output.write-unfinished",  # conta tambem quem ficou preso
         "--seed", str(seed),
         "--time-to-teleport", "-1",  # desliga o "teletransporte" de carro preso
-        "--waiting-time-memory", "10000",
+        "--waiting-time-memory", str(MEMORIA_ESPERA),
         "--no-step-log", "true",
         "--no-warnings", "true",
         "--duration-log.disable", "true",
@@ -246,6 +298,11 @@ def rodar(controlador, cenario, arquivo_rotas, seed, duracao=3600,
     filas_escoamento = 0
     espera_escoamento = 0.0
     segundo = 0
+    # excesso de espera: so se o controlador pedir (recompensa fila_excesso)
+    espera_limite = getattr(controlador, "espera_limite", None)
+    excesso = MedidorExcesso(espera_limite) if espera_limite is not None else None
+    # maior espera por aproximacao na observacao: so se o controlador pedir
+    observa_espera = bool(getattr(controlador, "observa_espera", False))
 
     def executar_transicao():
         """Executa 1 segundo da transicao pendente (amarelo / vermelho geral)."""
@@ -288,7 +345,9 @@ def rodar(controlador, cenario, arquivo_rotas, seed, duracao=3600,
         nonlocal proximo_verde, transicao
         obs = _ler_observacao(indice_verde, tempo_no_verde, t,
                               soma_filas + filas_escoamento,
-                              soma_espera + espera_escoamento)
+                              soma_espera + espera_escoamento,
+                              excesso.total if excesso is not None else 0.0,
+                              observa_espera)
         pedido = controlador.decidir(obs)
         escolha = protecao(obs, pedido, t)
         if escolha != pedido:
@@ -369,6 +428,8 @@ def rodar(controlador, cenario, arquivo_rotas, seed, duracao=3600,
         segundo += 1
         if e_verde:
             tempo_no_verde += 1
+        if excesso is not None:
+            excesso.passo()
 
         fila_total = sum(
             trafego.lane.getLastStepHaltingNumber(f)
@@ -399,6 +460,8 @@ def rodar(controlador, cenario, arquivo_rotas, seed, duracao=3600,
         extra += 1
         if e_verde:
             tempo_no_verde += 1
+        if excesso is not None:  # o excesso continua sendo medido no escoamento
+            excesso.passo()
         if din.filas_no_escoamento:
             filas_escoamento += sum(
                 trafego.lane.getLastStepHaltingNumber(f)
@@ -480,7 +543,8 @@ def _ler_tripinfo_concluidas(caminho):
 
 
 def _ler_observacao(indice_verde, tempo_no_verde, segundo,
-                    fila_acumulada=0.0, espera_acumulada=0.0):
+                    fila_acumulada=0.0, espera_acumulada=0.0, excesso_acumulado=0.0,
+                    observa_espera=False):
     filas, carros, espera = {}, {}, {}
     for aprox, faixas in FAIXAS_ENTRADA.items():
         filas[aprox] = sum(
@@ -500,8 +564,24 @@ def _ler_observacao(indice_verde, tempo_no_verde, segundo,
     return Observacao(
         filas, carros, espera, APROXIMACOES[indice_verde],
         tempo_no_verde, filas_saida, segundo,
-        fila_acumulada, espera_acumulada,
+        fila_acumulada, espera_acumulada, excesso_acumulado,
+        _maior_espera() if observa_espera else None,
     )
+
+
+def _maior_espera():
+    """Maior espera acumulada (s) por aproximacao, na ordem N, L, S, O.
+
+    So os carros nas faixas de entrada (as mesmas da fila). Cada carro esta em
+    uma faixa so, e o conjunto por aproximacao garante que nenhum e contado
+    duas vezes. Aproximacao vazia = 0. Com --waiting-time-memory 10000 a
+    espera acumulada e o total de segundos parado desde que o carro entrou."""
+    out = {}
+    for aprox, faixas in FAIXAS_ENTRADA.items():
+        ids = {v for f in faixas for v in trafego.lane.getLastStepVehicleIDs(f)}
+        out[aprox] = max((trafego.vehicle.getAccumulatedWaitingTime(v) for v in ids),
+                         default=0.0)
+    return out
 
 
 def _ler_tripinfo(caminho):

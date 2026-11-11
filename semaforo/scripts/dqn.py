@@ -38,13 +38,39 @@ ESCALA_TEMPO = 60.0
 TAMANHO_ESTADO = 4 + 4 + 4 + 1  # filas + carros + fase atual + tempo no verde
 N_ACOES = 4
 
+# --- Experimento 2: + maior espera acumulada por aproximacao (17 entradas) ---
+# Escala FIXA, decidida antes de treinar e igual em treino, validacao,
+# avaliacao e visualizacao: espera / 120 s, limitada a 3 (= 360 s).
+#  - 120 s = 2 x W (W = 60 s da recompensa fila_excesso): o valor 0,5 marca o
+#    ponto em que o carro passa a gerar excesso; 1 = "o dobro do limite".
+#  - teto 3 (360 s): com as DQNs do Experimento 1 nos 4 cenarios de TREINO e
+#    sementes de treino, P50 = 31 s, P99 = 175 s, maximo = 261 s (ver
+#    resultados/treino_fila_excesso_17_C/normalizacao_espera.json): os valores
+#    ficam entre 0 e ~2,2, a mesma faixa das outras entradas (filas/25,
+#    carros/35, tempo/60), e o teto nunca e atingido nessas politicas. Ele so
+#    age em esperas enormes (exploracao aleatoria no inicio do treino, carro
+#    preso por 1000+ s), para nao gerar entradas muito fora da faixa.
+#  Nenhum dado do cenario girado nem das sementes de teste entra nessa escolha.
+ESCALA_ESPERA = 120.0
+TETO_ESPERA = 3.0
+TAMANHO_ESTADO_ESPERA = TAMANHO_ESTADO + 4  # 17
+ENTRADAS_VALIDAS = (TAMANHO_ESTADO, TAMANHO_ESTADO_ESPERA)
 
-def estado_para_vetor(obs):
+
+def estado_para_vetor(obs, n_entradas=TAMANHO_ESTADO):
+    """13 entradas (como sempre) ou 17 (as mesmas 13 + maior espera N, L, S, O)."""
     v = []
     v += [obs.filas[a] / ESCALA_FILA for a in APROXIMACOES]
     v += [obs.carros[a] / ESCALA_CARROS for a in APROXIMACOES]
     v += [1.0 if a == obs.aprox_verde else 0.0 for a in APROXIMACOES]
     v += [min(obs.tempo_no_verde / ESCALA_TEMPO, 2.0)]
+    if n_entradas == TAMANHO_ESTADO_ESPERA:
+        if obs.maior_espera is None:
+            raise ValueError("observacao sem maior_espera: o controlador precisa de "
+                             "observa_espera = True")
+        v += [min(obs.maior_espera[a] / ESCALA_ESPERA, TETO_ESPERA) for a in APROXIMACOES]
+    elif n_entradas != TAMANHO_ESTADO:
+        raise ValueError(f"n_entradas deve ser 13 ou 17, nao {n_entradas}")
     return np.array(v, dtype=np.float32)
 
 
@@ -75,7 +101,29 @@ def recompensa_espera(obs_antes, obs_depois):
     return -delta / (ESCALA_RECOMPENSA * 10)
 
 
-RECOMPENSAS = {"fila": recompensa_fila, "espera": recompensa_espera}
+# --- Experimento 1 de equilibrio: fila + excesso de espera ----------------
+# W e beta foram fixados ANTES de treinar (ver
+# resultados/diagnostico_equilibrio/plano_experimentos.md).
+ESPERA_LIMITE = 60.0  # W: a partir de quantos segundos parado a espera e "excessiva"
+BETA_EXCESSO = 1.0  # quanto pesa cada segundo parado alem de W
+
+
+def recompensa_fila_excesso(obs_antes, obs_depois, beta=BETA_EXCESSO):
+    """R = -(delta_fila + beta * delta_excesso) / 100.
+
+    delta_fila: a mesma conta de recompensa_fila (carros x segundos parados).
+    delta_excesso: segundos parados, no intervalo, de carros cuja espera
+    acumulada ja passou de W (medido pelo simulador; ver
+    simulacao.MedidorExcesso). Um carro acima de W passa a custar 1 + beta
+    por segundo parado, em vez de 1. Com beta = 0, identica a recompensa_fila.
+    """
+    delta_fila = obs_depois.fila_acumulada - obs_antes.fila_acumulada
+    delta_excesso = obs_depois.excesso_acumulado - obs_antes.excesso_acumulado
+    return -(delta_fila + beta * delta_excesso) / ESCALA_RECOMPENSA
+
+
+RECOMPENSAS = {"fila": recompensa_fila, "espera": recompensa_espera,
+               "fila_excesso": recompensa_fila_excesso}
 
 
 class Rede(nn.Module):
@@ -103,9 +151,19 @@ class AgenteDQN(Controlador):
 
     def __init__(self, tipo_recompensa="fila", gamma=0.95, lr=5e-4,
                  tamanho_lote=64, memoria=50_000, aquecimento=2_000,
-                 atualizar_alvo=500, treinando=True, semente=0):
-        self.recompensa = RECOMPENSAS[tipo_recompensa]
+                 atualizar_alvo=500, treinando=True, semente=0,
+                 beta=BETA_EXCESSO, espera_limite=ESPERA_LIMITE,
+                 n_entradas=TAMANHO_ESTADO):
         self.tipo_recompensa = tipo_recompensa
+        self._definir_entradas(n_entradas)
+        if tipo_recompensa == "fila_excesso":
+            self.beta = beta
+            # o simulador so mede o excesso para quem tem este atributo
+            self.espera_limite = espera_limite
+            self.recompensa = lambda antes, depois: recompensa_fila_excesso(
+                antes, depois, self.beta)
+        else:
+            self.recompensa = RECOMPENSAS[tipo_recompensa]
         self.gamma = gamma
         self.tamanho_lote = tamanho_lote
         self.aquecimento = aquecimento
@@ -113,11 +171,11 @@ class AgenteDQN(Controlador):
         self.treinando = treinando
 
         torch.manual_seed(semente)
-        self.rede = Rede()
+        self.rede = Rede(n_entrada=self.n_entradas)
         # A "rede alvo" e uma copia congelada, atualizada de vez em quando.
         # Serve para o agente nao ficar perseguindo a propria sombra: se o
         # alvo mudasse a cada passo, o treino nao estabilizaria.
-        self.rede_alvo = Rede()
+        self.rede_alvo = Rede(n_entrada=self.n_entradas)
         self.rede_alvo.load_state_dict(self.rede.state_dict())
         self.otimizador = torch.optim.Adam(self.rede.parameters(), lr=lr)
 
@@ -173,10 +231,10 @@ class AgenteDQN(Controlador):
             self.recompensa_episodio += r
             if self.treinando:
                 self.memoria.append((
-                    estado_para_vetor(self._obs_anterior),
+                    self.vetor(self._obs_anterior),
                     self._acao_anterior,
                     r,
-                    estado_para_vetor(obs),
+                    self.vetor(obs),
                     dt,
                 ))
                 pedida = self._acao_pedida_anterior
@@ -205,7 +263,7 @@ class AgenteDQN(Controlador):
         if self.treinando and random.random() < self.epsilon:
             return random.randrange(N_ACOES)
         with torch.no_grad():
-            q = self.rede(torch.from_numpy(estado_para_vetor(obs)).unsqueeze(0))
+            q = self.rede(torch.from_numpy(self.vetor(obs)).unsqueeze(0))
         return int(torch.argmax(q, dim=1).item())
 
     def _aprender(self):
@@ -246,17 +304,73 @@ class AgenteDQN(Controlador):
         if self.passos_treino % self.atualizar_alvo == 0:
             self.rede_alvo.load_state_dict(self.rede.state_dict())
 
+    # --- entradas da rede -------------------------------------------------
+    def _definir_entradas(self, n_entradas):
+        if n_entradas not in ENTRADAS_VALIDAS:
+            raise ValueError(f"n_entradas deve ser 13 ou 17, nao {n_entradas}")
+        self.n_entradas = n_entradas
+        # o simulador so le a maior espera por aproximacao para quem pede
+        self.observa_espera = n_entradas == TAMANHO_ESTADO_ESPERA
+
+    def vetor(self, obs):
+        """A observacao como a REDE deste agente a ve (13 ou 17 numeros)."""
+        return estado_para_vetor(obs, self.n_entradas)
+
     # --- salvar / carregar ------------------------------------------------
+    # Formato dos checkpoints:
+    #  - 13 entradas: o state_dict puro, exatamente como sempre (os .pt antigos
+    #    e os novos de 13 entradas sao lidos e gravados do mesmo jeito);
+    #  - 17 entradas: {"formato": "dqn_v2", "n_entradas": 17, "observacao": ...,
+    #    "state_dict": ...}. A observacao fica registrada no proprio arquivo.
+    # Ao carregar, n_entradas vem do registro (v2) ou do formato do peso da
+    # primeira camada (antigos); os dois tem de concordar.
     def salvar(self, nome):
         os.makedirs(PASTA_MODELOS, exist_ok=True)
         caminho = os.path.join(PASTA_MODELOS, f"{nome}.pt")
-        torch.save(self.rede.state_dict(), caminho)
+        if self.n_entradas == TAMANHO_ESTADO:
+            torch.save(self.rede.state_dict(), caminho)
+        else:
+            torch.save({"formato": "dqn_v2", "n_entradas": self.n_entradas,
+                        "observacao": descricao_observacao(self.n_entradas),
+                        "state_dict": self.rede.state_dict()}, caminho)
         return caminho
 
     def carregar(self, nome):
         caminho = os.path.join(PASTA_MODELOS, f"{nome}.pt")
-        self.rede.load_state_dict(torch.load(caminho))
+        n, pesos = ler_checkpoint(caminho)
+        if n != self.n_entradas:  # refaz as redes no tamanho do checkpoint
+            self._definir_entradas(n)
+            self.rede = Rede(n_entrada=n)
+            self.rede_alvo = Rede(n_entrada=n)
+            self.otimizador = torch.optim.Adam(self.rede.parameters(),
+                                               lr=self.otimizador.param_groups[0]["lr"])
+        self.rede.load_state_dict(pesos)
         self.rede_alvo.load_state_dict(self.rede.state_dict())
         self.treinando = False
         self.epsilon = 0.0
         return self
+
+
+def descricao_observacao(n_entradas):
+    d = (["fila_N/25", "fila_L/25", "fila_S/25", "fila_O/25",
+          "carros_N/35", "carros_L/35", "carros_S/35", "carros_O/35",
+          "verde_N", "verde_L", "verde_S", "verde_O", "min(tempo_no_verde/60, 2)"])
+    if n_entradas == TAMANHO_ESTADO_ESPERA:
+        d += [f"min(maior_espera_{a}/{ESCALA_ESPERA:g}, {TETO_ESPERA:g})" for a in APROXIMACOES]
+    return d
+
+
+def ler_checkpoint(caminho):
+    """-> (n_entradas, state_dict). Aceita os .pt antigos (state_dict puro) e o
+    formato dqn_v2. Nao altera o arquivo."""
+    dados = torch.load(caminho)
+    if isinstance(dados, dict) and dados.get("formato") == "dqn_v2":
+        n, pesos = int(dados["n_entradas"]), dados["state_dict"]
+    else:
+        n, pesos = None, dados
+    n_pesos = int(pesos["camadas.0.weight"].shape[1])
+    if n is None:
+        n = n_pesos
+    if n != n_pesos or n not in ENTRADAS_VALIDAS:
+        raise ValueError(f"{caminho}: checkpoint inconsistente (registro {n}, pesos {n_pesos})")
+    return n, pesos

@@ -98,7 +98,10 @@ def main():
     hashes_antes = {m: sha(os.path.join(simulacao.PASTA, "modelos", f"{m}.pt"))
                     for m in ac.MODELOS_DQN}
     hash_aval = sha(AVALIACAO)
-    for rot in ac.ROTULO_MODELO:
+    for rot, modelo in ac.ROTULO_MODELO.items():
+        # rotulos de modelos que ainda nao foram treinados (ex.: 17 entradas) ficam de fora
+        if not os.path.exists(os.path.join(simulacao.PASTA, "modelos", f"{modelo}.pt")):
+            continue
         ag = ac.fabricar(rot)
         assert not ag.treinando and ag.epsilon == 0.0
     print("  tres modelos carregados em modo avaliacao: ok")
