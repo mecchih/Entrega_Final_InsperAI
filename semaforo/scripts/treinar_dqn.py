@@ -24,6 +24,10 @@ Regras do treino, pensadas para o resultado ser honesto:
 Uso:
   python treinar_dqn.py fila 250                       # como sempre (dinamica A)
   python treinar_dqn.py fila 250 --dinamica C --semente 0 --nome dqn_fila_C_seed0
+  python treinar_dqn.py fila_excesso 250 --dinamica C --semente 0 --nome dqn_fila_excesso_C_seed0
+      (fila + excesso de espera; W = 60 s e beta = 1 por padrao)
+  python treinar_dqn.py fila_excesso 250 --dinamica C --entradas 17 --semente 0 --nome dqn_fila_excesso_17_C_seed0
+      (Experimento 2: mesma recompensa, + maior espera por aproximacao na entrada da rede)
 
 Nada e sobrescrito: se o modelo ou o historico ja existirem, o treino nem
 comeca (a nao ser com --sobrescrever).
@@ -34,10 +38,13 @@ import json
 import os
 import statistics
 import time
+import xml.etree.ElementTree as ET
 
 import gerar_demanda
 import simulacao
-from dqn import AgenteDQN, PASTA_MODELOS
+from dqn import (AgenteDQN, BETA_EXCESSO, ENTRADAS_VALIDAS, ESPERA_LIMITE, PASTA_MODELOS,
+                 RECOMPENSAS, TAMANHO_ESTADO, descricao_observacao)
+from simulacao import APROXIMACOES
 
 CENARIOS_TREINO = ["equilibrado", "assimetrico", "pico", "saturado"]
 SEMENTES_VALIDACAO = [201, 202]  # para escolher o melhor checkpoint
@@ -60,7 +67,8 @@ def caminhos(nome, historico=None, tipo_recompensa="fila"):
 def treinar(tipo_recompensa="fila", episodios=EPISODIOS, semente=0, nome=None,
             verboso=True, dinamica="A", historico=None, sobrescrever=False,
             intervalo_validacao=INTERVALO_VALIDACAO,
-            sementes_validacao=SEMENTES_VALIDACAO):
+            sementes_validacao=SEMENTES_VALIDACAO, parametros_recompensa=None,
+            n_entradas=TAMANHO_ESTADO):
     arq_modelo, arq_historico = caminhos(nome, historico, tipo_recompensa)
     nome = nome or f"dqn_{tipo_recompensa}"
     din = simulacao.DINAMICAS[dinamica]
@@ -75,7 +83,9 @@ def treinar(tipo_recompensa="fila", episodios=EPISODIOS, semente=0, nome=None,
     import random
     random.seed(semente)
 
-    agente = AgenteDQN(tipo_recompensa=tipo_recompensa, semente=semente)
+    extras = {} if parametros_recompensa is None else dict(parametros_recompensa)
+    agente = AgenteDQN(tipo_recompensa=tipo_recompensa, semente=semente,
+                       n_entradas=n_entradas, **extras)
 
     historico = []
     validacoes = []
@@ -108,7 +118,9 @@ def treinar(tipo_recompensa="fila", episodios=EPISODIOS, semente=0, nome=None,
         if ep % intervalo_validacao == 0:
             # teste de verdade: sem exploracao, nos 4 cenarios de treino,
             # na MESMA dinamica do treino
-            esperas, intervencoes_val = _validar(agente, rotas, din, sementes_validacao)
+            esperas, intervencoes_val, justica = _validar(agente, rotas, din, sementes_validacao)
+            # o checkpoint continua escolhido SO pela espera media (mesmo
+            # criterio da primeira comparacao); justica so e registrada
             media = statistics.mean(esperas.values())
             marca = ""
             melhorou = media < melhor_espera
@@ -119,6 +131,7 @@ def treinar(tipo_recompensa="fila", episodios=EPISODIOS, semente=0, nome=None,
                 marca = "  <-- melhor ate agora, salvo"
             validacoes.append({"episodio": ep, "esperas": esperas, "media": media,
                                "intervencoes_seguranca": intervencoes_val,
+                               "justica": justica,
                                "salvo": melhorou})
             if verboso:
                 print(
@@ -144,6 +157,12 @@ def treinar(tipo_recompensa="fila", episodios=EPISODIOS, semente=0, nome=None,
             "melhor_espera": melhor_espera,
             "duracao_s": duracao,
             "modelo": nome,
+            "recompensa": tipo_recompensa,
+            "parametros_recompensa": (
+                {"espera_limite": agente.espera_limite, "beta": agente.beta}
+                if tipo_recompensa == "fila_excesso" else None),
+            "n_entradas": agente.n_entradas,
+            "observacao": descricao_observacao(agente.n_entradas),
             "semente": semente,
             "dinamica": din.nome,
             "episodios": episodios,
@@ -167,24 +186,65 @@ def _validar(agente, rotas, din, sementes):
     agente.treinando = False
     agente.epsilon = 0.0
 
-    esperas, intervencoes = {}, 0
+    esperas, intervencoes, justica = {}, 0, {}
     for cenario in CENARIOS_TREINO:
-        valores = []
+        valores, rodadas = [], []
         for s in sementes:
+            medidor = EsperasPorAprox()  # so observa: nao muda a rodada
             m = simulacao.rodar(agente, cenario, rotas[cenario], seed=s,
-                                dinamica=None if din.original() else din)
+                                dinamica=None if din.original() else din,
+                                instrumentacao=medidor)
             valores.append(m["espera_media"])
             intervencoes += agente.intervencoes_episodio
+            rodadas.append((m, medidor.esperas))
         esperas[cenario] = statistics.mean(valores)
+        justica[cenario] = {
+            "espera_p95": statistics.mean(m["espera_p95"] for m, _ in rodadas),
+            # inclui quem nao terminou a viagem (limite inferior da espera)
+            "espera_max": max(m["espera_max"] for m, _ in rodadas),
+            "veiculos_sem_atendimento": sum(
+                m.get("veiculos_sem_atendimento", 0) for m, _ in rodadas),
+            "p95_por_aprox": {a: _percentil([w for _, e in rodadas for w in e[a]], 95)
+                              for a in APROXIMACOES},
+        }
+        justica[cenario]["pior_p95_aprox"] = max(justica[cenario]["p95_por_aprox"].values())
 
     agente.treinando = estava_treinando
     agente.epsilon = epsilon
-    return esperas, intervencoes
+    return esperas, intervencoes, justica
+
+
+class EsperasPorAprox:
+    """Instrumentacao de simulacao.rodar que so le o tripinfo no fim e separa
+    a espera de cada carro pela aproximacao de entrada (id f<bloco>_<aprox>_...)."""
+
+    def inicio(self, estados_verdes, duracao):
+        self.esperas = {a: [] for a in APROXIMACOES}
+
+    def passo(self, segundo, estado):
+        pass
+
+    def decisao(self, obs, escolha):
+        pass
+
+    def fim(self, caminho_tripinfo):
+        if not os.path.exists(caminho_tripinfo):
+            return
+        for v in ET.parse(caminho_tripinfo).getroot():
+            self.esperas[v.get("id").split("_")[1]].append(float(v.get("waitingTime", 0)))
+
+
+def _percentil(valores, p):
+    if not valores:
+        return 0.0
+    s = sorted(valores)
+    return s[int(round((p / 100.0) * (len(s) - 1)))]
 
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser(description="Treina uma DQN.")
-    ap.add_argument("tipo", nargs="?", default="fila", help="recompensa: fila | espera")
+    ap.add_argument("tipo", nargs="?", default="fila", choices=sorted(RECOMPENSAS),
+                    help="recompensa: fila | espera | fila_excesso")
     ap.add_argument("episodios", nargs="?", type=int, default=EPISODIOS)
     ap.add_argument("--dinamica", default="A", choices=sorted(simulacao.DINAMICAS))
     ap.add_argument("--semente", type=int, default=0)
@@ -192,13 +252,22 @@ if __name__ == "__main__":
     ap.add_argument("--historico", default=None,
                     help="arquivo do historico (padrao: resultados/treino_<nome>.json)")
     ap.add_argument("--sobrescrever", action="store_true")
+    ap.add_argument("--espera-limite", type=float, default=ESPERA_LIMITE,
+                    help="W (s), so para fila_excesso")
+    ap.add_argument("--beta", type=float, default=BETA_EXCESSO, help="so para fila_excesso")
+    ap.add_argument("--entradas", type=int, default=TAMANHO_ESTADO, choices=ENTRADAS_VALIDAS,
+                    help="13 (padrao) ou 17 (+ maior espera por aproximacao)")
     args = ap.parse_args()
 
     din = simulacao.DINAMICAS[args.dinamica]
-    print(f"Treinando {args.nome or 'dqn_' + args.tipo}: recompensa '{args.tipo}', {args.episodios} episodios, "
+    params = ({"espera_limite": args.espera_limite, "beta": args.beta}
+              if args.tipo == "fila_excesso" else None)
+    print(f"Treinando {args.nome or 'dqn_' + args.tipo}: recompensa '{args.tipo}'"
+          f"{f' {params}' if params else ''}, {args.entradas} entradas, {args.episodios} episodios, "
           f"semente {args.semente}, dinamica {din.nome}")
     print(f"(cada episodio = 1 hora de transito; cenario sorteado entre "
           f"{', '.join(CENARIOS_TREINO)})\n")
     treinar(tipo_recompensa=args.tipo, episodios=args.episodios, semente=args.semente,
             nome=args.nome, dinamica=args.dinamica, historico=args.historico,
-            sobrescrever=args.sobrescrever)
+            sobrescrever=args.sobrescrever, parametros_recompensa=params,
+            n_entradas=args.entradas)

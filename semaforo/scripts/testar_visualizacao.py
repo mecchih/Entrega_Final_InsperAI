@@ -58,6 +58,47 @@ def main():
         print(f"OK 1: {rotulo:30s} {cenario:12s} semente {semente}: identica a avaliacao "
               f"(espera {m['espera_media']:.2f} s)\n")
 
+    # rede do Experimento 1 (13 entradas, recompensa fila_excesso)
+    with open(AVALIACAO.replace("comparacao_C", "comparacao_excesso_C")) as f:
+        exc = {(r["cenario"], r["controlador"], r["seed"]): r["metricas"]
+               for r in json.load(f)["rodadas"]}
+    m = visualizar_dqn.main(["--modelo", "dqn_fila_excesso_C_seed1", "--cenario", "girado",
+                             "--semente", "2", "--velocidade", "0", "--silencioso"])
+    ref = exc[("girado", "DQN excesso C seed1", 2)]
+    assert all(m[k] == ref[k] for k in CHAVES)
+    print("OK 1b: DQN excesso C seed1 (13 entradas) girado semente 2: identica a "
+          "comparacao_excesso_C\n")
+
+    # rede de 17 entradas (uma rede nova, sem treino, numa pasta temporaria):
+    # a janela mostra a mesma rodada que a simulacao sem janela
+    import tempfile, shutil, dqn
+    tmp = tempfile.mkdtemp(prefix="teste_vis17_")
+    pasta = dqn.PASTA_MODELOS
+    try:
+        dqn.PASTA_MODELOS = tmp
+        dqn.AgenteDQN(n_entradas=17, semente=0).salvar("rede17")
+        m = visualizar_dqn.main(["--modelo", "rede17.pt", "--cenario", "pico", "--semente", "1",
+                                 "--velocidade", "0", "--parar-em", "1500"])
+        assert m is None
+        m = visualizar_dqn.main(["--modelo", "rede17", "--cenario", "equilibrado", "--semente", "1",
+                                 "--velocidade", "0", "--silencioso"])
+        sem_janela = simulacao.rodar(dqn.AgenteDQN(treinando=False).carregar("rede17"), "equilibrado",
+                                     visualizar_dqn.gerar_demanda.gerar("equilibrado"), seed=1,
+                                     dinamica=visualizar_dqn.DINAMICAS["C"])
+        assert all(m[k] == sem_janela[k] for k in CHAVES)
+    finally:
+        dqn.PASTA_MODELOS = pasta
+        shutil.rmtree(tmp, ignore_errors=True)
+    print("OK 1c: rede de 17 entradas no SUMO-GUI (Q e maior espera no terminal); rodada "
+          "identica a mesma rodada sem janela\n")
+
+    # duas redes lado a lado, mesmo cenario e mesma semente
+    visualizar_dqn.main(["--modelo", "dqn_fila_C_seed0", "--comparar-com", "dqn_fila_excesso_C_seed0",
+                         "--cenario", "girado", "--semente", "1", "--velocidade", "0",
+                         "--parar-em", "600", "--silencioso"])
+    assert visualizar_dqn.RETORNO_SEGUNDA == 0
+    print("OK 1d: --comparar-com abriu as duas janelas (A e B) e as duas terminaram bem\n")
+
     m = visualizar_dqn.main(["--cenario", "pico", "--inicio", "1200", "--parar-em", "1260",
                              "--velocidade", "20"])
     assert m is None

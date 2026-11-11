@@ -69,8 +69,9 @@ def rodar_espiao(controlador, cenario, arquivo_rotas, seed, **kw):
     """Envolve simulacao.rodar: guarda os argumentos e confere, com a
     instrumentacao, os estados executados segundo a segundo."""
     reg = ac.Registro()
+    outra = kw.pop("instrumentacao", None)  # a da validacao (EsperasPorAprox)
     m = _rodar_original(controlador, cenario, arquivo_rotas, seed,
-                        instrumentacao=reg, **kw)
+                        instrumentacao=reg if outra is None else Ambas(reg, outra), **kw)
     segs = reg.segmentos()
     ac.checar_consistencia(reg, segs, m, kw.get("dinamica"))  # erro se inconsistente
     CHAMADAS.append({
@@ -92,6 +93,19 @@ def rodar_espiao(controlador, cenario, arquivo_rotas, seed, **kw):
         "metricas": m,
     })
     return m
+
+
+class Ambas:
+    """Repassa os ganchos da rodada para duas instrumentacoes."""
+
+    def __init__(self, *insts):
+        self.insts = insts
+
+    def __getattr__(self, nome):
+        alvos = [getattr(i, nome) for i in self.insts if hasattr(i, nome)]
+        if not alvos:
+            raise AttributeError(nome)
+        return lambda *a: [f(*a) for f in alvos][-1]
 
 
 class ConferirFila:

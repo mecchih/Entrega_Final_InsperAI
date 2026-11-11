@@ -59,6 +59,14 @@ ROTULO_MODELO = dict(zip(CONTROLADORES_PADRAO[2:], MODELOS_DQN))
 # DQNs treinadas na dinamica C (treinar_dqn.py --dinamica C)
 MODELOS_DQN_C = [f"dqn_fila_C_seed{i}" for i in range(3)]
 ROTULO_MODELO.update({f"DQN C seed{i}": m for i, m in enumerate(MODELOS_DQN_C)})
+# DQNs com recompensa fila + excesso de espera (treinar_dqn.py fila_excesso --dinamica C).
+# Na avaliacao a recompensa nao e usada: carregam como qualquer outra DQN.
+MODELOS_DQN_EXCESSO = [f"dqn_fila_excesso_C_seed{i}" for i in range(3)]
+ROTULO_MODELO.update({f"DQN excesso C seed{i}": m for i, m in enumerate(MODELOS_DQN_EXCESSO)})
+# Experimento 2: mesma recompensa, 17 entradas (+ maior espera por aproximacao).
+# O numero de entradas e lido do proprio checkpoint ao carregar.
+MODELOS_DQN_EXCESSO_17 = [f"dqn_fila_excesso_17_C_seed{i}" for i in range(3)]
+ROTULO_MODELO.update({f"DQN excesso17 C seed{i}": m for i, m in enumerate(MODELOS_DQN_EXCESSO_17)})
 EXTRAS = ["Max-Pressure teto", "Tempo fixo 30s"]
 
 # Periodos do cenario pico (os mesmos blocos de gerar_demanda.py)
