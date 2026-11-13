@@ -1,0 +1,40 @@
+{
+  "argumentos": {
+    "modo": "treinar",
+    "episodios": 250,
+    "sementes": [
+      0,
+      1,
+      2
+    ],
+    "validar_cada": 25,
+    "duracao": 3600,
+    "escoamento": 1200,
+    "backend": "libsumo",
+    "sumo_home": "..\\tools\\sumo-win64-1.28.0",
+    "gui": false,
+    "checkpoint": null,
+    "saida": null,
+    "cenario": "cologne8",
+    "aquecimento_local": 256,
+    "aquecimento_supervisor": 64,
+    "decaimento_local": 2000,
+    "decaimento_supervisor": 500
+  },
+  "torch": "2.15.0+cpu",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "scripts_sha256": {
+    "scripts\\treinar_marl_cologne.py": "48765dcaf5123b5646b467b9761b09a82b9e612140822c6c4b6d058eccb0ef47",
+    "scripts\\agente_marl_cologne.py": "60ebff81f8f2782e458c5d9c7a6e20263dae98f1f2d42c8f8e2a9a7468b8828c",
+    "scripts\\ambiente_marl_cologne.py": "5c14fa1eece487b19558af78932aad04a6c1930d2a80711cfeb7610ebae0bb8f"
+  },
+  "treino": "1000+episodio",
+  "validacao": [
+    201,
+    202
+  ],
+  "teste": [
+    1
+  ],
+  "nota": "mesmas rotas fixas em todas as sementes; nao e demanda inedita"
+}

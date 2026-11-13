@@ -1,0 +1,141 @@
+{
+  "semente": 1,
+  "modo": "original_fixo",
+  "treinando": false,
+  "versao_sumo": [
+    22,
+    "SUMO 1.28.0"
+  ],
+  "fim_sumo": 25387,
+  "passos_controlados": 187,
+  "duracao_real_s": 0.21031379999840283,
+  "veiculos_presentes_ao_assumir": 0,
+  "terminado_naturalmente": false,
+  "truncado_no_limite": false,
+  "terminado_por_colisao": true,
+  "eventos_colisao": [
+    {
+      "tempo": 25387,
+      "veiculos": [
+        "146387_416_0",
+        "162890_422_0"
+      ],
+      "tipo": "junction",
+      "faixa_evento": ":cluster_1098574052_1098574061_247379905_5_0",
+      "posicao_evento": 25.134112360215013,
+      "faixa_colisor": ":cluster_1098574052_1098574061_247379905_5_0",
+      "faixa_vitima": ":cluster_1098574052_1098574061_247379905_14_0"
+    }
+  ],
+  "pendentes_insercao": 0,
+  "remanescentes": 54,
+  "demanda_prevista": 2046,
+  "viagens_nao_inseridas": 1945,
+  "viagens_nao_concluidas": 1999,
+  "colisoes": 1,
+  "veiculos_colidentes_reportados": 2,
+  "penalidade_colisao_por_agente": -10000.0,
+  "teleportes": 0,
+  "intervencoes": 0,
+  "trocas": 0,
+  "eventos": 0,
+  "segundos_todos_tls_verdes": 0,
+  "fila_media_rede": 12.754010695187166,
+  "fila_media_sensores_locais": 12.481283422459892,
+  "fila_max_rede": 34,
+  "recompensas": [
+    -10000.0
+  ],
+  "decisoes": {},
+  "viagens": {
+    "demanda_janela": {
+      "inseridos": 101,
+      "concluidos": 47,
+      "interrompidos": 54,
+      "espera_concluidos": {
+        "n": 47,
+        "media": 20.70212765957447,
+        "p95": 52.0,
+        "maximo": 62.0
+      },
+      "espera_todos_inclui_censura": {
+        "n": 101,
+        "media": 23.534653465346533,
+        "p95": 62.0,
+        "maximo": 79.0
+      },
+      "atraso_insercao": {
+        "n": 101,
+        "media": 0.0297029702970297,
+        "p95": 0.0,
+        "maximo": 1.0
+      },
+      "duracao_concluidos": {
+        "n": 47,
+        "media": 67.74468085106383,
+        "p95": 136.89999999999998,
+        "maximo": 154.0
+      }
+    },
+    "aquecimento": {
+      "inseridos": 0,
+      "concluidos": 0,
+      "interrompidos": 0,
+      "espera_concluidos": {
+        "n": 0,
+        "media": null,
+        "p95": null,
+        "maximo": null
+      },
+      "espera_todos_inclui_censura": {
+        "n": 0,
+        "media": null,
+        "p95": null,
+        "maximo": null
+      },
+      "atraso_insercao": {
+        "n": 0,
+        "media": null,
+        "p95": null,
+        "maximo": null
+      },
+      "duracao_concluidos": {
+        "n": 0,
+        "media": null,
+        "p95": null,
+        "maximo": null
+      }
+    },
+    "afetados_pelo_controle": {
+      "inseridos": 101,
+      "concluidos": 47,
+      "interrompidos": 54,
+      "espera_concluidos": {
+        "n": 47,
+        "media": 20.70212765957447,
+        "p95": 52.0,
+        "maximo": 62.0
+      },
+      "espera_todos_inclui_censura": {
+        "n": 101,
+        "media": 23.534653465346533,
+        "p95": 62.0,
+        "maximo": 79.0
+      },
+      "atraso_insercao": {
+        "n": 101,
+        "media": 0.0297029702970297,
+        "p95": 0.0,
+        "maximo": 1.0
+      },
+      "duracao_concluidos": {
+        "n": 47,
+        "media": 67.74468085106383,
+        "p95": 136.89999999999998,
+        "maximo": 154.0
+      }
+    }
+  },
+  "espera_por_entrada": {},
+  "nota_espera_por_entrada": "tempo parado na area durante controle, entre veiculos observados inclusive espera zero; nao e espera total de viagem"
+}

@@ -1,0 +1,59 @@
+{
+  "episodios": 500,
+  "sementes_modelo": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "sementes_treino_sumo": "1000+episodio",
+  "sementes_validacao": [
+    201,
+    202
+  ],
+  "sementes_teste": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "trabalhadores": 3,
+  "duracao": 3600,
+  "escoamento": 1200,
+  "validar_cada": 25,
+  "salvar_cada": 100,
+  "aquecimento_local": 2000,
+  "aquecimento_supervisor": 2000,
+  "decaimento_local": 40000,
+  "decaimento_supervisor": 10000,
+  "sumo_home": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\tools\\sumo-win64-1.28.0",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "fontes_sha256": {
+    "treinar_marl_continuo.py": "fbf5753603db96aecd98a6939c3a706ccce2860f01622593e379268d18351058",
+    "agente_marl_cologne.py": "b7905a9bfcde57f0a9a4924eec9768a3167baec00551001fa2e8afc46328c74d",
+    "ambiente_marl_cologne.py": "9b06f483d9bfe41a2c56e0621410f20e8e90be1a1532b7d428003ea48cffae57",
+    "treinar_marl_cologne.py": "48765dcaf5123b5646b467b9761b09a82b9e612140822c6c4b6d058eccb0ef47",
+    "esquema_dqn_cologne3.py": "15f7d8fbeaf5468ed248befac2e1d6a6820637b03540e5e84e2a909ca6a78cd4",
+    "verificar_marl_continuo.py": "12b5548acbea767c92b7c9ed6b9e5e840ea73bb88f140f40b3502771acbcf2f1",
+    "verificar_rodada_marl_cologne.py": "0ddb20ed47742f0a8359f3f74196ee94bc8f6da8dcaf5af6e0f5c11599c1406e",
+    "relatar_marl_continuo.py": "7913c979572504162b35c8cd4db4e540f8c7d55766e064d03cfa09ec80cec9d5",
+    "acompanhar_marl_continuo.py": "75139281108f5d487b880356a7401a479bda965cabca55d918f6e45af0a57bb6"
+  },
+  "iniciado_utc": "2026-11-13T01:18:44.013654+00:00",
+  "snapshot": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\tmp\\marl_continuo\\antes_20261113T010040Z.json",
+  "python_relatorio": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\.venv-marl-relatorio\\Scripts\\python.exe",
+  "retomar_checkpoint": null,
+  "nota": "Mesmo OD/horarios entre sementes. Colisoes continuam com -10000 por contato novo/ator."
+}

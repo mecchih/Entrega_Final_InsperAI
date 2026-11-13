@@ -1,0 +1,345 @@
+{
+  "semente": 1020,
+  "modo": "hierarquico",
+  "treinando": true,
+  "versao_sumo": [
+    22,
+    "SUMO 1.28.0"
+  ],
+  "fim_sumo": 26094,
+  "passos_controlados": 894,
+  "duracao_real_s": 2.7255279000019073,
+  "veiculos_presentes_ao_assumir": 0,
+  "terminado_naturalmente": false,
+  "truncado_no_limite": false,
+  "terminado_por_colisao": true,
+  "eventos_colisao": [
+    {
+      "tempo": 26094,
+      "veiculos": [
+        "189348_434_0",
+        "190542_435_0"
+      ],
+      "tipo": "junction",
+      "faixa_evento": ":247379907_10_0",
+      "posicao_evento": 22.594743887129077,
+      "faixa_colisor": ":247379907_10_0",
+      "faixa_vitima": ":247379907_2_0"
+    }
+  ],
+  "pendentes_insercao": 2,
+  "remanescentes": 157,
+  "demanda_prevista": 2046,
+  "viagens_nao_inseridas": 1476,
+  "viagens_nao_concluidas": 1633,
+  "colisoes": 1,
+  "veiculos_colidentes_reportados": 2,
+  "penalidade_colisao_por_agente": -10000.0,
+  "teleportes": 0,
+  "intervencoes": 0,
+  "trocas": 360,
+  "eventos": 1087,
+  "segundos_todos_tls_verdes": 105,
+  "fila_media_rede": 30.626398210290827,
+  "fila_media_sensores_locais": 29.58053691275168,
+  "fila_max_rede": 100,
+  "recompensas": [
+    -10102.255,
+    -10023.625,
+    -10015.595,
+    -10176.845,
+    -10039.615,
+    -10017.985,
+    -10044.945,
+    -10059.095,
+    -10045.6175
+  ],
+  "decisoes": {
+    "supervisor_1": 2,
+    "decisoes_0": 75,
+    "decisoes_1": 111,
+    "decisoes_2": 82,
+    "decisoes_3": 71,
+    "decisoes_4": 89,
+    "decisoes_5": 105,
+    "decisoes_6": 94,
+    "decisoes_7": 74,
+    "supervisor_5": 3,
+    "supervisor_7": 10,
+    "supervisor_6": 8,
+    "supervisor_2": 4,
+    "supervisor_4": 1,
+    "supervisor_0": 1,
+    "supervisor_3": 1
+  },
+  "viagens": {
+    "demanda_janela": {
+      "inseridos": 570,
+      "concluidos": 413,
+      "interrompidos": 157,
+      "espera_concluidos": {
+        "n": 413,
+        "media": 42.13801452784504,
+        "p95": 122.39999999999998,
+        "maximo": 208.0
+      },
+      "espera_todos_inclui_censura": {
+        "n": 570,
+        "media": 47.94385964912281,
+        "p95": 143.54999999999995,
+        "maximo": 245.0
+      },
+      "atraso_insercao": {
+        "n": 570,
+        "media": 0.5964912280701754,
+        "p95": 1.0,
+        "maximo": 34.0
+      },
+      "duracao_concluidos": {
+        "n": 413,
+        "media": 117.99515738498789,
+        "p95": 242.39999999999986,
+        "maximo": 337.0
+      }
+    },
+    "aquecimento": {
+      "inseridos": 0,
+      "concluidos": 0,
+      "interrompidos": 0,
+      "espera_concluidos": {
+        "n": 0,
+        "media": null,
+        "p95": null,
+        "maximo": null
+      },
+      "espera_todos_inclui_censura": {
+        "n": 0,
+        "media": null,
+        "p95": null,
+        "maximo": null
+      },
+      "atraso_insercao": {
+        "n": 0,
+        "media": null,
+        "p95": null,
+        "maximo": null
+      },
+      "duracao_concluidos": {
+        "n": 0,
+        "media": null,
+        "p95": null,
+        "maximo": null
+      }
+    },
+    "afetados_pelo_controle": {
+      "inseridos": 570,
+      "concluidos": 413,
+      "interrompidos": 157,
+      "espera_concluidos": {
+        "n": 413,
+        "media": 42.13801452784504,
+        "p95": 122.39999999999998,
+        "maximo": 208.0
+      },
+      "espera_todos_inclui_censura": {
+        "n": 570,
+        "media": 47.94385964912281,
+        "p95": 143.54999999999995,
+        "maximo": 245.0
+      },
+      "atraso_insercao": {
+        "n": 570,
+        "media": 0.5964912280701754,
+        "p95": 1.0,
+        "maximo": 34.0
+      },
+      "duracao_concluidos": {
+        "n": 413,
+        "media": 117.99515738498789,
+        "p95": 242.39999999999986,
+        "maximo": 337.0
+      }
+    }
+  },
+  "espera_por_entrada": {
+    "247379907": {
+      "22917421#3": {
+        "n": 46,
+        "media": 14.41304347826087,
+        "p95": 41.75,
+        "maximo": 57.0
+      },
+      "186623965#15": {
+        "n": 12,
+        "media": 19.0,
+        "p95": 54.34999999999998,
+        "maximo": 67.0
+      },
+      "-22917421#14": {
+        "n": 18,
+        "media": 43.111111111111114,
+        "p95": 128.15,
+        "maximo": 129.0
+      },
+      "-186623965#18": {
+        "n": 132,
+        "media": 42.86363636363637,
+        "p95": 86.0,
+        "maximo": 109.0
+      }
+    },
+    "252017285": {
+      "-28675510#0": {
+        "n": 20,
+        "media": 3.5,
+        "p95": 16.1,
+        "maximo": 18.0
+      },
+      "-8716807#0": {
+        "n": 24,
+        "media": 3.2916666666666665,
+        "p95": 14.949999999999985,
+        "maximo": 17.0
+      },
+      "133081985#1": {
+        "n": 4,
+        "media": 11.0,
+        "p95": 23.4,
+        "maximo": 24.0
+      },
+      "-23283579#0": {
+        "n": 78,
+        "media": 7.743589743589744,
+        "p95": 27.0,
+        "maximo": 40.0
+      }
+    },
+    "256201389": {
+      "-24487264": {
+        "n": 0,
+        "media": null,
+        "p95": null,
+        "maximo": null
+      },
+      "-225249129#0": {
+        "n": 1,
+        "media": 0.0,
+        "p95": 0.0,
+        "maximo": 0.0
+      },
+      "23648008#2": {
+        "n": 7,
+        "media": 0.0,
+        "p95": 0.0,
+        "maximo": 0.0
+      }
+    },
+    "26110729": {
+      "-42925825#2": {
+        "n": 86,
+        "media": 27.953488372093023,
+        "p95": 78.0,
+        "maximo": 91.0
+      },
+      "186623965#9": {
+        "n": 31,
+        "media": 46.38709677419355,
+        "p95": 133.0,
+        "maximo": 142.0
+      },
+      "-297047310#2": {
+        "n": 39,
+        "media": 10.128205128205128,
+        "p95": 40.2,
+        "maximo": 47.0
+      },
+      "-186623965#16": {
+        "n": 120,
+        "media": 55.36666666666667,
+        "p95": 151.14999999999998,
+        "maximo": 169.0
+      }
+    },
+    "280120513": {
+      "297047310#4": {
+        "n": 21,
+        "media": 21.047619047619047,
+        "p95": 115.0,
+        "maximo": 123.0
+      },
+      "-23648008#0": {
+        "n": 6,
+        "media": 14.666666666666666,
+        "p95": 37.0,
+        "maximo": 44.0
+      },
+      "-28675493": {
+        "n": 34,
+        "media": 32.55882352941177,
+        "p95": 98.14999999999989,
+        "maximo": 131.0
+      }
+    },
+    "32319828": {
+      "-23686088#0": {
+        "n": 19,
+        "media": 3.473684210526316,
+        "p95": 22.599999999999987,
+        "maximo": 28.0
+      },
+      "-4936412": {
+        "n": 20,
+        "media": 8.65,
+        "p95": 21.1,
+        "maximo": 23.0
+      }
+    },
+    "62426694": {
+      "297047308": {
+        "n": 11,
+        "media": 47.54545454545455,
+        "p95": 84.5,
+        "maximo": 85.0
+      },
+      "-28675494#1": {
+        "n": 16,
+        "media": 4.4375,
+        "p95": 22.25,
+        "maximo": 38.0
+      },
+      "8716807#6": {
+        "n": 51,
+        "media": 30.666666666666668,
+        "p95": 78.0,
+        "maximo": 93.0
+      }
+    },
+    "cluster_1098574052_1098574061_247379905": {
+      "22917421#5": {
+        "n": 13,
+        "media": 7.3076923076923075,
+        "p95": 22.59999999999998,
+        "maximo": 31.0
+      },
+      "-28675510#11": {
+        "n": 35,
+        "media": 12.8,
+        "p95": 42.79999999999998,
+        "maximo": 65.0
+      },
+      "28675510#4": {
+        "n": 49,
+        "media": 58.46938775510204,
+        "p95": 131.19999999999996,
+        "maximo": 145.0
+      },
+      "-22959475#4": {
+        "n": 0,
+        "media": null,
+        "p95": null,
+        "maximo": null
+      }
+    }
+  },
+  "nota_espera_por_entrada": "tempo parado na area durante controle, entre veiculos observados inclusive espera zero; nao e espera total de viagem"
+}
