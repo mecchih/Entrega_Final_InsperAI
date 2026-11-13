@@ -9,3 +9,16 @@ semaforo/resultados/verificacao_organizacao/** -text
 semaforo/scripts/auditar_cologne1.py text eol=lf
 semaforo/scripts/testar_dqn_cologne1.py text eol=lf
 semaforo/scripts/verificar_resultados_cologne1.py text eol=lf
+semaforo/scripts/esquema_dqn_cologne3.py text eol=lf
+
+# MARL Cologne8: evidencias byte a byte e objetos grandes em Git LFS.
+semaforo/resultados/marl_cologne8/** -text
+semaforo/resultados/indice_execucoes_cologne8.json -text
+semaforo/resultados/indice_artefatos_cologne8.jsonl -text
+semaforo/resultados/verificacao_pacote_cologne8.json -text
+semaforo/resultados/marl_cologne8/**/*.pt filter=lfs diff=lfs merge=lfs -text
+semaforo/resultados/marl_cologne8/**/*.xml.gz filter=lfs diff=lfs merge=lfs -text
+semaforo/scripts/*marl*.py text eol=lf
+semaforo/scripts/verificar_pacote_cologne8.py text eol=lf
+semaforo/*COLOGNE8*.md text eol=lf
+semaforo/requirements-marl-cologne8.txt text eol=lf

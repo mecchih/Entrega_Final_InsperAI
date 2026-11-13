@@ -1,0 +1,3749 @@
+{
+  "formato": "smartflow_marl_supervisor_cologne_v1",
+  "cenario": "cologne8",
+  "cidade_inteira": false,
+  "controladores": [
+    {
+      "id": "247379907",
+      "entradas": [
+        {
+          "edge": "22917421#3",
+          "faixas": [
+            {
+              "id": "22917421#3_0",
+              "index": "0",
+              "disallow": "tram rail_urban rail rail_electric rail_fast ship",
+              "speed": "8.33",
+              "length": "96.26",
+              "shape": "14123.47,18160.98 14064.92,18084.58"
+            }
+          ],
+          "rumo_montante_graus": 37.46515705434291,
+          "rotulo_geografico": "N"
+        },
+        {
+          "edge": "186623965#15",
+          "faixas": [
+            {
+              "id": "186623965#15_0",
+              "index": "0",
+              "disallow": "tram rail_urban rail rail_electric rail_fast ship",
+              "speed": "13.89",
+              "length": "187.95",
+              "shape": "14258.17,18078.60 14091.30,18076.56 14070.27,18076.83"
+            },
+            {
+              "id": "186623965#15_1",
+              "index": "1",
+              "disallow": "tram rail_urban rail rail_electric rail_fast ship",
+              "speed": "13.89",
+              "length": "187.95",
+              "shape": "14258.21,18075.40 14091.30,18073.36 14070.23,18073.63"
+            }
+          ],
+          "rumo_montante_graus": 90.7355687380889,
+          "rotulo_geografico": "L"
+        },
+        {
+          "edge": "-22917421#14",
+          "faixas": [
+            {
+              "id": "-22917421#14_0",
+              "index": "0",
+              "disallow": "tram rail_urban rail rail_electric rail_fast ship",
+              "speed": "8.33",
+              "length": "533.59",
+              "shape": "13757.15,17614.25 13766.56,17625.76 13796.33,17673.53 13833.12,17732.58 13893.66,17822.33 13910.37,17848.08 13918.35,17862.00 13951.70,17909.08 14001.93,17983.44 14013.77,18001.97 14042.10,18046.62 14050.44,18059.75"
+            }
+          ],
+          "rumo_montante_graus": 212.4231656637773,
+          "rotulo_geografico": "S"
+        },
+        {
+          "edge": "-186623965#18",
+          "faixas": [
+            {
+              "id": "-186623965#18_0",
+              "index": "0",
+              "disallow": "tram rail_urban rail rail_electric rail_fast ship",
+              "speed": "13.89",
+              "length": "144.74",
+              "shape": "13900.92,18082.85 13941.81,18074.55 13991.57,18069.18 14044.79,18067.74"
+            },
+            {
+              "id": "-186623965#18_1",
+              "index": "1",
+              "disallow": "tram rail_urban rail rail_electric rail_fast ship",
+              "speed": "13.89",
+              "length": "144.74",
+              "shape": "13901.55,18085.98 13942.30,18077.72 13991.78,18072.37 14044.88,18070.94"
+            }
+          ],
+          "rumo_montante_graus": 271.5499022344786,
+          "rotulo_geografico": "O"
+        }
+      ],
+      "fases": [
+        {
+          "acao_local": 0,
+          "indice_xml": 0,
+          "state": "rrrrGGGggrrrrGGGgg",
+          "movimentos_liberados": [
+            {
+              "from": "-186623965#18",
+              "to": "22917421#5",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":247379907_13_0",
+              "tl": "247379907",
+              "linkIndex": "13",
+              "dir": "r",
+              "state": "O",
+              "luz": "G"
+            },
+            {
+              "from": "-186623965#18",
+              "to": "-186623965#16",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":247379907_14_0",
+              "tl": "247379907",
+              "linkIndex": "14",
+              "dir": "s",
+              "state": "O",
+              "luz": "G"
+            },
+            {
+              "from": "-186623965#18",
+              "to": "-186623965#16",
+              "fromLane": "1",
+              "toLane": "1",
+              "via": ":247379907_14_1",
+              "tl": "247379907",
+              "linkIndex": "15",
+              "dir": "s",
+              "state": "O",
+              "luz": "G"
+            },
+            {
+              "from": "-186623965#18",
+              "to": "-22917421#4",
+              "fromLane": "1",
+              "toLane": "0",
+              "via": ":247379907_16_0",
+              "tl": "247379907",
+              "linkIndex": "16",
+              "dir": "l",
+              "state": "o",
+              "luz": "g"
+            },
+            {
+              "from": "-186623965#18",
+              "to": "186623965#17",
+              "fromLane": "1",
+              "toLane": "1",
+              "via": ":247379907_17_0",
+              "tl": "247379907",
+              "linkIndex": "17",
+              "dir": "t",
+              "state": "o",
+              "luz": "g"
+            },
+            {
+              "from": "186623965#15",
+              "to": "-22917421#4",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":247379907_4_0",
+              "tl": "247379907",
+              "linkIndex": "4",
+              "dir": "r",
+              "state": "O",
+              "luz": "G"
+            },
+            {
+              "from": "186623965#15",
+              "to": "186623965#17",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":247379907_5_0",
+              "tl": "247379907",
+              "linkIndex": "5",
+              "dir": "s",
+              "state": "O",
+              "luz": "G"
+            },
+            {
+              "from": "186623965#15",
+              "to": "186623965#17",
+              "fromLane": "1",
+              "toLane": "1",
+              "via": ":247379907_5_1",
+              "tl": "247379907",
+              "linkIndex": "6",
+              "dir": "s",
+              "state": "O",
+              "luz": "G"
+            },
+            {
+              "from": "186623965#15",
+              "to": "22917421#5",
+              "fromLane": "1",
+              "toLane": "0",
+              "via": ":247379907_7_0",
+              "tl": "247379907",
+              "linkIndex": "7",
+              "dir": "l",
+              "state": "o",
+              "luz": "g"
+            },
+            {
+              "from": "186623965#15",
+              "to": "-186623965#16",
+              "fromLane": "1",
+              "toLane": "1",
+              "via": ":247379907_8_0",
+              "tl": "247379907",
+              "linkIndex": "8",
+              "dir": "t",
+              "state": "o",
+              "luz": "g"
+            }
+          ],
+          "entradas_liberadas": [
+            "-186623965#18",
+            "186623965#15"
+          ]
+        },
+        {
+          "acao_local": 1,
+          "indice_xml": 2,
+          "state": "rrrrrrrGGrrrrrrrGG",
+          "movimentos_liberados": [
+            {
+              "from": "-186623965#18",
+              "to": "-22917421#4",
+              "fromLane": "1",
+              "toLane": "0",
+              "via": ":247379907_16_0",
+              "tl": "247379907",
+              "linkIndex": "16",
+              "dir": "l",
+              "state": "o",
+              "luz": "G"
+            },
+            {
+              "from": "-186623965#18",
+              "to": "186623965#17",
+              "fromLane": "1",
+              "toLane": "1",
+              "via": ":247379907_17_0",
+              "tl": "247379907",
+              "linkIndex": "17",
+              "dir": "t",
+              "state": "o",
+              "luz": "G"
+            },
+            {
+              "from": "186623965#15",
+              "to": "22917421#5",
+              "fromLane": "1",
+              "toLane": "0",
+              "via": ":247379907_7_0",
+              "tl": "247379907",
+              "linkIndex": "7",
+              "dir": "l",
+              "state": "o",
+              "luz": "G"
+            },
+            {
+              "from": "186623965#15",
+              "to": "-186623965#16",
+              "fromLane": "1",
+              "toLane": "1",
+              "via": ":247379907_8_0",
+              "tl": "247379907",
+              "linkIndex": "8",
+              "dir": "t",
+              "state": "o",
+              "luz": "G"
+            }
+          ],
+          "entradas_liberadas": [
+            "-186623965#18",
+            "186623965#15"
+          ]
+        },
+        {
+          "acao_local": 2,
+          "indice_xml": 4,
+          "state": "GGggrrrrrGGggrrrrr",
+          "movimentos_liberados": [
+            {
+              "from": "-22917421#14",
+              "to": "-186623965#16",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":247379907_9_0",
+              "tl": "247379907",
+              "linkIndex": "9",
+              "dir": "r",
+              "state": "o",
+              "luz": "G"
+            },
+            {
+              "from": "-22917421#14",
+              "to": "-22917421#4",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":247379907_10_0",
+              "tl": "247379907",
+              "linkIndex": "10",
+              "dir": "s",
+              "state": "o",
+              "luz": "G"
+            },
+            {
+              "from": "-22917421#14",
+              "to": "186623965#17",
+              "fromLane": "0",
+              "toLane": "1",
+              "via": ":247379907_11_0",
+              "tl": "247379907",
+              "linkIndex": "11",
+              "dir": "l",
+              "state": "o",
+              "luz": "g"
+            },
+            {
+              "from": "-22917421#14",
+              "to": "22917421#5",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":247379907_12_0",
+              "tl": "247379907",
+              "linkIndex": "12",
+              "dir": "t",
+              "state": "o",
+              "luz": "g"
+            },
+            {
+              "from": "22917421#3",
+              "to": "186623965#17",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":247379907_0_0",
+              "tl": "247379907",
+              "linkIndex": "0",
+              "dir": "r",
+              "state": "o",
+              "luz": "G"
+            },
+            {
+              "from": "22917421#3",
+              "to": "22917421#5",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":247379907_1_0",
+              "tl": "247379907",
+              "linkIndex": "1",
+              "dir": "s",
+              "state": "o",
+              "luz": "G"
+            },
+            {
+              "from": "22917421#3",
+              "to": "-186623965#16",
+              "fromLane": "0",
+              "toLane": "1",
+              "via": ":247379907_2_0",
+              "tl": "247379907",
+              "linkIndex": "2",
+              "dir": "l",
+              "state": "o",
+              "luz": "g"
+            },
+            {
+              "from": "22917421#3",
+              "to": "-22917421#4",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":247379907_3_0",
+              "tl": "247379907",
+              "linkIndex": "3",
+              "dir": "t",
+              "state": "o",
+              "luz": "g"
+            }
+          ],
+          "entradas_liberadas": [
+            "-22917421#14",
+            "22917421#3"
+          ]
+        },
+        {
+          "acao_local": 3,
+          "indice_xml": 6,
+          "state": "rrGGrrrrrrrGGrrrrr",
+          "movimentos_liberados": [
+            {
+              "from": "-22917421#14",
+              "to": "186623965#17",
+              "fromLane": "0",
+              "toLane": "1",
+              "via": ":247379907_11_0",
+              "tl": "247379907",
+              "linkIndex": "11",
+              "dir": "l",
+              "state": "o",
+              "luz": "G"
+            },
+            {
+              "from": "-22917421#14",
+              "to": "22917421#5",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":247379907_12_0",
+              "tl": "247379907",
+              "linkIndex": "12",
+              "dir": "t",
+              "state": "o",
+              "luz": "G"
+            },
+            {
+              "from": "22917421#3",
+              "to": "-186623965#16",
+              "fromLane": "0",
+              "toLane": "1",
+              "via": ":247379907_2_0",
+              "tl": "247379907",
+              "linkIndex": "2",
+              "dir": "l",
+              "state": "o",
+              "luz": "G"
+            },
+            {
+              "from": "22917421#3",
+              "to": "-22917421#4",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":247379907_3_0",
+              "tl": "247379907",
+              "linkIndex": "3",
+              "dir": "t",
+              "state": "o",
+              "luz": "G"
+            }
+          ],
+          "entradas_liberadas": [
+            "-22917421#14",
+            "22917421#3"
+          ]
+        }
+      ],
+      "n_acoes": 4,
+      "n_entradas_rede": 17,
+      "conexoes": [
+        {
+          "from": "-186623965#18",
+          "to": "22917421#5",
+          "fromLane": "0",
+          "toLane": "0",
+          "via": ":247379907_13_0",
+          "tl": "247379907",
+          "linkIndex": "13",
+          "dir": "r",
+          "state": "O"
+        },
+        {
+          "from": "-186623965#18",
+          "to": "-186623965#16",
+          "fromLane": "0",
+          "toLane": "0",
+          "via": ":247379907_14_0",
+          "tl": "247379907",
+          "linkIndex": "14",
+          "dir": "s",
+          "state": "O"
+        },
+        {
+          "from": "-186623965#18",
+          "to": "-186623965#16",
+          "fromLane": "1",
+          "toLane": "1",
+          "via": ":247379907_14_1",
+          "tl": "247379907",
+          "linkIndex": "15",
+          "dir": "s",
+          "state": "O"
+        },
+        {
+          "from": "-186623965#18",
+          "to": "-22917421#4",
+          "fromLane": "1",
+          "toLane": "0",
+          "via": ":247379907_16_0",
+          "tl": "247379907",
+          "linkIndex": "16",
+          "dir": "l",
+          "state": "o"
+        },
+        {
+          "from": "-186623965#18",
+          "to": "186623965#17",
+          "fromLane": "1",
+          "toLane": "1",
+          "via": ":247379907_17_0",
+          "tl": "247379907",
+          "linkIndex": "17",
+          "dir": "t",
+          "state": "o"
+        },
+        {
+          "from": "-22917421#14",
+          "to": "-186623965#16",
+          "fromLane": "0",
+          "toLane": "0",
+          "via": ":247379907_9_0",
+          "tl": "247379907",
+          "linkIndex": "9",
+          "dir": "r",
+          "state": "o"
+        },
+        {
+          "from": "-22917421#14",
+          "to": "-22917421#4",
+          "fromLane": "0",
+          "toLane": "0",
+          "via": ":247379907_10_0",
+          "tl": "247379907",
+          "linkIndex": "10",
+          "dir": "s",
+          "state": "o"
+        },
+        {
+          "from": "-22917421#14",
+          "to": "186623965#17",
+          "fromLane": "0",
+          "toLane": "1",
+          "via": ":247379907_11_0",
+          "tl": "247379907",
+          "linkIndex": "11",
+          "dir": "l",
+          "state": "o"
+        },
+        {
+          "from": "-22917421#14",
+          "to": "22917421#5",
+          "fromLane": "0",
+          "toLane": "0",
+          "via": ":247379907_12_0",
+          "tl": "247379907",
+          "linkIndex": "12",
+          "dir": "t",
+          "state": "o"
+        },
+        {
+          "from": "186623965#15",
+          "to": "-22917421#4",
+          "fromLane": "0",
+          "toLane": "0",
+          "via": ":247379907_4_0",
+          "tl": "247379907",
+          "linkIndex": "4",
+          "dir": "r",
+          "state": "O"
+        },
+        {
+          "from": "186623965#15",
+          "to": "186623965#17",
+          "fromLane": "0",
+          "toLane": "0",
+          "via": ":247379907_5_0",
+          "tl": "247379907",
+          "linkIndex": "5",
+          "dir": "s",
+          "state": "O"
+        },
+        {
+          "from": "186623965#15",
+          "to": "186623965#17",
+          "fromLane": "1",
+          "toLane": "1",
+          "via": ":247379907_5_1",
+          "tl": "247379907",
+          "linkIndex": "6",
+          "dir": "s",
+          "state": "O"
+        },
+        {
+          "from": "186623965#15",
+          "to": "22917421#5",
+          "fromLane": "1",
+          "toLane": "0",
+          "via": ":247379907_7_0",
+          "tl": "247379907",
+          "linkIndex": "7",
+          "dir": "l",
+          "state": "o"
+        },
+        {
+          "from": "186623965#15",
+          "to": "-186623965#16",
+          "fromLane": "1",
+          "toLane": "1",
+          "via": ":247379907_8_0",
+          "tl": "247379907",
+          "linkIndex": "8",
+          "dir": "t",
+          "state": "o"
+        },
+        {
+          "from": "22917421#3",
+          "to": "186623965#17",
+          "fromLane": "0",
+          "toLane": "0",
+          "via": ":247379907_0_0",
+          "tl": "247379907",
+          "linkIndex": "0",
+          "dir": "r",
+          "state": "o"
+        },
+        {
+          "from": "22917421#3",
+          "to": "22917421#5",
+          "fromLane": "0",
+          "toLane": "0",
+          "via": ":247379907_1_0",
+          "tl": "247379907",
+          "linkIndex": "1",
+          "dir": "s",
+          "state": "o"
+        },
+        {
+          "from": "22917421#3",
+          "to": "-186623965#16",
+          "fromLane": "0",
+          "toLane": "1",
+          "via": ":247379907_2_0",
+          "tl": "247379907",
+          "linkIndex": "2",
+          "dir": "l",
+          "state": "o"
+        },
+        {
+          "from": "22917421#3",
+          "to": "-22917421#4",
+          "fromLane": "0",
+          "toLane": "0",
+          "via": ":247379907_3_0",
+          "tl": "247379907",
+          "linkIndex": "3",
+          "dir": "t",
+          "state": "o"
+        }
+      ],
+      "entradas_com_supervisor": 26
+    },
+    {
+      "id": "252017285",
+      "entradas": [
+        {
+          "edge": "-28675510#0",
+          "faixas": [
+            {
+              "id": "-28675510#0_0",
+              "index": "0",
+              "disallow": "tram rail_urban rail rail_electric rail_fast ship",
+              "speed": "13.89",
+              "length": "122.73",
+              "shape": "13774.84,17370.99 13788.76,17249.05"
+            }
+          ],
+          "rumo_montante_graus": 353.4876193291021,
+          "rotulo_geografico": "N"
+        },
+        {
+          "edge": "-8716807#0",
+          "faixas": [
+            {
+              "id": "-8716807#0_0",
+              "index": "0",
+              "disallow": "tram rail_urban rail rail_electric rail_fast ship",
+              "speed": "8.33",
+              "length": "100.28",
+              "shape": "13898.45,17227.23 13799.33,17242.47"
+            }
+          ],
+          "rumo_montante_graus": 98.74094976443423,
+          "rotulo_geografico": "L"
+        },
+        {
+          "edge": "133081985#1",
+          "faixas": [
+            {
+              "id": "133081985#1_0",
+              "index": "0",
+              "disallow": "tram rail_urban rail rail_electric rail_fast ship",
+              "speed": "13.89",
+              "length": "83.37",
+              "shape": "13799.76,17151.08 13793.38,17234.21"
+            }
+          ],
+          "rumo_montante_graus": 175.61130890167215,
+          "rotulo_geografico": "S"
+        },
+        {
+          "edge": "-23283579#0",
+          "faixas": [
+            {
+              "id": "-23283579#0_0",
+              "index": "0",
+              "disallow": "tram rail_urban rail rail_electric rail_fast ship",
+              "speed": "13.89",
+              "length": "61.69",
+              "shape": "13722.79,17232.70 13784.08,17239.66"
+            }
+          ],
+          "rumo_montante_graus": 263.52133115769215,
+          "rotulo_geografico": "O"
+        }
+      ],
+      "fases": [
+        {
+          "acao_local": 0,
+          "indice_xml": 0,
+          "state": "rrrrGGggrrrrGGgg",
+          "movimentos_liberados": [
+            {
+              "from": "-28675510#0",
+              "to": "23283579#0",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":252017285_12_0",
+              "tl": "252017285",
+              "linkIndex": "12",
+              "dir": "r",
+              "state": "O",
+              "luz": "G"
+            },
+            {
+              "from": "-28675510#0",
+              "to": "-133081985#1",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":252017285_13_0",
+              "tl": "252017285",
+              "linkIndex": "13",
+              "dir": "s",
+              "state": "O",
+              "luz": "G"
+            },
+            {
+              "from": "-28675510#0",
+              "to": "8716807#0",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":252017285_14_0",
+              "tl": "252017285",
+              "linkIndex": "14",
+              "dir": "l",
+              "state": "o",
+              "luz": "g"
+            },
+            {
+              "from": "-28675510#0",
+              "to": "28675510#0",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":252017285_15_0",
+              "tl": "252017285",
+              "linkIndex": "15",
+              "dir": "t",
+              "state": "o",
+              "luz": "g"
+            },
+            {
+              "from": "133081985#1",
+              "to": "8716807#0",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":252017285_4_0",
+              "tl": "252017285",
+              "linkIndex": "4",
+              "dir": "r",
+              "state": "O",
+              "luz": "G"
+            },
+            {
+              "from": "133081985#1",
+              "to": "28675510#0",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":252017285_5_0",
+              "tl": "252017285",
+              "linkIndex": "5",
+              "dir": "s",
+              "state": "O",
+              "luz": "G"
+            },
+            {
+              "from": "133081985#1",
+              "to": "23283579#0",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":252017285_6_0",
+              "tl": "252017285",
+              "linkIndex": "6",
+              "dir": "l",
+              "state": "o",
+              "luz": "g"
+            },
+            {
+              "from": "133081985#1",
+              "to": "-133081985#1",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":252017285_7_0",
+              "tl": "252017285",
+              "linkIndex": "7",
+              "dir": "t",
+              "state": "o",
+              "luz": "g"
+            }
+          ],
+          "entradas_liberadas": [
+            "-28675510#0",
+            "133081985#1"
+          ]
+        },
+        {
+          "acao_local": 1,
+          "indice_xml": 2,
+          "state": "GGggrrrrGGggrrrr",
+          "movimentos_liberados": [
+            {
+              "from": "-23283579#0",
+              "to": "-133081985#1",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":252017285_8_0",
+              "tl": "252017285",
+              "linkIndex": "8",
+              "dir": "r",
+              "state": "o",
+              "luz": "G"
+            },
+            {
+              "from": "-23283579#0",
+              "to": "8716807#0",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":252017285_9_0",
+              "tl": "252017285",
+              "linkIndex": "9",
+              "dir": "s",
+              "state": "o",
+              "luz": "G"
+            },
+            {
+              "from": "-23283579#0",
+              "to": "28675510#0",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":252017285_10_0",
+              "tl": "252017285",
+              "linkIndex": "10",
+              "dir": "l",
+              "state": "o",
+              "luz": "g"
+            },
+            {
+              "from": "-23283579#0",
+              "to": "23283579#0",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":252017285_11_0",
+              "tl": "252017285",
+              "linkIndex": "11",
+              "dir": "t",
+              "state": "o",
+              "luz": "g"
+            },
+            {
+              "from": "-8716807#0",
+              "to": "28675510#0",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":252017285_0_0",
+              "tl": "252017285",
+              "linkIndex": "0",
+              "dir": "r",
+              "state": "o",
+              "luz": "G"
+            },
+            {
+              "from": "-8716807#0",
+              "to": "23283579#0",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":252017285_1_0",
+              "tl": "252017285",
+              "linkIndex": "1",
+              "dir": "s",
+              "state": "o",
+              "luz": "G"
+            },
+            {
+              "from": "-8716807#0",
+              "to": "-133081985#1",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":252017285_2_0",
+              "tl": "252017285",
+              "linkIndex": "2",
+              "dir": "l",
+              "state": "o",
+              "luz": "g"
+            },
+            {
+              "from": "-8716807#0",
+              "to": "8716807#0",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":252017285_3_0",
+              "tl": "252017285",
+              "linkIndex": "3",
+              "dir": "t",
+              "state": "o",
+              "luz": "g"
+            }
+          ],
+          "entradas_liberadas": [
+            "-23283579#0",
+            "-8716807#0"
+          ]
+        }
+      ],
+      "n_acoes": 2,
+      "n_entradas_rede": 15,
+      "conexoes": [
+        {
+          "from": "-23283579#0",
+          "to": "-133081985#1",
+          "fromLane": "0",
+          "toLane": "0",
+          "via": ":252017285_8_0",
+          "tl": "252017285",
+          "linkIndex": "8",
+          "dir": "r",
+          "state": "o"
+        },
+        {
+          "from": "-23283579#0",
+          "to": "8716807#0",
+          "fromLane": "0",
+          "toLane": "0",
+          "via": ":252017285_9_0",
+          "tl": "252017285",
+          "linkIndex": "9",
+          "dir": "s",
+          "state": "o"
+        },
+        {
+          "from": "-23283579#0",
+          "to": "28675510#0",
+          "fromLane": "0",
+          "toLane": "0",
+          "via": ":252017285_10_0",
+          "tl": "252017285",
+          "linkIndex": "10",
+          "dir": "l",
+          "state": "o"
+        },
+        {
+          "from": "-23283579#0",
+          "to": "23283579#0",
+          "fromLane": "0",
+          "toLane": "0",
+          "via": ":252017285_11_0",
+          "tl": "252017285",
+          "linkIndex": "11",
+          "dir": "t",
+          "state": "o"
+        },
+        {
+          "from": "-28675510#0",
+          "to": "23283579#0",
+          "fromLane": "0",
+          "toLane": "0",
+          "via": ":252017285_12_0",
+          "tl": "252017285",
+          "linkIndex": "12",
+          "dir": "r",
+          "state": "O"
+        },
+        {
+          "from": "-28675510#0",
+          "to": "-133081985#1",
+          "fromLane": "0",
+          "toLane": "0",
+          "via": ":252017285_13_0",
+          "tl": "252017285",
+          "linkIndex": "13",
+          "dir": "s",
+          "state": "O"
+        },
+        {
+          "from": "-28675510#0",
+          "to": "8716807#0",
+          "fromLane": "0",
+          "toLane": "0",
+          "via": ":252017285_14_0",
+          "tl": "252017285",
+          "linkIndex": "14",
+          "dir": "l",
+          "state": "o"
+        },
+        {
+          "from": "-28675510#0",
+          "to": "28675510#0",
+          "fromLane": "0",
+          "toLane": "0",
+          "via": ":252017285_15_0",
+          "tl": "252017285",
+          "linkIndex": "15",
+          "dir": "t",
+          "state": "o"
+        },
+        {
+          "from": "-8716807#0",
+          "to": "28675510#0",
+          "fromLane": "0",
+          "toLane": "0",
+          "via": ":252017285_0_0",
+          "tl": "252017285",
+          "linkIndex": "0",
+          "dir": "r",
+          "state": "o"
+        },
+        {
+          "from": "-8716807#0",
+          "to": "23283579#0",
+          "fromLane": "0",
+          "toLane": "0",
+          "via": ":252017285_1_0",
+          "tl": "252017285",
+          "linkIndex": "1",
+          "dir": "s",
+          "state": "o"
+        },
+        {
+          "from": "-8716807#0",
+          "to": "-133081985#1",
+          "fromLane": "0",
+          "toLane": "0",
+          "via": ":252017285_2_0",
+          "tl": "252017285",
+          "linkIndex": "2",
+          "dir": "l",
+          "state": "o"
+        },
+        {
+          "from": "-8716807#0",
+          "to": "8716807#0",
+          "fromLane": "0",
+          "toLane": "0",
+          "via": ":252017285_3_0",
+          "tl": "252017285",
+          "linkIndex": "3",
+          "dir": "t",
+          "state": "o"
+        },
+        {
+          "from": "133081985#1",
+          "to": "8716807#0",
+          "fromLane": "0",
+          "toLane": "0",
+          "via": ":252017285_4_0",
+          "tl": "252017285",
+          "linkIndex": "4",
+          "dir": "r",
+          "state": "O"
+        },
+        {
+          "from": "133081985#1",
+          "to": "28675510#0",
+          "fromLane": "0",
+          "toLane": "0",
+          "via": ":252017285_5_0",
+          "tl": "252017285",
+          "linkIndex": "5",
+          "dir": "s",
+          "state": "O"
+        },
+        {
+          "from": "133081985#1",
+          "to": "23283579#0",
+          "fromLane": "0",
+          "toLane": "0",
+          "via": ":252017285_6_0",
+          "tl": "252017285",
+          "linkIndex": "6",
+          "dir": "l",
+          "state": "o"
+        },
+        {
+          "from": "133081985#1",
+          "to": "-133081985#1",
+          "fromLane": "0",
+          "toLane": "0",
+          "via": ":252017285_7_0",
+          "tl": "252017285",
+          "linkIndex": "7",
+          "dir": "t",
+          "state": "o"
+        }
+      ],
+      "entradas_com_supervisor": 24
+    },
+    {
+      "id": "256201389",
+      "entradas": [
+        {
+          "edge": "-24487264",
+          "faixas": [
+            {
+              "id": "-24487264_0",
+              "index": "0",
+              "disallow": "tram rail_urban rail rail_electric rail_fast ship",
+              "speed": "13.89",
+              "length": "166.35",
+              "shape": "14517.44,17439.46 14497.38,17274.33"
+            }
+          ],
+          "rumo_montante_graus": 6.926355319097424,
+          "rotulo_geografico": "N"
+        },
+        {
+          "edge": "-225249129#0",
+          "faixas": [
+            {
+              "id": "-225249129#0_0",
+              "index": "0",
+              "disallow": "tram rail_urban rail rail_electric rail_fast ship",
+              "speed": "8.33",
+              "length": "12.65",
+              "shape": "14517.15,17262.90 14504.98,17266.35"
+            }
+          ],
+          "rumo_montante_graus": 105.82718347110477,
+          "rotulo_geografico": "L"
+        },
+        {
+          "edge": "23648008#2",
+          "faixas": [
+            {
+              "id": "23648008#2_0",
+              "index": "0",
+              "disallow": "tram rail_urban rail rail_electric rail_fast ship",
+              "speed": "13.89",
+              "length": "175.60",
+              "shape": "14319.15,17305.85 14431.66,17280.16 14490.34,17266.76"
+            }
+          ],
+          "rumo_montante_graus": 282.8633355981897,
+          "rotulo_geografico": "O"
+        }
+      ],
+      "fases": [
+        {
+          "acao_local": 0,
+          "indice_xml": 0,
+          "state": "rrrGGgGgg",
+          "movimentos_liberados": [
+            {
+              "from": "-225249129#0",
+              "to": "24487264",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":256201389_3_0",
+              "tl": "256201389",
+              "linkIndex": "3",
+              "dir": "r",
+              "state": "O",
+              "luz": "G"
+            },
+            {
+              "from": "-225249129#0",
+              "to": "-23648008#3",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":256201389_4_0",
+              "tl": "256201389",
+              "linkIndex": "4",
+              "dir": "s",
+              "state": "O",
+              "luz": "G"
+            },
+            {
+              "from": "-225249129#0",
+              "to": "225249129#0",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":256201389_5_0",
+              "tl": "256201389",
+              "linkIndex": "5",
+              "dir": "t",
+              "state": "o",
+              "luz": "g"
+            },
+            {
+              "from": "23648008#2",
+              "to": "225249129#0",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":256201389_6_0",
+              "tl": "256201389",
+              "linkIndex": "6",
+              "dir": "s",
+              "state": "O",
+              "luz": "G"
+            },
+            {
+              "from": "23648008#2",
+              "to": "24487264",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":256201389_7_0",
+              "tl": "256201389",
+              "linkIndex": "7",
+              "dir": "l",
+              "state": "o",
+              "luz": "g"
+            },
+            {
+              "from": "23648008#2",
+              "to": "-23648008#3",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":256201389_8_0",
+              "tl": "256201389",
+              "linkIndex": "8",
+              "dir": "t",
+              "state": "o",
+              "luz": "g"
+            }
+          ],
+          "entradas_liberadas": [
+            "-225249129#0",
+            "23648008#2"
+          ]
+        },
+        {
+          "acao_local": 1,
+          "indice_xml": 2,
+          "state": "rrrrrGrGG",
+          "movimentos_liberados": [
+            {
+              "from": "-225249129#0",
+              "to": "225249129#0",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":256201389_5_0",
+              "tl": "256201389",
+              "linkIndex": "5",
+              "dir": "t",
+              "state": "o",
+              "luz": "G"
+            },
+            {
+              "from": "23648008#2",
+              "to": "24487264",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":256201389_7_0",
+              "tl": "256201389",
+              "linkIndex": "7",
+              "dir": "l",
+              "state": "o",
+              "luz": "G"
+            },
+            {
+              "from": "23648008#2",
+              "to": "-23648008#3",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":256201389_8_0",
+              "tl": "256201389",
+              "linkIndex": "8",
+              "dir": "t",
+              "state": "o",
+              "luz": "G"
+            }
+          ],
+          "entradas_liberadas": [
+            "-225249129#0",
+            "23648008#2"
+          ]
+        },
+        {
+          "acao_local": 2,
+          "indice_xml": 4,
+          "state": "GGgGrrrrr",
+          "movimentos_liberados": [
+            {
+              "from": "-225249129#0",
+              "to": "24487264",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":256201389_3_0",
+              "tl": "256201389",
+              "linkIndex": "3",
+              "dir": "r",
+              "state": "O",
+              "luz": "G"
+            },
+            {
+              "from": "-24487264",
+              "to": "-23648008#3",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":256201389_0_0",
+              "tl": "256201389",
+              "linkIndex": "0",
+              "dir": "r",
+              "state": "o",
+              "luz": "G"
+            },
+            {
+              "from": "-24487264",
+              "to": "225249129#0",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":256201389_1_0",
+              "tl": "256201389",
+              "linkIndex": "1",
+              "dir": "l",
+              "state": "o",
+              "luz": "G"
+            },
+            {
+              "from": "-24487264",
+              "to": "24487264",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":256201389_2_0",
+              "tl": "256201389",
+              "linkIndex": "2",
+              "dir": "t",
+              "state": "o",
+              "luz": "g"
+            }
+          ],
+          "entradas_liberadas": [
+            "-225249129#0",
+            "-24487264"
+          ]
+        }
+      ],
+      "n_acoes": 3,
+      "n_entradas_rede": 13,
+      "conexoes": [
+        {
+          "from": "-225249129#0",
+          "to": "24487264",
+          "fromLane": "0",
+          "toLane": "0",
+          "via": ":256201389_3_0",
+          "tl": "256201389",
+          "linkIndex": "3",
+          "dir": "r",
+          "state": "O"
+        },
+        {
+          "from": "-225249129#0",
+          "to": "-23648008#3",
+          "fromLane": "0",
+          "toLane": "0",
+          "via": ":256201389_4_0",
+          "tl": "256201389",
+          "linkIndex": "4",
+          "dir": "s",
+          "state": "O"
+        },
+        {
+          "from": "-225249129#0",
+          "to": "225249129#0",
+          "fromLane": "0",
+          "toLane": "0",
+          "via": ":256201389_5_0",
+          "tl": "256201389",
+          "linkIndex": "5",
+          "dir": "t",
+          "state": "o"
+        },
+        {
+          "from": "-24487264",
+          "to": "-23648008#3",
+          "fromLane": "0",
+          "toLane": "0",
+          "via": ":256201389_0_0",
+          "tl": "256201389",
+          "linkIndex": "0",
+          "dir": "r",
+          "state": "o"
+        },
+        {
+          "from": "-24487264",
+          "to": "225249129#0",
+          "fromLane": "0",
+          "toLane": "0",
+          "via": ":256201389_1_0",
+          "tl": "256201389",
+          "linkIndex": "1",
+          "dir": "l",
+          "state": "o"
+        },
+        {
+          "from": "-24487264",
+          "to": "24487264",
+          "fromLane": "0",
+          "toLane": "0",
+          "via": ":256201389_2_0",
+          "tl": "256201389",
+          "linkIndex": "2",
+          "dir": "t",
+          "state": "o"
+        },
+        {
+          "from": "23648008#2",
+          "to": "225249129#0",
+          "fromLane": "0",
+          "toLane": "0",
+          "via": ":256201389_6_0",
+          "tl": "256201389",
+          "linkIndex": "6",
+          "dir": "s",
+          "state": "O"
+        },
+        {
+          "from": "23648008#2",
+          "to": "24487264",
+          "fromLane": "0",
+          "toLane": "0",
+          "via": ":256201389_7_0",
+          "tl": "256201389",
+          "linkIndex": "7",
+          "dir": "l",
+          "state": "o"
+        },
+        {
+          "from": "23648008#2",
+          "to": "-23648008#3",
+          "fromLane": "0",
+          "toLane": "0",
+          "via": ":256201389_8_0",
+          "tl": "256201389",
+          "linkIndex": "8",
+          "dir": "t",
+          "state": "o"
+        }
+      ],
+      "entradas_com_supervisor": 22
+    },
+    {
+      "id": "26110729",
+      "entradas": [
+        {
+          "edge": "-42925825#2",
+          "faixas": [
+            {
+              "id": "-42925825#2_0",
+              "index": "0",
+              "disallow": "tram rail_urban rail rail_electric rail_fast ship",
+              "speed": "13.89",
+              "length": "254.19",
+              "shape": "14291.94,18337.39 14285.75,18275.99 14265.47,18084.58"
+            }
+          ],
+          "rumo_montante_graus": 6.047957764289099,
+          "rotulo_geografico": "N"
+        },
+        {
+          "edge": "186623965#9",
+          "faixas": [
+            {
+              "id": "186623965#9_0",
+              "index": "0",
+              "disallow": "tram rail_urban rail rail_electric rail_fast ship",
+              "speed": "13.89",
+              "length": "159.68",
+              "shape": "14433.38,18074.22 14418.86,18074.77 14358.52,18076.49 14347.21,18076.85 14307.76,18077.66 14277.13,18078.26 14273.76,18078.39"
+            },
+            {
+              "id": "186623965#9_1",
+              "index": "1",
+              "disallow": "tram rail_urban rail rail_electric rail_fast ship",
+              "speed": "13.89",
+              "length": "159.68",
+              "shape": "14433.26,18071.02 14418.75,18071.57 14358.43,18073.29 14347.12,18073.65 14307.69,18074.46 14277.04,18075.06 14273.64,18075.20"
+            }
+          ],
+          "rumo_montante_graus": 92.20912759531825,
+          "rotulo_geografico": "L"
+        },
+        {
+          "edge": "-297047310#2",
+          "faixas": [
+            {
+              "id": "-297047310#2_0",
+              "index": "0",
+              "disallow": "tram rail_urban rail rail_electric rail_fast ship",
+              "speed": "13.89",
+              "length": "601.46",
+              "shape": "14201.34,17465.30 14207.76,17516.96 14212.00,17548.65 14213.26,17558.11 14214.44,17565.55 14217.25,17587.63 14219.28,17607.69 14223.60,17650.37 14225.79,17669.44 14226.77,17677.95 14228.61,17692.16 14234.18,17735.15 14237.24,17756.23 14241.38,17796.00 14242.05,17801.68 14242.42,17804.89 14256.37,17942.71 14257.06,17949.63 14265.75,18043.66 14266.82,18063.08"
+            }
+          ],
+          "rumo_montante_graus": 183.15368482685963,
+          "rotulo_geografico": "S"
+        },
+        {
+          "edge": "-186623965#16",
+          "faixas": [
+            {
+              "id": "-186623965#16_0",
+              "index": "0",
+              "disallow": "tram rail_urban rail rail_electric rail_fast ship",
+              "speed": "13.89",
+              "length": "188.11",
+              "shape": "14070.14,18067.23 14091.30,18066.96 14258.29,18069.00"
+            },
+            {
+              "id": "-186623965#16_1",
+              "index": "1",
+              "disallow": "tram rail_urban rail rail_electric rail_fast ship",
+              "speed": "13.89",
+              "length": "188.11",
+              "shape": "14070.19,18070.43 14091.30,18070.16 14258.25,18072.20"
+            }
+          ],
+          "rumo_montante_graus": 269.3000923633367,
+          "rotulo_geografico": "O"
+        }
+      ],
+      "fases": [
+        {
+          "acao_local": 0,
+          "indice_xml": 0,
+          "state": "rrrrGGGggrrrrGGGgg",
+          "movimentos_liberados": [
+            {
+              "from": "-186623965#16",
+              "to": "155600123#0",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":26110729_13_0",
+              "tl": "26110729",
+              "linkIndex": "13",
+              "dir": "r",
+              "state": "O",
+              "luz": "G"
+            },
+            {
+              "from": "-186623965#16",
+              "to": "-186623965#14",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":26110729_14_0",
+              "tl": "26110729",
+              "linkIndex": "14",
+              "dir": "s",
+              "state": "O",
+              "luz": "G"
+            },
+            {
+              "from": "-186623965#16",
+              "to": "-186623965#14",
+              "fromLane": "1",
+              "toLane": "1",
+              "via": ":26110729_14_1",
+              "tl": "26110729",
+              "linkIndex": "15",
+              "dir": "s",
+              "state": "O",
+              "luz": "G"
+            },
+            {
+              "from": "-186623965#16",
+              "to": "42925825#0",
+              "fromLane": "1",
+              "toLane": "0",
+              "via": ":26110729_16_0",
+              "tl": "26110729",
+              "linkIndex": "16",
+              "dir": "l",
+              "state": "o",
+              "luz": "g"
+            },
+            {
+              "from": "-186623965#16",
+              "to": "186623965#15",
+              "fromLane": "1",
+              "toLane": "1",
+              "via": ":26110729_17_0",
+              "tl": "26110729",
+              "linkIndex": "17",
+              "dir": "t",
+              "state": "o",
+              "luz": "g"
+            },
+            {
+              "from": "186623965#9",
+              "to": "42925825#0",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":26110729_4_0",
+              "tl": "26110729",
+              "linkIndex": "4",
+              "dir": "r",
+              "state": "O",
+              "luz": "G"
+            },
+            {
+              "from": "186623965#9",
+              "to": "186623965#15",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":26110729_5_0",
+              "tl": "26110729",
+              "linkIndex": "5",
+              "dir": "s",
+              "state": "O",
+              "luz": "G"
+            },
+            {
+              "from": "186623965#9",
+              "to": "186623965#15",
+              "fromLane": "1",
+              "toLane": "1",
+              "via": ":26110729_5_1",
+              "tl": "26110729",
+              "linkIndex": "6",
+              "dir": "s",
+              "state": "O",
+              "luz": "G"
+            },
+            {
+              "from": "186623965#9",
+              "to": "155600123#0",
+              "fromLane": "1",
+              "toLane": "0",
+              "via": ":26110729_7_0",
+              "tl": "26110729",
+              "linkIndex": "7",
+              "dir": "l",
+              "state": "o",
+              "luz": "g"
+            },
+            {
+              "from": "186623965#9",
+              "to": "-186623965#14",
+              "fromLane": "1",
+              "toLane": "1",
+              "via": ":26110729_8_0",
+              "tl": "26110729",
+              "linkIndex": "8",
+              "dir": "t",
+              "state": "o",
+              "luz": "g"
+            }
+          ],
+          "entradas_liberadas": [
+            "-186623965#16",
+            "186623965#9"
+          ]
+        },
+        {
+          "acao_local": 1,
+          "indice_xml": 2,
+          "state": "rrrrrrrGGrrrrrrrGG",
+          "movimentos_liberados": [
+            {
+              "from": "-186623965#16",
+              "to": "42925825#0",
+              "fromLane": "1",
+              "toLane": "0",
+              "via": ":26110729_16_0",
+              "tl": "26110729",
+              "linkIndex": "16",
+              "dir": "l",
+              "state": "o",
+              "luz": "G"
+            },
+            {
+              "from": "-186623965#16",
+              "to": "186623965#15",
+              "fromLane": "1",
+              "toLane": "1",
+              "via": ":26110729_17_0",
+              "tl": "26110729",
+              "linkIndex": "17",
+              "dir": "t",
+              "state": "o",
+              "luz": "G"
+            },
+            {
+              "from": "186623965#9",
+              "to": "155600123#0",
+              "fromLane": "1",
+              "toLane": "0",
+              "via": ":26110729_7_0",
+              "tl": "26110729",
+              "linkIndex": "7",
+              "dir": "l",
+              "state": "o",
+              "luz": "G"
+            },
+            {
+              "from": "186623965#9",
+              "to": "-186623965#14",
+              "fromLane": "1",
+              "toLane": "1",
+              "via": ":26110729_8_0",
+              "tl": "26110729",
+              "linkIndex": "8",
+              "dir": "t",
+              "state": "o",
+              "luz": "G"
+            }
+          ],
+          "entradas_liberadas": [
+            "-186623965#16",
+            "186623965#9"
+          ]
+        },
+        {
+          "acao_local": 2,
+          "indice_xml": 4,
+          "state": "GGggrrrrrGGggrrrrr",
+          "movimentos_liberados": [
+            {
+              "from": "-297047310#2",
+              "to": "-186623965#14",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":26110729_9_0",
+              "tl": "26110729",
+              "linkIndex": "9",
+              "dir": "r",
+              "state": "o",
+              "luz": "G"
+            },
+            {
+              "from": "-297047310#2",
+              "to": "42925825#0",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":26110729_10_0",
+              "tl": "26110729",
+              "linkIndex": "10",
+              "dir": "s",
+              "state": "o",
+              "luz": "G"
+            },
+            {
+              "from": "-297047310#2",
+              "to": "186623965#15",
+              "fromLane": "0",
+              "toLane": "1",
+              "via": ":26110729_11_0",
+              "tl": "26110729",
+              "linkIndex": "11",
+              "dir": "l",
+              "state": "o",
+              "luz": "g"
+            },
+            {
+              "from": "-297047310#2",
+              "to": "155600123#0",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":26110729_12_0",
+              "tl": "26110729",
+              "linkIndex": "12",
+              "dir": "t",
+              "state": "o",
+              "luz": "g"
+            },
+            {
+              "from": "-42925825#2",
+              "to": "186623965#15",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":26110729_0_0",
+              "tl": "26110729",
+              "linkIndex": "0",
+              "dir": "r",
+              "state": "o",
+              "luz": "G"
+            },
+            {
+              "from": "-42925825#2",
+              "to": "155600123#0",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":26110729_1_0",
+              "tl": "26110729",
+              "linkIndex": "1",
+              "dir": "s",
+              "state": "o",
+              "luz": "G"
+            },
+            {
+              "from": "-42925825#2",
+              "to": "-186623965#14",
+              "fromLane": "0",
+              "toLane": "1",
+              "via": ":26110729_2_0",
+              "tl": "26110729",
+              "linkIndex": "2",
+              "dir": "l",
+              "state": "o",
+              "luz": "g"
+            },
+            {
+              "from": "-42925825#2",
+              "to": "42925825#0",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":26110729_3_0",
+              "tl": "26110729",
+              "linkIndex": "3",
+              "dir": "t",
+              "state": "o",
+              "luz": "g"
+            }
+          ],
+          "entradas_liberadas": [
+            "-297047310#2",
+            "-42925825#2"
+          ]
+        },
+        {
+          "acao_local": 3,
+          "indice_xml": 6,
+          "state": "rrGGrrrrrrrGGrrrrr",
+          "movimentos_liberados": [
+            {
+              "from": "-297047310#2",
+              "to": "186623965#15",
+              "fromLane": "0",
+              "toLane": "1",
+              "via": ":26110729_11_0",
+              "tl": "26110729",
+              "linkIndex": "11",
+              "dir": "l",
+              "state": "o",
+              "luz": "G"
+            },
+            {
+              "from": "-297047310#2",
+              "to": "155600123#0",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":26110729_12_0",
+              "tl": "26110729",
+              "linkIndex": "12",
+              "dir": "t",
+              "state": "o",
+              "luz": "G"
+            },
+            {
+              "from": "-42925825#2",
+              "to": "-186623965#14",
+              "fromLane": "0",
+              "toLane": "1",
+              "via": ":26110729_2_0",
+              "tl": "26110729",
+              "linkIndex": "2",
+              "dir": "l",
+              "state": "o",
+              "luz": "G"
+            },
+            {
+              "from": "-42925825#2",
+              "to": "42925825#0",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":26110729_3_0",
+              "tl": "26110729",
+              "linkIndex": "3",
+              "dir": "t",
+              "state": "o",
+              "luz": "G"
+            }
+          ],
+          "entradas_liberadas": [
+            "-297047310#2",
+            "-42925825#2"
+          ]
+        }
+      ],
+      "n_acoes": 4,
+      "n_entradas_rede": 17,
+      "conexoes": [
+        {
+          "from": "-186623965#16",
+          "to": "155600123#0",
+          "fromLane": "0",
+          "toLane": "0",
+          "via": ":26110729_13_0",
+          "tl": "26110729",
+          "linkIndex": "13",
+          "dir": "r",
+          "state": "O"
+        },
+        {
+          "from": "-186623965#16",
+          "to": "-186623965#14",
+          "fromLane": "0",
+          "toLane": "0",
+          "via": ":26110729_14_0",
+          "tl": "26110729",
+          "linkIndex": "14",
+          "dir": "s",
+          "state": "O"
+        },
+        {
+          "from": "-186623965#16",
+          "to": "-186623965#14",
+          "fromLane": "1",
+          "toLane": "1",
+          "via": ":26110729_14_1",
+          "tl": "26110729",
+          "linkIndex": "15",
+          "dir": "s",
+          "state": "O"
+        },
+        {
+          "from": "-186623965#16",
+          "to": "42925825#0",
+          "fromLane": "1",
+          "toLane": "0",
+          "via": ":26110729_16_0",
+          "tl": "26110729",
+          "linkIndex": "16",
+          "dir": "l",
+          "state": "o"
+        },
+        {
+          "from": "-186623965#16",
+          "to": "186623965#15",
+          "fromLane": "1",
+          "toLane": "1",
+          "via": ":26110729_17_0",
+          "tl": "26110729",
+          "linkIndex": "17",
+          "dir": "t",
+          "state": "o"
+        },
+        {
+          "from": "-297047310#2",
+          "to": "-186623965#14",
+          "fromLane": "0",
+          "toLane": "0",
+          "via": ":26110729_9_0",
+          "tl": "26110729",
+          "linkIndex": "9",
+          "dir": "r",
+          "state": "o"
+        },
+        {
+          "from": "-297047310#2",
+          "to": "42925825#0",
+          "fromLane": "0",
+          "toLane": "0",
+          "via": ":26110729_10_0",
+          "tl": "26110729",
+          "linkIndex": "10",
+          "dir": "s",
+          "state": "o"
+        },
+        {
+          "from": "-297047310#2",
+          "to": "186623965#15",
+          "fromLane": "0",
+          "toLane": "1",
+          "via": ":26110729_11_0",
+          "tl": "26110729",
+          "linkIndex": "11",
+          "dir": "l",
+          "state": "o"
+        },
+        {
+          "from": "-297047310#2",
+          "to": "155600123#0",
+          "fromLane": "0",
+          "toLane": "0",
+          "via": ":26110729_12_0",
+          "tl": "26110729",
+          "linkIndex": "12",
+          "dir": "t",
+          "state": "o"
+        },
+        {
+          "from": "-42925825#2",
+          "to": "186623965#15",
+          "fromLane": "0",
+          "toLane": "0",
+          "via": ":26110729_0_0",
+          "tl": "26110729",
+          "linkIndex": "0",
+          "dir": "r",
+          "state": "o"
+        },
+        {
+          "from": "-42925825#2",
+          "to": "155600123#0",
+          "fromLane": "0",
+          "toLane": "0",
+          "via": ":26110729_1_0",
+          "tl": "26110729",
+          "linkIndex": "1",
+          "dir": "s",
+          "state": "o"
+        },
+        {
+          "from": "-42925825#2",
+          "to": "-186623965#14",
+          "fromLane": "0",
+          "toLane": "1",
+          "via": ":26110729_2_0",
+          "tl": "26110729",
+          "linkIndex": "2",
+          "dir": "l",
+          "state": "o"
+        },
+        {
+          "from": "-42925825#2",
+          "to": "42925825#0",
+          "fromLane": "0",
+          "toLane": "0",
+          "via": ":26110729_3_0",
+          "tl": "26110729",
+          "linkIndex": "3",
+          "dir": "t",
+          "state": "o"
+        },
+        {
+          "from": "186623965#9",
+          "to": "42925825#0",
+          "fromLane": "0",
+          "toLane": "0",
+          "via": ":26110729_4_0",
+          "tl": "26110729",
+          "linkIndex": "4",
+          "dir": "r",
+          "state": "O"
+        },
+        {
+          "from": "186623965#9",
+          "to": "186623965#15",
+          "fromLane": "0",
+          "toLane": "0",
+          "via": ":26110729_5_0",
+          "tl": "26110729",
+          "linkIndex": "5",
+          "dir": "s",
+          "state": "O"
+        },
+        {
+          "from": "186623965#9",
+          "to": "186623965#15",
+          "fromLane": "1",
+          "toLane": "1",
+          "via": ":26110729_5_1",
+          "tl": "26110729",
+          "linkIndex": "6",
+          "dir": "s",
+          "state": "O"
+        },
+        {
+          "from": "186623965#9",
+          "to": "155600123#0",
+          "fromLane": "1",
+          "toLane": "0",
+          "via": ":26110729_7_0",
+          "tl": "26110729",
+          "linkIndex": "7",
+          "dir": "l",
+          "state": "o"
+        },
+        {
+          "from": "186623965#9",
+          "to": "-186623965#14",
+          "fromLane": "1",
+          "toLane": "1",
+          "via": ":26110729_8_0",
+          "tl": "26110729",
+          "linkIndex": "8",
+          "dir": "t",
+          "state": "o"
+        }
+      ],
+      "entradas_com_supervisor": 26
+    },
+    {
+      "id": "280120513",
+      "entradas": [
+        {
+          "edge": "297047310#4",
+          "faixas": [
+            {
+              "id": "297047310#4_0",
+              "index": "0",
+              "disallow": "tram rail_urban rail rail_electric rail_fast ship",
+              "speed": "13.89",
+              "length": "55.16",
+              "shape": "14189.63,17397.46 14187.35,17376.63 14183.63,17342.63"
+            }
+          ],
+          "rumo_montante_graus": 6.243995900140384,
+          "rotulo_geografico": "N"
+        },
+        {
+          "edge": "-23648008#0",
+          "faixas": [
+            {
+              "id": "-23648008#0_0",
+              "index": "0",
+              "disallow": "tram rail_urban rail rail_electric rail_fast ship",
+              "speed": "13.89",
+              "length": "75.90",
+              "shape": "14269.70,17319.56 14195.39,17334.96"
+            }
+          ],
+          "rumo_montante_graus": 101.70823500438001,
+          "rotulo_geografico": "L"
+        },
+        {
+          "edge": "-28675493",
+          "faixas": [
+            {
+              "id": "-28675493_0",
+              "index": "0",
+              "disallow": "tram rail_urban rail rail_electric rail_fast ship",
+              "speed": "13.89",
+              "length": "90.85",
+              "shape": "14180.53,17236.74 14188.55,17327.23"
+            },
+            {
+              "id": "-28675493_1",
+              "index": "1",
+              "disallow": "tram rail_urban rail rail_electric rail_fast ship",
+              "speed": "13.89",
+              "length": "90.85",
+              "shape": "14177.35,17237.02 14185.36,17327.51"
+            }
+          ],
+          "rumo_montante_graus": 185.06480971157956,
+          "rotulo_geografico": "S"
+        }
+      ],
+      "fases": [
+        {
+          "acao_local": 0,
+          "indice_xml": 0,
+          "state": "GggrrrGGg",
+          "movimentos_liberados": [
+            {
+              "from": "-28675493",
+              "to": "23648008#0",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":280120513_6_0",
+              "tl": "280120513",
+              "linkIndex": "6",
+              "dir": "r",
+              "state": "O",
+              "luz": "G"
+            },
+            {
+              "from": "-28675493",
+              "to": "-297047307",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":280120513_7_0",
+              "tl": "280120513",
+              "linkIndex": "7",
+              "dir": "s",
+              "state": "O",
+              "luz": "G"
+            },
+            {
+              "from": "-28675493",
+              "to": "28675493",
+              "fromLane": "1",
+              "toLane": "0",
+              "via": ":280120513_8_0",
+              "tl": "280120513",
+              "linkIndex": "8",
+              "dir": "t",
+              "state": "o",
+              "luz": "g"
+            },
+            {
+              "from": "297047310#4",
+              "to": "28675493",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":280120513_0_0",
+              "tl": "280120513",
+              "linkIndex": "0",
+              "dir": "s",
+              "state": "O",
+              "luz": "G"
+            },
+            {
+              "from": "297047310#4",
+              "to": "23648008#0",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":280120513_1_0",
+              "tl": "280120513",
+              "linkIndex": "1",
+              "dir": "l",
+              "state": "o",
+              "luz": "g"
+            },
+            {
+              "from": "297047310#4",
+              "to": "-297047307",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":280120513_2_0",
+              "tl": "280120513",
+              "linkIndex": "2",
+              "dir": "t",
+              "state": "o",
+              "luz": "g"
+            }
+          ],
+          "entradas_liberadas": [
+            "-28675493",
+            "297047310#4"
+          ]
+        },
+        {
+          "acao_local": 1,
+          "indice_xml": 2,
+          "state": "rGGrrrrrG",
+          "movimentos_liberados": [
+            {
+              "from": "-28675493",
+              "to": "28675493",
+              "fromLane": "1",
+              "toLane": "0",
+              "via": ":280120513_8_0",
+              "tl": "280120513",
+              "linkIndex": "8",
+              "dir": "t",
+              "state": "o",
+              "luz": "G"
+            },
+            {
+              "from": "297047310#4",
+              "to": "23648008#0",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":280120513_1_0",
+              "tl": "280120513",
+              "linkIndex": "1",
+              "dir": "l",
+              "state": "o",
+              "luz": "G"
+            },
+            {
+              "from": "297047310#4",
+              "to": "-297047307",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":280120513_2_0",
+              "tl": "280120513",
+              "linkIndex": "2",
+              "dir": "t",
+              "state": "o",
+              "luz": "G"
+            }
+          ],
+          "entradas_liberadas": [
+            "-28675493",
+            "297047310#4"
+          ]
+        },
+        {
+          "acao_local": 2,
+          "indice_xml": 4,
+          "state": "rrrGGgGrr",
+          "movimentos_liberados": [
+            {
+              "from": "-23648008#0",
+              "to": "-297047307",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":280120513_3_0",
+              "tl": "280120513",
+              "linkIndex": "3",
+              "dir": "r",
+              "state": "o",
+              "luz": "G"
+            },
+            {
+              "from": "-23648008#0",
+              "to": "28675493",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":280120513_4_0",
+              "tl": "280120513",
+              "linkIndex": "4",
+              "dir": "l",
+              "state": "o",
+              "luz": "G"
+            },
+            {
+              "from": "-23648008#0",
+              "to": "23648008#0",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":280120513_5_0",
+              "tl": "280120513",
+              "linkIndex": "5",
+              "dir": "t",
+              "state": "o",
+              "luz": "g"
+            },
+            {
+              "from": "-28675493",
+              "to": "23648008#0",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":280120513_6_0",
+              "tl": "280120513",
+              "linkIndex": "6",
+              "dir": "r",
+              "state": "O",
+              "luz": "G"
+            }
+          ],
+          "entradas_liberadas": [
+            "-23648008#0",
+            "-28675493"
+          ]
+        }
+      ],
+      "n_acoes": 3,
+      "n_entradas_rede": 13,
+      "conexoes": [
+        {
+          "from": "-23648008#0",
+          "to": "-297047307",
+          "fromLane": "0",
+          "toLane": "0",
+          "via": ":280120513_3_0",
+          "tl": "280120513",
+          "linkIndex": "3",
+          "dir": "r",
+          "state": "o"
+        },
+        {
+          "from": "-23648008#0",
+          "to": "28675493",
+          "fromLane": "0",
+          "toLane": "0",
+          "via": ":280120513_4_0",
+          "tl": "280120513",
+          "linkIndex": "4",
+          "dir": "l",
+          "state": "o"
+        },
+        {
+          "from": "-23648008#0",
+          "to": "23648008#0",
+          "fromLane": "0",
+          "toLane": "0",
+          "via": ":280120513_5_0",
+          "tl": "280120513",
+          "linkIndex": "5",
+          "dir": "t",
+          "state": "o"
+        },
+        {
+          "from": "-28675493",
+          "to": "23648008#0",
+          "fromLane": "0",
+          "toLane": "0",
+          "via": ":280120513_6_0",
+          "tl": "280120513",
+          "linkIndex": "6",
+          "dir": "r",
+          "state": "O"
+        },
+        {
+          "from": "-28675493",
+          "to": "-297047307",
+          "fromLane": "0",
+          "toLane": "0",
+          "via": ":280120513_7_0",
+          "tl": "280120513",
+          "linkIndex": "7",
+          "dir": "s",
+          "state": "O"
+        },
+        {
+          "from": "-28675493",
+          "to": "28675493",
+          "fromLane": "1",
+          "toLane": "0",
+          "via": ":280120513_8_0",
+          "tl": "280120513",
+          "linkIndex": "8",
+          "dir": "t",
+          "state": "o"
+        },
+        {
+          "from": "297047310#4",
+          "to": "28675493",
+          "fromLane": "0",
+          "toLane": "0",
+          "via": ":280120513_0_0",
+          "tl": "280120513",
+          "linkIndex": "0",
+          "dir": "s",
+          "state": "O"
+        },
+        {
+          "from": "297047310#4",
+          "to": "23648008#0",
+          "fromLane": "0",
+          "toLane": "0",
+          "via": ":280120513_1_0",
+          "tl": "280120513",
+          "linkIndex": "1",
+          "dir": "l",
+          "state": "o"
+        },
+        {
+          "from": "297047310#4",
+          "to": "-297047307",
+          "fromLane": "0",
+          "toLane": "0",
+          "via": ":280120513_2_0",
+          "tl": "280120513",
+          "linkIndex": "2",
+          "dir": "t",
+          "state": "o"
+        }
+      ],
+      "entradas_com_supervisor": 22
+    },
+    {
+      "id": "32319828",
+      "entradas": [
+        {
+          "edge": "-23686088#0",
+          "faixas": [
+            {
+              "id": "-23686088#0_0",
+              "index": "0",
+              "disallow": "tram rail_urban rail rail_electric rail_fast ship",
+              "speed": "13.89",
+              "length": "36.79",
+              "shape": "13824.19,16876.75 13828.97,16840.28"
+            }
+          ],
+          "rumo_montante_graus": 352.5329983357679,
+          "rotulo_geografico": "N"
+        },
+        {
+          "edge": "-4936412",
+          "faixas": [
+            {
+              "id": "-4936412_0",
+              "index": "0",
+              "disallow": "tram rail_urban rail rail_electric rail_fast ship",
+              "speed": "13.89",
+              "length": "34.03",
+              "shape": "13837.44,16795.75 13833.52,16829.56"
+            }
+          ],
+          "rumo_montante_graus": 173.38653951768538,
+          "rotulo_geografico": "S"
+        }
+      ],
+      "fases": [
+        {
+          "acao_local": 0,
+          "indice_xml": 0,
+          "state": "GGggGGgg",
+          "movimentos_liberados": [
+            {
+              "from": "-23686088#0",
+              "to": "155723703#0",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":32319828_4_0",
+              "tl": "32319828",
+              "linkIndex": "4",
+              "dir": "r",
+              "state": "O",
+              "luz": "G"
+            },
+            {
+              "from": "-23686088#0",
+              "to": "4936412",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":32319828_5_0",
+              "tl": "32319828",
+              "linkIndex": "5",
+              "dir": "s",
+              "state": "O",
+              "luz": "G"
+            },
+            {
+              "from": "-23686088#0",
+              "to": "8716827#0",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":32319828_6_0",
+              "tl": "32319828",
+              "linkIndex": "6",
+              "dir": "l",
+              "state": "o",
+              "luz": "g"
+            },
+            {
+              "from": "-23686088#0",
+              "to": "23686088#0",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":32319828_7_0",
+              "tl": "32319828",
+              "linkIndex": "7",
+              "dir": "t",
+              "state": "o",
+              "luz": "g"
+            },
+            {
+              "from": "-4936412",
+              "to": "8716827#0",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":32319828_0_0",
+              "tl": "32319828",
+              "linkIndex": "0",
+              "dir": "r",
+              "state": "O",
+              "luz": "G"
+            },
+            {
+              "from": "-4936412",
+              "to": "23686088#0",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":32319828_1_0",
+              "tl": "32319828",
+              "linkIndex": "1",
+              "dir": "s",
+              "state": "O",
+              "luz": "G"
+            },
+            {
+              "from": "-4936412",
+              "to": "155723703#0",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":32319828_2_0",
+              "tl": "32319828",
+              "linkIndex": "2",
+              "dir": "l",
+              "state": "o",
+              "luz": "g"
+            },
+            {
+              "from": "-4936412",
+              "to": "4936412",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":32319828_3_0",
+              "tl": "32319828",
+              "linkIndex": "3",
+              "dir": "t",
+              "state": "o",
+              "luz": "g"
+            }
+          ],
+          "entradas_liberadas": [
+            "-23686088#0",
+            "-4936412"
+          ]
+        },
+        {
+          "acao_local": 1,
+          "indice_xml": 2,
+          "state": "rrGGrrGG",
+          "movimentos_liberados": [
+            {
+              "from": "-23686088#0",
+              "to": "8716827#0",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":32319828_6_0",
+              "tl": "32319828",
+              "linkIndex": "6",
+              "dir": "l",
+              "state": "o",
+              "luz": "G"
+            },
+            {
+              "from": "-23686088#0",
+              "to": "23686088#0",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":32319828_7_0",
+              "tl": "32319828",
+              "linkIndex": "7",
+              "dir": "t",
+              "state": "o",
+              "luz": "G"
+            },
+            {
+              "from": "-4936412",
+              "to": "155723703#0",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":32319828_2_0",
+              "tl": "32319828",
+              "linkIndex": "2",
+              "dir": "l",
+              "state": "o",
+              "luz": "G"
+            },
+            {
+              "from": "-4936412",
+              "to": "4936412",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":32319828_3_0",
+              "tl": "32319828",
+              "linkIndex": "3",
+              "dir": "t",
+              "state": "o",
+              "luz": "G"
+            }
+          ],
+          "entradas_liberadas": [
+            "-23686088#0",
+            "-4936412"
+          ]
+        }
+      ],
+      "n_acoes": 2,
+      "n_entradas_rede": 9,
+      "conexoes": [
+        {
+          "from": "-23686088#0",
+          "to": "155723703#0",
+          "fromLane": "0",
+          "toLane": "0",
+          "via": ":32319828_4_0",
+          "tl": "32319828",
+          "linkIndex": "4",
+          "dir": "r",
+          "state": "O"
+        },
+        {
+          "from": "-23686088#0",
+          "to": "4936412",
+          "fromLane": "0",
+          "toLane": "0",
+          "via": ":32319828_5_0",
+          "tl": "32319828",
+          "linkIndex": "5",
+          "dir": "s",
+          "state": "O"
+        },
+        {
+          "from": "-23686088#0",
+          "to": "8716827#0",
+          "fromLane": "0",
+          "toLane": "0",
+          "via": ":32319828_6_0",
+          "tl": "32319828",
+          "linkIndex": "6",
+          "dir": "l",
+          "state": "o"
+        },
+        {
+          "from": "-23686088#0",
+          "to": "23686088#0",
+          "fromLane": "0",
+          "toLane": "0",
+          "via": ":32319828_7_0",
+          "tl": "32319828",
+          "linkIndex": "7",
+          "dir": "t",
+          "state": "o"
+        },
+        {
+          "from": "-4936412",
+          "to": "8716827#0",
+          "fromLane": "0",
+          "toLane": "0",
+          "via": ":32319828_0_0",
+          "tl": "32319828",
+          "linkIndex": "0",
+          "dir": "r",
+          "state": "O"
+        },
+        {
+          "from": "-4936412",
+          "to": "23686088#0",
+          "fromLane": "0",
+          "toLane": "0",
+          "via": ":32319828_1_0",
+          "tl": "32319828",
+          "linkIndex": "1",
+          "dir": "s",
+          "state": "O"
+        },
+        {
+          "from": "-4936412",
+          "to": "155723703#0",
+          "fromLane": "0",
+          "toLane": "0",
+          "via": ":32319828_2_0",
+          "tl": "32319828",
+          "linkIndex": "2",
+          "dir": "l",
+          "state": "o"
+        },
+        {
+          "from": "-4936412",
+          "to": "4936412",
+          "fromLane": "0",
+          "toLane": "0",
+          "via": ":32319828_3_0",
+          "tl": "32319828",
+          "linkIndex": "3",
+          "dir": "t",
+          "state": "o"
+        }
+      ],
+      "entradas_com_supervisor": 18
+    },
+    {
+      "id": "62426694",
+      "entradas": [
+        {
+          "edge": "297047308",
+          "faixas": [
+            {
+              "id": "297047308_0",
+              "index": "0",
+              "disallow": "tram rail_urban rail rail_electric rail_fast ship",
+              "speed": "13.89",
+              "length": "28.52",
+              "shape": "14173.50,17229.30 14171.37,17200.86"
+            }
+          ],
+          "rumo_montante_graus": 4.28314322950175,
+          "rotulo_geografico": "N"
+        },
+        {
+          "edge": "-28675494#1",
+          "faixas": [
+            {
+              "id": "-28675494#1_0",
+              "index": "0",
+              "disallow": "tram rail_urban rail rail_electric rail_fast ship",
+              "speed": "13.89",
+              "length": "73.43",
+              "shape": "14169.94,17112.78 14176.22,17182.17 14176.56,17185.91"
+            },
+            {
+              "id": "-28675494#1_1",
+              "index": "1",
+              "disallow": "tram rail_urban rail rail_electric rail_fast ship",
+              "speed": "13.89",
+              "length": "73.43",
+              "shape": "14166.75,17113.07 14173.03,17182.46 14173.37,17186.20"
+            }
+          ],
+          "rumo_montante_graus": 185.1944289077348,
+          "rotulo_geografico": "S"
+        },
+        {
+          "edge": "8716807#6",
+          "faixas": [
+            {
+              "id": "8716807#6_0",
+              "index": "0",
+              "disallow": "tram rail_urban rail rail_electric rail_fast ship",
+              "speed": "8.33",
+              "length": "58.51",
+              "shape": "14106.82,17199.24 14164.96,17192.67"
+            }
+          ],
+          "rumo_montante_graus": 276.447250152769,
+          "rotulo_geografico": "O"
+        }
+      ],
+      "fases": [
+        {
+          "acao_local": 0,
+          "indice_xml": 0,
+          "state": "GGgGggrrr",
+          "movimentos_liberados": [
+            {
+              "from": "-28675494#1",
+              "to": "-297047308",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":62426694_3_0",
+              "tl": "62426694",
+              "linkIndex": "3",
+              "dir": "s",
+              "state": "O",
+              "luz": "G"
+            },
+            {
+              "from": "-28675494#1",
+              "to": "-8716807#6",
+              "fromLane": "1",
+              "toLane": "0",
+              "via": ":62426694_4_0",
+              "tl": "62426694",
+              "linkIndex": "4",
+              "dir": "l",
+              "state": "o",
+              "luz": "g"
+            },
+            {
+              "from": "-28675494#1",
+              "to": "28675494#0",
+              "fromLane": "1",
+              "toLane": "0",
+              "via": ":62426694_5_0",
+              "tl": "62426694",
+              "linkIndex": "5",
+              "dir": "t",
+              "state": "o",
+              "luz": "g"
+            },
+            {
+              "from": "297047308",
+              "to": "-8716807#6",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":62426694_0_0",
+              "tl": "62426694",
+              "linkIndex": "0",
+              "dir": "r",
+              "state": "O",
+              "luz": "G"
+            },
+            {
+              "from": "297047308",
+              "to": "28675494#0",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":62426694_1_0",
+              "tl": "62426694",
+              "linkIndex": "1",
+              "dir": "s",
+              "state": "O",
+              "luz": "G"
+            },
+            {
+              "from": "297047308",
+              "to": "-297047308",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":62426694_2_0",
+              "tl": "62426694",
+              "linkIndex": "2",
+              "dir": "t",
+              "state": "o",
+              "luz": "g"
+            }
+          ],
+          "entradas_liberadas": [
+            "-28675494#1",
+            "297047308"
+          ]
+        },
+        {
+          "acao_local": 1,
+          "indice_xml": 2,
+          "state": "rrGrGGrrr",
+          "movimentos_liberados": [
+            {
+              "from": "-28675494#1",
+              "to": "-8716807#6",
+              "fromLane": "1",
+              "toLane": "0",
+              "via": ":62426694_4_0",
+              "tl": "62426694",
+              "linkIndex": "4",
+              "dir": "l",
+              "state": "o",
+              "luz": "G"
+            },
+            {
+              "from": "-28675494#1",
+              "to": "28675494#0",
+              "fromLane": "1",
+              "toLane": "0",
+              "via": ":62426694_5_0",
+              "tl": "62426694",
+              "linkIndex": "5",
+              "dir": "t",
+              "state": "o",
+              "luz": "G"
+            },
+            {
+              "from": "297047308",
+              "to": "-297047308",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":62426694_2_0",
+              "tl": "62426694",
+              "linkIndex": "2",
+              "dir": "t",
+              "state": "o",
+              "luz": "G"
+            }
+          ],
+          "entradas_liberadas": [
+            "-28675494#1",
+            "297047308"
+          ]
+        },
+        {
+          "acao_local": 2,
+          "indice_xml": 4,
+          "state": "GrrrrrGGg",
+          "movimentos_liberados": [
+            {
+              "from": "297047308",
+              "to": "-8716807#6",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":62426694_0_0",
+              "tl": "62426694",
+              "linkIndex": "0",
+              "dir": "r",
+              "state": "O",
+              "luz": "G"
+            },
+            {
+              "from": "8716807#6",
+              "to": "28675494#0",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":62426694_6_0",
+              "tl": "62426694",
+              "linkIndex": "6",
+              "dir": "r",
+              "state": "o",
+              "luz": "G"
+            },
+            {
+              "from": "8716807#6",
+              "to": "-297047308",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":62426694_7_0",
+              "tl": "62426694",
+              "linkIndex": "7",
+              "dir": "l",
+              "state": "o",
+              "luz": "G"
+            },
+            {
+              "from": "8716807#6",
+              "to": "-8716807#6",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":62426694_8_0",
+              "tl": "62426694",
+              "linkIndex": "8",
+              "dir": "t",
+              "state": "o",
+              "luz": "g"
+            }
+          ],
+          "entradas_liberadas": [
+            "297047308",
+            "8716807#6"
+          ]
+        }
+      ],
+      "n_acoes": 3,
+      "n_entradas_rede": 13,
+      "conexoes": [
+        {
+          "from": "-28675494#1",
+          "to": "-297047308",
+          "fromLane": "0",
+          "toLane": "0",
+          "via": ":62426694_3_0",
+          "tl": "62426694",
+          "linkIndex": "3",
+          "dir": "s",
+          "state": "O"
+        },
+        {
+          "from": "-28675494#1",
+          "to": "-8716807#6",
+          "fromLane": "1",
+          "toLane": "0",
+          "via": ":62426694_4_0",
+          "tl": "62426694",
+          "linkIndex": "4",
+          "dir": "l",
+          "state": "o"
+        },
+        {
+          "from": "-28675494#1",
+          "to": "28675494#0",
+          "fromLane": "1",
+          "toLane": "0",
+          "via": ":62426694_5_0",
+          "tl": "62426694",
+          "linkIndex": "5",
+          "dir": "t",
+          "state": "o"
+        },
+        {
+          "from": "297047308",
+          "to": "-8716807#6",
+          "fromLane": "0",
+          "toLane": "0",
+          "via": ":62426694_0_0",
+          "tl": "62426694",
+          "linkIndex": "0",
+          "dir": "r",
+          "state": "O"
+        },
+        {
+          "from": "297047308",
+          "to": "28675494#0",
+          "fromLane": "0",
+          "toLane": "0",
+          "via": ":62426694_1_0",
+          "tl": "62426694",
+          "linkIndex": "1",
+          "dir": "s",
+          "state": "O"
+        },
+        {
+          "from": "297047308",
+          "to": "-297047308",
+          "fromLane": "0",
+          "toLane": "0",
+          "via": ":62426694_2_0",
+          "tl": "62426694",
+          "linkIndex": "2",
+          "dir": "t",
+          "state": "o"
+        },
+        {
+          "from": "8716807#6",
+          "to": "28675494#0",
+          "fromLane": "0",
+          "toLane": "0",
+          "via": ":62426694_6_0",
+          "tl": "62426694",
+          "linkIndex": "6",
+          "dir": "r",
+          "state": "o"
+        },
+        {
+          "from": "8716807#6",
+          "to": "-297047308",
+          "fromLane": "0",
+          "toLane": "0",
+          "via": ":62426694_7_0",
+          "tl": "62426694",
+          "linkIndex": "7",
+          "dir": "l",
+          "state": "o"
+        },
+        {
+          "from": "8716807#6",
+          "to": "-8716807#6",
+          "fromLane": "0",
+          "toLane": "0",
+          "via": ":62426694_8_0",
+          "tl": "62426694",
+          "linkIndex": "8",
+          "dir": "t",
+          "state": "o"
+        }
+      ],
+      "entradas_com_supervisor": 22
+    },
+    {
+      "id": "cluster_1098574052_1098574061_247379905",
+      "entradas": [
+        {
+          "edge": "22917421#5",
+          "faixas": [
+            {
+              "id": "22917421#5_0",
+              "index": "0",
+              "disallow": "tram rail_urban rail rail_electric rail_fast ship",
+              "speed": "8.33",
+              "length": "533.47",
+              "shape": "14047.88,18061.69 14039.40,18048.34 14011.07,18003.69 13999.25,17985.20 13949.06,17910.90 13915.65,17863.72 13907.63,17849.74 13891.00,17824.09 13830.44,17734.32 13793.61,17675.23 13763.96,17627.62 13754.67,17616.27"
+            }
+          ],
+          "rumo_montante_graus": 39.30040096761669,
+          "rotulo_geografico": "N"
+        },
+        {
+          "edge": "-28675510#11",
+          "faixas": [
+            {
+              "id": "-28675510#11_0",
+              "index": "0",
+              "disallow": "tram rail_urban rail rail_electric rail_fast ship",
+              "speed": "13.89",
+              "length": "257.90",
+              "shape": "13672.12,17865.89 13679.49,17837.75 13682.08,17827.18 13727.51,17640.96 13732.42,17621.60 13733.24,17618.26 13733.93,17615.51"
+            }
+          ],
+          "rumo_montante_graus": 345.9147439011504,
+          "rotulo_geografico": "N"
+        },
+        {
+          "edge": "28675510#4",
+          "faixas": [
+            {
+              "id": "28675510#4_0",
+              "index": "0",
+              "disallow": "tram rail_urban rail rail_electric rail_fast ship",
+              "speed": "13.89",
+              "length": "88.75",
+              "shape": "13761.54,17502.08 13744.05,17585.89 13743.36,17588.95"
+            }
+          ],
+          "rumo_montante_graus": 167.292886498712,
+          "rotulo_geografico": "S"
+        },
+        {
+          "edge": "-22959475#4",
+          "faixas": [
+            {
+              "id": "-22959475#4_0",
+              "index": "0",
+              "disallow": "tram rail_urban rail rail_electric rail_fast ship",
+              "speed": "8.33",
+              "length": "190.59",
+              "shape": "13564.81,17527.30 13601.42,17522.59 13614.29,17521.51 13638.44,17524.59 13650.29,17528.90 13661.01,17536.85 13709.28,17572.63 13733.67,17590.72"
+            }
+          ],
+          "rumo_montante_graus": 233.43576751335058,
+          "rotulo_geografico": "O"
+        }
+      ],
+      "fases": [
+        {
+          "acao_local": 0,
+          "indice_xml": 0,
+          "state": "rrrrGGggrrrrGGgg",
+          "movimentos_liberados": [
+            {
+              "from": "-28675510#11",
+              "to": "22959475#0",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":cluster_1098574052_1098574061_247379905_12_0",
+              "tl": "cluster_1098574052_1098574061_247379905",
+              "linkIndex": "12",
+              "dir": "r",
+              "state": "O",
+              "luz": "G"
+            },
+            {
+              "from": "-28675510#11",
+              "to": "-28675510#5",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":cluster_1098574052_1098574061_247379905_13_0",
+              "tl": "cluster_1098574052_1098574061_247379905",
+              "linkIndex": "13",
+              "dir": "s",
+              "state": "O",
+              "luz": "G"
+            },
+            {
+              "from": "-28675510#11",
+              "to": "-22917421#14",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":cluster_1098574052_1098574061_247379905_14_0",
+              "tl": "cluster_1098574052_1098574061_247379905",
+              "linkIndex": "14",
+              "dir": "l",
+              "state": "o",
+              "luz": "g"
+            },
+            {
+              "from": "-28675510#11",
+              "to": "28675510#7",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":cluster_1098574052_1098574061_247379905_15_0",
+              "tl": "cluster_1098574052_1098574061_247379905",
+              "linkIndex": "15",
+              "dir": "t",
+              "state": "o",
+              "luz": "g"
+            },
+            {
+              "from": "28675510#4",
+              "to": "-22917421#14",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":cluster_1098574052_1098574061_247379905_4_0",
+              "tl": "cluster_1098574052_1098574061_247379905",
+              "linkIndex": "4",
+              "dir": "r",
+              "state": "O",
+              "luz": "G"
+            },
+            {
+              "from": "28675510#4",
+              "to": "28675510#7",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":cluster_1098574052_1098574061_247379905_5_0",
+              "tl": "cluster_1098574052_1098574061_247379905",
+              "linkIndex": "5",
+              "dir": "s",
+              "state": "O",
+              "luz": "G"
+            },
+            {
+              "from": "28675510#4",
+              "to": "22959475#0",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":cluster_1098574052_1098574061_247379905_6_0",
+              "tl": "cluster_1098574052_1098574061_247379905",
+              "linkIndex": "6",
+              "dir": "l",
+              "state": "o",
+              "luz": "g"
+            },
+            {
+              "from": "28675510#4",
+              "to": "-28675510#5",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":cluster_1098574052_1098574061_247379905_7_0",
+              "tl": "cluster_1098574052_1098574061_247379905",
+              "linkIndex": "7",
+              "dir": "t",
+              "state": "o",
+              "luz": "g"
+            }
+          ],
+          "entradas_liberadas": [
+            "-28675510#11",
+            "28675510#4"
+          ]
+        },
+        {
+          "acao_local": 1,
+          "indice_xml": 2,
+          "state": "rrrrrrGGrrrrrrGG",
+          "movimentos_liberados": [
+            {
+              "from": "-28675510#11",
+              "to": "-22917421#14",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":cluster_1098574052_1098574061_247379905_14_0",
+              "tl": "cluster_1098574052_1098574061_247379905",
+              "linkIndex": "14",
+              "dir": "l",
+              "state": "o",
+              "luz": "G"
+            },
+            {
+              "from": "-28675510#11",
+              "to": "28675510#7",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":cluster_1098574052_1098574061_247379905_15_0",
+              "tl": "cluster_1098574052_1098574061_247379905",
+              "linkIndex": "15",
+              "dir": "t",
+              "state": "o",
+              "luz": "G"
+            },
+            {
+              "from": "28675510#4",
+              "to": "22959475#0",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":cluster_1098574052_1098574061_247379905_6_0",
+              "tl": "cluster_1098574052_1098574061_247379905",
+              "linkIndex": "6",
+              "dir": "l",
+              "state": "o",
+              "luz": "G"
+            },
+            {
+              "from": "28675510#4",
+              "to": "-28675510#5",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":cluster_1098574052_1098574061_247379905_7_0",
+              "tl": "cluster_1098574052_1098574061_247379905",
+              "linkIndex": "7",
+              "dir": "t",
+              "state": "o",
+              "luz": "G"
+            }
+          ],
+          "entradas_liberadas": [
+            "-28675510#11",
+            "28675510#4"
+          ]
+        },
+        {
+          "acao_local": 2,
+          "indice_xml": 4,
+          "state": "GGggrrrrGGggrrrr",
+          "movimentos_liberados": [
+            {
+              "from": "-22959475#4",
+              "to": "-28675510#5",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":cluster_1098574052_1098574061_247379905_8_0",
+              "tl": "cluster_1098574052_1098574061_247379905",
+              "linkIndex": "8",
+              "dir": "r",
+              "state": "o",
+              "luz": "G"
+            },
+            {
+              "from": "-22959475#4",
+              "to": "-22917421#14",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":cluster_1098574052_1098574061_247379905_9_0",
+              "tl": "cluster_1098574052_1098574061_247379905",
+              "linkIndex": "9",
+              "dir": "s",
+              "state": "o",
+              "luz": "G"
+            },
+            {
+              "from": "-22959475#4",
+              "to": "28675510#7",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":cluster_1098574052_1098574061_247379905_10_0",
+              "tl": "cluster_1098574052_1098574061_247379905",
+              "linkIndex": "10",
+              "dir": "l",
+              "state": "o",
+              "luz": "g"
+            },
+            {
+              "from": "-22959475#4",
+              "to": "22959475#0",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":cluster_1098574052_1098574061_247379905_11_0",
+              "tl": "cluster_1098574052_1098574061_247379905",
+              "linkIndex": "11",
+              "dir": "t",
+              "state": "o",
+              "luz": "g"
+            },
+            {
+              "from": "22917421#5",
+              "to": "28675510#7",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":cluster_1098574052_1098574061_247379905_0_0",
+              "tl": "cluster_1098574052_1098574061_247379905",
+              "linkIndex": "0",
+              "dir": "r",
+              "state": "o",
+              "luz": "G"
+            },
+            {
+              "from": "22917421#5",
+              "to": "22959475#0",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":cluster_1098574052_1098574061_247379905_1_0",
+              "tl": "cluster_1098574052_1098574061_247379905",
+              "linkIndex": "1",
+              "dir": "s",
+              "state": "o",
+              "luz": "G"
+            },
+            {
+              "from": "22917421#5",
+              "to": "-28675510#5",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":cluster_1098574052_1098574061_247379905_2_0",
+              "tl": "cluster_1098574052_1098574061_247379905",
+              "linkIndex": "2",
+              "dir": "l",
+              "state": "o",
+              "luz": "g"
+            },
+            {
+              "from": "22917421#5",
+              "to": "-22917421#14",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":cluster_1098574052_1098574061_247379905_3_0",
+              "tl": "cluster_1098574052_1098574061_247379905",
+              "linkIndex": "3",
+              "dir": "t",
+              "state": "o",
+              "luz": "g"
+            }
+          ],
+          "entradas_liberadas": [
+            "-22959475#4",
+            "22917421#5"
+          ]
+        },
+        {
+          "acao_local": 3,
+          "indice_xml": 6,
+          "state": "rrGGrrrrrrGGrrrr",
+          "movimentos_liberados": [
+            {
+              "from": "-22959475#4",
+              "to": "28675510#7",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":cluster_1098574052_1098574061_247379905_10_0",
+              "tl": "cluster_1098574052_1098574061_247379905",
+              "linkIndex": "10",
+              "dir": "l",
+              "state": "o",
+              "luz": "G"
+            },
+            {
+              "from": "-22959475#4",
+              "to": "22959475#0",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":cluster_1098574052_1098574061_247379905_11_0",
+              "tl": "cluster_1098574052_1098574061_247379905",
+              "linkIndex": "11",
+              "dir": "t",
+              "state": "o",
+              "luz": "G"
+            },
+            {
+              "from": "22917421#5",
+              "to": "-28675510#5",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":cluster_1098574052_1098574061_247379905_2_0",
+              "tl": "cluster_1098574052_1098574061_247379905",
+              "linkIndex": "2",
+              "dir": "l",
+              "state": "o",
+              "luz": "G"
+            },
+            {
+              "from": "22917421#5",
+              "to": "-22917421#14",
+              "fromLane": "0",
+              "toLane": "0",
+              "via": ":cluster_1098574052_1098574061_247379905_3_0",
+              "tl": "cluster_1098574052_1098574061_247379905",
+              "linkIndex": "3",
+              "dir": "t",
+              "state": "o",
+              "luz": "G"
+            }
+          ],
+          "entradas_liberadas": [
+            "-22959475#4",
+            "22917421#5"
+          ]
+        }
+      ],
+      "n_acoes": 4,
+      "n_entradas_rede": 17,
+      "conexoes": [
+        {
+          "from": "-22959475#4",
+          "to": "-28675510#5",
+          "fromLane": "0",
+          "toLane": "0",
+          "via": ":cluster_1098574052_1098574061_247379905_8_0",
+          "tl": "cluster_1098574052_1098574061_247379905",
+          "linkIndex": "8",
+          "dir": "r",
+          "state": "o"
+        },
+        {
+          "from": "-22959475#4",
+          "to": "-22917421#14",
+          "fromLane": "0",
+          "toLane": "0",
+          "via": ":cluster_1098574052_1098574061_247379905_9_0",
+          "tl": "cluster_1098574052_1098574061_247379905",
+          "linkIndex": "9",
+          "dir": "s",
+          "state": "o"
+        },
+        {
+          "from": "-22959475#4",
+          "to": "28675510#7",
+          "fromLane": "0",
+          "toLane": "0",
+          "via": ":cluster_1098574052_1098574061_247379905_10_0",
+          "tl": "cluster_1098574052_1098574061_247379905",
+          "linkIndex": "10",
+          "dir": "l",
+          "state": "o"
+        },
+        {
+          "from": "-22959475#4",
+          "to": "22959475#0",
+          "fromLane": "0",
+          "toLane": "0",
+          "via": ":cluster_1098574052_1098574061_247379905_11_0",
+          "tl": "cluster_1098574052_1098574061_247379905",
+          "linkIndex": "11",
+          "dir": "t",
+          "state": "o"
+        },
+        {
+          "from": "-28675510#11",
+          "to": "22959475#0",
+          "fromLane": "0",
+          "toLane": "0",
+          "via": ":cluster_1098574052_1098574061_247379905_12_0",
+          "tl": "cluster_1098574052_1098574061_247379905",
+          "linkIndex": "12",
+          "dir": "r",
+          "state": "O"
+        },
+        {
+          "from": "-28675510#11",
+          "to": "-28675510#5",
+          "fromLane": "0",
+          "toLane": "0",
+          "via": ":cluster_1098574052_1098574061_247379905_13_0",
+          "tl": "cluster_1098574052_1098574061_247379905",
+          "linkIndex": "13",
+          "dir": "s",
+          "state": "O"
+        },
+        {
+          "from": "-28675510#11",
+          "to": "-22917421#14",
+          "fromLane": "0",
+          "toLane": "0",
+          "via": ":cluster_1098574052_1098574061_247379905_14_0",
+          "tl": "cluster_1098574052_1098574061_247379905",
+          "linkIndex": "14",
+          "dir": "l",
+          "state": "o"
+        },
+        {
+          "from": "-28675510#11",
+          "to": "28675510#7",
+          "fromLane": "0",
+          "toLane": "0",
+          "via": ":cluster_1098574052_1098574061_247379905_15_0",
+          "tl": "cluster_1098574052_1098574061_247379905",
+          "linkIndex": "15",
+          "dir": "t",
+          "state": "o"
+        },
+        {
+          "from": "22917421#5",
+          "to": "28675510#7",
+          "fromLane": "0",
+          "toLane": "0",
+          "via": ":cluster_1098574052_1098574061_247379905_0_0",
+          "tl": "cluster_1098574052_1098574061_247379905",
+          "linkIndex": "0",
+          "dir": "r",
+          "state": "o"
+        },
+        {
+          "from": "22917421#5",
+          "to": "22959475#0",
+          "fromLane": "0",
+          "toLane": "0",
+          "via": ":cluster_1098574052_1098574061_247379905_1_0",
+          "tl": "cluster_1098574052_1098574061_247379905",
+          "linkIndex": "1",
+          "dir": "s",
+          "state": "o"
+        },
+        {
+          "from": "22917421#5",
+          "to": "-28675510#5",
+          "fromLane": "0",
+          "toLane": "0",
+          "via": ":cluster_1098574052_1098574061_247379905_2_0",
+          "tl": "cluster_1098574052_1098574061_247379905",
+          "linkIndex": "2",
+          "dir": "l",
+          "state": "o"
+        },
+        {
+          "from": "22917421#5",
+          "to": "-22917421#14",
+          "fromLane": "0",
+          "toLane": "0",
+          "via": ":cluster_1098574052_1098574061_247379905_3_0",
+          "tl": "cluster_1098574052_1098574061_247379905",
+          "linkIndex": "3",
+          "dir": "t",
+          "state": "o"
+        },
+        {
+          "from": "28675510#4",
+          "to": "-22917421#14",
+          "fromLane": "0",
+          "toLane": "0",
+          "via": ":cluster_1098574052_1098574061_247379905_4_0",
+          "tl": "cluster_1098574052_1098574061_247379905",
+          "linkIndex": "4",
+          "dir": "r",
+          "state": "O"
+        },
+        {
+          "from": "28675510#4",
+          "to": "28675510#7",
+          "fromLane": "0",
+          "toLane": "0",
+          "via": ":cluster_1098574052_1098574061_247379905_5_0",
+          "tl": "cluster_1098574052_1098574061_247379905",
+          "linkIndex": "5",
+          "dir": "s",
+          "state": "O"
+        },
+        {
+          "from": "28675510#4",
+          "to": "22959475#0",
+          "fromLane": "0",
+          "toLane": "0",
+          "via": ":cluster_1098574052_1098574061_247379905_6_0",
+          "tl": "cluster_1098574052_1098574061_247379905",
+          "linkIndex": "6",
+          "dir": "l",
+          "state": "o"
+        },
+        {
+          "from": "28675510#4",
+          "to": "-28675510#5",
+          "fromLane": "0",
+          "toLane": "0",
+          "via": ":cluster_1098574052_1098574061_247379905_7_0",
+          "tl": "cluster_1098574052_1098574061_247379905",
+          "linkIndex": "7",
+          "dir": "t",
+          "state": "o"
+        }
+      ],
+      "entradas_com_supervisor": 26
+    }
+  ],
+  "acoes_supervisor": [
+    "equilibrado",
+    "priorizar_247379907",
+    "priorizar_252017285",
+    "priorizar_256201389",
+    "priorizar_26110729",
+    "priorizar_280120513",
+    "priorizar_32319828",
+    "priorizar_62426694",
+    "priorizar_cluster_1098574052_1098574061_247379905"
+  ],
+  "entradas_supervisor": 176,
+  "ordem_supervisor": [
+    "vetores_locais_base_por_ordem_controladores",
+    "ocupacao_jusante_por_aproximacao/100",
+    "estagio_onehot_verde_amarelo_vermelho_por_tls",
+    "orientacao_anterior_onehot",
+    "veiculos_rede/350",
+    "fila_rede/250"
+  ],
+  "sensores": "vias imediatamente controladas; sem ampliar ou imputar montante",
+  "escalas": {
+    "fila": 25,
+    "carros": 35,
+    "tempo": 60,
+    "espera": 120,
+    "teto_tempo": 2,
+    "teto_espera": 3
+  },
+  "tempos": {
+    "decisao_local": 5,
+    "supervisor": 30,
+    "verde_minimo": 10,
+    "amarelo": 3,
+    "vermelho_geral_local": 2,
+    "verde_max_condicional": 60
+  },
+  "recompensa": {
+    "W": 60,
+    "beta": 1,
+    "escala": 100,
+    "local": "-(fila_local + excesso_local + 0.5*custo_no_priorizado)/100 por segundo; termo prioritario zero em equilibrado",
+    "supervisor": "-(fila_rede + excesso_rede)/(100*n_controladores) por segundo",
+    "excesso": "somente incremento no segundo atual; nao cobra espera anterior a entrada na area",
+    "colisao": -10000.0,
+    "atribuicao_colisao": "penalidade de equipe para cada ator, por evento novo; termina episodio",
+    "avaliacao_colisao": "colisoes precedem censura e espera na selecao"
+  },
+  "demanda": {
+    "total": 2046,
+    "tipos": {
+      "trip": 2046
+    },
+    "antes_controle": 0,
+    "primeira_partida": 25200.0,
+    "ultima_partida": 28798.0
+  },
+  "episodio": {
+    "inicio_aquecimento": 25200,
+    "inicio_controle": 25200,
+    "fim_demanda": 28800,
+    "escoamento_maximo": 1200,
+    "fim_replay": "termino natural OU limite finito do episodio: sem bootstrap; flags separados"
+  },
+  "fontes": {
+    "referencias\\cologne8_sumo_rl_1.4.5\\sumo_rl\\nets\\RESCO\\cologne8\\cologne8.net.xml": "51194519fd4d69726612d38b44606637c31389b86079f909139ba8f1aaffd2a8",
+    "referencias\\cologne8_sumo_rl_1.4.5\\sumo_rl\\nets\\RESCO\\cologne8\\cologne8.rou.xml": "25cab1cc0d98d91bc12176743b57bc9710cd18d712f46c221b54131ee35ca646",
+    "referencias\\cologne8_sumo_rl_1.4.5\\proveniencia.json": "45d3dff1a6adc590b3da4fb728f01a2a8cd899a2b938a49204811ddbe292d2fd"
+  }
+}

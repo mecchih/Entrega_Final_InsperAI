@@ -1,0 +1,93 @@
+{
+  "formato": "pacote_marl_cologne8_v1",
+  "utc": "2026-11-13T15:59:37.563991+00:00",
+  "branch": "experimento/marl-cologne8-supervisor",
+  "base": "2e5713ac600a6611ab7028b997f184d4fb80d5f7",
+  "principal": {
+    "pasta": "semaforo/resultados/marl_cologne8/20261113T011843Z_continuo_10seeds_9f8d757b",
+    "episodios": 5000,
+    "testes_finais": 100,
+    "viagens_por_teste": 2046,
+    "espera_marl_s": 9.290913978494624,
+    "p95_medio_marl_s": 35.43,
+    "colisoes_media_marl": 18.46,
+    "conclusao": "Ganho de espera e atendimento; colisoes e equidade local continuam pendentes"
+  },
+  "inventario": {
+    "caminho": "semaforo/resultados/indice_artefatos_cologne8.jsonl",
+    "sha256": "bffacfb0d8c40ae70df05b160797f28a47a1e50145f21a5ca5ff2e8122c6e5cf",
+    "arquivos": 26652,
+    "bytes": 10544295291,
+    "arquivos_lfs": 6561,
+    "bytes_lfs": 10013491191,
+    "arquivos_git_normal": 20091
+  },
+  "execucoes": [
+    {
+      "pasta": "semaforo/resultados/marl_cologne8/20261113T002405Z_piloto_a486d158",
+      "papel": "piloto_inicial_com_falha"
+    },
+    {
+      "pasta": "semaforo/resultados/marl_cologne8/20261113T002517Z_auditoria_original",
+      "papel": "auditoria_rede_ou_passo_sumo"
+    },
+    {
+      "pasta": "semaforo/resultados/marl_cologne8/20261113T002613Z_auditoria_reprocessada",
+      "papel": "auditoria_rede_ou_passo_sumo"
+    },
+    {
+      "pasta": "semaforo/resultados/marl_cologne8/20261113T002705Z_auditoria_original_passo02",
+      "papel": "auditoria_rede_ou_passo_sumo"
+    },
+    {
+      "pasta": "semaforo/resultados/marl_cologne8/20261113T002705Z_auditoria_reprocessado_passo05",
+      "papel": "auditoria_rede_ou_passo_sumo"
+    },
+    {
+      "pasta": "semaforo/resultados/marl_cologne8/20261113T002706Z_auditoria_reprocessado_passo02",
+      "papel": "auditoria_rede_ou_passo_sumo"
+    },
+    {
+      "pasta": "semaforo/resultados/marl_cologne8/20261113T002843Z_piloto_f82ea9c0",
+      "papel": "piloto_aprendizagem"
+    },
+    {
+      "pasta": "semaforo/resultados/marl_cologne8/20261113T003221Z_piloto_d65e5c26",
+      "papel": "piloto_penalidade_terminal"
+    },
+    {
+      "pasta": "semaforo/resultados/marl_cologne8/20261113T003357Z_treinar_afff873a",
+      "papel": "treino_historico_colisao_terminal_3x250"
+    },
+    {
+      "pasta": "semaforo/resultados/marl_cologne8/20261113T003821Z_conferencia_sensores",
+      "papel": "conferencia_sensores_e_movimentos"
+    },
+    {
+      "pasta": "semaforo/resultados/marl_cologne8/20261113T010530Z_piloto_continuo",
+      "papel": "piloto_colisao_nao_terminal"
+    },
+    {
+      "pasta": "semaforo/resultados/marl_cologne8/20261113T011248Z_continuo_bf6c3fff",
+      "papel": "ensaio_executor_seed777_descartavel"
+    },
+    {
+      "pasta": "semaforo/resultados/marl_cologne8/20261113T011843Z_continuo_10seeds_9f8d757b",
+      "papel": "principal_continuo_10x500"
+    }
+  ],
+  "caches_locais_fora_do_commit": [
+    "semaforo/resultados/marl_cologne8/20261113T011248Z_continuo_bf6c3fff/cache_matplotlib/fontlist-v3.11.0.json",
+    "semaforo/resultados/marl_cologne8/20261113T011843Z_continuo_10seeds_9f8d757b/cache_matplotlib/fontlist-v3.11.0.json",
+    "semaforo/resultados/marl_cologne8/20261113T011843Z_continuo_10seeds_9f8d757b/analise_detalhada_20261113T132227Z_1aaabc/cache_matplotlib/fontlist-v3.11.0.json",
+    "semaforo/resultados/marl_cologne8/20261113T011843Z_continuo_10seeds_9f8d757b/analise_detalhada_20261113T132621Z_902ba2/cache_matplotlib/fontlist-v3.11.0.json"
+  ],
+  "metadados_fora_do_inventario": [
+    ".gitattributes",
+    ".gitignore",
+    "semaforo/resultados/indice_artefatos_cologne8.jsonl",
+    "semaforo/resultados/indice_execucoes_cologne8.json",
+    "semaforo/resultados/verificacao_pacote_cologne8.json"
+  ],
+  "nota": "Todos os pesos, replays, dados e resultados originais permanecem no disco; conteudo LFS exige upload separado no futuro push."
+}
