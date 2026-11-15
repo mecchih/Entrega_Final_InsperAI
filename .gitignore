@@ -5,7 +5,14 @@
 __pycache__/
 *.py[cod]
 
-# Os .pyc ja versionados no projeto original permanecem preservados.
+# Os .pyc antes versionados foram retirados do versionamento (manutencao 14/11/2026,
+# conforme pendencia registrada em semaforo/REGISTRO_COLOGNE1.md).
+
+# Tripinfo temporario de simulacao.rodar/visualizar_dqn (um por processo).
+/semaforo/resultados/_tmp_tripinfo_*.xml
+
+# Pacotes ZIP de revisao gerados localmente na raiz.
+/*.zip
 
 # Caches gerados durante os relatorios Cologne8; evidencias permanecem versionadas.
 /semaforo/resultados/marl_cologne8/**/cache_matplotlib/
