@@ -1,0 +1,57 @@
+{
+  "utc": "2026-11-14T17:44:27.875587+00:00",
+  "modo": "curto",
+  "config_mpc": {
+    "STEP": 120,
+    "STEPS": 4,
+    "HORIZON": 480,
+    "G_MIN": 10,
+    "G_MAX": 60,
+    "MU": 0.01,
+    "GREEN_WEIGHT": 0.0001,
+    "CHI_BAR": 0.9
+  },
+  "ciclo_nominal_s": 120,
+  "calibracao_seed": 1001,
+  "teste_seeds": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "piloto_seed": 201,
+  "duracao_calibracao": 3600,
+  "duracao_piloto": 300,
+  "duracao_completa": 3600,
+  "escoamento": 1200,
+  "backend": "libsumo",
+  "sumo_home": "..\\tools\\sumo-win64-1.28.0",
+  "ambiente": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "executavel": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\.venv-mpc-cologne8\\Scripts\\python.exe",
+    "pacotes": {
+      "numpy": "2.5.4",
+      "scipy": "1.18.1",
+      "clarabel": "0.11.1",
+      "osqp": "1.1.3",
+      "libsumo": "1.28.0",
+      "traci": "1.28.0",
+      "sumolib": "1.28.0"
+    }
+  },
+  "fontes": {
+    "comparar_mpc_cologne8.py": "954611f17c49ebb69055a534eccdfc1c96a7c1e9c3a972c26dfbe589f182f8e0",
+    "controlador_mpc_cologne8.py": "3bbfc746d8e3b7a93cacf62a148cec60e4929d62a160c18999b2351b89696d50",
+    "ambiente_comparacao_mpc.py": "479ecd12e7627c667004ce1b7b444093d96d2190d6651a8bfea545a3e94b776f"
+  },
+  "parametros_congelados_antes_teste": true,
+  "nao_e_reproducao_exata_do_artigo": true,
+  "calibracao": "Giros/destinos observados com programa original em seed 1001, sem treinar redes; taxas futuras estimadas exclusivamente pela janela passada de 120s.",
+  "execucao_verdes": "QP aloca tempos num ciclo NOMINAL; executor local mantem fase ate idade atingir alvo e segue ordem ciclica real, com atualizacao 120s, decisao 5s e protecoes historicas. Ciclos fisicos nao sao sincronizados nem obrigados a durar exatamente 120s."
+}

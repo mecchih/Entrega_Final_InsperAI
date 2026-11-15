@@ -13,3 +13,10 @@ O runner cria outra cópia da rede em cada pasta de resultado e altera somente
 o programa semafórico dessa cópia. A referência original e as rotas não mudam.
 Veja [o registro completo](../REGISTRO_COLOGNE1.md) para decisões, comandos,
 resultados e limitações.
+
+## Comparador MPC no Cologne8
+
+`mpc_externo_fdbdf4a/` preserva o modelo central e o solver externos (MIT),
+com commit e hashes registrados. É código de um manuscrito submetido ao ECC
+2027, sem aceitação confirmada. A adaptação, os resultados e os comandos estão
+em [COMPARACAO_MPC_COLOGNE8.md](../COMPARACAO_MPC_COLOGNE8.md).
