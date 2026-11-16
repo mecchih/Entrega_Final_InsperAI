@@ -1,0 +1,505 @@
+{
+  "inicio": "2026-11-16T19:11:41.9236095-03:00",
+  "status": "CONCLUIDA",
+  "escopo": "84 checkpoints intermediarios da v4; preservar estados finais, politicas, XMLs e resultados",
+  "plano": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\tmp\\limpeza_cologne8_20261116\\plano.json",
+  "bytes_planejados": 6366765212,
+  "livre_antes_bytes": 10738839552,
+  "protegidos_sha256": {
+    "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed0/estado_ep0500.pt": "d16b92caa79fe8924cd21928fcd1151170ff366d0b46fc5b655a6643d36e85b0",
+    "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed1/estado_ep0500.pt": "aeed16eebf3e6bb9666c73e1be8f3944c2d49fd2d4558c69f6adbeaf78415105",
+    "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed2/estado_ep0500.pt": "89ff9e362a6172feac92fcfcb437f2783016ecbdf1ab21216c4a63e9976379ec",
+    "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed3/estado_ep0500.pt": "3403722c7467d2ec23083d5771428c86ba6810cf33ebb0df26780aff0f4f7855",
+    "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed4/estado_ep0500.pt": "33920a5f435043200d6fd5a3d8886032efbfdf31c502ba231b74b80e20bf1226",
+    "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed5/estado_ep0500.pt": "86f7ea4ab468b70782f9e1261b25f446134dadb40804752b96303fef3b5c198c",
+    "semaforo/resultados/cologne8_corrigido/20261116_130813_10sementes_500ep_v4_retomada/seed6/estado_ep0500.pt": "52dfabb400b30b8f3d7f2b3a1e32580caf2628cf0331bcc3b6de25c24e6f2201",
+    "semaforo/resultados/cologne8_corrigido/20261116_130813_10sementes_500ep_v4_retomada/seed7/estado_ep0500.pt": "c4c675e198629992b892dcfc62f91db81d1623bad0909e300c8ba2e9cfdfcf45",
+    "semaforo/resultados/cologne8_corrigido/20261116_130813_10sementes_500ep_v4_retomada/seed8/estado_ep0500.pt": "c8850bd0e9bee0bfdf5986eaa18b190a27481fca7b00ab5a1a506d3250b87ea6",
+    "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4_retomada_final/seed9/estado_ep0500.pt": "dd62501f5b2d2f57ab75f05a108909faeb7726114910ecdcc33e2a2dc3c7ff3d",
+    "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed0/politica_ep0300.pt": "fd9c3ce62d9deefab5088a2e05263f02dc3ec915743ae71495ed35a72b680450",
+    "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed1/politica_ep0150.pt": "c335f190f16662d00104e481f3271fe4bd1ef2d0b26fbc1f989d07ee6cfa6302",
+    "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed2/politica_ep0425.pt": "492824945834d29532583438af5a4677004e8e9ff54ecf333e2ce7ddc6461805",
+    "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed3/politica_ep0275.pt": "91228660c511e1a02584e3d87b8a181638d33c4cee6f014d697981893dafaff8",
+    "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed4/politica_ep0400.pt": "ee781405140235f43f3b2213e570eb70c7bfa16b99bd994b92b9839952d13734",
+    "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed5/politica_ep0450.pt": "2a1cbea2e7b6a5121013ed52510287726e5870563d9a44958f88ff514628b55b",
+    "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed6/politica_ep0200.pt": "596f4ad21a7521f62bc598fda56afcc28b2beaee689c64cff8cffcba0429ecaf",
+    "semaforo/resultados/cologne8_corrigido/20261116_130813_10sementes_500ep_v4_retomada/seed7/politica_ep0500.pt": "b958770c4cac8f6f1d3b600f55c46e480c0015aa08926087497c57621746b639",
+    "semaforo/resultados/cologne8_corrigido/20261116_130813_10sementes_500ep_v4_retomada/seed8/politica_ep0450.pt": "2f7d04a5dfa1f6dbb97629aacb977ddad022773473aa68b32acc67a9606521ab",
+    "semaforo/resultados/cologne8_corrigido/20261116_130813_10sementes_500ep_v4_retomada/seed9/politica_ep0175.pt": "9f53413524614631320ae573be9cd4cd1f10bd2868e70cfd3a13e9b04d503925",
+    "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed0/politica_ep0025.pt": "37657a99543c1bd79fefa5e38bf8baa124a77319b9fe9c673ec0feecec920a65",
+    "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed0/politica_ep0050.pt": "9826b05c20e3713e1920061b9b13f72ce3b8e404f731a03b94019e1ae243c240",
+    "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed0/politica_ep0125.pt": "30493bd6db34e06ae528b0d4ae040888c1f3f26472b67e368aed59a63f48d5c2",
+    "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed1/politica_ep0025.pt": "b244224df2da3fc85fd2fca8b4dace27769f193f6589d1c2854bbc22275d015b",
+    "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed1/politica_ep0050.pt": "fe33b2c5e53cdde977dd4f182c8007042c3200527ba71a22929a931d3d56f0e1",
+    "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed1/politica_ep0075.pt": "5bd62a569e68eb4df7cd5572ecfee9664ee623bd26499389800b15ac8089707c",
+    "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed1/politica_ep0100.pt": "9c950b97c86ee445708962b1b8a4805240e1a0d388b70f70cf2bf2fe7ea3ceb0",
+    "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed2/politica_ep0025.pt": "4d3646db2e1fd281836dd230d19fad7c4214f49f781c6b5edb6524d1e2af8bbb",
+    "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed2/politica_ep0050.pt": "6c9d472e95ae07682a3df09deedbae936b648372c7d094228863e0096e31bba2",
+    "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed2/politica_ep0075.pt": "3f776971c04cace8db6395bd118141c8a576f92c69af197b851358c71c267ccc",
+    "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed2/politica_ep0150.pt": "2e95b0f7d3d46f121790d685bb27fc1d189683a87f3c8cc186cd7b6d3f7a259a",
+    "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed3/politica_ep0025.pt": "f887a144f7ea66603e344fd517ef03e16298c0872ae96839389d964c9c1ec401",
+    "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed3/politica_ep0050.pt": "2f5c0ef7bce3c05bd285ed5adc41fedffff288b88d5d7f5a89bc5d52d1b0014b",
+    "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed3/politica_ep0150.pt": "8e55f88d14e3653ec3fb0577e3780b039ea55cb23737e72af22b9328b3599801",
+    "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed3/politica_ep0200.pt": "3d28ce7d236bf31dc66ef9836f30f07852c88c083a1d148acae31cf26aac5dfd",
+    "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed3/politica_ep0225.pt": "9f0f6d72f59c403fc143e0db5e67f2b48ce1e7cf2c1a714f0f9d61da41180540",
+    "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed4/politica_ep0025.pt": "2e73511522c10c463565997e8c26bb4f5b06b092e673b1df1fa232f88a6a6412",
+    "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed4/politica_ep0050.pt": "93b7bcc4054756e3cbb9f33565dcbff500f4c4dfaf86e49b8af645d9c5a076b0",
+    "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed4/politica_ep0175.pt": "c65cfa23115747bfc8399822eea3e668c70b5e39515ccfb47371db2c22011b5b",
+    "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed4/politica_ep0200.pt": "b7e95f67e3c6a48d9f405e70339a809f08f425f83af4203823645a19bd35be4a",
+    "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed5/politica_ep0025.pt": "ca0367c24a3b12efd3ec9e0b791013fa1887d79bef1c078cf434debab6a06991",
+    "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed5/politica_ep0125.pt": "e1015190981949409508f1b845b275a1a291133f57f2a77cc3dd22e5181fd2f3",
+    "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed5/politica_ep0375.pt": "2c5182719ecbab72d45e5a9b01dccc83e7b48547781b4756a203dd347af5d418",
+    "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed6/politica_ep0025.pt": "d5e1d88a267140a521a046ef7588226415b16e705d4e5dad82601242f6a61f4a",
+    "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed7/politica_ep0025.pt": "41ffc356c7d2cf87c4ccfbb26d96b794964de584e13520eb01199b42feaad875",
+    "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed7/politica_ep0050.pt": "0229b0c00e10b130e80bda04b7a7a187697b62ec5dc44657bebbe708106e267e",
+    "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed7/politica_ep0175.pt": "7f8af7e4bd5f581044ffde7b6397d16101b27996974ecd25ca817814a7d254b9",
+    "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed8/politica_ep0025.pt": "5776f559d9f45f4e73f67782bfb127f9538f61544bd2b5abe4bfe1ebd95d9bf6",
+    "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed8/politica_ep0050.pt": "bfcb065ca4817ef58ed5ca5db54162ed406ac94bdd8fc8d5a12e0c7bd3c395db",
+    "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed8/politica_ep0150.pt": "155e899fadcc3b1b17cbfa299fa60f3a80ac781b3276ee60afe271b19142a552",
+    "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed8/politica_ep0200.pt": "3224ee6c1e00351c54c90a03ddd1994a39cce7970ea07fb11bc7a6e8a7a94fd6",
+    "semaforo/resultados/cologne8_corrigido/20261116_130813_10sementes_500ep_v4_retomada/seed7/politica_ep0375.pt": "fa28615f9e98660de149742f2974ef87262e81de6acd04ece80ebb9f05325bbc",
+    "semaforo/resultados/cologne8_corrigido/20261116_130813_10sementes_500ep_v4_retomada/seed9/politica_ep0025.pt": "480eeb041562ff03bdb879adab6bffdc061a5a2761a6a750f211e816999f80e0",
+    "semaforo/resultados/cologne8_corrigido/20261116_130813_10sementes_500ep_v4_retomada/seed9/politica_ep0050.pt": "6c2317844f47013a8df3e97ac240aeb930c08ac653f6260547845e165b44386e",
+    "semaforo/resultados/cologne8_corrigido/20261116_130813_10sementes_500ep_v4_retomada/seed9/politica_ep0075.pt": "9617bbd826d8edce14fc8e29d71157fdbacdf049762a52c0a83f1c94277b58f4"
+  },
+  "removidos": [
+    {
+      "Path": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\cologne8_corrigido\\20261116_10sementes_500ep_v4\\seed0\\estado_ep0001.pt",
+      "Relative": "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed0/estado_ep0001.pt",
+      "Bytes": 1560443
+    },
+    {
+      "Path": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\cologne8_corrigido\\20261116_10sementes_500ep_v4\\seed0\\estado_ep0010.pt",
+      "Relative": "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed0/estado_ep0010.pt",
+      "Bytes": 9542939
+    },
+    {
+      "Path": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\cologne8_corrigido\\20261116_10sementes_500ep_v4\\seed0\\estado_ep0025.pt",
+      "Relative": "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed0/estado_ep0025.pt",
+      "Bytes": 21549175
+    },
+    {
+      "Path": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\cologne8_corrigido\\20261116_10sementes_500ep_v4\\seed0\\estado_ep0050.pt",
+      "Relative": "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed0/estado_ep0050.pt",
+      "Bytes": 42471095
+    },
+    {
+      "Path": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\cologne8_corrigido\\20261116_10sementes_500ep_v4\\seed0\\estado_ep0100.pt",
+      "Relative": "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed0/estado_ep0100.pt",
+      "Bytes": 90408695
+    },
+    {
+      "Path": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\cologne8_corrigido\\20261116_10sementes_500ep_v4\\seed0\\estado_ep0200.pt",
+      "Relative": "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed0/estado_ep0200.pt",
+      "Bytes": 121081719
+    },
+    {
+      "Path": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\cologne8_corrigido\\20261116_10sementes_500ep_v4\\seed0\\estado_ep0300.pt",
+      "Relative": "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed0/estado_ep0300.pt",
+      "Bytes": 139487671
+    },
+    {
+      "Path": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\cologne8_corrigido\\20261116_10sementes_500ep_v4\\seed0\\estado_ep0400.pt",
+      "Relative": "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed0/estado_ep0400.pt",
+      "Bytes": 155103287
+    },
+    {
+      "Path": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\cologne8_corrigido\\20261116_10sementes_500ep_v4\\seed1\\estado_ep0001.pt",
+      "Relative": "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed1/estado_ep0001.pt",
+      "Bytes": 1557691
+    },
+    {
+      "Path": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\cologne8_corrigido\\20261116_10sementes_500ep_v4\\seed1\\estado_ep0010.pt",
+      "Relative": "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed1/estado_ep0010.pt",
+      "Bytes": 9634523
+    },
+    {
+      "Path": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\cologne8_corrigido\\20261116_10sementes_500ep_v4\\seed1\\estado_ep0025.pt",
+      "Relative": "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed1/estado_ep0025.pt",
+      "Bytes": 22157303
+    },
+    {
+      "Path": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\cologne8_corrigido\\20261116_10sementes_500ep_v4\\seed1\\estado_ep0050.pt",
+      "Relative": "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed1/estado_ep0050.pt",
+      "Bytes": 43464247
+    },
+    {
+      "Path": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\cologne8_corrigido\\20261116_10sementes_500ep_v4\\seed1\\estado_ep0100.pt",
+      "Relative": "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed1/estado_ep0100.pt",
+      "Bytes": 89688503
+    },
+    {
+      "Path": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\cologne8_corrigido\\20261116_10sementes_500ep_v4\\seed1\\estado_ep0200.pt",
+      "Relative": "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed1/estado_ep0200.pt",
+      "Bytes": 121519991
+    },
+    {
+      "Path": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\cologne8_corrigido\\20261116_10sementes_500ep_v4\\seed1\\estado_ep0300.pt",
+      "Relative": "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed1/estado_ep0300.pt",
+      "Bytes": 140035895
+    },
+    {
+      "Path": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\cologne8_corrigido\\20261116_10sementes_500ep_v4\\seed1\\estado_ep0400.pt",
+      "Relative": "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed1/estado_ep0400.pt",
+      "Bytes": 155103351
+    },
+    {
+      "Path": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\cologne8_corrigido\\20261116_10sementes_500ep_v4\\seed2\\estado_ep0001.pt",
+      "Relative": "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed2/estado_ep0001.pt",
+      "Bytes": 1559035
+    },
+    {
+      "Path": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\cologne8_corrigido\\20261116_10sementes_500ep_v4\\seed2\\estado_ep0010.pt",
+      "Relative": "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed2/estado_ep0010.pt",
+      "Bytes": 9678747
+    },
+    {
+      "Path": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\cologne8_corrigido\\20261116_10sementes_500ep_v4\\seed2\\estado_ep0025.pt",
+      "Relative": "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed2/estado_ep0025.pt",
+      "Bytes": 21753975
+    },
+    {
+      "Path": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\cologne8_corrigido\\20261116_10sementes_500ep_v4\\seed2\\estado_ep0050.pt",
+      "Relative": "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed2/estado_ep0050.pt",
+      "Bytes": 42245111
+    },
+    {
+      "Path": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\cologne8_corrigido\\20261116_10sementes_500ep_v4\\seed2\\estado_ep0100.pt",
+      "Relative": "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed2/estado_ep0100.pt",
+      "Bytes": 87599607
+    },
+    {
+      "Path": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\cologne8_corrigido\\20261116_10sementes_500ep_v4\\seed2\\estado_ep0200.pt",
+      "Relative": "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed2/estado_ep0200.pt",
+      "Bytes": 121287223
+    },
+    {
+      "Path": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\cologne8_corrigido\\20261116_10sementes_500ep_v4\\seed2\\estado_ep0300.pt",
+      "Relative": "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed2/estado_ep0300.pt",
+      "Bytes": 139930167
+    },
+    {
+      "Path": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\cologne8_corrigido\\20261116_10sementes_500ep_v4\\seed2\\estado_ep0400.pt",
+      "Relative": "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed2/estado_ep0400.pt",
+      "Bytes": 155103415
+    },
+    {
+      "Path": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\cologne8_corrigido\\20261116_10sementes_500ep_v4\\seed3\\estado_ep0001.pt",
+      "Relative": "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed3/estado_ep0001.pt",
+      "Bytes": 1567291
+    },
+    {
+      "Path": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\cologne8_corrigido\\20261116_10sementes_500ep_v4\\seed3\\estado_ep0010.pt",
+      "Relative": "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed3/estado_ep0010.pt",
+      "Bytes": 9639643
+    },
+    {
+      "Path": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\cologne8_corrigido\\20261116_10sementes_500ep_v4\\seed3\\estado_ep0025.pt",
+      "Relative": "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed3/estado_ep0025.pt",
+      "Bytes": 21422071
+    },
+    {
+      "Path": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\cologne8_corrigido\\20261116_10sementes_500ep_v4\\seed3\\estado_ep0050.pt",
+      "Relative": "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed3/estado_ep0050.pt",
+      "Bytes": 41611767
+    },
+    {
+      "Path": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\cologne8_corrigido\\20261116_10sementes_500ep_v4\\seed3\\estado_ep0100.pt",
+      "Relative": "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed3/estado_ep0100.pt",
+      "Bytes": 87522935
+    },
+    {
+      "Path": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\cologne8_corrigido\\20261116_10sementes_500ep_v4\\seed3\\estado_ep0200.pt",
+      "Relative": "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed3/estado_ep0200.pt",
+      "Bytes": 121251767
+    },
+    {
+      "Path": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\cologne8_corrigido\\20261116_10sementes_500ep_v4\\seed3\\estado_ep0300.pt",
+      "Relative": "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed3/estado_ep0300.pt",
+      "Bytes": 139716151
+    },
+    {
+      "Path": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\cologne8_corrigido\\20261116_10sementes_500ep_v4\\seed3\\estado_ep0400.pt",
+      "Relative": "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed3/estado_ep0400.pt",
+      "Bytes": 155103159
+    },
+    {
+      "Path": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\cologne8_corrigido\\20261116_10sementes_500ep_v4\\seed4\\estado_ep0001.pt",
+      "Relative": "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed4/estado_ep0001.pt",
+      "Bytes": 1564347
+    },
+    {
+      "Path": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\cologne8_corrigido\\20261116_10sementes_500ep_v4\\seed4\\estado_ep0010.pt",
+      "Relative": "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed4/estado_ep0010.pt",
+      "Bytes": 9584987
+    },
+    {
+      "Path": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\cologne8_corrigido\\20261116_10sementes_500ep_v4\\seed4\\estado_ep0025.pt",
+      "Relative": "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed4/estado_ep0025.pt",
+      "Bytes": 21696183
+    },
+    {
+      "Path": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\cologne8_corrigido\\20261116_10sementes_500ep_v4\\seed4\\estado_ep0050.pt",
+      "Relative": "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed4/estado_ep0050.pt",
+      "Bytes": 41988151
+    },
+    {
+      "Path": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\cologne8_corrigido\\20261116_10sementes_500ep_v4\\seed4\\estado_ep0100.pt",
+      "Relative": "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed4/estado_ep0100.pt",
+      "Bytes": 87992439
+    },
+    {
+      "Path": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\cologne8_corrigido\\20261116_10sementes_500ep_v4\\seed4\\estado_ep0200.pt",
+      "Relative": "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed4/estado_ep0200.pt",
+      "Bytes": 121201655
+    },
+    {
+      "Path": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\cologne8_corrigido\\20261116_10sementes_500ep_v4\\seed4\\estado_ep0300.pt",
+      "Relative": "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed4/estado_ep0300.pt",
+      "Bytes": 139610359
+    },
+    {
+      "Path": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\cologne8_corrigido\\20261116_10sementes_500ep_v4\\seed4\\estado_ep0400.pt",
+      "Relative": "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed4/estado_ep0400.pt",
+      "Bytes": 155103095
+    },
+    {
+      "Path": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\cologne8_corrigido\\20261116_10sementes_500ep_v4\\seed5\\estado_ep0001.pt",
+      "Relative": "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed5/estado_ep0001.pt",
+      "Bytes": 1533563
+    },
+    {
+      "Path": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\cologne8_corrigido\\20261116_10sementes_500ep_v4\\seed5\\estado_ep0010.pt",
+      "Relative": "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed5/estado_ep0010.pt",
+      "Bytes": 9584923
+    },
+    {
+      "Path": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\cologne8_corrigido\\20261116_10sementes_500ep_v4\\seed5\\estado_ep0025.pt",
+      "Relative": "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed5/estado_ep0025.pt",
+      "Bytes": 21328567
+    },
+    {
+      "Path": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\cologne8_corrigido\\20261116_10sementes_500ep_v4\\seed5\\estado_ep0050.pt",
+      "Relative": "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed5/estado_ep0050.pt",
+      "Bytes": 42093879
+    },
+    {
+      "Path": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\cologne8_corrigido\\20261116_10sementes_500ep_v4\\seed5\\estado_ep0100.pt",
+      "Relative": "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed5/estado_ep0100.pt",
+      "Bytes": 90660919
+    },
+    {
+      "Path": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\cologne8_corrigido\\20261116_10sementes_500ep_v4\\seed5\\estado_ep0200.pt",
+      "Relative": "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed5/estado_ep0200.pt",
+      "Bytes": 121308727
+    },
+    {
+      "Path": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\cologne8_corrigido\\20261116_10sementes_500ep_v4\\seed5\\estado_ep0300.pt",
+      "Relative": "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed5/estado_ep0300.pt",
+      "Bytes": 139823223
+    },
+    {
+      "Path": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\cologne8_corrigido\\20261116_10sementes_500ep_v4\\seed5\\estado_ep0400.pt",
+      "Relative": "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed5/estado_ep0400.pt",
+      "Bytes": 155103351
+    },
+    {
+      "Path": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\cologne8_corrigido\\20261116_10sementes_500ep_v4\\seed6\\estado_ep0001.pt",
+      "Relative": "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed6/estado_ep0001.pt",
+      "Bytes": 1558395
+    },
+    {
+      "Path": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\cologne8_corrigido\\20261116_10sementes_500ep_v4\\seed6\\estado_ep0010.pt",
+      "Relative": "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed6/estado_ep0010.pt",
+      "Bytes": 9586395
+    },
+    {
+      "Path": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\cologne8_corrigido\\20261116_10sementes_500ep_v4\\seed6\\estado_ep0025.pt",
+      "Relative": "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed6/estado_ep0025.pt",
+      "Bytes": 22117239
+    },
+    {
+      "Path": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\cologne8_corrigido\\20261116_10sementes_500ep_v4\\seed6\\estado_ep0050.pt",
+      "Relative": "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed6/estado_ep0050.pt",
+      "Bytes": 42594295
+    },
+    {
+      "Path": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\cologne8_corrigido\\20261116_10sementes_500ep_v4\\seed6\\estado_ep0100.pt",
+      "Relative": "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed6/estado_ep0100.pt",
+      "Bytes": 89024119
+    },
+    {
+      "Path": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\cologne8_corrigido\\20261116_10sementes_500ep_v4\\seed6\\estado_ep0200.pt",
+      "Relative": "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed6/estado_ep0200.pt",
+      "Bytes": 121344503
+    },
+    {
+      "Path": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\cologne8_corrigido\\20261116_10sementes_500ep_v4\\seed6\\estado_ep0300.pt",
+      "Relative": "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed6/estado_ep0300.pt",
+      "Bytes": 139830263
+    },
+    {
+      "Path": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\cologne8_corrigido\\20261116_10sementes_500ep_v4\\seed6\\estado_ep0359.pt",
+      "Relative": "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed6/estado_ep0359.pt",
+      "Bytes": 150706359
+    },
+    {
+      "Path": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\cologne8_corrigido\\20261116_10sementes_500ep_v4\\seed7\\estado_ep0001.pt",
+      "Relative": "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed7/estado_ep0001.pt",
+      "Bytes": 1570299
+    },
+    {
+      "Path": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\cologne8_corrigido\\20261116_10sementes_500ep_v4\\seed7\\estado_ep0010.pt",
+      "Relative": "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed7/estado_ep0010.pt",
+      "Bytes": 9681499
+    },
+    {
+      "Path": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\cologne8_corrigido\\20261116_10sementes_500ep_v4\\seed7\\estado_ep0025.pt",
+      "Relative": "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed7/estado_ep0025.pt",
+      "Bytes": 21725239
+    },
+    {
+      "Path": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\cologne8_corrigido\\20261116_10sementes_500ep_v4\\seed7\\estado_ep0050.pt",
+      "Relative": "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed7/estado_ep0050.pt",
+      "Bytes": 42214711
+    },
+    {
+      "Path": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\cologne8_corrigido\\20261116_10sementes_500ep_v4\\seed7\\estado_ep0100.pt",
+      "Relative": "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed7/estado_ep0100.pt",
+      "Bytes": 87762167
+    },
+    {
+      "Path": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\cologne8_corrigido\\20261116_10sementes_500ep_v4\\seed7\\estado_ep0200.pt",
+      "Relative": "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed7/estado_ep0200.pt",
+      "Bytes": 121164599
+    },
+    {
+      "Path": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\cologne8_corrigido\\20261116_10sementes_500ep_v4\\seed7\\estado_ep0300.pt",
+      "Relative": "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed7/estado_ep0300.pt",
+      "Bytes": 139599159
+    },
+    {
+      "Path": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\cologne8_corrigido\\20261116_10sementes_500ep_v4\\seed7\\estado_ep0350.pt",
+      "Relative": "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed7/estado_ep0350.pt",
+      "Bytes": 148775479
+    },
+    {
+      "Path": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\cologne8_corrigido\\20261116_10sementes_500ep_v4\\seed8\\estado_ep0001.pt",
+      "Relative": "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed8/estado_ep0001.pt",
+      "Bytes": 1568955
+    },
+    {
+      "Path": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\cologne8_corrigido\\20261116_10sementes_500ep_v4\\seed8\\estado_ep0010.pt",
+      "Relative": "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed8/estado_ep0010.pt",
+      "Bytes": 9444379
+    },
+    {
+      "Path": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\cologne8_corrigido\\20261116_10sementes_500ep_v4\\seed8\\estado_ep0025.pt",
+      "Relative": "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed8/estado_ep0025.pt",
+      "Bytes": 21482551
+    },
+    {
+      "Path": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\cologne8_corrigido\\20261116_10sementes_500ep_v4\\seed8\\estado_ep0050.pt",
+      "Relative": "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed8/estado_ep0050.pt",
+      "Bytes": 42353527
+    },
+    {
+      "Path": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\cologne8_corrigido\\20261116_10sementes_500ep_v4\\seed8\\estado_ep0100.pt",
+      "Relative": "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed8/estado_ep0100.pt",
+      "Bytes": 89303223
+    },
+    {
+      "Path": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\cologne8_corrigido\\20261116_10sementes_500ep_v4\\seed8\\estado_ep0200.pt",
+      "Relative": "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed8/estado_ep0200.pt",
+      "Bytes": 121133239
+    },
+    {
+      "Path": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\cologne8_corrigido\\20261116_10sementes_500ep_v4\\seed8\\estado_ep0300.pt",
+      "Relative": "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed8/estado_ep0300.pt",
+      "Bytes": 139737591
+    },
+    {
+      "Path": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\cologne8_corrigido\\20261116_10sementes_500ep_v4\\seed8\\estado_ep0337.pt",
+      "Relative": "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/seed8/estado_ep0337.pt",
+      "Bytes": 146549239
+    },
+    {
+      "Path": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\cologne8_corrigido\\20261116_130813_10sementes_500ep_v4_retomada\\seed6\\estado_ep0400.pt",
+      "Relative": "semaforo/resultados/cologne8_corrigido/20261116_130813_10sementes_500ep_v4_retomada/seed6/estado_ep0400.pt",
+      "Bytes": 155104055
+    },
+    {
+      "Path": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\cologne8_corrigido\\20261116_130813_10sementes_500ep_v4_retomada\\seed7\\estado_ep0400.pt",
+      "Relative": "semaforo/resultados/cologne8_corrigido/20261116_130813_10sementes_500ep_v4_retomada/seed7/estado_ep0400.pt",
+      "Bytes": 155104247
+    },
+    {
+      "Path": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\cologne8_corrigido\\20261116_130813_10sementes_500ep_v4_retomada\\seed8\\estado_ep0400.pt",
+      "Relative": "semaforo/resultados/cologne8_corrigido/20261116_130813_10sementes_500ep_v4_retomada/seed8/estado_ep0400.pt",
+      "Bytes": 155104439
+    },
+    {
+      "Path": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\cologne8_corrigido\\20261116_130813_10sementes_500ep_v4_retomada\\seed9\\estado_ep0001.pt",
+      "Relative": "semaforo/resultados/cologne8_corrigido/20261116_130813_10sementes_500ep_v4_retomada/seed9/estado_ep0001.pt",
+      "Bytes": 1475003
+    },
+    {
+      "Path": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\cologne8_corrigido\\20261116_130813_10sementes_500ep_v4_retomada\\seed9\\estado_ep0010.pt",
+      "Relative": "semaforo/resultados/cologne8_corrigido/20261116_130813_10sementes_500ep_v4_retomada/seed9/estado_ep0010.pt",
+      "Bytes": 9513819
+    },
+    {
+      "Path": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\cologne8_corrigido\\20261116_130813_10sementes_500ep_v4_retomada\\seed9\\estado_ep0025.pt",
+      "Relative": "semaforo/resultados/cologne8_corrigido/20261116_130813_10sementes_500ep_v4_retomada/seed9/estado_ep0025.pt",
+      "Bytes": 21364663
+    },
+    {
+      "Path": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\cologne8_corrigido\\20261116_130813_10sementes_500ep_v4_retomada\\seed9\\estado_ep0050.pt",
+      "Relative": "semaforo/resultados/cologne8_corrigido/20261116_130813_10sementes_500ep_v4_retomada/seed9/estado_ep0050.pt",
+      "Bytes": 41875255
+    },
+    {
+      "Path": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\cologne8_corrigido\\20261116_130813_10sementes_500ep_v4_retomada\\seed9\\estado_ep0100.pt",
+      "Relative": "semaforo/resultados/cologne8_corrigido/20261116_130813_10sementes_500ep_v4_retomada/seed9/estado_ep0100.pt",
+      "Bytes": 87491127
+    },
+    {
+      "Path": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\cologne8_corrigido\\20261116_130813_10sementes_500ep_v4_retomada\\seed9\\estado_ep0200.pt",
+      "Relative": "semaforo/resultados/cologne8_corrigido/20261116_130813_10sementes_500ep_v4_retomada/seed9/estado_ep0200.pt",
+      "Bytes": 121162423
+    },
+    {
+      "Path": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\cologne8_corrigido\\20261116_130813_10sementes_500ep_v4_retomada\\seed9\\estado_ep0201.pt",
+      "Relative": "semaforo/resultados/cologne8_corrigido/20261116_130813_10sementes_500ep_v4_retomada/seed9/estado_ep0201.pt",
+      "Bytes": 121352311
+    },
+    {
+      "Path": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\cologne8_corrigido\\20261116_10sementes_500ep_v4_retomada_final\\seed9\\estado_ep0300.pt",
+      "Relative": "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4_retomada_final/seed9/estado_ep0300.pt",
+      "Bytes": 139743735
+    },
+    {
+      "Path": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\cologne8_corrigido\\20261116_10sementes_500ep_v4_retomada_final\\seed9\\estado_ep0400.pt",
+      "Relative": "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4_retomada_final/seed9/estado_ep0400.pt",
+      "Bytes": 155109751
+    }
+  ],
+  "modelos_protegidos_verificados": true,
+  "limite": "Perde-se a retomada dos episodios intermediarios removidos. Continuacao desde o episodio 500 e inferencia com as politicas selecionadas permanecem.",
+  "fim": "2026-11-16T19:11:46.6720544-03:00",
+  "livre_depois_bytes": 17105780736,
+  "verificacao_complementar": {
+    "data_local": "2026-11-16T19:13:33.971388-03:00",
+    "estados_finais_restantes": 10,
+    "xmls_preservados": {
+      "treino": 5000,
+      "validacao": 1000,
+      "testes": 250,
+      "comparadores": 20
+    },
+    "registros_publicacao": "PACOTE_GIT_20261116.json permanece como inventario historico anterior a esta limpeza.",
+    "primeira_tentativa": "Abortada na pre-validacao sem remover arquivos; comparacao de datas corrigida para epoch UTC antes da execucao."
+  },
+  "bytes_logicos_removidos": 6366765212,
+  "variacao_livre_bytes": 6366941184
+}

@@ -1,5 +1,22 @@
 # Colônia ampliada: treino longo com colisão não terminal
 
+**Versão atual para comparação: MARL v4, concluída em 16/11/2026.** São dez
+sementes de treinamento com 500 episódios cada, 100 testes reservados e 20
+rodadas dos comparadores, na rede Cologne8 derivada. Espera média: **18,44 s**
+no MARL, **22,82 s** no Max-Pressure e **39,03 s** no programa original dessa
+cópia. Persistiram 30 contatos em 100 testes MARL e 37 viagens pendentes em
+um teste; os comparadores concluíram todas as viagens. Essas médias não devem
+ser comparadas diretamente às versões anteriores ou a outra rede/demanda.
+
+Pontos de entrada: [análise completa e métricas](resultados/cologne8_corrigido/20261116_10sementes_500ep_v4_retomada_final/ANALISE.json),
+[gráfico](resultados/cologne8_corrigido/20261116_10sementes_500ep_v4_retomada_final/curvas_comparacao.png),
+[protocolo](resultados/cologne8_corrigido/20261116_10sementes_500ep_v4/protocolo.json)
+e [índice das políticas e arquivos publicados](resultados/cologne8_corrigido/PACOTE_GIT_20261116.json).
+O índice é um retrato anterior à [limpeza autorizada de estados intermediários](resultados/cologne8_corrigido/LIMPEZA_CHECKPOINTS_INTERMEDIARIOS_20261116.json).
+
+As seções a seguir preservam o histórico v2/v3 e a evolução até a conclusão
+v4; as descrições de protocolos antigos correspondem às respectivas datas.
+
 Protocolo definido em 12/11/2026, após a usuária pedir treinos mais longos,
 dez sementes e continuidade após colisões. Esta rodada é separada da anterior.
 Nenhum peso/histórico/resultado anterior será sobrescrito. Código anterior
@@ -605,3 +622,21 @@ como proveniência. Para repetir o treino, usar os comandos relativos acima e
 ajustar `--sumo-home` à instalação disponível. Para reler resultados em outra
 máquina, os caminhos originais precisam ser resolvidos na cópia de trabalho;
 não se deve editar os registros de origem esperando manter seus hashes.
+
+### Limpeza autorizada após a conclusão — 16/11
+
+Foram removidos somente **84 estados intermediários da v4**, totalizando
+6.366.765.212 bytes (6,37 GB). Permaneceram os **dez estados completos do
+episódio 500 e as 45 políticas**, com os 55 hashes iguais aos conferidos
+antes da limpeza. Os 5000 XMLs de treino, 1000 de validação, 250 dos testes
+das três raízes e 20 dos comparadores foram mantidos, assim como históricos,
+métricas, fontes e relatórios. Não houve limpeza de objetos do Git/LFS nem
+de outros experimentos. O espaço livre passou de cerca de 10,74 para
+17,11 GB no intervalo da exclusão.
+
+A continuação a partir dos estados finais e a execução das políticas
+selecionadas permanecem disponíveis. A retomada dos episódios intermediários
+removidos deixa de ser possível. Os diagnósticos e `PRESERVACAO.json` anteriores
+registram a situação no momento de sua geração; `PACOTE_GIT_20261116.json`
+continua como inventário histórico anterior à limpeza. Para o estado atual,
+consultar o [registro da exclusão e conferência dos arquivos preservados](resultados/cologne8_corrigido/LIMPEZA_CHECKPOINTS_INTERMEDIARIOS_20261116.json).
