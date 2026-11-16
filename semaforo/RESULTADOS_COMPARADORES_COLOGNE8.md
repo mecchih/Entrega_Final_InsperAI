@@ -141,6 +141,11 @@ Grupos para `avaliar`: `atuado_calibrado`, `max_pressure_movimento_ajustado`,
 
 Cada simulação levou cerca de 4 s no ambiente usado (Linux, 2 CPUs).
 
+## Demonstração visual
+
+Para mostrar tempo fixo, rede que copia e MARL lado a lado no SUMO-GUI, veja
+[DEMO_VISUAL_COLOGNE8.md](DEMO_VISUAL_COLOGNE8.md).
+
 ## Arquivos
 
 - `scripts/comparadores_cologne8.py`: os controladores, a calibração, os treinos e a avaliação.

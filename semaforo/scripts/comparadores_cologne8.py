@@ -326,6 +326,54 @@ def treinar_mlp(dados, semente):
     return mlp, float(mlp.score(X, y))
 
 
+def exportar_imitacao_numpy(semente):
+    """Converte as MLPs do scikit-learn em pesos NumPy puros (.npz), sem pickle e sem sklearn."""
+    pasta = SAIDA / "modelos" / f"imitacao_seed{semente}"
+    modelos = pickle.loads((pasta / "mlps.pkl").read_bytes())
+    m = manifesto()
+    arrays = {}
+    for i, (s, mo) in enumerate(zip(m["controladores"], modelos)):
+        arrays[f"{i}_classes"] = np.asarray(mo.classes_, dtype=np.int64)
+        for k, (W, b) in enumerate(zip(getattr(mo, "coefs_", []), getattr(mo, "intercepts_", []))):
+            arrays[f"{i}_W{k}"], arrays[f"{i}_b{k}"] = np.asarray(W, np.float64), np.asarray(b, np.float64)
+        arrays[f"{i}_camadas"] = np.array(len(getattr(mo, "coefs_", [])))
+        arrays[f"{i}_id"] = np.array(s["id"])
+    np.savez(pasta / "mlps_numpy.npz", **arrays)
+    return pasta / "mlps_numpy.npz"
+
+
+class MLPNumpy:
+    """Mesma decisao que MLPClassifier.predict (ReLU nas ocultas; saida logistica ou softmax)."""
+
+    def __init__(self, dados, i):
+        self.classes_ = dados[f"{i}_classes"]
+        n = int(dados[f"{i}_camadas"])
+        self.camadas = [(dados[f"{i}_W{k}"], dados[f"{i}_b{k}"]) for k in range(n)]
+
+    def predict_proba(self, X):
+        if not self.camadas:
+            return np.ones((len(X), 1))
+        h = np.asarray(X, np.float64)
+        for k, (W, b) in enumerate(self.camadas):
+            h = h @ W + b
+            if k < len(self.camadas) - 1:
+                h = np.maximum(h, 0.0)
+        if h.shape[1] == 1:
+            p = 1.0 / (1.0 + np.exp(-h[:, 0]))
+            return np.stack([1.0 - p, p], axis=1)
+        h = h - h.max(axis=1, keepdims=True)
+        e = np.exp(h)
+        return e / e.sum(axis=1, keepdims=True)
+
+
+def carregar_imitacao_numpy(arquivo, controladores):
+    dados = np.load(arquivo, allow_pickle=False)
+    ids = [str(dados[f"{i}_id"]) for i in range(len(controladores))]
+    if ids != [s["id"] for s in controladores]:
+        raise ValueError("Os pesos foram exportados para outra ordem de semaforos")
+    return [MLPNumpy(dados, i) for i in range(len(controladores))]
+
+
 class QTabular(Base):
     """Q-learning tabular. Estado: fase, faixa de tempo de verde e fila por fase (em baldes)."""
     BALDES = (0, 2, 5, 10)  # 0 | 1-2 | 3-5 | 6-10 | 11+
@@ -630,12 +678,14 @@ def avaliar_grupo(nome):
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
-    ap.add_argument("etapa", choices=["calibrar", "calibrar_webster", "calibrar_mp_movimento", "imitacao", "qlearning", "avaliar"])
+    ap.add_argument("etapa", choices=["exportar_imitacao", "calibrar", "calibrar_webster", "calibrar_mp_movimento", "imitacao", "qlearning", "avaliar"])
     ap.add_argument("--semente", type=int, default=0)
     ap.add_argument("--episodios", type=int, default=200)
     ap.add_argument("--grupo", default=None)
     a = ap.parse_args()
-    if a.etapa == "calibrar":
+    if a.etapa == "exportar_imitacao":
+        print(exportar_imitacao_numpy(a.semente))
+    elif a.etapa == "calibrar":
         calibrar_classicos()
     elif a.etapa == "calibrar_webster":
         calibrar_webster()
