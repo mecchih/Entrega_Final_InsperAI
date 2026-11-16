@@ -9,3 +9,15 @@ __pycache__/
 
 # Caches gerados durante os relatorios Cologne8; evidencias permanecem versionadas.
 /semaforo/resultados/marl_cologne8/**/cache_matplotlib/
+
+# Estados completos de retomada permanecem locais; politicas selecionadas seguem no Git/LFS.
+# Evita indexar copias volumosas do replay durante o treinamento.
+/semaforo/resultados/cologne8_corrigido/**/estado_ep*.pt
+/semaforo/resultados/piloto_supervisor_cologne8/**/estado_ep*.pt
+
+# XMLs brutos de treino/validacao ficam no arquivo local; metricas e testes seguem no Git.
+# O indice de publicacao registra caminhos, tamanhos e hashes dos XMLs omitidos.
+/semaforo/resultados/cologne8_corrigido/**/episodios/**/tripinfo.xml.gz
+/semaforo/resultados/cologne8_corrigido/**/validacao/**/tripinfo.xml.gz
+/semaforo/resultados/piloto_supervisor_cologne8/**/episodios/**/tripinfo.xml.gz
+/semaforo/resultados/piloto_supervisor_cologne8/**/validacao/**/tripinfo.xml.gz

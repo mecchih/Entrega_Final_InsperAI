@@ -1,0 +1,185 @@
+{
+  "variante": "com_supervisor",
+  "semente": 0,
+  "episodios": 100,
+  "n_atores": 9,
+  "melhor_ep": 25,
+  "melhor_score": [
+    50,
+    0,
+    14.832574300380342
+  ],
+  "checkpoint": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\piloto_supervisor_cologne8\\20261115_pareado_3x100_reinicio\\com_supervisor_seed0\\politica_ep0025.pt",
+  "sha256_checkpoint": "78049f5d2373cf50c2d8797cb2251bc421e949d45d1421f119a713249aafb595",
+  "validacoes": [
+    {
+      "episodio": 25,
+      "score": [
+        50,
+        0,
+        14.832574300380342
+      ],
+      "melhorou": true,
+      "metricas": [
+        {
+          "espera": 11.594785442694189,
+          "p95": 45.0,
+          "colisoes": 9,
+          "nao_concluidas": 0,
+          "concluidas": 1841
+        },
+        {
+          "espera": 16.62239004886717,
+          "p95": 59.0,
+          "colisoes": 26,
+          "nao_concluidas": 0,
+          "concluidas": 2251
+        },
+        {
+          "espera": 16.28054740957967,
+          "p95": 60.0,
+          "colisoes": 15,
+          "nao_concluidas": 0,
+          "concluidas": 2046
+        }
+      ]
+    },
+    {
+      "episodio": 50,
+      "score": [
+        76,
+        0,
+        15.536218677337581
+      ],
+      "melhorou": false,
+      "metricas": [
+        {
+          "espera": 11.551330798479087,
+          "p95": 51.0,
+          "colisoes": 18,
+          "nao_concluidas": 0,
+          "concluidas": 1841
+        },
+        {
+          "espera": 17.95957352287872,
+          "p95": 72.5,
+          "colisoes": 31,
+          "nao_concluidas": 0,
+          "concluidas": 2251
+        },
+        {
+          "espera": 17.097751710654936,
+          "p95": 65.0,
+          "colisoes": 27,
+          "nao_concluidas": 0,
+          "concluidas": 2046
+        }
+      ]
+    },
+    {
+      "episodio": 75,
+      "score": [
+        79,
+        0,
+        13.61429196047657
+      ],
+      "melhorou": false,
+      "metricas": [
+        {
+          "espera": 9.56816947311244,
+          "p95": 38.0,
+          "colisoes": 11,
+          "nao_concluidas": 0,
+          "concluidas": 1841
+        },
+        {
+          "espera": 17.61439360284318,
+          "p95": 72.0,
+          "colisoes": 36,
+          "nao_concluidas": 0,
+          "concluidas": 2251
+        },
+        {
+          "espera": 13.660312805474096,
+          "p95": 59.0,
+          "colisoes": 32,
+          "nao_concluidas": 0,
+          "concluidas": 2046
+        }
+      ]
+    },
+    {
+      "episodio": 100,
+      "score": [
+        59,
+        0,
+        13.388953265649468
+      ],
+      "melhorou": false,
+      "metricas": [
+        {
+          "espera": 9.128191200434546,
+          "p95": 35.0,
+          "colisoes": 5,
+          "nao_concluidas": 0,
+          "concluidas": 1841
+        },
+        {
+          "espera": 16.931141714793426,
+          "p95": 71.0,
+          "colisoes": 35,
+          "nao_concluidas": 0,
+          "concluidas": 2251
+        },
+        {
+          "espera": 14.10752688172043,
+          "p95": 58.0,
+          "colisoes": 19,
+          "nao_concluidas": 0,
+          "concluidas": 2046
+        }
+      ]
+    }
+  ],
+  "teste": [
+    {
+      "espera": 10.709256844850065,
+      "p95": 46.0,
+      "colisoes": 15,
+      "nao_concluidas": 0,
+      "concluidas": 1534
+    },
+    {
+      "espera": 22.26309616888194,
+      "p95": 97.0,
+      "colisoes": 53,
+      "nao_concluidas": 0,
+      "concluidas": 2558
+    },
+    {
+      "espera": 11.32258064516129,
+      "p95": 46.0,
+      "colisoes": 18,
+      "nao_concluidas": 0,
+      "concluidas": 2046
+    },
+    {
+      "espera": 16.396268325188807,
+      "p95": 57.0,
+      "colisoes": 30,
+      "nao_concluidas": 0,
+      "concluidas": 2251
+    }
+  ],
+  "gradientes": [
+    31803,
+    41319,
+    37721,
+    32310,
+    34508,
+    49330,
+    35191,
+    33218,
+    11208
+  ]
+}

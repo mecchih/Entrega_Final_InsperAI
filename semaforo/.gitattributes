@@ -2,3 +2,12 @@
 scripts/*mpc*.py text eol=lf
 requirements-mpc-cologne8.txt text eol=lf
 resultados/mpc_cologne8/** -text
+scripts/*supervisor*.py text eol=lf
+scripts/auditar_colisoes_cologne8.py text eol=lf
+resultados/piloto_supervisor_cologne8/** -text
+resultados/piloto_supervisor_cologne8/**/*.pt filter=lfs diff=lfs merge=lfs -text
+scripts/*cologne8_corrigido.py text eol=lf
+scripts/preparar_rede_cologne8_corrigida.py text eol=lf
+scripts/auditar_correcao_cologne8.py text eol=lf
+resultados/cologne8_corrigido/** -text
+resultados/cologne8_corrigido/**/*.pt filter=lfs diff=lfs merge=lfs -text

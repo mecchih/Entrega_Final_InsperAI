@@ -1,0 +1,97 @@
+{
+  "limpeza": {
+    "Inicio": "2026-11-16T13:00:50.8777659-03:00",
+    "FreeBefore": 16266129408,
+    "Targets": [
+      {
+        "Path": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\tmp\\uv-cache-dqn",
+        "Bytes": 1212856056,
+        "Files": 19849
+      },
+      {
+        "Path": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\tmp\\uv-cache-mpc",
+        "Bytes": 702087407,
+        "Files": 3937
+      }
+    ],
+    "CheckpointsBefore": [
+      {
+        "Path": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\cologne8_corrigido\\20261116_10sementes_500ep_v4\\seed6\\estado_ep0359.pt",
+        "SHA256": "15de2699a64a7de2c417c82ae8eebeb1960e903bae8aab0fd8e8bf24b75c4065"
+      },
+      {
+        "Path": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\cologne8_corrigido\\20261116_10sementes_500ep_v4\\seed7\\estado_ep0350.pt",
+        "SHA256": "1433486fefde3ae992955a026ad7f8cf98d45438aa29c1462599b42772565b39"
+      },
+      {
+        "Path": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\cologne8_corrigido\\20261116_10sementes_500ep_v4\\seed8\\estado_ep0337.pt",
+        "SHA256": "0c01d4e9ed2cae71c0147d2787c34c6e7d913c7a0c437821f27b8f59ae035755"
+      }
+    ],
+    "Finished": true,
+    "FreeAfter": 16230825984,
+    "Fim": "2026-11-16T13:05:43.7033766-03:00"
+  },
+  "retomada": {
+    "pid": 26508,
+    "inicio": "2026-11-16T13:08:14.1679213-03:00",
+    "saida": "semaforo/resultados/cologne8_corrigido/20261116_130813_10sementes_500ep_v4_retomada",
+    "origem": "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4",
+    "stdout": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\tmp\\cologne8_corrigido\\retomada_20261116_130813_stdout.log",
+    "stderr": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\tmp\\cologne8_corrigido\\retomada_20261116_130813_stderr.log",
+    "argumentos": [
+      "-B",
+      "-X",
+      "utf8",
+      "semaforo/scripts/treinar_cologne8_corrigido.py",
+      "--saida",
+      "semaforo/resultados/cologne8_corrigido/20261116_130813_10sementes_500ep_v4_retomada",
+      "--rede",
+      "semaforo/resultados/cologne8_corrigido/20261116_rede_sem_espera_interna_v2/cologne8.net.xml",
+      "--sumo-home",
+      "../tools/sumo-win64-1.28.0",
+      "--auditoria",
+      "semaforo/resultados/cologne8_corrigido/AUDITORIA_FINAL_20261116.json",
+      "--retomar-raiz",
+      "semaforo/resultados/cologne8_corrigido/20261116_10sementes_500ep_v4"
+    ],
+    "disco_livre_antes_bytes": 15839567872,
+    "reserva_GiB": 8
+  },
+  "pre_verificacao": {
+    "checkpoints_parciais_preservados": 3,
+    "fontes_iguais": 7,
+    "torch": "2.15.0+cpu",
+    "numpy": "2.5.4",
+    "libsumo": "1.28.0"
+  },
+  "limite": "Caches somavam 1914943463 bytes logicos; isso nao equivale a espaco fisico liberado. Espaco variou durante a inspecao, sem causa atribuida. Modelos, resultados e ambientes Python preservados.",
+  "validacao_inicial_retomada": {
+    "local": "2026-11-16T13:14:25.538683-03:00",
+    "workers": [
+      {
+        "seed": 0,
+        "initialized": true,
+        "next_episode": 501,
+        "history_rows": 500,
+        "complete": false
+      },
+      {
+        "seed": 1,
+        "initialized": true,
+        "next_episode": 501,
+        "history_rows": 500,
+        "complete": false
+      },
+      {
+        "seed": 2,
+        "initialized": true,
+        "next_episode": 501,
+        "history_rows": 500,
+        "complete": false
+      }
+    ],
+    "failures": [],
+    "free_GiB": 14.358978271484375
+  }
+}

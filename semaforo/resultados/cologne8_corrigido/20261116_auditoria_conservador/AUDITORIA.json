@@ -1,0 +1,35 @@
+{
+  "rodadas": [
+    {
+      "modo": "original_fixo",
+      "semente": 301,
+      "colisoes": 16,
+      "nao_concluidas": 0,
+      "espera": 32.263440860215056
+    },
+    {
+      "modo": "max_pressure",
+      "semente": 301,
+      "colisoes": 16,
+      "nao_concluidas": 0,
+      "espera": 17.090420332355816
+    }
+  ],
+  "derivacao": {
+    "fonte": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\referencias\\cologne8_sumo_rl_1.4.5\\sumo_rl\\nets\\RESCO\\cologne8\\cologne8.rou.xml",
+    "fonte_sha256": "25cab1cc0d98d91bc12176743b57bc9710cd18d712f46c221b54131ee35ca646",
+    "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\cologne8_corrigido\\20261116_auditoria_conservador\\demanda_derivada.rou.xml",
+    "sha256": "912ec7c3b6d8283e700126c189f1e1e5f33d3180fe8c6a547edd04a46be9c5ed",
+    "perfil": "conservador",
+    "alteracoes_vtype": {
+      "jmStoplineGapMinor": "2",
+      "jmAdvance": "0",
+      "jmExtraGap": "1",
+      "jmTimegapMinor": "2",
+      "jmSigmaMinor": "0"
+    },
+    "inalterados": "rede, fases, viagens, OD, horarios, comprimento, minGap, tau, deteccao de colisoes"
+  },
+  "sem_contatos_nas_condicoes_auditadas": false,
+  "limite": "Copia comportamental derivada; ausencia observada de contatos nao garante seguranca universal."
+}
