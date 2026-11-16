@@ -1,0 +1,424 @@
+{
+  "dinamica": "C: transicao corrigida + verde maximo",
+  "sementes_calibracao": [
+    301,
+    302,
+    303,
+    304,
+    305
+  ],
+  "cenarios": [
+    "equilibrado",
+    "assimetrico",
+    "pico",
+    "saturado"
+  ],
+  "criterio_ajuste_unico": "menor media da espera relativa ao Webster nos 4 cenarios",
+  "webster_espera": {
+    "equilibrado": 28.39746344004503,
+    "assimetrico": 31.495719304378007,
+    "pico": 49.995940276008675,
+    "saturado": 87.45866299187857
+  },
+  "ajuste_unico": {
+    "custo_troca": 3,
+    "verde_minimo": 25,
+    "verde_maximo": 60
+  },
+  "ajuste_por_cenario": {
+    "equilibrado": {
+      "custo_troca": 2,
+      "verde_minimo": 10
+    },
+    "assimetrico": {
+      "custo_troca": 0,
+      "verde_minimo": 15
+    },
+    "pico": {
+      "custo_troca": 0,
+      "verde_minimo": 15
+    },
+    "saturado": {
+      "custo_troca": 0,
+      "verde_minimo": 30
+    }
+  },
+  "original": {
+    "ajuste_unico": {
+      "custo_troca": 0.0,
+      "verde_minimo": 18
+    },
+    "ajuste_por_cenario": {
+      "equilibrado": {
+        "custo_troca": 0,
+        "verde_minimo": 10
+      },
+      "assimetrico": {
+        "custo_troca": 2,
+        "verde_minimo": 10
+      },
+      "pico": {
+        "custo_troca": 0,
+        "verde_minimo": 10
+      },
+      "saturado": {
+        "custo_troca": 2,
+        "verde_minimo": 25
+      }
+    },
+    "espera_ajuste_unico": {
+      "equilibrado": 31.165570186789868,
+      "assimetrico": 27.818499176274422,
+      "pico": 31.251660245566207,
+      "saturado": 129.82692795813864
+    },
+    "relativo_ajuste_unico": 1.0225614501884666,
+    "espera_teto": {
+      "equilibrado": 24.350848750765927,
+      "assimetrico": 24.984181057254986,
+      "pico": 30.806643383663776,
+      "saturado": 81.34646210004212
+    }
+  },
+  "recalibrado": {
+    "espera_ajuste_unico": {
+      "equilibrado": 37.25186687538555,
+      "assimetrico": 33.08326069593017,
+      "pico": 36.987444287931396,
+      "saturado": 81.29033344362007
+    },
+    "relativo_ajuste_unico": 1.0078720117238191,
+    "espera_teto": {
+      "equilibrado": 24.098731606025435,
+      "assimetrico": 24.075568358088418,
+      "pico": 26.383446087258786,
+      "saturado": 66.65993043757949
+    }
+  },
+  "grade": [
+    {
+      "custo_troca": 0,
+      "verde_minimo": 10,
+      "espera_equilibrado": 24.350848750765927,
+      "espera_assimetrico": 24.680964804866935,
+      "espera_pico": 30.806643383663776,
+      "espera_saturado": 232.08227718841323,
+      "relativo_webster": 1.2277338590331854
+    },
+    {
+      "custo_troca": 1,
+      "verde_minimo": 10,
+      "espera_equilibrado": 24.529890362358454,
+      "espera_assimetrico": 25.110485803965247,
+      "espera_pico": 30.013207262091083,
+      "espera_saturado": 233.11685217394373,
+      "relativo_webster": 1.2317092533628327
+    },
+    {
+      "custo_troca": 2,
+      "verde_minimo": 10,
+      "espera_equilibrado": 24.098731606025435,
+      "espera_assimetrico": 24.984181057254986,
+      "espera_pico": 30.981574534243837,
+      "espera_saturado": 233.49777252374315,
+      "relativo_webster": 1.2328420356703573
+    },
+    {
+      "custo_troca": 3,
+      "verde_minimo": 10,
+      "espera_equilibrado": 24.816259879670714,
+      "espera_assimetrico": 24.609755106801188,
+      "espera_pico": 31.879719641677802,
+      "espera_saturado": 233.66246426579164,
+      "relativo_webster": 1.2411486918891155
+    },
+    {
+      "custo_troca": 5,
+      "verde_minimo": 10,
+      "espera_equilibrado": 28.20232076787143,
+      "espera_assimetrico": 26.74537687944455,
+      "espera_pico": 36.04204525594656,
+      "espera_saturado": 234.93113592403623,
+      "relativo_webster": 1.3123497185580486
+    },
+    {
+      "custo_troca": 0,
+      "verde_minimo": 15,
+      "espera_equilibrado": 26.277291073196004,
+      "espera_assimetrico": 24.075568358088418,
+      "espera_pico": 26.383446087258786,
+      "espera_saturado": 186.70324686947177,
+      "relativo_webster": 1.088054670778459
+    },
+    {
+      "custo_troca": 1,
+      "verde_minimo": 15,
+      "espera_equilibrado": 26.093573175368874,
+      "espera_assimetrico": 24.357474484022195,
+      "espera_pico": 26.689646148924147,
+      "espera_saturado": 186.1134140930044,
+      "relativo_webster": 1.0885200371997148
+    },
+    {
+      "custo_troca": 2,
+      "verde_minimo": 15,
+      "espera_equilibrado": 26.1006309417306,
+      "espera_assimetrico": 24.799562112842356,
+      "espera_pico": 26.65102005044476,
+      "espera_saturado": 185.6383530392518,
+      "relativo_webster": 1.090540174817545
+    },
+    {
+      "custo_troca": 3,
+      "verde_minimo": 15,
+      "espera_equilibrado": 26.28988408045633,
+      "espera_assimetrico": 24.71655616386337,
+      "espera_pico": 27.24703401783976,
+      "espera_saturado": 185.62303585122768,
+      "relativo_webster": 1.094483945188408
+    },
+    {
+      "custo_troca": 5,
+      "verde_minimo": 15,
+      "espera_equilibrado": 28.070159838749337,
+      "espera_assimetrico": 26.228141017546562,
+      "espera_pico": 30.133520100264867,
+      "espera_saturado": 186.01135247842222,
+      "relativo_webster": 1.1376987250615398
+    },
+    {
+      "custo_troca": 0,
+      "verde_minimo": 20,
+      "espera_equilibrado": 31.165570186789868,
+      "espera_assimetrico": 27.818499176274422,
+      "espera_pico": 31.251660245566207,
+      "espera_saturado": 129.82692795813864,
+      "relativo_webster": 1.0225614501884666
+    },
+    {
+      "custo_troca": 1,
+      "verde_minimo": 20,
+      "espera_equilibrado": 31.065309958735707,
+      "espera_assimetrico": 27.8821714908738,
+      "espera_pico": 31.427996373575297,
+      "espera_saturado": 132.05405891886443,
+      "relativo_webster": 1.0294321945432987
+    },
+    {
+      "custo_troca": 2,
+      "verde_minimo": 20,
+      "espera_equilibrado": 31.275811238017234,
+      "espera_assimetrico": 28.219750142492554,
+      "espera_pico": 31.4585883333747,
+      "espera_saturado": 131.32049228766164,
+      "relativo_webster": 1.032021001003365
+    },
+    {
+      "custo_troca": 3,
+      "verde_minimo": 20,
+      "espera_equilibrado": 31.379695339140497,
+      "espera_assimetrico": 28.40668677495624,
+      "espera_pico": 31.213454018125315,
+      "espera_saturado": 132.80869617051604,
+      "relativo_webster": 1.037447630809038
+    },
+    {
+      "custo_troca": 5,
+      "verde_minimo": 20,
+      "espera_equilibrado": 32.01465594633034,
+      "espera_assimetrico": 28.749732149075335,
+      "espera_pico": 33.345271088427694,
+      "espera_saturado": 130.3620473045437,
+      "relativo_webster": 1.049426745963334
+    },
+    {
+      "custo_troca": 0,
+      "verde_minimo": 25,
+      "espera_equilibrado": 37.36013851860334,
+      "espera_assimetrico": 32.96909726893765,
+      "espera_pico": 37.156591586924414,
+      "espera_saturado": 81.74980097820293,
+      "relativo_webster": 1.0100782002457294
+    },
+    {
+      "custo_troca": 1,
+      "verde_minimo": 25,
+      "espera_equilibrado": 37.612901398622775,
+      "espera_assimetrico": 33.12267270699499,
+      "espera_pico": 36.90153751730033,
+      "espera_saturado": 82.1464646156066,
+      "relativo_webster": 1.013380929125112
+    },
+    {
+      "custo_troca": 2,
+      "verde_minimo": 25,
+      "espera_equilibrado": 37.838111318963925,
+      "espera_assimetrico": 33.004030696147844,
+      "espera_pico": 36.7821078506393,
+      "espera_saturado": 81.34646210004212,
+      "relativo_webster": 1.0115378580299579
+    },
+    {
+      "custo_troca": 3,
+      "verde_minimo": 25,
+      "espera_equilibrado": 37.25186687538555,
+      "espera_assimetrico": 33.08326069593017,
+      "espera_pico": 36.987444287931396,
+      "espera_saturado": 81.29033344362007,
+      "relativo_webster": 1.0078720117238191
+    },
+    {
+      "custo_troca": 5,
+      "verde_minimo": 25,
+      "espera_equilibrado": 37.07322255811943,
+      "espera_assimetrico": 33.38840893153307,
+      "espera_pico": 37.72293174684826,
+      "espera_saturado": 82.74278110132917,
+      "relativo_webster": 1.0165509863597
+    },
+    {
+      "custo_troca": 0,
+      "verde_minimo": 30,
+      "espera_equilibrado": 43.58769936612304,
+      "espera_assimetrico": 38.10095871680849,
+      "espera_pico": 43.368729531602284,
+      "espera_saturado": 66.65993043757949,
+      "relativo_webster": 1.0935666880144534
+    },
+    {
+      "custo_troca": 1,
+      "verde_minimo": 30,
+      "espera_equilibrado": 43.47572334233189,
+      "espera_assimetrico": 38.00848302680581,
+      "espera_pico": 42.70684763842309,
+      "espera_saturado": 67.18631019928188,
+      "relativo_webster": 1.0900418365493065
+    },
+    {
+      "custo_troca": 2,
+      "verde_minimo": 30,
+      "espera_equilibrado": 43.592289622629416,
+      "espera_assimetrico": 38.26625897070574,
+      "espera_pico": 42.79664770476663,
+      "espera_saturado": 67.96179352958862,
+      "relativo_webster": 1.095779909385183
+    },
+    {
+      "custo_troca": 3,
+      "verde_minimo": 30,
+      "espera_equilibrado": 43.88553825411241,
+      "espera_assimetrico": 37.63404716751246,
+      "espera_pico": 43.615930210347116,
+      "espera_saturado": 68.74837024796119,
+      "relativo_webster": 1.099688487449012
+    },
+    {
+      "custo_troca": 5,
+      "verde_minimo": 30,
+      "espera_equilibrado": 44.14659969882401,
+      "espera_assimetrico": 38.03182367057208,
+      "espera_pico": 42.85017545365175,
+      "espera_saturado": 68.61745442048998,
+      "relativo_webster": 1.1009408475692233
+    },
+    {
+      "custo_troca": 0,
+      "verde_minimo": 35,
+      "espera_equilibrado": 49.78931479478184,
+      "espera_assimetrico": 43.17389792930752,
+      "espera_pico": 49.297959113999376,
+      "espera_saturado": 68.86014358621738,
+      "relativo_webster": 1.224367993539505
+    },
+    {
+      "custo_troca": 1,
+      "verde_minimo": 35,
+      "espera_equilibrado": 50.253198912235156,
+      "espera_assimetrico": 43.294206129637736,
+      "espera_pico": 49.73102436493376,
+      "espera_saturado": 68.86014358621738,
+      "relativo_webster": 1.2315723040823177
+    },
+    {
+      "custo_troca": 2,
+      "verde_minimo": 35,
+      "espera_equilibrado": 49.97501062313527,
+      "espera_assimetrico": 43.184368224882846,
+      "espera_pico": 49.34296996766645,
+      "espera_saturado": 68.9993278542436,
+      "relativo_webster": 1.2267088246432791
+    },
+    {
+      "custo_troca": 3,
+      "verde_minimo": 35,
+      "espera_equilibrado": 50.32231491776821,
+      "espera_assimetrico": 43.30676662373478,
+      "espera_pico": 49.08103925638496,
+      "espera_saturado": 68.59332226373672,
+      "relativo_webster": 1.2282675775834853
+    },
+    {
+      "custo_troca": 5,
+      "verde_minimo": 35,
+      "espera_equilibrado": 50.83491553979857,
+      "espera_assimetrico": 42.64349154213386,
+      "espera_pico": 48.92985605813692,
+      "espera_saturado": 69.47262949822687,
+      "relativo_webster": 1.2292730230934814
+    },
+    {
+      "custo_troca": 0,
+      "verde_minimo": 40,
+      "espera_equilibrado": 56.02254824217533,
+      "espera_assimetrico": 48.64470668154245,
+      "espera_pico": 54.50710716746666,
+      "espera_saturado": 72.67349865626956,
+      "relativo_webster": 1.3596162308211461
+    },
+    {
+      "custo_troca": 1,
+      "verde_minimo": 40,
+      "espera_equilibrado": 56.02254824217533,
+      "espera_assimetrico": 48.64470668154245,
+      "espera_pico": 54.75964681800429,
+      "espera_saturado": 72.67349865626956,
+      "relativo_webster": 1.360879031606287
+    },
+    {
+      "custo_troca": 2,
+      "verde_minimo": 40,
+      "espera_equilibrado": 56.00152209361409,
+      "espera_assimetrico": 48.35395572723118,
+      "espera_pico": 55.133816944554596,
+      "espera_saturado": 72.67633453007316,
+      "relativo_webster": 1.3602651737281433
+    },
+    {
+      "custo_troca": 3,
+      "verde_minimo": 40,
+      "espera_equilibrado": 56.40991345263708,
+      "espera_assimetrico": 48.14296901010747,
+      "espera_pico": 54.37358393359272,
+      "espera_saturado": 72.72294778571774,
+      "relativo_webster": 1.3585175338254862
+    },
+    {
+      "custo_troca": 5,
+      "verde_minimo": 40,
+      "espera_equilibrado": 55.92801608489874,
+      "espera_assimetrico": 48.0000473864321,
+      "espera_pico": 55.702142801803475,
+      "espera_saturado": 71.91877273399697,
+      "relativo_webster": 1.357485252615679
+    },
+    {
+      "custo_troca": 0.0,
+      "verde_minimo": 18,
+      "espera_equilibrado": 31.165570186789868,
+      "espera_assimetrico": 27.818499176274422,
+      "espera_pico": 31.251660245566207,
+      "espera_saturado": 129.82692795813864,
+      "relativo_webster": 1.0225614501884666
+    }
+  ]
+}

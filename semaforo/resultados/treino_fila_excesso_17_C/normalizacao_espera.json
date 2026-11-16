@@ -1,0 +1,91 @@
+{
+ "escolha": {
+  "escala_s": 120.0,
+  "teto": 3.0,
+  "formula": "min(maior_espera / 120, 3)"
+ },
+ "dados": {
+  "cenarios": [
+   "equilibrado",
+   "assimetrico",
+   "pico",
+   "saturado"
+  ],
+  "sementes_de_treino": {
+   "equilibrado": [
+    1001,
+    1005
+   ],
+   "assimetrico": [
+    1002,
+    1006
+   ],
+   "pico": [
+    1003,
+    1007
+   ],
+   "saturado": [
+    1004,
+    1008
+   ]
+  },
+  "modelos": [
+   "dqn_fila_excesso_C_seed0",
+   "dqn_fila_excesso_C_seed1",
+   "dqn_fila_excesso_C_seed2"
+  ],
+  "unidade": "maior espera acumulada (s) por aproximacao, em cada decisao"
+ },
+ "todos": {
+  "n": 33160,
+  "p50": 31.0,
+  "p90": 105.0,
+  "p95": 128.0,
+  "p99": 175.0,
+  "max": 261.0,
+  "pct_acima_do_teto": 0.0,
+  "media_normalizada": 0.357116757137113
+ },
+ "por_cenario": {
+  "equilibrado": {
+   "n": 6584,
+   "p50": 17.0,
+   "p90": 52.0,
+   "p95": 62.0,
+   "p99": 85.0,
+   "max": 131.0,
+   "pct_acima_do_teto": 0.0,
+   "media_normalizada": 0.18317385581206966
+  },
+  "assimetrico": {
+   "n": 7476,
+   "p50": 16.0,
+   "p90": 87.0,
+   "p95": 117.0,
+   "p99": 177.0,
+   "max": 261.0,
+   "pct_acima_do_teto": 0.0,
+   "media_normalizada": 0.2594390939896558
+  },
+  "pico": {
+   "n": 6676,
+   "p50": 14.0,
+   "p90": 53.0,
+   "p95": 63.0,
+   "p99": 85.0,
+   "max": 153.0,
+   "pct_acima_do_teto": 0.0,
+   "media_normalizada": 0.17507364689434793
+  },
+  "saturado": {
+   "n": 12424,
+   "p50": 68.0,
+   "p90": 131.0,
+   "p95": 151.0,
+   "p99": 188.0,
+   "max": 261.0,
+   "pct_acima_do_teto": 0.0,
+   "media_normalizada": 0.6058931637690491
+  }
+ }
+}
