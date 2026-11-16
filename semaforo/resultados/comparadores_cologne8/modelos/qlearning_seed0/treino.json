@@ -1,0 +1,3613 @@
+{
+  "semente": 0,
+  "episodios": 300,
+  "episodio_escolhido": 80,
+  "criterio_selecao": "igual ao MARL: colisoes, nao concluidas, espera (validacao 201/202)",
+  "alfa": 0.1,
+  "gamma": 0.95,
+  "epsilon": "1 -> 0.05 em 60% dos episodios",
+  "historico_validacao": [
+    {
+      "episodio": 10,
+      "criterio": [
+        43,
+        630,
+        132.2936311979293
+      ],
+      "validacao": [
+        {
+          "semente": 201,
+          "espera_s": 129.50576923076923,
+          "p95_s": 651.0999999999999,
+          "espera_max_s": 1934.0,
+          "duracao_viagem_s": 217.40833333333333,
+          "colisoes": 23,
+          "nao_concluidas": 486,
+          "fila_media_rede": 156.5475,
+          "fila_max_rede": 284,
+          "intervencoes": 72,
+          "trocas": 957,
+          "terminado_naturalmente": false,
+          "fim_sumo": 30000
+        },
+        {
+          "semente": 202,
+          "espera_s": 135.08149316508937,
+          "p95_s": 840.8499999999995,
+          "espera_max_s": 1412.0,
+          "duracao_viagem_s": 234.81545741324922,
+          "colisoes": 20,
+          "nao_concluidas": 144,
+          "fila_media_rede": 65.538125,
+          "fila_max_rede": 141,
+          "intervencoes": 80,
+          "trocas": 836,
+          "terminado_naturalmente": false,
+          "fim_sumo": 30000
+        }
+      ]
+    },
+    {
+      "episodio": 20,
+      "criterio": [
+        40,
+        89,
+        41.352370691269925
+      ],
+      "validacao": [
+        {
+          "semente": 201,
+          "espera_s": 39.88563049853372,
+          "p95_s": 160.0,
+          "espera_max_s": 357.0,
+          "duracao_viagem_s": 132.36412512218965,
+          "colisoes": 17,
+          "nao_concluidas": 0,
+          "fila_media_rede": 20.49799297541395,
+          "fila_max_rede": 92,
+          "intervencoes": 81,
+          "trocas": 683,
+          "terminado_naturalmente": true,
+          "fim_sumo": 29186
+        },
+        {
+          "semente": 202,
+          "espera_s": 42.81911088400613,
+          "p95_s": 183.19999999999982,
+          "espera_max_s": 408.0,
+          "duracao_viagem_s": 134.20132856412877,
+          "colisoes": 23,
+          "nao_concluidas": 89,
+          "fila_media_rede": 52.794375,
+          "fila_max_rede": 98,
+          "intervencoes": 76,
+          "trocas": 797,
+          "terminado_naturalmente": false,
+          "fim_sumo": 30000
+        }
+      ]
+    },
+    {
+      "episodio": 30,
+      "criterio": [
+        59,
+        0,
+        41.514418377321604
+      ],
+      "validacao": [
+        {
+          "semente": 201,
+          "espera_s": 38.17937438905181,
+          "p95_s": 137.0,
+          "espera_max_s": 497.0,
+          "duracao_viagem_s": 129.47605083088953,
+          "colisoes": 21,
+          "nao_concluidas": 0,
+          "fila_media_rede": 19.390280188445328,
+          "fila_max_rede": 82,
+          "intervencoes": 96,
+          "trocas": 710,
+          "terminado_naturalmente": true,
+          "fim_sumo": 29233
+        },
+        {
+          "semente": 202,
+          "espera_s": 44.8494623655914,
+          "p95_s": 171.0,
+          "espera_max_s": 308.0,
+          "duracao_viagem_s": 138.0078201368524,
+          "colisoes": 38,
+          "nao_concluidas": 0,
+          "fila_media_rede": 23.317339426250317,
+          "fila_max_rede": 100,
+          "intervencoes": 92,
+          "trocas": 700,
+          "terminado_naturalmente": true,
+          "fim_sumo": 29139
+        }
+      ]
+    },
+    {
+      "episodio": 40,
+      "criterio": [
+        48,
+        0,
+        39.205522971652
+      ],
+      "validacao": [
+        {
+          "semente": 201,
+          "espera_s": 29.63147605083089,
+          "p95_s": 105.75,
+          "espera_max_s": 269.0,
+          "duracao_viagem_s": 117.64711632453567,
+          "colisoes": 22,
+          "nao_concluidas": 0,
+          "fila_media_rede": 15.686821705426357,
+          "fila_max_rede": 57,
+          "intervencoes": 90,
+          "trocas": 689,
+          "terminado_naturalmente": true,
+          "fim_sumo": 29070
+        },
+        {
+          "semente": 202,
+          "espera_s": 48.77956989247312,
+          "p95_s": 158.5,
+          "espera_max_s": 1074.0,
+          "duracao_viagem_s": 140.9926686217009,
+          "colisoes": 26,
+          "nao_concluidas": 0,
+          "fila_media_rede": 25.594670766077375,
+          "fila_max_rede": 97,
+          "intervencoes": 75,
+          "trocas": 732,
+          "terminado_naturalmente": true,
+          "fim_sumo": 29103
+        }
+      ]
+    },
+    {
+      "episodio": 50,
+      "criterio": [
+        48,
+        0,
+        34.4613880742913
+      ],
+      "validacao": [
+        {
+          "semente": 201,
+          "espera_s": 29.757575757575758,
+          "p95_s": 113.0,
+          "espera_max_s": 817.0,
+          "duracao_viagem_s": 117.30645161290323,
+          "colisoes": 23,
+          "nao_concluidas": 0,
+          "fila_media_rede": 15.606091630406961,
+          "fila_max_rede": 70,
+          "intervencoes": 100,
+          "trocas": 708,
+          "terminado_naturalmente": true,
+          "fim_sumo": 29107
+        },
+        {
+          "semente": 202,
+          "espera_s": 39.16520039100684,
+          "p95_s": 153.75,
+          "espera_max_s": 278.0,
+          "duracao_viagem_s": 130.4960899315738,
+          "colisoes": 25,
+          "nao_concluidas": 0,
+          "fila_media_rede": 20.95402298850575,
+          "fila_max_rede": 104,
+          "intervencoes": 94,
+          "trocas": 702,
+          "terminado_naturalmente": true,
+          "fim_sumo": 29028
+        }
+      ]
+    },
+    {
+      "episodio": 60,
+      "criterio": [
+        42,
+        11,
+        50.18695410953475
+      ],
+      "validacao": [
+        {
+          "semente": 201,
+          "espera_s": 57.637837837837836,
+          "p95_s": 301.5999999999999,
+          "espera_max_s": 833.0,
+          "duracao_viagem_s": 150.56953316953317,
+          "colisoes": 16,
+          "nao_concluidas": 11,
+          "fila_media_rede": 26.889791666666667,
+          "fila_max_rede": 126,
+          "intervencoes": 76,
+          "trocas": 745,
+          "terminado_naturalmente": false,
+          "fim_sumo": 30000
+        },
+        {
+          "semente": 202,
+          "espera_s": 42.73607038123167,
+          "p95_s": 160.0,
+          "espera_max_s": 416.0,
+          "duracao_viagem_s": 134.70087976539588,
+          "colisoes": 26,
+          "nao_concluidas": 0,
+          "fila_media_rede": 22.827640156453715,
+          "fila_max_rede": 108,
+          "intervencoes": 76,
+          "trocas": 660,
+          "terminado_naturalmente": true,
+          "fim_sumo": 29035
+        }
+      ]
+    },
+    {
+      "episodio": 70,
+      "criterio": [
+        40,
+        10,
+        29.999433462580683
+      ],
+      "validacao": [
+        {
+          "semente": 201,
+          "espera_s": 29.268172888015716,
+          "p95_s": 119.25,
+          "espera_max_s": 217.0,
+          "duracao_viagem_s": 117.45235756385068,
+          "colisoes": 17,
+          "nao_concluidas": 10,
+          "fila_media_rede": 16.738125,
+          "fila_max_rede": 81,
+          "intervencoes": 72,
+          "trocas": 803,
+          "terminado_naturalmente": false,
+          "fim_sumo": 30000
+        },
+        {
+          "semente": 202,
+          "espera_s": 30.73069403714565,
+          "p95_s": 123.0,
+          "espera_max_s": 197.0,
+          "duracao_viagem_s": 118.57135874877811,
+          "colisoes": 23,
+          "nao_concluidas": 0,
+          "fila_media_rede": 15.9516210739615,
+          "fila_max_rede": 98,
+          "intervencoes": 84,
+          "trocas": 726,
+          "terminado_naturalmente": true,
+          "fim_sumo": 29148
+        }
+      ]
+    },
+    {
+      "episodio": 80,
+      "criterio": [
+        25,
+        0,
+        28.147849462365592
+      ],
+      "validacao": [
+        {
+          "semente": 201,
+          "espera_s": 23.252688172043012,
+          "p95_s": 92.0,
+          "espera_max_s": 167.0,
+          "duracao_viagem_s": 108.97116324535679,
+          "colisoes": 15,
+          "nao_concluidas": 0,
+          "fila_media_rede": 12.057171768277257,
+          "fila_max_rede": 80,
+          "intervencoes": 95,
+          "trocas": 619,
+          "terminado_naturalmente": true,
+          "fim_sumo": 29153
+        },
+        {
+          "semente": 202,
+          "espera_s": 33.043010752688176,
+          "p95_s": 135.0,
+          "espera_max_s": 415.0,
+          "duracao_viagem_s": 119.72434017595307,
+          "colisoes": 10,
+          "nao_concluidas": 0,
+          "fila_media_rede": 17.182533637979184,
+          "fila_max_rede": 89,
+          "intervencoes": 84,
+          "trocas": 637,
+          "terminado_naturalmente": true,
+          "fim_sumo": 29139
+        }
+      ]
+    },
+    {
+      "episodio": 90,
+      "criterio": [
+        45,
+        0,
+        24.543743890518083
+      ],
+      "validacao": [
+        {
+          "semente": 201,
+          "espera_s": 24.835777126099707,
+          "p95_s": 100.0,
+          "espera_max_s": 211.0,
+          "duracao_viagem_s": 111.62023460410558,
+          "colisoes": 23,
+          "nao_concluidas": 0,
+          "fila_media_rede": 13.2187012987013,
+          "fila_max_rede": 108,
+          "intervencoes": 95,
+          "trocas": 638,
+          "terminado_naturalmente": true,
+          "fim_sumo": 29050
+        },
+        {
+          "semente": 202,
+          "espera_s": 24.25171065493646,
+          "p95_s": 100.0,
+          "espera_max_s": 216.0,
+          "duracao_viagem_s": 109.73949169110459,
+          "colisoes": 22,
+          "nao_concluidas": 0,
+          "fila_media_rede": 13.024901703800786,
+          "fila_max_rede": 76,
+          "intervencoes": 88,
+          "trocas": 663,
+          "terminado_naturalmente": true,
+          "fim_sumo": 29015
+        }
+      ]
+    },
+    {
+      "episodio": 100,
+      "criterio": [
+        44,
+        0,
+        28.08895405669599
+      ],
+      "validacao": [
+        {
+          "semente": 201,
+          "espera_s": 25.329423264907135,
+          "p95_s": 87.0,
+          "espera_max_s": 312.0,
+          "duracao_viagem_s": 109.5982404692082,
+          "colisoes": 22,
+          "nao_concluidas": 0,
+          "fila_media_rede": 13.281729785056294,
+          "fila_max_rede": 52,
+          "intervencoes": 107,
+          "trocas": 605,
+          "terminado_naturalmente": true,
+          "fim_sumo": 29108
+        },
+        {
+          "semente": 202,
+          "espera_s": 30.848484848484848,
+          "p95_s": 125.0,
+          "espera_max_s": 303.0,
+          "duracao_viagem_s": 118.45161290322581,
+          "colisoes": 22,
+          "nao_concluidas": 0,
+          "fila_media_rede": 16.474191866527633,
+          "fila_max_rede": 98,
+          "intervencoes": 113,
+          "trocas": 608,
+          "terminado_naturalmente": true,
+          "fim_sumo": 29036
+        }
+      ]
+    },
+    {
+      "episodio": 110,
+      "criterio": [
+        42,
+        1,
+        24.728348354592537
+      ],
+      "validacao": [
+        {
+          "semente": 201,
+          "espera_s": 26.401466992665036,
+          "p95_s": 106.79999999999995,
+          "espera_max_s": 218.0,
+          "duracao_viagem_s": 111.68850855745721,
+          "colisoes": 26,
+          "nao_concluidas": 1,
+          "fila_media_rede": 11.498333333333333,
+          "fila_max_rede": 77,
+          "intervencoes": 96,
+          "trocas": 655,
+          "terminado_naturalmente": false,
+          "fim_sumo": 30000
+        },
+        {
+          "semente": 202,
+          "espera_s": 23.05522971652004,
+          "p95_s": 91.0,
+          "espera_max_s": 261.0,
+          "duracao_viagem_s": 107.40860215053763,
+          "colisoes": 16,
+          "nao_concluidas": 0,
+          "fila_media_rede": 12.368324607329843,
+          "fila_max_rede": 57,
+          "intervencoes": 103,
+          "trocas": 646,
+          "terminado_naturalmente": true,
+          "fim_sumo": 29020
+        }
+      ]
+    },
+    {
+      "episodio": 120,
+      "criterio": [
+        42,
+        0,
+        27.52541544477028
+      ],
+      "validacao": [
+        {
+          "semente": 201,
+          "espera_s": 27.427663734115345,
+          "p95_s": 103.0,
+          "espera_max_s": 347.0,
+          "duracao_viagem_s": 113.10068426197458,
+          "colisoes": 24,
+          "nao_concluidas": 0,
+          "fila_media_rede": 14.398309426229508,
+          "fila_max_rede": 81,
+          "intervencoes": 95,
+          "trocas": 620,
+          "terminado_naturalmente": true,
+          "fim_sumo": 29104
+        },
+        {
+          "semente": 202,
+          "espera_s": 27.62316715542522,
+          "p95_s": 98.0,
+          "espera_max_s": 239.0,
+          "duracao_viagem_s": 113.34066471163246,
+          "colisoes": 18,
+          "nao_concluidas": 0,
+          "fila_media_rede": 14.636410654253943,
+          "fila_max_rede": 70,
+          "intervencoes": 103,
+          "trocas": 637,
+          "terminado_naturalmente": true,
+          "fim_sumo": 29067
+        }
+      ]
+    },
+    {
+      "episodio": 130,
+      "criterio": [
+        49,
+        0,
+        21.4836265884653
+      ],
+      "validacao": [
+        {
+          "semente": 201,
+          "espera_s": 22.578690127077223,
+          "p95_s": 91.75,
+          "espera_max_s": 308.0,
+          "duracao_viagem_s": 107.11925708699903,
+          "colisoes": 23,
+          "nao_concluidas": 0,
+          "fila_media_rede": 11.959669079627714,
+          "fila_max_rede": 64,
+          "intervencoes": 99,
+          "trocas": 788,
+          "terminado_naturalmente": true,
+          "fim_sumo": 29068
+        },
+        {
+          "semente": 202,
+          "espera_s": 20.38856304985337,
+          "p95_s": 80.0,
+          "espera_max_s": 222.0,
+          "duracao_viagem_s": 103.40566959921799,
+          "colisoes": 26,
+          "nao_concluidas": 0,
+          "fila_media_rede": 10.903705636743215,
+          "fila_max_rede": 58,
+          "intervencoes": 90,
+          "trocas": 793,
+          "terminado_naturalmente": true,
+          "fim_sumo": 29032
+        }
+      ]
+    },
+    {
+      "episodio": 140,
+      "criterio": [
+        53,
+        5,
+        33.981653354521654
+      ],
+      "validacao": [
+        {
+          "semente": 201,
+          "espera_s": 30.57820136852395,
+          "p95_s": 120.75,
+          "espera_max_s": 258.0,
+          "duracao_viagem_s": 117.88269794721407,
+          "colisoes": 36,
+          "nao_concluidas": 0,
+          "fila_media_rede": 16.25810635538262,
+          "fila_max_rede": 78,
+          "intervencoes": 111,
+          "trocas": 627,
+          "terminado_naturalmente": true,
+          "fim_sumo": 29055
+        },
+        {
+          "semente": 202,
+          "espera_s": 37.38510534051935,
+          "p95_s": 148.0,
+          "espera_max_s": 281.0,
+          "duracao_viagem_s": 125.55707986281234,
+          "colisoes": 17,
+          "nao_concluidas": 5,
+          "fila_media_rede": 17.089375,
+          "fila_max_rede": 88,
+          "intervencoes": 116,
+          "trocas": 676,
+          "terminado_naturalmente": false,
+          "fim_sumo": 30000
+        }
+      ]
+    },
+    {
+      "episodio": 150,
+      "criterio": [
+        37,
+        0,
+        27.542521994134894
+      ],
+      "validacao": [
+        {
+          "semente": 201,
+          "espera_s": 33.08162267839687,
+          "p95_s": 102.0,
+          "espera_max_s": 496.0,
+          "duracao_viagem_s": 122.17008797653959,
+          "colisoes": 21,
+          "nao_concluidas": 0,
+          "fila_media_rede": 17.415467625899282,
+          "fila_max_rede": 67,
+          "intervencoes": 94,
+          "trocas": 744,
+          "terminado_naturalmente": true,
+          "fim_sumo": 29092
+        },
+        {
+          "semente": 202,
+          "espera_s": 22.003421309872923,
+          "p95_s": 88.0,
+          "espera_max_s": 164.0,
+          "duracao_viagem_s": 106.37927663734115,
+          "colisoes": 16,
+          "nao_concluidas": 0,
+          "fila_media_rede": 11.741733923457433,
+          "fila_max_rede": 61,
+          "intervencoes": 107,
+          "trocas": 732,
+          "terminado_naturalmente": true,
+          "fim_sumo": 29041
+        }
+      ]
+    },
+    {
+      "episodio": 160,
+      "criterio": [
+        48,
+        0,
+        24.587732160312804
+      ],
+      "validacao": [
+        {
+          "semente": 201,
+          "espera_s": 26.152981427174975,
+          "p95_s": 99.0,
+          "espera_max_s": 280.0,
+          "duracao_viagem_s": 110.85826001955034,
+          "colisoes": 26,
+          "nao_concluidas": 0,
+          "fila_media_rede": 13.814127352410415,
+          "fila_max_rede": 65,
+          "intervencoes": 121,
+          "trocas": 627,
+          "terminado_naturalmente": true,
+          "fim_sumo": 29079
+        },
+        {
+          "semente": 202,
+          "espera_s": 23.022482893450636,
+          "p95_s": 84.0,
+          "espera_max_s": 203.0,
+          "duracao_viagem_s": 107.07038123167156,
+          "colisoes": 22,
+          "nao_concluidas": 0,
+          "fila_media_rede": 12.143886743886744,
+          "fila_max_rede": 43,
+          "intervencoes": 123,
+          "trocas": 635,
+          "terminado_naturalmente": true,
+          "fim_sumo": 29085
+        }
+      ]
+    },
+    {
+      "episodio": 170,
+      "criterio": [
+        51,
+        0,
+        19.96798631476051
+      ],
+      "validacao": [
+        {
+          "semente": 201,
+          "espera_s": 21.08260019550342,
+          "p95_s": 82.0,
+          "espera_max_s": 195.0,
+          "duracao_viagem_s": 105.89100684261975,
+          "colisoes": 24,
+          "nao_concluidas": 0,
+          "fila_media_rede": 11.051662404092072,
+          "fila_max_rede": 68,
+          "intervencoes": 134,
+          "trocas": 559,
+          "terminado_naturalmente": true,
+          "fim_sumo": 29110
+        },
+        {
+          "semente": 202,
+          "espera_s": 18.853372434017594,
+          "p95_s": 75.75,
+          "espera_max_s": 194.0,
+          "duracao_viagem_s": 103.32355816226784,
+          "colisoes": 27,
+          "nao_concluidas": 0,
+          "fila_media_rede": 9.98836908761954,
+          "fila_max_rede": 70,
+          "intervencoes": 129,
+          "trocas": 569,
+          "terminado_naturalmente": true,
+          "fim_sumo": 29069
+        }
+      ]
+    },
+    {
+      "episodio": 180,
+      "criterio": [
+        38,
+        16,
+        27.846482864558503
+      ],
+      "validacao": [
+        {
+          "semente": 201,
+          "espera_s": 24.892473118279568,
+          "p95_s": 105.0,
+          "espera_max_s": 204.0,
+          "duracao_viagem_s": 109.91837732160313,
+          "colisoes": 22,
+          "nao_concluidas": 0,
+          "fila_media_rede": 13.177473521053992,
+          "fila_max_rede": 60,
+          "intervencoes": 130,
+          "trocas": 629,
+          "terminado_naturalmente": true,
+          "fim_sumo": 29071
+        },
+        {
+          "semente": 202,
+          "espera_s": 30.800492610837438,
+          "p95_s": 127.54999999999995,
+          "espera_max_s": 352.0,
+          "duracao_viagem_s": 115.47339901477832,
+          "colisoes": 16,
+          "nao_concluidas": 16,
+          "fila_media_rede": 16.983333333333334,
+          "fila_max_rede": 58,
+          "intervencoes": 126,
+          "trocas": 610,
+          "terminado_naturalmente": false,
+          "fim_sumo": 30000
+        }
+      ]
+    },
+    {
+      "episodio": 190,
+      "criterio": [
+        53,
+        0,
+        21.043010752688176
+      ],
+      "validacao": [
+        {
+          "semente": 201,
+          "espera_s": 22.53323558162268,
+          "p95_s": 82.75,
+          "espera_max_s": 246.0,
+          "duracao_viagem_s": 107.36314760508309,
+          "colisoes": 24,
+          "nao_concluidas": 0,
+          "fila_media_rede": 11.916129032258064,
+          "fila_max_rede": 55,
+          "intervencoes": 162,
+          "trocas": 562,
+          "terminado_naturalmente": true,
+          "fim_sumo": 29075
+        },
+        {
+          "semente": 202,
+          "espera_s": 19.552785923753667,
+          "p95_s": 67.0,
+          "espera_max_s": 162.0,
+          "duracao_viagem_s": 102.56402737047898,
+          "colisoes": 29,
+          "nao_concluidas": 0,
+          "fila_media_rede": 10.407686315242794,
+          "fila_max_rede": 39,
+          "intervencoes": 165,
+          "trocas": 556,
+          "terminado_naturalmente": true,
+          "fim_sumo": 29051
+        }
+      ]
+    },
+    {
+      "episodio": 200,
+      "criterio": [
+        46,
+        0,
+        19.868035190615835
+      ],
+      "validacao": [
+        {
+          "semente": 201,
+          "espera_s": 18.444281524926687,
+          "p95_s": 65.0,
+          "espera_max_s": 146.0,
+          "duracao_viagem_s": 100.64613880742912,
+          "colisoes": 20,
+          "nao_concluidas": 0,
+          "fila_media_rede": 9.674942411057078,
+          "fila_max_rede": 41,
+          "intervencoes": 142,
+          "trocas": 541,
+          "terminado_naturalmente": true,
+          "fim_sumo": 29107
+        },
+        {
+          "semente": 202,
+          "espera_s": 21.291788856304986,
+          "p95_s": 81.0,
+          "espera_max_s": 181.0,
+          "duracao_viagem_s": 105.42717497556207,
+          "colisoes": 26,
+          "nao_concluidas": 0,
+          "fila_media_rede": 11.369367022662152,
+          "fila_max_rede": 58,
+          "intervencoes": 164,
+          "trocas": 529,
+          "terminado_naturalmente": true,
+          "fim_sumo": 29039
+        }
+      ]
+    },
+    {
+      "episodio": 210,
+      "criterio": [
+        55,
+        0,
+        45.181329423264906
+      ],
+      "validacao": [
+        {
+          "semente": 201,
+          "espera_s": 29.036168132942326,
+          "p95_s": 124.75,
+          "espera_max_s": 401.0,
+          "duracao_viagem_s": 112.60215053763442,
+          "colisoes": 22,
+          "nao_concluidas": 0,
+          "fila_media_rede": 15.479573250065053,
+          "fila_max_rede": 88,
+          "intervencoes": 142,
+          "trocas": 612,
+          "terminado_naturalmente": true,
+          "fim_sumo": 29043
+        },
+        {
+          "semente": 202,
+          "espera_s": 61.32649071358749,
+          "p95_s": 420.0,
+          "espera_max_s": 1397.0,
+          "duracao_viagem_s": 148.7952101661779,
+          "colisoes": 33,
+          "nao_concluidas": 0,
+          "fila_media_rede": 32.60727272727273,
+          "fila_max_rede": 135,
+          "intervencoes": 119,
+          "trocas": 640,
+          "terminado_naturalmente": true,
+          "fim_sumo": 29050
+        }
+      ]
+    },
+    {
+      "episodio": 220,
+      "criterio": [
+        35,
+        0,
+        19.66446725317693
+      ],
+      "validacao": [
+        {
+          "semente": 201,
+          "espera_s": 17.796676441837732,
+          "p95_s": 68.0,
+          "espera_max_s": 157.0,
+          "duracao_viagem_s": 100.63587487781037,
+          "colisoes": 17,
+          "nao_concluidas": 0,
+          "fila_media_rede": 9.48361934477379,
+          "fila_max_rede": 45,
+          "intervencoes": 143,
+          "trocas": 605,
+          "terminado_naturalmente": true,
+          "fim_sumo": 29046
+        },
+        {
+          "semente": 202,
+          "espera_s": 21.532258064516128,
+          "p95_s": 90.0,
+          "espera_max_s": 229.0,
+          "duracao_viagem_s": 105.613880742913,
+          "colisoes": 18,
+          "nao_concluidas": 0,
+          "fila_media_rede": 11.526247061896056,
+          "fila_max_rede": 51,
+          "intervencoes": 142,
+          "trocas": 570,
+          "terminado_naturalmente": true,
+          "fim_sumo": 29029
+        }
+      ]
+    },
+    {
+      "episodio": 230,
+      "criterio": [
+        36,
+        0,
+        23.141984359726294
+      ],
+      "validacao": [
+        {
+          "semente": 201,
+          "espera_s": 24.359726295210166,
+          "p95_s": 93.5,
+          "espera_max_s": 246.0,
+          "duracao_viagem_s": 108.0733137829912,
+          "colisoes": 19,
+          "nao_concluidas": 0,
+          "fila_media_rede": 12.90511892450879,
+          "fila_max_rede": 52,
+          "intervencoes": 154,
+          "trocas": 565,
+          "terminado_naturalmente": true,
+          "fim_sumo": 29068
+        },
+        {
+          "semente": 202,
+          "espera_s": 21.924242424242426,
+          "p95_s": 83.0,
+          "espera_max_s": 213.0,
+          "duracao_viagem_s": 106.7565982404692,
+          "colisoes": 17,
+          "nao_concluidas": 0,
+          "fila_media_rede": 11.625614489003882,
+          "fila_max_rede": 52,
+          "intervencoes": 154,
+          "trocas": 577,
+          "terminado_naturalmente": true,
+          "fim_sumo": 29065
+        }
+      ]
+    },
+    {
+      "episodio": 240,
+      "criterio": [
+        44,
+        0,
+        18.380987292277617
+      ],
+      "validacao": [
+        {
+          "semente": 201,
+          "espera_s": 17.391984359726294,
+          "p95_s": 66.0,
+          "espera_max_s": 178.0,
+          "duracao_viagem_s": 99.66666666666667,
+          "colisoes": 24,
+          "nao_concluidas": 0,
+          "fila_media_rede": 9.23045054375971,
+          "fila_max_rede": 53,
+          "intervencoes": 153,
+          "trocas": 550,
+          "terminado_naturalmente": true,
+          "fim_sumo": 29062
+        },
+        {
+          "semente": 202,
+          "espera_s": 19.369990224828936,
+          "p95_s": 75.0,
+          "espera_max_s": 184.0,
+          "duracao_viagem_s": 102.1001955034213,
+          "colisoes": 20,
+          "nao_concluidas": 0,
+          "fila_media_rede": 10.299610894941635,
+          "fila_max_rede": 43,
+          "intervencoes": 160,
+          "trocas": 554,
+          "terminado_naturalmente": true,
+          "fim_sumo": 29055
+        }
+      ]
+    },
+    {
+      "episodio": 250,
+      "criterio": [
+        48,
+        0,
+        20.83626588465298
+      ],
+      "validacao": [
+        {
+          "semente": 201,
+          "espera_s": 21.81329423264907,
+          "p95_s": 81.75,
+          "espera_max_s": 178.0,
+          "duracao_viagem_s": 106.50830889540568,
+          "colisoes": 26,
+          "nao_concluidas": 0,
+          "fila_media_rede": 11.496785806119826,
+          "fila_max_rede": 89,
+          "intervencoes": 142,
+          "trocas": 568,
+          "terminado_naturalmente": true,
+          "fim_sumo": 29089
+        },
+        {
+          "semente": 202,
+          "espera_s": 19.85923753665689,
+          "p95_s": 71.0,
+          "espera_max_s": 186.0,
+          "duracao_viagem_s": 103.71065493646138,
+          "colisoes": 22,
+          "nao_concluidas": 0,
+          "fila_media_rede": 10.571539859776681,
+          "fila_max_rede": 37,
+          "intervencoes": 141,
+          "trocas": 585,
+          "terminado_naturalmente": true,
+          "fim_sumo": 29051
+        }
+      ]
+    },
+    {
+      "episodio": 260,
+      "criterio": [
+        32,
+        0,
+        19.903470185728253
+      ],
+      "validacao": [
+        {
+          "semente": 201,
+          "espera_s": 16.346041055718477,
+          "p95_s": 58.75,
+          "espera_max_s": 167.0,
+          "duracao_viagem_s": 100.0019550342131,
+          "colisoes": 17,
+          "nao_concluidas": 0,
+          "fila_media_rede": 8.625740025740026,
+          "fila_max_rede": 40,
+          "intervencoes": 155,
+          "trocas": 573,
+          "terminado_naturalmente": true,
+          "fim_sumo": 29085
+        },
+        {
+          "semente": 202,
+          "espera_s": 23.460899315738025,
+          "p95_s": 85.75,
+          "espera_max_s": 176.0,
+          "duracao_viagem_s": 109.52883675464321,
+          "colisoes": 15,
+          "nao_concluidas": 0,
+          "fila_media_rede": 12.538461538461538,
+          "fila_max_rede": 69,
+          "intervencoes": 153,
+          "trocas": 588,
+          "terminado_naturalmente": true,
+          "fim_sumo": 29035
+        }
+      ]
+    },
+    {
+      "episodio": 270,
+      "criterio": [
+        41,
+        0,
+        18.51099706744868
+      ],
+      "validacao": [
+        {
+          "semente": 201,
+          "espera_s": 20.33186705767351,
+          "p95_s": 79.0,
+          "espera_max_s": 190.0,
+          "duracao_viagem_s": 105.41544477028349,
+          "colisoes": 17,
+          "nao_concluidas": 0,
+          "fila_media_rede": 10.704854867711276,
+          "fila_max_rede": 58,
+          "intervencoes": 118,
+          "trocas": 623,
+          "terminado_naturalmente": true,
+          "fim_sumo": 29093
+        },
+        {
+          "semente": 202,
+          "espera_s": 16.690127077223853,
+          "p95_s": 61.0,
+          "espera_max_s": 155.0,
+          "duracao_viagem_s": 99.64760508308895,
+          "colisoes": 24,
+          "nao_concluidas": 0,
+          "fila_media_rede": 8.907576152043738,
+          "fila_max_rede": 45,
+          "intervencoes": 106,
+          "trocas": 618,
+          "terminado_naturalmente": true,
+          "fim_sumo": 29041
+        }
+      ]
+    },
+    {
+      "episodio": 280,
+      "criterio": [
+        32,
+        0,
+        17.91520039100684
+      ],
+      "validacao": [
+        {
+          "semente": 201,
+          "espera_s": 17.96578690127077,
+          "p95_s": 69.0,
+          "espera_max_s": 156.0,
+          "duracao_viagem_s": 101.06647116324535,
+          "colisoes": 13,
+          "nao_concluidas": 0,
+          "fila_media_rede": 9.566493506493506,
+          "fila_max_rede": 57,
+          "intervencoes": 168,
+          "trocas": 535,
+          "terminado_naturalmente": true,
+          "fim_sumo": 29050
+        },
+        {
+          "semente": 202,
+          "espera_s": 17.864613880742912,
+          "p95_s": 65.0,
+          "espera_max_s": 235.0,
+          "duracao_viagem_s": 101.15395894428153,
+          "colisoes": 19,
+          "nao_concluidas": 0,
+          "fila_media_rede": 9.49636929460581,
+          "fila_max_rede": 60,
+          "intervencoes": 164,
+          "trocas": 555,
+          "terminado_naturalmente": true,
+          "fim_sumo": 29056
+        }
+      ]
+    },
+    {
+      "episodio": 290,
+      "criterio": [
+        33,
+        0,
+        21.911534701857285
+      ],
+      "validacao": [
+        {
+          "semente": 201,
+          "espera_s": 20.893939393939394,
+          "p95_s": 77.0,
+          "espera_max_s": 246.0,
+          "duracao_viagem_s": 105.49706744868035,
+          "colisoes": 16,
+          "nao_concluidas": 0,
+          "fila_media_rede": 11.020849420849421,
+          "fila_max_rede": 92,
+          "intervencoes": 181,
+          "trocas": 566,
+          "terminado_naturalmente": true,
+          "fim_sumo": 29085
+        },
+        {
+          "semente": 202,
+          "espera_s": 22.92913000977517,
+          "p95_s": 90.0,
+          "espera_max_s": 220.0,
+          "duracao_viagem_s": 107.96089931573802,
+          "colisoes": 17,
+          "nao_concluidas": 0,
+          "fila_media_rede": 12.2359375,
+          "fila_max_rede": 85,
+          "intervencoes": 175,
+          "trocas": 539,
+          "terminado_naturalmente": true,
+          "fim_sumo": 29040
+        }
+      ]
+    },
+    {
+      "episodio": 300,
+      "criterio": [
+        39,
+        0,
+        16.467741935483872
+      ],
+      "validacao": [
+        {
+          "semente": 201,
+          "espera_s": 15.09188660801564,
+          "p95_s": 56.0,
+          "espera_max_s": 140.0,
+          "duracao_viagem_s": 97.81818181818181,
+          "colisoes": 22,
+          "nao_concluidas": 0,
+          "fila_media_rede": 8.016321243523317,
+          "fila_max_rede": 38,
+          "intervencoes": 169,
+          "trocas": 546,
+          "terminado_naturalmente": true,
+          "fim_sumo": 29060
+        },
+        {
+          "semente": 202,
+          "espera_s": 17.843597262952102,
+          "p95_s": 71.75,
+          "espera_max_s": 140.0,
+          "duracao_viagem_s": 101.2991202346041,
+          "colisoes": 17,
+          "nao_concluidas": 0,
+          "fila_media_rede": 9.501818181818182,
+          "fila_max_rede": 63,
+          "intervencoes": 164,
+          "trocas": 544,
+          "terminado_naturalmente": true,
+          "fim_sumo": 29050
+        }
+      ]
+    }
+  ],
+  "curva_treino": [
+    {
+      "episodio": 1,
+      "epsilon": 1.0,
+      "espera_s": 130.58846529814272,
+      "colisoes": 32,
+      "nao_concluidas": 0,
+      "estados_visitados": 673
+    },
+    {
+      "episodio": 2,
+      "epsilon": 0.9944444444444445,
+      "espera_s": 107.62218963831867,
+      "colisoes": 30,
+      "nao_concluidas": 0,
+      "estados_visitados": 1003
+    },
+    {
+      "episodio": 3,
+      "epsilon": 0.9888888888888889,
+      "espera_s": 121.48533724340176,
+      "colisoes": 21,
+      "nao_concluidas": 0,
+      "estados_visitados": 1229
+    },
+    {
+      "episodio": 4,
+      "epsilon": 0.9833333333333333,
+      "espera_s": 99.20772238514174,
+      "colisoes": 38,
+      "nao_concluidas": 0,
+      "estados_visitados": 1426
+    },
+    {
+      "episodio": 5,
+      "epsilon": 0.9777777777777777,
+      "espera_s": 111.90664711632454,
+      "colisoes": 38,
+      "nao_concluidas": 0,
+      "estados_visitados": 1588
+    },
+    {
+      "episodio": 6,
+      "epsilon": 0.9722222222222222,
+      "espera_s": 101.08406647116324,
+      "colisoes": 31,
+      "nao_concluidas": 0,
+      "estados_visitados": 1701
+    },
+    {
+      "episodio": 7,
+      "epsilon": 0.9666666666666667,
+      "espera_s": 120.44183773216031,
+      "colisoes": 30,
+      "nao_concluidas": 0,
+      "estados_visitados": 1848
+    },
+    {
+      "episodio": 8,
+      "epsilon": 0.9611111111111111,
+      "espera_s": 96.65982404692082,
+      "colisoes": 29,
+      "nao_concluidas": 0,
+      "estados_visitados": 1944
+    },
+    {
+      "episodio": 9,
+      "epsilon": 0.9555555555555556,
+      "espera_s": 117.30009775171065,
+      "colisoes": 32,
+      "nao_concluidas": 0,
+      "estados_visitados": 2088
+    },
+    {
+      "episodio": 10,
+      "epsilon": 0.95,
+      "espera_s": 124.32600195503422,
+      "colisoes": 21,
+      "nao_concluidas": 0,
+      "estados_visitados": 2170
+    },
+    {
+      "episodio": 11,
+      "epsilon": 0.9444444444444444,
+      "espera_s": 148.54007820136852,
+      "colisoes": 36,
+      "nao_concluidas": 0,
+      "estados_visitados": 2428
+    },
+    {
+      "episodio": 12,
+      "epsilon": 0.9388888888888889,
+      "espera_s": 85.14369501466275,
+      "colisoes": 20,
+      "nao_concluidas": 0,
+      "estados_visitados": 2482
+    },
+    {
+      "episodio": 13,
+      "epsilon": 0.9333333333333333,
+      "espera_s": 87.09872922776148,
+      "colisoes": 30,
+      "nao_concluidas": 0,
+      "estados_visitados": 2539
+    },
+    {
+      "episodio": 14,
+      "epsilon": 0.9277777777777778,
+      "espera_s": 125.69403714565004,
+      "colisoes": 34,
+      "nao_concluidas": 0,
+      "estados_visitados": 2590
+    },
+    {
+      "episodio": 15,
+      "epsilon": 0.9222222222222223,
+      "espera_s": 155.47262952101661,
+      "colisoes": 32,
+      "nao_concluidas": 0,
+      "estados_visitados": 2664
+    },
+    {
+      "episodio": 16,
+      "epsilon": 0.9166666666666666,
+      "espera_s": 127.33040078201368,
+      "colisoes": 37,
+      "nao_concluidas": 0,
+      "estados_visitados": 2732
+    },
+    {
+      "episodio": 17,
+      "epsilon": 0.9111111111111111,
+      "espera_s": 113.50439882697947,
+      "colisoes": 27,
+      "nao_concluidas": 0,
+      "estados_visitados": 2791
+    },
+    {
+      "episodio": 18,
+      "epsilon": 0.9055555555555556,
+      "espera_s": 135.76197458455522,
+      "colisoes": 21,
+      "nao_concluidas": 0,
+      "estados_visitados": 2850
+    },
+    {
+      "episodio": 19,
+      "epsilon": 0.9,
+      "espera_s": 90.97214076246334,
+      "colisoes": 32,
+      "nao_concluidas": 0,
+      "estados_visitados": 2899
+    },
+    {
+      "episodio": 20,
+      "epsilon": 0.8944444444444445,
+      "espera_s": 96.45259042033236,
+      "colisoes": 27,
+      "nao_concluidas": 0,
+      "estados_visitados": 2946
+    },
+    {
+      "episodio": 21,
+      "epsilon": 0.8888888888888888,
+      "espera_s": 99.9652981427175,
+      "colisoes": 21,
+      "nao_concluidas": 0,
+      "estados_visitados": 3061
+    },
+    {
+      "episodio": 22,
+      "epsilon": 0.8833333333333333,
+      "espera_s": 147.91446725317692,
+      "colisoes": 51,
+      "nao_concluidas": 0,
+      "estados_visitados": 3090
+    },
+    {
+      "episodio": 23,
+      "epsilon": 0.8777777777777778,
+      "espera_s": 102.57673509286413,
+      "colisoes": 27,
+      "nao_concluidas": 0,
+      "estados_visitados": 3124
+    },
+    {
+      "episodio": 24,
+      "epsilon": 0.8722222222222222,
+      "espera_s": 87.79960899315738,
+      "colisoes": 35,
+      "nao_concluidas": 0,
+      "estados_visitados": 3156
+    },
+    {
+      "episodio": 25,
+      "epsilon": 0.8666666666666667,
+      "espera_s": 93.930596285435,
+      "colisoes": 18,
+      "nao_concluidas": 0,
+      "estados_visitados": 3194
+    },
+    {
+      "episodio": 26,
+      "epsilon": 0.8611111111111112,
+      "espera_s": 103.84213098729228,
+      "colisoes": 24,
+      "nao_concluidas": 0,
+      "estados_visitados": 3227
+    },
+    {
+      "episodio": 27,
+      "epsilon": 0.8555555555555556,
+      "espera_s": 114.0307917888563,
+      "colisoes": 34,
+      "nao_concluidas": 0,
+      "estados_visitados": 3261
+    },
+    {
+      "episodio": 28,
+      "epsilon": 0.85,
+      "espera_s": 108.0117302052786,
+      "colisoes": 20,
+      "nao_concluidas": 0,
+      "estados_visitados": 3298
+    },
+    {
+      "episodio": 29,
+      "epsilon": 0.8444444444444444,
+      "espera_s": 92.86461388074291,
+      "colisoes": 30,
+      "nao_concluidas": 0,
+      "estados_visitados": 3328
+    },
+    {
+      "episodio": 30,
+      "epsilon": 0.8388888888888889,
+      "espera_s": 71.37341153470186,
+      "colisoes": 26,
+      "nao_concluidas": 0,
+      "estados_visitados": 3344
+    },
+    {
+      "episodio": 31,
+      "epsilon": 0.8333333333333334,
+      "espera_s": 105.85972629521017,
+      "colisoes": 15,
+      "nao_concluidas": 0,
+      "estados_visitados": 3461
+    },
+    {
+      "episodio": 32,
+      "epsilon": 0.8277777777777777,
+      "espera_s": 105.78690127077223,
+      "colisoes": 25,
+      "nao_concluidas": 0,
+      "estados_visitados": 3478
+    },
+    {
+      "episodio": 33,
+      "epsilon": 0.8222222222222222,
+      "espera_s": 109.07282502443793,
+      "colisoes": 23,
+      "nao_concluidas": 0,
+      "estados_visitados": 3504
+    },
+    {
+      "episodio": 34,
+      "epsilon": 0.8166666666666667,
+      "espera_s": 87.75904203323559,
+      "colisoes": 33,
+      "nao_concluidas": 0,
+      "estados_visitados": 3527
+    },
+    {
+      "episodio": 35,
+      "epsilon": 0.8111111111111111,
+      "espera_s": 96.1177908113392,
+      "colisoes": 42,
+      "nao_concluidas": 0,
+      "estados_visitados": 3546
+    },
+    {
+      "episodio": 36,
+      "epsilon": 0.8055555555555556,
+      "espera_s": 103.04398826979472,
+      "colisoes": 21,
+      "nao_concluidas": 0,
+      "estados_visitados": 3553
+    },
+    {
+      "episodio": 37,
+      "epsilon": 0.8,
+      "espera_s": 81.51808406647116,
+      "colisoes": 31,
+      "nao_concluidas": 0,
+      "estados_visitados": 3574
+    },
+    {
+      "episodio": 38,
+      "epsilon": 0.7944444444444445,
+      "espera_s": 83.56060606060606,
+      "colisoes": 18,
+      "nao_concluidas": 0,
+      "estados_visitados": 3606
+    },
+    {
+      "episodio": 39,
+      "epsilon": 0.7888888888888889,
+      "espera_s": 104.06989247311827,
+      "colisoes": 19,
+      "nao_concluidas": 0,
+      "estados_visitados": 3625
+    },
+    {
+      "episodio": 40,
+      "epsilon": 0.7833333333333333,
+      "espera_s": 93.18377321603128,
+      "colisoes": 42,
+      "nao_concluidas": 0,
+      "estados_visitados": 3655
+    },
+    {
+      "episodio": 41,
+      "epsilon": 0.7777777777777778,
+      "espera_s": 73.63294232649072,
+      "colisoes": 32,
+      "nao_concluidas": 0,
+      "estados_visitados": 3713
+    },
+    {
+      "episodio": 42,
+      "epsilon": 0.7722222222222223,
+      "espera_s": 124.10850439882698,
+      "colisoes": 18,
+      "nao_concluidas": 0,
+      "estados_visitados": 3745
+    },
+    {
+      "episodio": 43,
+      "epsilon": 0.7666666666666666,
+      "espera_s": 93.80205278592375,
+      "colisoes": 26,
+      "nao_concluidas": 0,
+      "estados_visitados": 3757
+    },
+    {
+      "episodio": 44,
+      "epsilon": 0.7611111111111111,
+      "espera_s": 86.5562072336266,
+      "colisoes": 15,
+      "nao_concluidas": 0,
+      "estados_visitados": 3772
+    },
+    {
+      "episodio": 45,
+      "epsilon": 0.7555555555555555,
+      "espera_s": 65.97800586510265,
+      "colisoes": 19,
+      "nao_concluidas": 0,
+      "estados_visitados": 3784
+    },
+    {
+      "episodio": 46,
+      "epsilon": 0.75,
+      "espera_s": 81.54838709677419,
+      "colisoes": 32,
+      "nao_concluidas": 0,
+      "estados_visitados": 3797
+    },
+    {
+      "episodio": 47,
+      "epsilon": 0.7444444444444445,
+      "espera_s": 73.79765395894428,
+      "colisoes": 22,
+      "nao_concluidas": 0,
+      "estados_visitados": 3808
+    },
+    {
+      "episodio": 48,
+      "epsilon": 0.7388888888888889,
+      "espera_s": 87.10752688172043,
+      "colisoes": 18,
+      "nao_concluidas": 0,
+      "estados_visitados": 3825
+    },
+    {
+      "episodio": 49,
+      "epsilon": 0.7333333333333334,
+      "espera_s": 114.11045943304008,
+      "colisoes": 20,
+      "nao_concluidas": 0,
+      "estados_visitados": 3835
+    },
+    {
+      "episodio": 50,
+      "epsilon": 0.7277777777777779,
+      "espera_s": 83.19550342130988,
+      "colisoes": 11,
+      "nao_concluidas": 0,
+      "estados_visitados": 3859
+    },
+    {
+      "episodio": 51,
+      "epsilon": 0.7222222222222222,
+      "espera_s": 97.60948191593353,
+      "colisoes": 39,
+      "nao_concluidas": 0,
+      "estados_visitados": 3915
+    },
+    {
+      "episodio": 52,
+      "epsilon": 0.7166666666666667,
+      "espera_s": 86.2008797653959,
+      "colisoes": 19,
+      "nao_concluidas": 0,
+      "estados_visitados": 3934
+    },
+    {
+      "episodio": 53,
+      "epsilon": 0.7111111111111111,
+      "espera_s": 69.5772238514174,
+      "colisoes": 23,
+      "nao_concluidas": 0,
+      "estados_visitados": 3946
+    },
+    {
+      "episodio": 54,
+      "epsilon": 0.7055555555555555,
+      "espera_s": 64.61876832844575,
+      "colisoes": 24,
+      "nao_concluidas": 0,
+      "estados_visitados": 3960
+    },
+    {
+      "episodio": 55,
+      "epsilon": 0.7,
+      "espera_s": 85.1544477028348,
+      "colisoes": 27,
+      "nao_concluidas": 0,
+      "estados_visitados": 3971
+    },
+    {
+      "episodio": 56,
+      "epsilon": 0.6944444444444444,
+      "espera_s": 70.2663734115347,
+      "colisoes": 19,
+      "nao_concluidas": 0,
+      "estados_visitados": 3983
+    },
+    {
+      "episodio": 57,
+      "epsilon": 0.6888888888888889,
+      "espera_s": 83.43304007820137,
+      "colisoes": 27,
+      "nao_concluidas": 0,
+      "estados_visitados": 3994
+    },
+    {
+      "episodio": 58,
+      "epsilon": 0.6833333333333333,
+      "espera_s": 69.72238514173998,
+      "colisoes": 29,
+      "nao_concluidas": 0,
+      "estados_visitados": 4007
+    },
+    {
+      "episodio": 59,
+      "epsilon": 0.6777777777777778,
+      "espera_s": 93.70039100684262,
+      "colisoes": 22,
+      "nao_concluidas": 0,
+      "estados_visitados": 4029
+    },
+    {
+      "episodio": 60,
+      "epsilon": 0.6722222222222223,
+      "espera_s": 85.65591397849462,
+      "colisoes": 28,
+      "nao_concluidas": 0,
+      "estados_visitados": 4057
+    },
+    {
+      "episodio": 61,
+      "epsilon": 0.6666666666666667,
+      "espera_s": 76.58602150537635,
+      "colisoes": 25,
+      "nao_concluidas": 0,
+      "estados_visitados": 4116
+    },
+    {
+      "episodio": 62,
+      "epsilon": 0.6611111111111111,
+      "espera_s": 82.2453567937439,
+      "colisoes": 28,
+      "nao_concluidas": 0,
+      "estados_visitados": 4128
+    },
+    {
+      "episodio": 63,
+      "epsilon": 0.6555555555555556,
+      "espera_s": 84.28201368523949,
+      "colisoes": 31,
+      "nao_concluidas": 0,
+      "estados_visitados": 4139
+    },
+    {
+      "episodio": 64,
+      "epsilon": 0.65,
+      "espera_s": 69.09139784946237,
+      "colisoes": 24,
+      "nao_concluidas": 0,
+      "estados_visitados": 4158
+    },
+    {
+      "episodio": 65,
+      "epsilon": 0.6444444444444444,
+      "espera_s": 62.60508308895405,
+      "colisoes": 27,
+      "nao_concluidas": 0,
+      "estados_visitados": 4162
+    },
+    {
+      "episodio": 66,
+      "epsilon": 0.6388888888888888,
+      "espera_s": 64.56207233626589,
+      "colisoes": 17,
+      "nao_concluidas": 0,
+      "estados_visitados": 4169
+    },
+    {
+      "episodio": 67,
+      "epsilon": 0.6333333333333333,
+      "espera_s": 56.51368523949169,
+      "colisoes": 20,
+      "nao_concluidas": 0,
+      "estados_visitados": 4185
+    },
+    {
+      "episodio": 68,
+      "epsilon": 0.6277777777777778,
+      "espera_s": 73.6564027370479,
+      "colisoes": 26,
+      "nao_concluidas": 0,
+      "estados_visitados": 4195
+    },
+    {
+      "episodio": 69,
+      "epsilon": 0.6222222222222222,
+      "espera_s": 72.10508308895406,
+      "colisoes": 23,
+      "nao_concluidas": 0,
+      "estados_visitados": 4212
+    },
+    {
+      "episodio": 70,
+      "epsilon": 0.6166666666666667,
+      "espera_s": 62.94721407624633,
+      "colisoes": 24,
+      "nao_concluidas": 0,
+      "estados_visitados": 4220
+    },
+    {
+      "episodio": 71,
+      "epsilon": 0.6111111111111112,
+      "espera_s": 76.6001955034213,
+      "colisoes": 15,
+      "nao_concluidas": 0,
+      "estados_visitados": 4269
+    },
+    {
+      "episodio": 72,
+      "epsilon": 0.6055555555555556,
+      "espera_s": 80.77565982404693,
+      "colisoes": 20,
+      "nao_concluidas": 0,
+      "estados_visitados": 4290
+    },
+    {
+      "episodio": 73,
+      "epsilon": 0.6,
+      "espera_s": 48.16911045943304,
+      "colisoes": 20,
+      "nao_concluidas": 0,
+      "estados_visitados": 4295
+    },
+    {
+      "episodio": 74,
+      "epsilon": 0.5944444444444444,
+      "espera_s": 60.03714565004888,
+      "colisoes": 19,
+      "nao_concluidas": 0,
+      "estados_visitados": 4301
+    },
+    {
+      "episodio": 75,
+      "epsilon": 0.5888888888888889,
+      "espera_s": 46.28201368523949,
+      "colisoes": 27,
+      "nao_concluidas": 0,
+      "estados_visitados": 4310
+    },
+    {
+      "episodio": 76,
+      "epsilon": 0.5833333333333333,
+      "espera_s": 61.14613880742913,
+      "colisoes": 16,
+      "nao_concluidas": 0,
+      "estados_visitados": 4316
+    },
+    {
+      "episodio": 77,
+      "epsilon": 0.5777777777777777,
+      "espera_s": 50.03616813294233,
+      "colisoes": 25,
+      "nao_concluidas": 0,
+      "estados_visitados": 4323
+    },
+    {
+      "episodio": 78,
+      "epsilon": 0.5722222222222222,
+      "espera_s": 68.06451612903226,
+      "colisoes": 28,
+      "nao_concluidas": 0,
+      "estados_visitados": 4327
+    },
+    {
+      "episodio": 79,
+      "epsilon": 0.5666666666666667,
+      "espera_s": 55.618768328445746,
+      "colisoes": 23,
+      "nao_concluidas": 0,
+      "estados_visitados": 4336
+    },
+    {
+      "episodio": 80,
+      "epsilon": 0.5611111111111111,
+      "espera_s": 48.97507331378299,
+      "colisoes": 25,
+      "nao_concluidas": 0,
+      "estados_visitados": 4350
+    },
+    {
+      "episodio": 81,
+      "epsilon": 0.5555555555555556,
+      "espera_s": 61.77321603128055,
+      "colisoes": 26,
+      "nao_concluidas": 0,
+      "estados_visitados": 4386
+    },
+    {
+      "episodio": 82,
+      "epsilon": 0.55,
+      "espera_s": 58.228250244379275,
+      "colisoes": 29,
+      "nao_concluidas": 0,
+      "estados_visitados": 4397
+    },
+    {
+      "episodio": 83,
+      "epsilon": 0.5444444444444445,
+      "espera_s": 50.4227761485826,
+      "colisoes": 32,
+      "nao_concluidas": 0,
+      "estados_visitados": 4403
+    },
+    {
+      "episodio": 84,
+      "epsilon": 0.5388888888888889,
+      "espera_s": 65.30254154447702,
+      "colisoes": 17,
+      "nao_concluidas": 0,
+      "estados_visitados": 4409
+    },
+    {
+      "episodio": 85,
+      "epsilon": 0.5333333333333333,
+      "espera_s": 58.551319648093845,
+      "colisoes": 23,
+      "nao_concluidas": 0,
+      "estados_visitados": 4419
+    },
+    {
+      "episodio": 86,
+      "epsilon": 0.5277777777777778,
+      "espera_s": 45.1891495601173,
+      "colisoes": 31,
+      "nao_concluidas": 0,
+      "estados_visitados": 4427
+    },
+    {
+      "episodio": 87,
+      "epsilon": 0.5222222222222221,
+      "espera_s": 53.806451612903224,
+      "colisoes": 17,
+      "nao_concluidas": 0,
+      "estados_visitados": 4440
+    },
+    {
+      "episodio": 88,
+      "epsilon": 0.5166666666666666,
+      "espera_s": 40.84115347018573,
+      "colisoes": 15,
+      "nao_concluidas": 0,
+      "estados_visitados": 4447
+    },
+    {
+      "episodio": 89,
+      "epsilon": 0.5111111111111111,
+      "espera_s": 48.96285434995112,
+      "colisoes": 30,
+      "nao_concluidas": 0,
+      "estados_visitados": 4458
+    },
+    {
+      "episodio": 90,
+      "epsilon": 0.5055555555555555,
+      "espera_s": 53.97947214076246,
+      "colisoes": 21,
+      "nao_concluidas": 0,
+      "estados_visitados": 4466
+    },
+    {
+      "episodio": 91,
+      "epsilon": 0.5,
+      "espera_s": 45.56304985337243,
+      "colisoes": 17,
+      "nao_concluidas": 0,
+      "estados_visitados": 4489
+    },
+    {
+      "episodio": 92,
+      "epsilon": 0.49444444444444446,
+      "espera_s": 47.352394916911045,
+      "colisoes": 23,
+      "nao_concluidas": 0,
+      "estados_visitados": 4495
+    },
+    {
+      "episodio": 93,
+      "epsilon": 0.48888888888888893,
+      "espera_s": 54.300586510263926,
+      "colisoes": 23,
+      "nao_concluidas": 0,
+      "estados_visitados": 4503
+    },
+    {
+      "episodio": 94,
+      "epsilon": 0.4833333333333333,
+      "espera_s": 57.75317693059628,
+      "colisoes": 17,
+      "nao_concluidas": 0,
+      "estados_visitados": 4511
+    },
+    {
+      "episodio": 95,
+      "epsilon": 0.47777777777777775,
+      "espera_s": 46.09090909090909,
+      "colisoes": 17,
+      "nao_concluidas": 0,
+      "estados_visitados": 4517
+    },
+    {
+      "episodio": 96,
+      "epsilon": 0.4722222222222222,
+      "espera_s": 44.20625610948191,
+      "colisoes": 22,
+      "nao_concluidas": 0,
+      "estados_visitados": 4522
+    },
+    {
+      "episodio": 97,
+      "epsilon": 0.4666666666666667,
+      "espera_s": 48.5039100684262,
+      "colisoes": 22,
+      "nao_concluidas": 0,
+      "estados_visitados": 4530
+    },
+    {
+      "episodio": 98,
+      "epsilon": 0.46111111111111114,
+      "espera_s": 47.70234604105572,
+      "colisoes": 21,
+      "nao_concluidas": 0,
+      "estados_visitados": 4538
+    },
+    {
+      "episodio": 99,
+      "epsilon": 0.4555555555555556,
+      "espera_s": 43.810361681329425,
+      "colisoes": 22,
+      "nao_concluidas": 0,
+      "estados_visitados": 4545
+    },
+    {
+      "episodio": 100,
+      "epsilon": 0.44999999999999996,
+      "espera_s": 47.07184750733138,
+      "colisoes": 9,
+      "nao_concluidas": 0,
+      "estados_visitados": 4549
+    },
+    {
+      "episodio": 101,
+      "epsilon": 0.4444444444444444,
+      "espera_s": 44.91251221896383,
+      "colisoes": 27,
+      "nao_concluidas": 0,
+      "estados_visitados": 4581
+    },
+    {
+      "episodio": 102,
+      "epsilon": 0.4388888888888889,
+      "espera_s": 43.70625610948191,
+      "colisoes": 20,
+      "nao_concluidas": 0,
+      "estados_visitados": 4586
+    },
+    {
+      "episodio": 103,
+      "epsilon": 0.43333333333333335,
+      "espera_s": 46.272238514174,
+      "colisoes": 17,
+      "nao_concluidas": 0,
+      "estados_visitados": 4596
+    },
+    {
+      "episodio": 104,
+      "epsilon": 0.4277777777777778,
+      "espera_s": 56.40713587487781,
+      "colisoes": 21,
+      "nao_concluidas": 0,
+      "estados_visitados": 4606
+    },
+    {
+      "episodio": 105,
+      "epsilon": 0.4222222222222223,
+      "espera_s": 38.35386119257087,
+      "colisoes": 20,
+      "nao_concluidas": 0,
+      "estados_visitados": 4612
+    },
+    {
+      "episodio": 106,
+      "epsilon": 0.41666666666666663,
+      "espera_s": 42.20772238514174,
+      "colisoes": 18,
+      "nao_concluidas": 0,
+      "estados_visitados": 4618
+    },
+    {
+      "episodio": 107,
+      "epsilon": 0.4111111111111111,
+      "espera_s": 44.886119257086996,
+      "colisoes": 21,
+      "nao_concluidas": 0,
+      "estados_visitados": 4622
+    },
+    {
+      "episodio": 108,
+      "epsilon": 0.40555555555555556,
+      "espera_s": 61.35386119257087,
+      "colisoes": 20,
+      "nao_concluidas": 0,
+      "estados_visitados": 4628
+    },
+    {
+      "episodio": 109,
+      "epsilon": 0.4,
+      "espera_s": 39.639296187683286,
+      "colisoes": 27,
+      "nao_concluidas": 0,
+      "estados_visitados": 4631
+    },
+    {
+      "episodio": 110,
+      "epsilon": 0.3944444444444445,
+      "espera_s": 46.89980449657869,
+      "colisoes": 19,
+      "nao_concluidas": 0,
+      "estados_visitados": 4637
+    },
+    {
+      "episodio": 111,
+      "epsilon": 0.38888888888888884,
+      "espera_s": 43.241446725317694,
+      "colisoes": 24,
+      "nao_concluidas": 0,
+      "estados_visitados": 4666
+    },
+    {
+      "episodio": 112,
+      "epsilon": 0.3833333333333333,
+      "espera_s": 45.604105571847505,
+      "colisoes": 19,
+      "nao_concluidas": 0,
+      "estados_visitados": 4671
+    },
+    {
+      "episodio": 113,
+      "epsilon": 0.37777777777777777,
+      "espera_s": 50.6099706744868,
+      "colisoes": 23,
+      "nao_concluidas": 0,
+      "estados_visitados": 4681
+    },
+    {
+      "episodio": 114,
+      "epsilon": 0.37222222222222223,
+      "espera_s": 33.90029325513196,
+      "colisoes": 18,
+      "nao_concluidas": 0,
+      "estados_visitados": 4686
+    },
+    {
+      "episodio": 115,
+      "epsilon": 0.3666666666666667,
+      "espera_s": 38.30009775171065,
+      "colisoes": 21,
+      "nao_concluidas": 0,
+      "estados_visitados": 4693
+    },
+    {
+      "episodio": 116,
+      "epsilon": 0.36111111111111116,
+      "espera_s": 50.155913978494624,
+      "colisoes": 23,
+      "nao_concluidas": 0,
+      "estados_visitados": 4699
+    },
+    {
+      "episodio": 117,
+      "epsilon": 0.3555555555555555,
+      "espera_s": 39.05620723362659,
+      "colisoes": 19,
+      "nao_concluidas": 0,
+      "estados_visitados": 4707
+    },
+    {
+      "episodio": 118,
+      "epsilon": 0.35,
+      "espera_s": 51.35288367546432,
+      "colisoes": 21,
+      "nao_concluidas": 0,
+      "estados_visitados": 4712
+    },
+    {
+      "episodio": 119,
+      "epsilon": 0.34444444444444444,
+      "espera_s": 47.61485826001955,
+      "colisoes": 18,
+      "nao_concluidas": 0,
+      "estados_visitados": 4716
+    },
+    {
+      "episodio": 120,
+      "epsilon": 0.3388888888888889,
+      "espera_s": 38.64907135874878,
+      "colisoes": 23,
+      "nao_concluidas": 0,
+      "estados_visitados": 4717
+    },
+    {
+      "episodio": 121,
+      "epsilon": 0.33333333333333337,
+      "espera_s": 39.92424242424242,
+      "colisoes": 21,
+      "nao_concluidas": 0,
+      "estados_visitados": 4751
+    },
+    {
+      "episodio": 122,
+      "epsilon": 0.3277777777777777,
+      "espera_s": 33.20283479960899,
+      "colisoes": 15,
+      "nao_concluidas": 0,
+      "estados_visitados": 4753
+    },
+    {
+      "episodio": 123,
+      "epsilon": 0.3222222222222222,
+      "espera_s": 40.027370478983386,
+      "colisoes": 25,
+      "nao_concluidas": 0,
+      "estados_visitados": 4756
+    },
+    {
+      "episodio": 124,
+      "epsilon": 0.31666666666666665,
+      "espera_s": 55.871945259042036,
+      "colisoes": 26,
+      "nao_concluidas": 0,
+      "estados_visitados": 4766
+    },
+    {
+      "episodio": 125,
+      "epsilon": 0.3111111111111111,
+      "espera_s": 37.29227761485826,
+      "colisoes": 20,
+      "nao_concluidas": 0,
+      "estados_visitados": 4772
+    },
+    {
+      "episodio": 126,
+      "epsilon": 0.3055555555555556,
+      "espera_s": 47.90811339198436,
+      "colisoes": 14,
+      "nao_concluidas": 0,
+      "estados_visitados": 4783
+    },
+    {
+      "episodio": 127,
+      "epsilon": 0.30000000000000004,
+      "espera_s": 39.964320625610945,
+      "colisoes": 25,
+      "nao_concluidas": 0,
+      "estados_visitados": 4789
+    },
+    {
+      "episodio": 128,
+      "epsilon": 0.2944444444444444,
+      "espera_s": 36.65395894428153,
+      "colisoes": 22,
+      "nao_concluidas": 0,
+      "estados_visitados": 4795
+    },
+    {
+      "episodio": 129,
+      "epsilon": 0.28888888888888886,
+      "espera_s": 40.441348973607035,
+      "colisoes": 29,
+      "nao_concluidas": 0,
+      "estados_visitados": 4804
+    },
+    {
+      "episodio": 130,
+      "epsilon": 0.2833333333333333,
+      "espera_s": 35.16715542521994,
+      "colisoes": 29,
+      "nao_concluidas": 0,
+      "estados_visitados": 4806
+    },
+    {
+      "episodio": 131,
+      "epsilon": 0.2777777777777778,
+      "espera_s": 38.80840664711632,
+      "colisoes": 24,
+      "nao_concluidas": 0,
+      "estados_visitados": 4838
+    },
+    {
+      "episodio": 132,
+      "epsilon": 0.27222222222222225,
+      "espera_s": 32.410068426197455,
+      "colisoes": 33,
+      "nao_concluidas": 0,
+      "estados_visitados": 4842
+    },
+    {
+      "episodio": 133,
+      "epsilon": 0.2666666666666667,
+      "espera_s": 37.16911045943304,
+      "colisoes": 22,
+      "nao_concluidas": 0,
+      "estados_visitados": 4856
+    },
+    {
+      "episodio": 134,
+      "epsilon": 0.26111111111111107,
+      "espera_s": 36.86363636363637,
+      "colisoes": 28,
+      "nao_concluidas": 0,
+      "estados_visitados": 4859
+    },
+    {
+      "episodio": 135,
+      "epsilon": 0.25555555555555554,
+      "espera_s": 32.817693059628546,
+      "colisoes": 16,
+      "nao_concluidas": 0,
+      "estados_visitados": 4863
+    },
+    {
+      "episodio": 136,
+      "epsilon": 0.25,
+      "espera_s": 34.671554252199414,
+      "colisoes": 28,
+      "nao_concluidas": 0,
+      "estados_visitados": 4868
+    },
+    {
+      "episodio": 137,
+      "epsilon": 0.24444444444444446,
+      "espera_s": 33.662267839687196,
+      "colisoes": 18,
+      "nao_concluidas": 0,
+      "estados_visitados": 4874
+    },
+    {
+      "episodio": 138,
+      "epsilon": 0.23888888888888893,
+      "espera_s": 35.29178885630498,
+      "colisoes": 15,
+      "nao_concluidas": 0,
+      "estados_visitados": 4878
+    },
+    {
+      "episodio": 139,
+      "epsilon": 0.23333333333333328,
+      "espera_s": 29.774193548387096,
+      "colisoes": 15,
+      "nao_concluidas": 0,
+      "estados_visitados": 4882
+    },
+    {
+      "episodio": 140,
+      "epsilon": 0.22777777777777775,
+      "espera_s": 35.209188660801566,
+      "colisoes": 19,
+      "nao_concluidas": 0,
+      "estados_visitados": 4882
+    },
+    {
+      "episodio": 141,
+      "epsilon": 0.2222222222222222,
+      "espera_s": 35.166666666666664,
+      "colisoes": 35,
+      "nao_concluidas": 0,
+      "estados_visitados": 4908
+    },
+    {
+      "episodio": 142,
+      "epsilon": 0.21666666666666667,
+      "espera_s": 28.28299120234604,
+      "colisoes": 21,
+      "nao_concluidas": 0,
+      "estados_visitados": 4912
+    },
+    {
+      "episodio": 143,
+      "epsilon": 0.21111111111111114,
+      "espera_s": 40.52101661779081,
+      "colisoes": 17,
+      "nao_concluidas": 0,
+      "estados_visitados": 4918
+    },
+    {
+      "episodio": 144,
+      "epsilon": 0.2055555555555556,
+      "espera_s": 42.67595307917889,
+      "colisoes": 20,
+      "nao_concluidas": 0,
+      "estados_visitados": 4929
+    },
+    {
+      "episodio": 145,
+      "epsilon": 0.19999999999999996,
+      "espera_s": 36.11925708699902,
+      "colisoes": 19,
+      "nao_concluidas": 0,
+      "estados_visitados": 4931
+    },
+    {
+      "episodio": 146,
+      "epsilon": 0.19444444444444442,
+      "espera_s": 26.03323558162268,
+      "colisoes": 28,
+      "nao_concluidas": 0,
+      "estados_visitados": 4937
+    },
+    {
+      "episodio": 147,
+      "epsilon": 0.18888888888888888,
+      "espera_s": 35.569403714565006,
+      "colisoes": 13,
+      "nao_concluidas": 0,
+      "estados_visitados": 4941
+    },
+    {
+      "episodio": 148,
+      "epsilon": 0.18333333333333335,
+      "espera_s": 38.02883675464321,
+      "colisoes": 26,
+      "nao_concluidas": 0,
+      "estados_visitados": 4946
+    },
+    {
+      "episodio": 149,
+      "epsilon": 0.1777777777777778,
+      "espera_s": 29.643206256109483,
+      "colisoes": 15,
+      "nao_concluidas": 0,
+      "estados_visitados": 4947
+    },
+    {
+      "episodio": 150,
+      "epsilon": 0.17222222222222228,
+      "espera_s": 37.219941348973606,
+      "colisoes": 21,
+      "nao_concluidas": 0,
+      "estados_visitados": 4955
+    },
+    {
+      "episodio": 151,
+      "epsilon": 0.16666666666666663,
+      "espera_s": 36.09090909090909,
+      "colisoes": 12,
+      "nao_concluidas": 0,
+      "estados_visitados": 4975
+    },
+    {
+      "episodio": 152,
+      "epsilon": 0.1611111111111111,
+      "espera_s": 31.325024437927663,
+      "colisoes": 27,
+      "nao_concluidas": 0,
+      "estados_visitados": 4978
+    },
+    {
+      "episodio": 153,
+      "epsilon": 0.15555555555555556,
+      "espera_s": 33.43841642228739,
+      "colisoes": 26,
+      "nao_concluidas": 0,
+      "estados_visitados": 4979
+    },
+    {
+      "episodio": 154,
+      "epsilon": 0.15000000000000002,
+      "espera_s": 36.36168132942326,
+      "colisoes": 19,
+      "nao_concluidas": 0,
+      "estados_visitados": 4982
+    },
+    {
+      "episodio": 155,
+      "epsilon": 0.1444444444444445,
+      "espera_s": 32.79227761485826,
+      "colisoes": 25,
+      "nao_concluidas": 0,
+      "estados_visitados": 4987
+    },
+    {
+      "episodio": 156,
+      "epsilon": 0.13888888888888884,
+      "espera_s": 31.019550342130987,
+      "colisoes": 18,
+      "nao_concluidas": 0,
+      "estados_visitados": 4990
+    },
+    {
+      "episodio": 157,
+      "epsilon": 0.1333333333333333,
+      "espera_s": 27.46578690127077,
+      "colisoes": 13,
+      "nao_concluidas": 0,
+      "estados_visitados": 4995
+    },
+    {
+      "episodio": 158,
+      "epsilon": 0.12777777777777777,
+      "espera_s": 27.827956989247312,
+      "colisoes": 19,
+      "nao_concluidas": 0,
+      "estados_visitados": 4999
+    },
+    {
+      "episodio": 159,
+      "epsilon": 0.12222222222222223,
+      "espera_s": 29.727761485826,
+      "colisoes": 23,
+      "nao_concluidas": 0,
+      "estados_visitados": 5002
+    },
+    {
+      "episodio": 160,
+      "epsilon": 0.1166666666666667,
+      "espera_s": 29.73802541544477,
+      "colisoes": 18,
+      "nao_concluidas": 0,
+      "estados_visitados": 5007
+    },
+    {
+      "episodio": 161,
+      "epsilon": 0.11111111111111116,
+      "espera_s": 23.763440860215052,
+      "colisoes": 26,
+      "nao_concluidas": 0,
+      "estados_visitados": 5026
+    },
+    {
+      "episodio": 162,
+      "epsilon": 0.10555555555555551,
+      "espera_s": 26.546432062561095,
+      "colisoes": 12,
+      "nao_concluidas": 0,
+      "estados_visitados": 5031
+    },
+    {
+      "episodio": 163,
+      "epsilon": 0.09999999999999998,
+      "espera_s": 24.371456500488758,
+      "colisoes": 25,
+      "nao_concluidas": 0,
+      "estados_visitados": 5032
+    },
+    {
+      "episodio": 164,
+      "epsilon": 0.09444444444444444,
+      "espera_s": 23.972140762463344,
+      "colisoes": 20,
+      "nao_concluidas": 0,
+      "estados_visitados": 5038
+    },
+    {
+      "episodio": 165,
+      "epsilon": 0.0888888888888889,
+      "espera_s": 28.34213098729228,
+      "colisoes": 13,
+      "nao_concluidas": 0,
+      "estados_visitados": 5045
+    },
+    {
+      "episodio": 166,
+      "epsilon": 0.08333333333333337,
+      "espera_s": 31.75366568914956,
+      "colisoes": 32,
+      "nao_concluidas": 0,
+      "estados_visitados": 5047
+    },
+    {
+      "episodio": 167,
+      "epsilon": 0.07777777777777772,
+      "espera_s": 25.910557184750733,
+      "colisoes": 23,
+      "nao_concluidas": 0,
+      "estados_visitados": 5047
+    },
+    {
+      "episodio": 168,
+      "epsilon": 0.07222222222222219,
+      "espera_s": 35.32160312805474,
+      "colisoes": 15,
+      "nao_concluidas": 0,
+      "estados_visitados": 5051
+    },
+    {
+      "episodio": 169,
+      "epsilon": 0.06666666666666665,
+      "espera_s": 29.634897360703814,
+      "colisoes": 23,
+      "nao_concluidas": 0,
+      "estados_visitados": 5055
+    },
+    {
+      "episodio": 170,
+      "epsilon": 0.061111111111111116,
+      "espera_s": 22.051808406647115,
+      "colisoes": 20,
+      "nao_concluidas": 0,
+      "estados_visitados": 5058
+    },
+    {
+      "episodio": 171,
+      "epsilon": 0.05555555555555558,
+      "espera_s": 19.271260997067447,
+      "colisoes": 16,
+      "nao_concluidas": 0,
+      "estados_visitados": 5073
+    },
+    {
+      "episodio": 172,
+      "epsilon": 0.050000000000000044,
+      "espera_s": 23.225806451612904,
+      "colisoes": 9,
+      "nao_concluidas": 0,
+      "estados_visitados": 5074
+    },
+    {
+      "episodio": 173,
+      "epsilon": 0.05,
+      "espera_s": 23.487781036168133,
+      "colisoes": 21,
+      "nao_concluidas": 0,
+      "estados_visitados": 5075
+    },
+    {
+      "episodio": 174,
+      "epsilon": 0.05,
+      "espera_s": 23.544965786901273,
+      "colisoes": 17,
+      "nao_concluidas": 0,
+      "estados_visitados": 5078
+    },
+    {
+      "episodio": 175,
+      "epsilon": 0.05,
+      "espera_s": 19.252199413489738,
+      "colisoes": 15,
+      "nao_concluidas": 0,
+      "estados_visitados": 5080
+    },
+    {
+      "episodio": 176,
+      "epsilon": 0.05,
+      "espera_s": 24.43548387096774,
+      "colisoes": 25,
+      "nao_concluidas": 0,
+      "estados_visitados": 5082
+    },
+    {
+      "episodio": 177,
+      "epsilon": 0.05,
+      "espera_s": 24.26197458455523,
+      "colisoes": 22,
+      "nao_concluidas": 0,
+      "estados_visitados": 5085
+    },
+    {
+      "episodio": 178,
+      "epsilon": 0.05,
+      "espera_s": 26.637341153470185,
+      "colisoes": 21,
+      "nao_concluidas": 0,
+      "estados_visitados": 5089
+    },
+    {
+      "episodio": 179,
+      "epsilon": 0.05,
+      "espera_s": 26.269794721407624,
+      "colisoes": 26,
+      "nao_concluidas": 0,
+      "estados_visitados": 5091
+    },
+    {
+      "episodio": 180,
+      "epsilon": 0.05,
+      "espera_s": 23.87585532746823,
+      "colisoes": 19,
+      "nao_concluidas": 0,
+      "estados_visitados": 5096
+    },
+    {
+      "episodio": 181,
+      "epsilon": 0.05,
+      "espera_s": 25.838709677419356,
+      "colisoes": 14,
+      "nao_concluidas": 0,
+      "estados_visitados": 5114
+    },
+    {
+      "episodio": 182,
+      "epsilon": 0.05,
+      "espera_s": 28.441348973607038,
+      "colisoes": 27,
+      "nao_concluidas": 0,
+      "estados_visitados": 5123
+    },
+    {
+      "episodio": 183,
+      "epsilon": 0.05,
+      "espera_s": 25.30058651026393,
+      "colisoes": 17,
+      "nao_concluidas": 0,
+      "estados_visitados": 5129
+    },
+    {
+      "episodio": 184,
+      "epsilon": 0.05,
+      "espera_s": 26.845063538611925,
+      "colisoes": 26,
+      "nao_concluidas": 0,
+      "estados_visitados": 5132
+    },
+    {
+      "episodio": 185,
+      "epsilon": 0.05,
+      "espera_s": 24.475562072336267,
+      "colisoes": 15,
+      "nao_concluidas": 0,
+      "estados_visitados": 5133
+    },
+    {
+      "episodio": 186,
+      "epsilon": 0.05,
+      "espera_s": 28.718963831867057,
+      "colisoes": 22,
+      "nao_concluidas": 0,
+      "estados_visitados": 5134
+    },
+    {
+      "episodio": 187,
+      "epsilon": 0.05,
+      "espera_s": 27.23509286412512,
+      "colisoes": 21,
+      "nao_concluidas": 0,
+      "estados_visitados": 5135
+    },
+    {
+      "episodio": 188,
+      "epsilon": 0.05,
+      "espera_s": 32.21309872922776,
+      "colisoes": 19,
+      "nao_concluidas": 0,
+      "estados_visitados": 5140
+    },
+    {
+      "episodio": 189,
+      "epsilon": 0.05,
+      "espera_s": 22.675953079178885,
+      "colisoes": 25,
+      "nao_concluidas": 0,
+      "estados_visitados": 5142
+    },
+    {
+      "episodio": 190,
+      "epsilon": 0.05,
+      "espera_s": 22.643695014662757,
+      "colisoes": 15,
+      "nao_concluidas": 0,
+      "estados_visitados": 5144
+    },
+    {
+      "episodio": 191,
+      "epsilon": 0.05,
+      "espera_s": 24.711143695014663,
+      "colisoes": 18,
+      "nao_concluidas": 0,
+      "estados_visitados": 5154
+    },
+    {
+      "episodio": 192,
+      "epsilon": 0.05,
+      "espera_s": 22.848973607038122,
+      "colisoes": 20,
+      "nao_concluidas": 0,
+      "estados_visitados": 5156
+    },
+    {
+      "episodio": 193,
+      "epsilon": 0.05,
+      "espera_s": 24.684261974584555,
+      "colisoes": 23,
+      "nao_concluidas": 0,
+      "estados_visitados": 5158
+    },
+    {
+      "episodio": 194,
+      "epsilon": 0.05,
+      "espera_s": 25.14711632453568,
+      "colisoes": 30,
+      "nao_concluidas": 0,
+      "estados_visitados": 5159
+    },
+    {
+      "episodio": 195,
+      "epsilon": 0.05,
+      "espera_s": 23.489247311827956,
+      "colisoes": 32,
+      "nao_concluidas": 0,
+      "estados_visitados": 5160
+    },
+    {
+      "episodio": 196,
+      "epsilon": 0.05,
+      "espera_s": 20.8108504398827,
+      "colisoes": 22,
+      "nao_concluidas": 0,
+      "estados_visitados": 5163
+    },
+    {
+      "episodio": 197,
+      "epsilon": 0.05,
+      "espera_s": 23.38514173998045,
+      "colisoes": 26,
+      "nao_concluidas": 0,
+      "estados_visitados": 5163
+    },
+    {
+      "episodio": 198,
+      "epsilon": 0.05,
+      "espera_s": 24.941348973607038,
+      "colisoes": 21,
+      "nao_concluidas": 0,
+      "estados_visitados": 5165
+    },
+    {
+      "episodio": 199,
+      "epsilon": 0.05,
+      "espera_s": 24.065982404692082,
+      "colisoes": 17,
+      "nao_concluidas": 0,
+      "estados_visitados": 5167
+    },
+    {
+      "episodio": 200,
+      "epsilon": 0.05,
+      "espera_s": 27.56256109481916,
+      "colisoes": 16,
+      "nao_concluidas": 0,
+      "estados_visitados": 5170
+    },
+    {
+      "episodio": 201,
+      "epsilon": 0.05,
+      "espera_s": 26.205278592375368,
+      "colisoes": 25,
+      "nao_concluidas": 0,
+      "estados_visitados": 5178
+    },
+    {
+      "episodio": 202,
+      "epsilon": 0.05,
+      "espera_s": 26.31036168132942,
+      "colisoes": 15,
+      "nao_concluidas": 0,
+      "estados_visitados": 5181
+    },
+    {
+      "episodio": 203,
+      "epsilon": 0.05,
+      "espera_s": 24.571358748778103,
+      "colisoes": 20,
+      "nao_concluidas": 0,
+      "estados_visitados": 5184
+    },
+    {
+      "episodio": 204,
+      "epsilon": 0.05,
+      "espera_s": 24.928152492668623,
+      "colisoes": 15,
+      "nao_concluidas": 0,
+      "estados_visitados": 5187
+    },
+    {
+      "episodio": 205,
+      "epsilon": 0.05,
+      "espera_s": 24.43743890518084,
+      "colisoes": 18,
+      "nao_concluidas": 0,
+      "estados_visitados": 5192
+    },
+    {
+      "episodio": 206,
+      "epsilon": 0.05,
+      "espera_s": 20.740469208211145,
+      "colisoes": 22,
+      "nao_concluidas": 0,
+      "estados_visitados": 5194
+    },
+    {
+      "episodio": 207,
+      "epsilon": 0.05,
+      "espera_s": 26.755131964809383,
+      "colisoes": 24,
+      "nao_concluidas": 0,
+      "estados_visitados": 5197
+    },
+    {
+      "episodio": 208,
+      "epsilon": 0.05,
+      "espera_s": 26.89980449657869,
+      "colisoes": 15,
+      "nao_concluidas": 0,
+      "estados_visitados": 5197
+    },
+    {
+      "episodio": 209,
+      "epsilon": 0.05,
+      "espera_s": 20.7683284457478,
+      "colisoes": 15,
+      "nao_concluidas": 0,
+      "estados_visitados": 5199
+    },
+    {
+      "episodio": 210,
+      "epsilon": 0.05,
+      "espera_s": 23.548387096774192,
+      "colisoes": 24,
+      "nao_concluidas": 0,
+      "estados_visitados": 5205
+    },
+    {
+      "episodio": 211,
+      "epsilon": 0.05,
+      "espera_s": 21.08260019550342,
+      "colisoes": 22,
+      "nao_concluidas": 0,
+      "estados_visitados": 5217
+    },
+    {
+      "episodio": 212,
+      "epsilon": 0.05,
+      "espera_s": 22.05131964809384,
+      "colisoes": 30,
+      "nao_concluidas": 0,
+      "estados_visitados": 5218
+    },
+    {
+      "episodio": 213,
+      "epsilon": 0.05,
+      "espera_s": 20.772727272727273,
+      "colisoes": 17,
+      "nao_concluidas": 0,
+      "estados_visitados": 5220
+    },
+    {
+      "episodio": 214,
+      "epsilon": 0.05,
+      "espera_s": 24.340664711632453,
+      "colisoes": 15,
+      "nao_concluidas": 0,
+      "estados_visitados": 5222
+    },
+    {
+      "episodio": 215,
+      "epsilon": 0.05,
+      "espera_s": 24.35581622678397,
+      "colisoes": 16,
+      "nao_concluidas": 0,
+      "estados_visitados": 5224
+    },
+    {
+      "episodio": 216,
+      "epsilon": 0.05,
+      "espera_s": 24.153958944281523,
+      "colisoes": 36,
+      "nao_concluidas": 0,
+      "estados_visitados": 5226
+    },
+    {
+      "episodio": 217,
+      "epsilon": 0.05,
+      "espera_s": 24.543010752688172,
+      "colisoes": 22,
+      "nao_concluidas": 0,
+      "estados_visitados": 5227
+    },
+    {
+      "episodio": 218,
+      "epsilon": 0.05,
+      "espera_s": 22.649071358748778,
+      "colisoes": 18,
+      "nao_concluidas": 0,
+      "estados_visitados": 5230
+    },
+    {
+      "episodio": 219,
+      "epsilon": 0.05,
+      "espera_s": 21.666177908113394,
+      "colisoes": 35,
+      "nao_concluidas": 0,
+      "estados_visitados": 5231
+    },
+    {
+      "episodio": 220,
+      "epsilon": 0.05,
+      "espera_s": 17.884652981427173,
+      "colisoes": 24,
+      "nao_concluidas": 0,
+      "estados_visitados": 5232
+    },
+    {
+      "episodio": 221,
+      "epsilon": 0.05,
+      "espera_s": 23.980938416422287,
+      "colisoes": 16,
+      "nao_concluidas": 0,
+      "estados_visitados": 5237
+    },
+    {
+      "episodio": 222,
+      "epsilon": 0.05,
+      "espera_s": 22.46432062561095,
+      "colisoes": 26,
+      "nao_concluidas": 0,
+      "estados_visitados": 5241
+    },
+    {
+      "episodio": 223,
+      "epsilon": 0.05,
+      "espera_s": 21.419354838709676,
+      "colisoes": 25,
+      "nao_concluidas": 0,
+      "estados_visitados": 5241
+    },
+    {
+      "episodio": 224,
+      "epsilon": 0.05,
+      "espera_s": 18.09921798631476,
+      "colisoes": 24,
+      "nao_concluidas": 0,
+      "estados_visitados": 5243
+    },
+    {
+      "episodio": 225,
+      "epsilon": 0.05,
+      "espera_s": 21.947214076246333,
+      "colisoes": 20,
+      "nao_concluidas": 0,
+      "estados_visitados": 5244
+    },
+    {
+      "episodio": 226,
+      "epsilon": 0.05,
+      "espera_s": 20.272727272727273,
+      "colisoes": 24,
+      "nao_concluidas": 0,
+      "estados_visitados": 5246
+    },
+    {
+      "episodio": 227,
+      "epsilon": 0.05,
+      "espera_s": 20.866080156402738,
+      "colisoes": 21,
+      "nao_concluidas": 0,
+      "estados_visitados": 5248
+    },
+    {
+      "episodio": 228,
+      "epsilon": 0.05,
+      "espera_s": 28.740469208211145,
+      "colisoes": 19,
+      "nao_concluidas": 0,
+      "estados_visitados": 5251
+    },
+    {
+      "episodio": 229,
+      "epsilon": 0.05,
+      "espera_s": 25.414956011730204,
+      "colisoes": 17,
+      "nao_concluidas": 0,
+      "estados_visitados": 5252
+    },
+    {
+      "episodio": 230,
+      "epsilon": 0.05,
+      "espera_s": 21.98729227761486,
+      "colisoes": 14,
+      "nao_concluidas": 0,
+      "estados_visitados": 5253
+    },
+    {
+      "episodio": 231,
+      "epsilon": 0.05,
+      "espera_s": 18.60019550342131,
+      "colisoes": 29,
+      "nao_concluidas": 0,
+      "estados_visitados": 5261
+    },
+    {
+      "episodio": 232,
+      "epsilon": 0.05,
+      "espera_s": 19.371945259042032,
+      "colisoes": 28,
+      "nao_concluidas": 0,
+      "estados_visitados": 5261
+    },
+    {
+      "episodio": 233,
+      "epsilon": 0.05,
+      "espera_s": 22.995112414467254,
+      "colisoes": 17,
+      "nao_concluidas": 0,
+      "estados_visitados": 5263
+    },
+    {
+      "episodio": 234,
+      "epsilon": 0.05,
+      "espera_s": 19.372434017595307,
+      "colisoes": 14,
+      "nao_concluidas": 0,
+      "estados_visitados": 5266
+    },
+    {
+      "episodio": 235,
+      "epsilon": 0.05,
+      "espera_s": 18.289833822091886,
+      "colisoes": 22,
+      "nao_concluidas": 0,
+      "estados_visitados": 5268
+    },
+    {
+      "episodio": 236,
+      "epsilon": 0.05,
+      "espera_s": 22.327468230694038,
+      "colisoes": 22,
+      "nao_concluidas": 0,
+      "estados_visitados": 5271
+    },
+    {
+      "episodio": 237,
+      "epsilon": 0.05,
+      "espera_s": 25.238514173998045,
+      "colisoes": 17,
+      "nao_concluidas": 0,
+      "estados_visitados": 5271
+    },
+    {
+      "episodio": 238,
+      "epsilon": 0.05,
+      "espera_s": 21.560117302052785,
+      "colisoes": 29,
+      "nao_concluidas": 0,
+      "estados_visitados": 5276
+    },
+    {
+      "episodio": 239,
+      "epsilon": 0.05,
+      "espera_s": 23.040078201368523,
+      "colisoes": 14,
+      "nao_concluidas": 0,
+      "estados_visitados": 5277
+    },
+    {
+      "episodio": 240,
+      "epsilon": 0.05,
+      "espera_s": 21.79227761485826,
+      "colisoes": 20,
+      "nao_concluidas": 0,
+      "estados_visitados": 5277
+    },
+    {
+      "episodio": 241,
+      "epsilon": 0.05,
+      "espera_s": 20.63880742913001,
+      "colisoes": 15,
+      "nao_concluidas": 0,
+      "estados_visitados": 5286
+    },
+    {
+      "episodio": 242,
+      "epsilon": 0.05,
+      "espera_s": 22.940860215053764,
+      "colisoes": 22,
+      "nao_concluidas": 0,
+      "estados_visitados": 5289
+    },
+    {
+      "episodio": 243,
+      "epsilon": 0.05,
+      "espera_s": 27.851417399804497,
+      "colisoes": 22,
+      "nao_concluidas": 0,
+      "estados_visitados": 5292
+    },
+    {
+      "episodio": 244,
+      "epsilon": 0.05,
+      "espera_s": 19.479472140762464,
+      "colisoes": 29,
+      "nao_concluidas": 0,
+      "estados_visitados": 5292
+    },
+    {
+      "episodio": 245,
+      "epsilon": 0.05,
+      "espera_s": 22.935972629521018,
+      "colisoes": 24,
+      "nao_concluidas": 0,
+      "estados_visitados": 5293
+    },
+    {
+      "episodio": 246,
+      "epsilon": 0.05,
+      "espera_s": 19.519061583577713,
+      "colisoes": 20,
+      "nao_concluidas": 0,
+      "estados_visitados": 5295
+    },
+    {
+      "episodio": 247,
+      "epsilon": 0.05,
+      "espera_s": 23.918377321603128,
+      "colisoes": 14,
+      "nao_concluidas": 0,
+      "estados_visitados": 5295
+    },
+    {
+      "episodio": 248,
+      "epsilon": 0.05,
+      "espera_s": 23.960899315738025,
+      "colisoes": 18,
+      "nao_concluidas": 0,
+      "estados_visitados": 5297
+    },
+    {
+      "episodio": 249,
+      "epsilon": 0.05,
+      "espera_s": 20.489247311827956,
+      "colisoes": 20,
+      "nao_concluidas": 0,
+      "estados_visitados": 5299
+    },
+    {
+      "episodio": 250,
+      "epsilon": 0.05,
+      "espera_s": 18.019550342130987,
+      "colisoes": 21,
+      "nao_concluidas": 0,
+      "estados_visitados": 5301
+    },
+    {
+      "episodio": 251,
+      "epsilon": 0.05,
+      "espera_s": 18.510752688172044,
+      "colisoes": 16,
+      "nao_concluidas": 0,
+      "estados_visitados": 5312
+    },
+    {
+      "episodio": 252,
+      "epsilon": 0.05,
+      "espera_s": 22.042033235581624,
+      "colisoes": 18,
+      "nao_concluidas": 0,
+      "estados_visitados": 5314
+    },
+    {
+      "episodio": 253,
+      "epsilon": 0.05,
+      "espera_s": 20.185239491691103,
+      "colisoes": 19,
+      "nao_concluidas": 0,
+      "estados_visitados": 5316
+    },
+    {
+      "episodio": 254,
+      "epsilon": 0.05,
+      "espera_s": 20.225806451612904,
+      "colisoes": 26,
+      "nao_concluidas": 0,
+      "estados_visitados": 5317
+    },
+    {
+      "episodio": 255,
+      "epsilon": 0.05,
+      "espera_s": 24.997556207233625,
+      "colisoes": 17,
+      "nao_concluidas": 0,
+      "estados_visitados": 5319
+    },
+    {
+      "episodio": 256,
+      "epsilon": 0.05,
+      "espera_s": 18.677419354838708,
+      "colisoes": 20,
+      "nao_concluidas": 0,
+      "estados_visitados": 5321
+    },
+    {
+      "episodio": 257,
+      "epsilon": 0.05,
+      "espera_s": 23.14222873900293,
+      "colisoes": 16,
+      "nao_concluidas": 0,
+      "estados_visitados": 5322
+    },
+    {
+      "episodio": 258,
+      "epsilon": 0.05,
+      "espera_s": 20.38318670576735,
+      "colisoes": 29,
+      "nao_concluidas": 0,
+      "estados_visitados": 5326
+    },
+    {
+      "episodio": 259,
+      "epsilon": 0.05,
+      "espera_s": 22.290811339198434,
+      "colisoes": 17,
+      "nao_concluidas": 0,
+      "estados_visitados": 5327
+    },
+    {
+      "episodio": 260,
+      "epsilon": 0.05,
+      "espera_s": 19.906647116324535,
+      "colisoes": 23,
+      "nao_concluidas": 0,
+      "estados_visitados": 5328
+    },
+    {
+      "episodio": 261,
+      "epsilon": 0.05,
+      "espera_s": 19.947214076246333,
+      "colisoes": 23,
+      "nao_concluidas": 0,
+      "estados_visitados": 5337
+    },
+    {
+      "episodio": 262,
+      "epsilon": 0.05,
+      "espera_s": 22.476539589442815,
+      "colisoes": 5,
+      "nao_concluidas": 0,
+      "estados_visitados": 5339
+    },
+    {
+      "episodio": 263,
+      "epsilon": 0.05,
+      "espera_s": 24.38905180840665,
+      "colisoes": 13,
+      "nao_concluidas": 0,
+      "estados_visitados": 5342
+    },
+    {
+      "episodio": 264,
+      "epsilon": 0.05,
+      "espera_s": 20.79032258064516,
+      "colisoes": 13,
+      "nao_concluidas": 0,
+      "estados_visitados": 5343
+    },
+    {
+      "episodio": 265,
+      "epsilon": 0.05,
+      "espera_s": 27.95112414467253,
+      "colisoes": 34,
+      "nao_concluidas": 0,
+      "estados_visitados": 5350
+    },
+    {
+      "episodio": 266,
+      "epsilon": 0.05,
+      "espera_s": 18.491202346041057,
+      "colisoes": 24,
+      "nao_concluidas": 0,
+      "estados_visitados": 5350
+    },
+    {
+      "episodio": 267,
+      "epsilon": 0.05,
+      "espera_s": 22.85923753665689,
+      "colisoes": 19,
+      "nao_concluidas": 0,
+      "estados_visitados": 5352
+    },
+    {
+      "episodio": 268,
+      "epsilon": 0.05,
+      "espera_s": 19.80156402737048,
+      "colisoes": 17,
+      "nao_concluidas": 0,
+      "estados_visitados": 5355
+    },
+    {
+      "episodio": 269,
+      "epsilon": 0.05,
+      "espera_s": 22.6158357771261,
+      "colisoes": 17,
+      "nao_concluidas": 0,
+      "estados_visitados": 5357
+    },
+    {
+      "episodio": 270,
+      "epsilon": 0.05,
+      "espera_s": 22.962854349951122,
+      "colisoes": 22,
+      "nao_concluidas": 0,
+      "estados_visitados": 5360
+    },
+    {
+      "episodio": 271,
+      "epsilon": 0.05,
+      "espera_s": 20.437927663734115,
+      "colisoes": 25,
+      "nao_concluidas": 0,
+      "estados_visitados": 5369
+    },
+    {
+      "episodio": 272,
+      "epsilon": 0.05,
+      "espera_s": 22.38318670576735,
+      "colisoes": 20,
+      "nao_concluidas": 0,
+      "estados_visitados": 5373
+    },
+    {
+      "episodio": 273,
+      "epsilon": 0.05,
+      "espera_s": 23.138318670576734,
+      "colisoes": 31,
+      "nao_concluidas": 0,
+      "estados_visitados": 5374
+    },
+    {
+      "episodio": 274,
+      "epsilon": 0.05,
+      "espera_s": 19.608015640273706,
+      "colisoes": 20,
+      "nao_concluidas": 0,
+      "estados_visitados": 5375
+    },
+    {
+      "episodio": 275,
+      "epsilon": 0.05,
+      "espera_s": 21.63782991202346,
+      "colisoes": 19,
+      "nao_concluidas": 0,
+      "estados_visitados": 5376
+    },
+    {
+      "episodio": 276,
+      "epsilon": 0.05,
+      "espera_s": 19.79227761485826,
+      "colisoes": 26,
+      "nao_concluidas": 0,
+      "estados_visitados": 5377
+    },
+    {
+      "episodio": 277,
+      "epsilon": 0.05,
+      "espera_s": 23.799120234604107,
+      "colisoes": 10,
+      "nao_concluidas": 0,
+      "estados_visitados": 5377
+    },
+    {
+      "episodio": 278,
+      "epsilon": 0.05,
+      "espera_s": 21.042521994134898,
+      "colisoes": 21,
+      "nao_concluidas": 0,
+      "estados_visitados": 5382
+    },
+    {
+      "episodio": 279,
+      "epsilon": 0.05,
+      "espera_s": 21.091397849462364,
+      "colisoes": 22,
+      "nao_concluidas": 0,
+      "estados_visitados": 5383
+    },
+    {
+      "episodio": 280,
+      "epsilon": 0.05,
+      "espera_s": 21.62121212121212,
+      "colisoes": 26,
+      "nao_concluidas": 0,
+      "estados_visitados": 5384
+    },
+    {
+      "episodio": 281,
+      "epsilon": 0.05,
+      "espera_s": 20.53323558162268,
+      "colisoes": 17,
+      "nao_concluidas": 0,
+      "estados_visitados": 5388
+    },
+    {
+      "episodio": 282,
+      "epsilon": 0.05,
+      "espera_s": 18.032746823069402,
+      "colisoes": 13,
+      "nao_concluidas": 0,
+      "estados_visitados": 5390
+    },
+    {
+      "episodio": 283,
+      "epsilon": 0.05,
+      "espera_s": 18.781524926686217,
+      "colisoes": 26,
+      "nao_concluidas": 0,
+      "estados_visitados": 5390
+    },
+    {
+      "episodio": 284,
+      "epsilon": 0.05,
+      "espera_s": 23.46041055718475,
+      "colisoes": 26,
+      "nao_concluidas": 0,
+      "estados_visitados": 5390
+    },
+    {
+      "episodio": 285,
+      "epsilon": 0.05,
+      "espera_s": 18.643695014662757,
+      "colisoes": 21,
+      "nao_concluidas": 0,
+      "estados_visitados": 5393
+    },
+    {
+      "episodio": 286,
+      "epsilon": 0.05,
+      "espera_s": 20.715542521994134,
+      "colisoes": 18,
+      "nao_concluidas": 0,
+      "estados_visitados": 5394
+    },
+    {
+      "episodio": 287,
+      "epsilon": 0.05,
+      "espera_s": 21.78787878787879,
+      "colisoes": 14,
+      "nao_concluidas": 0,
+      "estados_visitados": 5394
+    },
+    {
+      "episodio": 288,
+      "epsilon": 0.05,
+      "espera_s": 19.29227761485826,
+      "colisoes": 10,
+      "nao_concluidas": 0,
+      "estados_visitados": 5398
+    },
+    {
+      "episodio": 289,
+      "epsilon": 0.05,
+      "espera_s": 26.137341153470185,
+      "colisoes": 25,
+      "nao_concluidas": 0,
+      "estados_visitados": 5399
+    },
+    {
+      "episodio": 290,
+      "epsilon": 0.05,
+      "espera_s": 26.317693059628542,
+      "colisoes": 17,
+      "nao_concluidas": 0,
+      "estados_visitados": 5399
+    },
+    {
+      "episodio": 291,
+      "epsilon": 0.05,
+      "espera_s": 22.412512218963833,
+      "colisoes": 19,
+      "nao_concluidas": 0,
+      "estados_visitados": 5403
+    },
+    {
+      "episodio": 292,
+      "epsilon": 0.05,
+      "espera_s": 22.933528836754643,
+      "colisoes": 19,
+      "nao_concluidas": 0,
+      "estados_visitados": 5406
+    },
+    {
+      "episodio": 293,
+      "epsilon": 0.05,
+      "espera_s": 21.46969696969697,
+      "colisoes": 10,
+      "nao_concluidas": 0,
+      "estados_visitados": 5407
+    },
+    {
+      "episodio": 294,
+      "epsilon": 0.05,
+      "espera_s": 22.752199413489738,
+      "colisoes": 29,
+      "nao_concluidas": 0,
+      "estados_visitados": 5408
+    },
+    {
+      "episodio": 295,
+      "epsilon": 0.05,
+      "espera_s": 20.82649071358749,
+      "colisoes": 29,
+      "nao_concluidas": 0,
+      "estados_visitados": 5410
+    },
+    {
+      "episodio": 296,
+      "epsilon": 0.05,
+      "espera_s": 19.3841642228739,
+      "colisoes": 25,
+      "nao_concluidas": 0,
+      "estados_visitados": 5410
+    },
+    {
+      "episodio": 297,
+      "epsilon": 0.05,
+      "espera_s": 20.035190615835777,
+      "colisoes": 24,
+      "nao_concluidas": 0,
+      "estados_visitados": 5410
+    },
+    {
+      "episodio": 298,
+      "epsilon": 0.05,
+      "espera_s": 19.859726295210166,
+      "colisoes": 15,
+      "nao_concluidas": 0,
+      "estados_visitados": 5411
+    },
+    {
+      "episodio": 299,
+      "epsilon": 0.05,
+      "espera_s": 25.600684261974585,
+      "colisoes": 25,
+      "nao_concluidas": 0,
+      "estados_visitados": 5413
+    },
+    {
+      "episodio": 300,
+      "epsilon": 0.05,
+      "espera_s": 20.896383186705766,
+      "colisoes": 30,
+      "nao_concluidas": 0,
+      "estados_visitados": 5413
+    }
+  ]
+}
