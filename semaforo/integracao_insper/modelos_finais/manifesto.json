@@ -1,0 +1,253 @@
+{
+ "origem": "semaforo/integracao_insper/otimizacao_final/resultados/teste_final/teste_final.json",
+ "selecao": "checkpoint de cada semente de modelo escolhido SO na validacao (sementes 221-225)",
+ "teste_final": "sementes de trafego 241-250 (cenario intenso), executado uma unica vez",
+ "bracos": {
+  "A_v1": {
+   "papel": "independente da bateria anterior (colisao global)",
+   "modelo": "independente",
+   "config": {
+    "verde_minimo": 10,
+    "colisao": "global",
+    "supervisor_s": 30
+   },
+   "sementes_modelo": {
+    "1": {
+     "arquivo": "semaforo/integracao_insper/modelos_finais/A_v1/s1_ep0025.pt",
+     "origem": "semaforo/integracao_insper/resultados/bateria_principal_20261116/treinos/independente_s1/politica_ep0025.pt",
+     "sha256": "def687479324a17486e5020ed8e7c7480e46716a6bae000b64d89e1d616f71cf",
+     "bytes": 68397
+    },
+    "2": {
+     "arquivo": "semaforo/integracao_insper/modelos_finais/A_v1/s2_ep0050.pt",
+     "origem": "semaforo/integracao_insper/resultados/bateria_principal_20261116/treinos/independente_s2/politica_ep0050.pt",
+     "sha256": "6224b90e1eec66657c14043aa59dab8a5e06ea82e64e6af9ff4f457c98bc6dcd",
+     "bytes": 68397
+    },
+    "3": {
+     "arquivo": "semaforo/integracao_insper/modelos_finais/A_v1/s3_ep0100.pt",
+     "origem": "semaforo/integracao_insper/resultados/bateria_principal_20261116/treinos/independente_s3/politica_ep0100.pt",
+     "sha256": "537abe824abddecf88057d9476368a3ffaa6b7229d49c185818d8a1a1df97873",
+     "bytes": 68397
+    },
+    "4": {
+     "arquivo": "semaforo/integracao_insper/modelos_finais/A_v1/s4_ep0125.pt",
+     "origem": "semaforo/integracao_insper/resultados/bateria_principal_20261116/treinos/independente_s4/politica_ep0125.pt",
+     "sha256": "566984f91f8eb19d243495e0ee9703eebf07f2a8dea2c30164e566aa2b24b0a1",
+     "bytes": 68397
+    },
+    "5": {
+     "arquivo": "semaforo/integracao_insper/modelos_finais/A_v1/s5_ep0150.pt",
+     "origem": "semaforo/integracao_insper/resultados/bateria_principal_20261116/treinos/independente_s5/politica_ep0150.pt",
+     "sha256": "2d873fd6eb3f90a773505ae842e82d4c7feea3d5feb329f1f1ed39f0cebb3ddd",
+     "bytes": 68397
+    }
+   }
+  },
+  "B_v1": {
+   "papel": "hierarquico da bateria anterior (colisao global, supervisor 30 s)",
+   "modelo": "hierarquico",
+   "config": {
+    "verde_minimo": 10,
+    "colisao": "global",
+    "supervisor_s": 30
+   },
+   "sementes_modelo": {
+    "1": {
+     "arquivo": "semaforo/integracao_insper/modelos_finais/B_v1/s1_ep0150.pt",
+     "origem": "semaforo/integracao_insper/resultados/bateria_principal_20261116/treinos/hierarquico_s1/politica_ep0150.pt",
+     "sha256": "e960f22de2306851e6d5d8f299392caa3a1c2f4886a13d40019a814fbe4c226c",
+     "bytes": 100315
+    },
+    "2": {
+     "arquivo": "semaforo/integracao_insper/modelos_finais/B_v1/s2_ep0100.pt",
+     "origem": "semaforo/integracao_insper/resultados/bateria_principal_20261116/treinos/hierarquico_s2/politica_ep0100.pt",
+     "sha256": "384066c5ad4b0d043f1cc47f4c7d12603aad330cd6bea7737dbc464f9f615207",
+     "bytes": 100315
+    },
+    "3": {
+     "arquivo": "semaforo/integracao_insper/modelos_finais/B_v1/s3_ep0150.pt",
+     "origem": "semaforo/integracao_insper/resultados/bateria_principal_20261116/treinos/hierarquico_s3/politica_ep0150.pt",
+     "sha256": "332dda058f321974506a9b7d90d8b7d3bc912709f9f994bd1466a93a41bf2651",
+     "bytes": 100315
+    },
+    "4": {
+     "arquivo": "semaforo/integracao_insper/modelos_finais/B_v1/s4_ep0125.pt",
+     "origem": "semaforo/integracao_insper/resultados/bateria_principal_20261116/treinos/hierarquico_s4/politica_ep0125.pt",
+     "sha256": "aeb696735ddd8e452b884ac667955278422b8b8d5b0dc663e1d7a804cc53d391",
+     "bytes": 100315
+    },
+    "5": {
+     "arquivo": "semaforo/integracao_insper/modelos_finais/B_v1/s5_ep0100.pt",
+     "origem": "semaforo/integracao_insper/resultados/bateria_principal_20261116/treinos/hierarquico_s5/politica_ep0100.pt",
+     "sha256": "eadc0e40422ed9f0ec1ecbf6293ef045e43ba1ae2cfef9c149da475b6236c9fd",
+     "bytes": 100315
+    }
+   }
+  },
+  "A_col": {
+   "papel": "RECOMENDADO para a apresentacao: independente, verde min 10 s, colisao atribuida",
+   "modelo": "independente",
+   "config": {
+    "verde_minimo": 10,
+    "colisao": "atribuida",
+    "supervisor_s": 30
+   },
+   "sementes_modelo": {
+    "1": {
+     "arquivo": "semaforo/integracao_insper/modelos_finais/A_col/s1_ep0075.pt",
+     "origem": "semaforo/integracao_insper/otimizacao_final/resultados/treinos/A_col_s1/politica_ep0075.pt",
+     "sha256": "1a37aa3a4ef19af0104f895cf8919fe0fe41d82ba346010e512b96e790cd79b5",
+     "bytes": 68525
+    },
+    "2": {
+     "arquivo": "semaforo/integracao_insper/modelos_finais/A_col/s2_ep0050.pt",
+     "origem": "semaforo/integracao_insper/otimizacao_final/resultados/treinos/A_col_s2/politica_ep0050.pt",
+     "sha256": "286053b520060a2e5c61833e94f8df553c0a9f43a34d13ed84c6851f76cfd947",
+     "bytes": 68525
+    },
+    "3": {
+     "arquivo": "semaforo/integracao_insper/modelos_finais/A_col/s3_ep0100.pt",
+     "origem": "semaforo/integracao_insper/otimizacao_final/resultados/treinos/A_col_s3/politica_ep0100.pt",
+     "sha256": "2f907ea1e6ea726e2cb4c0548d64f211f1375e560fa73e6c74020af0e557d35b",
+     "bytes": 68525
+    },
+    "4": {
+     "arquivo": "semaforo/integracao_insper/modelos_finais/A_col/s4_ep0125.pt",
+     "origem": "semaforo/integracao_insper/otimizacao_final/resultados/treinos/A_col_s4/politica_ep0125.pt",
+     "sha256": "b3ae9e54cfe46cf8a6e8f131c48db9ce99f63a000906feb5d38df44408572af8",
+     "bytes": 68525
+    },
+    "5": {
+     "arquivo": "semaforo/integracao_insper/modelos_finais/A_col/s5_ep0050.pt",
+     "origem": "semaforo/integracao_insper/otimizacao_final/resultados/treinos/A_col_s5/politica_ep0050.pt",
+     "sha256": "8612da3fdef03fa733384934e161548868823bd63a745db7d0b143203919ce95",
+     "bytes": 68525
+    }
+   }
+  },
+  "A_col_v5": {
+   "papel": "independente com verde min 5 s (rejeitado: instavel)",
+   "modelo": "independente",
+   "config": {
+    "verde_minimo": 5,
+    "colisao": "atribuida",
+    "supervisor_s": 30
+   },
+   "sementes_modelo": {
+    "1": {
+     "arquivo": "semaforo/integracao_insper/modelos_finais/A_col_v5/s1_ep0150.pt",
+     "origem": "semaforo/integracao_insper/otimizacao_final/resultados/treinos/A_col_v5_s1/politica_ep0150.pt",
+     "sha256": "2e5eb0beac55bbcb421c61dfcca402132b5e838e740e495fd97629eae817eb84",
+     "bytes": 68525
+    },
+    "2": {
+     "arquivo": "semaforo/integracao_insper/modelos_finais/A_col_v5/s2_ep0150.pt",
+     "origem": "semaforo/integracao_insper/otimizacao_final/resultados/treinos/A_col_v5_s2/politica_ep0150.pt",
+     "sha256": "79bdbf06a845efd892b953ecbf14cf09ed92e3cbb874c9afac6f67d86321d7f4",
+     "bytes": 68525
+    },
+    "3": {
+     "arquivo": "semaforo/integracao_insper/modelos_finais/A_col_v5/s3_ep0100.pt",
+     "origem": "semaforo/integracao_insper/otimizacao_final/resultados/treinos/A_col_v5_s3/politica_ep0100.pt",
+     "sha256": "4bebdbb455b3a8a697aae5c3353eb32221056188cc359102c97a72bf47657ce0",
+     "bytes": 68525
+    },
+    "4": {
+     "arquivo": "semaforo/integracao_insper/modelos_finais/A_col_v5/s4_ep0100.pt",
+     "origem": "semaforo/integracao_insper/otimizacao_final/resultados/treinos/A_col_v5_s4/politica_ep0100.pt",
+     "sha256": "50086162cc09a304472f454e7e7b3b1785981facc2ea935377d151ec67547c27",
+     "bytes": 68525
+    },
+    "5": {
+     "arquivo": "semaforo/integracao_insper/modelos_finais/A_col_v5/s5_ep0150.pt",
+     "origem": "semaforo/integracao_insper/otimizacao_final/resultados/treinos/A_col_v5_s5/politica_ep0150.pt",
+     "sha256": "9f42bf3eb1b355cab7627e54d037fc087fcdf9077b043956c9918272e041940f",
+     "bytes": 68525
+    }
+   }
+  },
+  "B_col_s30": {
+   "papel": "hierarquico, supervisor 30 s",
+   "modelo": "hierarquico",
+   "config": {
+    "verde_minimo": 10,
+    "colisao": "atribuida",
+    "supervisor_s": 30
+   },
+   "sementes_modelo": {
+    "1": {
+     "arquivo": "semaforo/integracao_insper/modelos_finais/B_col_s30/s1_ep0100.pt",
+     "origem": "semaforo/integracao_insper/otimizacao_final/resultados/treinos/B_col_s30_s1/politica_ep0100.pt",
+     "sha256": "22cfcba4704616ae0d696ad9c01d75787922018f9aa62e6653cae2b730ac994c",
+     "bytes": 100443
+    },
+    "2": {
+     "arquivo": "semaforo/integracao_insper/modelos_finais/B_col_s30/s2_ep0125.pt",
+     "origem": "semaforo/integracao_insper/otimizacao_final/resultados/treinos/B_col_s30_s2/politica_ep0125.pt",
+     "sha256": "5367bb17d0dfe7cffe4447bd246c12b765cf66163ec496dd789804835db6a7d4",
+     "bytes": 100443
+    },
+    "3": {
+     "arquivo": "semaforo/integracao_insper/modelos_finais/B_col_s30/s3_ep0125.pt",
+     "origem": "semaforo/integracao_insper/otimizacao_final/resultados/treinos/B_col_s30_s3/politica_ep0125.pt",
+     "sha256": "db5f9ad2ecc3e49d0ae2bedf76d583592814de38654d4ea97d5aecdb915e1a61",
+     "bytes": 100443
+    },
+    "4": {
+     "arquivo": "semaforo/integracao_insper/modelos_finais/B_col_s30/s4_ep0150.pt",
+     "origem": "semaforo/integracao_insper/otimizacao_final/resultados/treinos/B_col_s30_s4/politica_ep0150.pt",
+     "sha256": "8e9089a45d8c4971f07f58898c360fae8de2733c62da2d6f3f1e2f08c5cb987b",
+     "bytes": 100443
+    },
+    "5": {
+     "arquivo": "semaforo/integracao_insper/modelos_finais/B_col_s30/s5_ep0075.pt",
+     "origem": "semaforo/integracao_insper/otimizacao_final/resultados/treinos/B_col_s30_s5/politica_ep0075.pt",
+     "sha256": "e8501a3b074d430ebfbb820a8680ab6ae8c892c1ac944dd4fcf902be2a927542",
+     "bytes": 100443
+    }
+   }
+  },
+  "B_col_s15": {
+   "papel": "hierarquico recomendado (supervisor 15 s), sem ganho sobre o independente",
+   "modelo": "hierarquico",
+   "config": {
+    "verde_minimo": 10,
+    "colisao": "atribuida",
+    "supervisor_s": 15
+   },
+   "sementes_modelo": {
+    "1": {
+     "arquivo": "semaforo/integracao_insper/modelos_finais/B_col_s15/s1_ep0150.pt",
+     "origem": "semaforo/integracao_insper/otimizacao_final/resultados/treinos/B_col_s15_s1/politica_ep0150.pt",
+     "sha256": "918aec8685f94ad0ac659e76b89eed545d62eb7933f1d37f960009ab9228c364",
+     "bytes": 100443
+    },
+    "2": {
+     "arquivo": "semaforo/integracao_insper/modelos_finais/B_col_s15/s2_ep0125.pt",
+     "origem": "semaforo/integracao_insper/otimizacao_final/resultados/treinos/B_col_s15_s2/politica_ep0125.pt",
+     "sha256": "9ec0ea660976614363e472c88ee77427d022ebaa181dec058a84e22ec9b3d5a3",
+     "bytes": 100443
+    },
+    "3": {
+     "arquivo": "semaforo/integracao_insper/modelos_finais/B_col_s15/s3_ep0125.pt",
+     "origem": "semaforo/integracao_insper/otimizacao_final/resultados/treinos/B_col_s15_s3/politica_ep0125.pt",
+     "sha256": "bade119726cbb12d1ac8ee0284a64f30d901856083bb3f2e3c76757b041e130d",
+     "bytes": 100443
+    },
+    "4": {
+     "arquivo": "semaforo/integracao_insper/modelos_finais/B_col_s15/s4_ep0125.pt",
+     "origem": "semaforo/integracao_insper/otimizacao_final/resultados/treinos/B_col_s15_s4/politica_ep0125.pt",
+     "sha256": "d806f9854d9b350173cf255a7da6761a54c4240620e84a71bbbc93fcddaea7d5",
+     "bytes": 100443
+    },
+    "5": {
+     "arquivo": "semaforo/integracao_insper/modelos_finais/B_col_s15/s5_ep0050.pt",
+     "origem": "semaforo/integracao_insper/otimizacao_final/resultados/treinos/B_col_s15_s5/politica_ep0050.pt",
+     "sha256": "da8d4a354f5120f5156c7a70a5274a6bede36e5f901dd41786b6a4aa3cfb0d54",
+     "bytes": 100443
+    }
+   }
+  }
+ }
+}
