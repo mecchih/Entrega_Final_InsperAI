@@ -1,0 +1,1013 @@
+{
+  "medias": {
+    "MPC": {
+      "espera_s": 38.65410557184751,
+      "p95_s": 109.125,
+      "duracao_viagem_s": 124.28567937438905,
+      "fila": 20.206162902687755,
+      "colisoes": 29.5,
+      "concluidas": 2046,
+      "nao_concluidas": 0,
+      "teleportes": 0,
+      "intervencoes": 0
+    },
+    "Max-Pressure": {
+      "espera_s": 15.831378299120235,
+      "p95_s": 50.85,
+      "duracao_viagem_s": 101.71695992179863,
+      "fila": 8.422980962017562,
+      "colisoes": 18.2,
+      "concluidas": 2046,
+      "nao_concluidas": 0,
+      "teleportes": 0,
+      "intervencoes": 39.9
+    },
+    "Original": {
+      "espera_s": 30.51774193548387,
+      "p95_s": 87.55,
+      "duracao_viagem_s": 115.17316715542522,
+      "fila": 16.009027964492102,
+      "colisoes": 23.6,
+      "concluidas": 2046,
+      "nao_concluidas": 0,
+      "teleportes": 0,
+      "intervencoes": 0
+    },
+    "MARL": {
+      "espera_s": 9.290913978494624,
+      "p95_s": 35.43,
+      "duracao_viagem_s": 89.14253176930596,
+      "fila": 4.940612066604914,
+      "colisoes": 18.46,
+      "concluidas": 2046,
+      "nao_concluidas": 0,
+      "teleportes": 0,
+      "intervencoes": 47.98
+    }
+  },
+  "rodadas_mpc": [
+    {
+      "seed": 1,
+      "espera_s": 38.86217008797654,
+      "p95_s": 107.0,
+      "fila": 20.279022403258654,
+      "colisoes": 20,
+      "concluidas": 2046,
+      "nao_concluidas": 0,
+      "segundos_reais": 38.65636190000805
+    },
+    {
+      "seed": 2,
+      "espera_s": 38.85581622678397,
+      "p95_s": 108.0,
+      "fila": 20.500900900900902,
+      "colisoes": 23,
+      "concluidas": 2046,
+      "nao_concluidas": 0,
+      "segundos_reais": 39.7816901000042
+    },
+    {
+      "seed": 3,
+      "espera_s": 38.541544477028346,
+      "p95_s": 107.0,
+      "fila": 19.99164979757085,
+      "colisoes": 37,
+      "concluidas": 2046,
+      "nao_concluidas": 0,
+      "segundos_reais": 40.60313770000357
+    },
+    {
+      "seed": 4,
+      "espera_s": 37.9672531769306,
+      "p95_s": 109.0,
+      "fila": 19.784443314692425,
+      "colisoes": 31,
+      "concluidas": 2046,
+      "nao_concluidas": 0,
+      "segundos_reais": 38.078286200005095
+    },
+    {
+      "seed": 5,
+      "espera_s": 38.139296187683286,
+      "p95_s": 109.0,
+      "fila": 20.078068823831536,
+      "colisoes": 29,
+      "concluidas": 2046,
+      "nao_concluidas": 0,
+      "segundos_reais": 38.51515970000764
+    },
+    {
+      "seed": 6,
+      "espera_s": 40.06989247311828,
+      "p95_s": 114.0,
+      "fila": 20.925095541401273,
+      "colisoes": 42,
+      "concluidas": 2046,
+      "nao_concluidas": 0,
+      "segundos_reais": 41.509962300013285
+    },
+    {
+      "seed": 7,
+      "espera_s": 38.336754643206255,
+      "p95_s": 108.75,
+      "fila": 20.241885625965995,
+      "colisoes": 22,
+      "concluidas": 2046,
+      "nao_concluidas": 0,
+      "segundos_reais": 38.530366500024684
+    },
+    {
+      "seed": 8,
+      "espera_s": 38.612414467253174,
+      "p95_s": 109.0,
+      "fila": 19.941546989166035,
+      "colisoes": 29,
+      "concluidas": 2046,
+      "nao_concluidas": 0,
+      "segundos_reais": 41.97417979998863
+    },
+    {
+      "seed": 9,
+      "espera_s": 39.03225806451613,
+      "p95_s": 110.75,
+      "fila": 20.3642148129295,
+      "colisoes": 39,
+      "concluidas": 2046,
+      "nao_concluidas": 0,
+      "segundos_reais": 38.01451239999733
+    },
+    {
+      "seed": 10,
+      "espera_s": 38.123655913978496,
+      "p95_s": 108.75,
+      "fila": 19.95480081716037,
+      "colisoes": 23,
+      "concluidas": 2046,
+      "nao_concluidas": 0,
+      "segundos_reais": 37.81538270000601
+    }
+  ],
+  "bootstrap": {
+    "espera_s": {
+      "delta_MPC_menos_MARL": 29.363191593352877,
+      "IC95_bootstrap_cruzado": [
+        28.84838514173998,
+        29.8888954056696
+      ]
+    },
+    "p95_s": {
+      "delta_MPC_menos_MARL": 73.695,
+      "IC95_bootstrap_cruzado": [
+        71.879875,
+        75.56
+      ]
+    },
+    "colisoes": {
+      "delta_MPC_menos_MARL": 11.04,
+      "IC95_bootstrap_cruzado": [
+        7.059999999999999,
+        15.36
+      ]
+    }
+  },
+  "bootstrap_semente": 74291,
+  "bootstrap_replicas": 10000,
+  "entradas": [
+    {
+      "tls": "247379907",
+      "edge": "-186623965#18",
+      "MPC_s": 19.118213058419244,
+      "MARL_s": 4.06701030927835,
+      "MaxPressure_s": 7.67319587628866,
+      "veiculos_observados_somados_entre_execucoes": {
+        "MPC": 2910,
+        "MARL": 29100,
+        "Max-Pressure": 2910
+      }
+    },
+    {
+      "tls": "247379907",
+      "edge": "-22917421#14",
+      "MPC_s": 26.269490971027,
+      "MARL_s": 7.39485465586695,
+      "MaxPressure_s": 15.227872215665643,
+      "veiculos_observados_somados_entre_execucoes": {
+        "MPC": 1229,
+        "MARL": 14010,
+        "Max-Pressure": 1363
+      }
+    },
+    {
+      "tls": "247379907",
+      "edge": "186623965#15",
+      "MPC_s": 17.63087361082292,
+      "MARL_s": 6.5913389822949755,
+      "MaxPressure_s": 8.116069380150167,
+      "veiculos_observados_somados_entre_execucoes": {
+        "MPC": 1243,
+        "MARL": 13281,
+        "Max-Pressure": 1366
+      }
+    },
+    {
+      "tls": "247379907",
+      "edge": "22917421#3",
+      "MPC_s": 35.9875,
+      "MARL_s": 6.12,
+      "MaxPressure_s": 11.924264705882353,
+      "veiculos_observados_somados_entre_execucoes": {
+        "MPC": 1360,
+        "MARL": 13600,
+        "Max-Pressure": 1360
+      }
+    },
+    {
+      "tls": "252017285",
+      "edge": "-23283579#0",
+      "MPC_s": 17.25910931174089,
+      "MARL_s": 2.690404858299595,
+      "MaxPressure_s": 10.665182186234818,
+      "veiculos_observados_somados_entre_execucoes": {
+        "MPC": 2470,
+        "MARL": 24700,
+        "Max-Pressure": 2470
+      }
+    },
+    {
+      "tls": "252017285",
+      "edge": "-28675510#0",
+      "MPC_s": 21.45948958286462,
+      "MARL_s": 4.1245380038739405,
+      "MaxPressure_s": 3.7657866702852316,
+      "veiculos_observados_somados_entre_execucoes": {
+        "MPC": 798,
+        "MARL": 8238,
+        "Max-Pressure": 858
+      }
+    },
+    {
+      "tls": "252017285",
+      "edge": "-8716807#0",
+      "MPC_s": 9.92123553540718,
+      "MARL_s": 2.519817958022578,
+      "MaxPressure_s": 5.942024660451548,
+      "veiculos_observados_somados_entre_execucoes": {
+        "MPC": 1046,
+        "MARL": 10868,
+        "Max-Pressure": 1029
+      }
+    },
+    {
+      "tls": "252017285",
+      "edge": "133081985#1",
+      "MPC_s": 18.630053280053282,
+      "MARL_s": 6.484600399600399,
+      "MaxPressure_s": 3.6682317682317684,
+      "veiculos_observados_somados_entre_execucoes": {
+        "MPC": 775,
+        "MARL": 7704,
+        "Max-Pressure": 772
+      }
+    },
+    {
+      "tls": "256201389",
+      "edge": "-225249129#0",
+      "MPC_s": 16.0,
+      "MARL_s": 5.613333333333333,
+      "MaxPressure_s": 0.0,
+      "veiculos_observados_somados_entre_execucoes": {
+        "MPC": 90,
+        "MARL": 900,
+        "Max-Pressure": 90
+      }
+    },
+    {
+      "tls": "256201389",
+      "edge": "23648008#2",
+      "MPC_s": 3.8444444444444446,
+      "MARL_s": 2.253888888888889,
+      "MaxPressure_s": 0.0,
+      "veiculos_observados_somados_entre_execucoes": {
+        "MPC": 180,
+        "MARL": 1800,
+        "Max-Pressure": 180
+      }
+    },
+    {
+      "tls": "26110729",
+      "edge": "-186623965#16",
+      "MPC_s": 20.460532232774394,
+      "MARL_s": 6.138102149517782,
+      "MaxPressure_s": 9.5078766737881,
+      "veiculos_observados_somados_entre_execucoes": {
+        "MPC": 3883,
+        "MARL": 39950,
+        "Max-Pressure": 3941
+      }
+    },
+    {
+      "tls": "26110729",
+      "edge": "-297047310#2",
+      "MPC_s": 14.646237264671921,
+      "MARL_s": 5.8304247809733365,
+      "MaxPressure_s": 8.001098795645033,
+      "veiculos_observados_somados_entre_execucoes": {
+        "MPC": 2561,
+        "MARL": 23890,
+        "Max-Pressure": 2427
+      }
+    },
+    {
+      "tls": "26110729",
+      "edge": "-42925825#2",
+      "MPC_s": 33.818064516129034,
+      "MARL_s": 9.787096774193548,
+      "MaxPressure_s": 28.648064516129033,
+      "veiculos_observados_somados_entre_execucoes": {
+        "MPC": 3100,
+        "MARL": 31000,
+        "Max-Pressure": 3100
+      }
+    },
+    {
+      "tls": "26110729",
+      "edge": "186623965#9",
+      "MPC_s": 27.897037037037038,
+      "MARL_s": 7.837851851851852,
+      "MaxPressure_s": 8.07037037037037,
+      "veiculos_observados_somados_entre_execucoes": {
+        "MPC": 1350,
+        "MARL": 13500,
+        "Max-Pressure": 1350
+      }
+    },
+    {
+      "tls": "280120513",
+      "edge": "-23648008#0",
+      "MPC_s": 24.17058823529412,
+      "MARL_s": 3.2239705882352943,
+      "MaxPressure_s": 5.211764705882353,
+      "veiculos_observados_somados_entre_execucoes": {
+        "MPC": 680,
+        "MARL": 6800,
+        "Max-Pressure": 680
+      }
+    },
+    {
+      "tls": "280120513",
+      "edge": "-28675493",
+      "MPC_s": 25.324126429639627,
+      "MARL_s": 1.328529083072457,
+      "MaxPressure_s": 1.4820651442521644,
+      "veiculos_observados_somados_entre_execucoes": {
+        "MPC": 1942,
+        "MARL": 19860,
+        "Max-Pressure": 1893
+      }
+    },
+    {
+      "tls": "280120513",
+      "edge": "297047310#4",
+      "MPC_s": 19.358539536520173,
+      "MARL_s": 1.8392394511476275,
+      "MaxPressure_s": 1.3939763479205198,
+      "veiculos_observados_somados_entre_execucoes": {
+        "MPC": 884,
+        "MARL": 8942,
+        "Max-Pressure": 860
+      }
+    },
+    {
+      "tls": "32319828",
+      "edge": "-23686088#0",
+      "MPC_s": 8.028030303030302,
+      "MARL_s": 1.1597715880610617,
+      "MaxPressure_s": 0.017293233082706767,
+      "veiculos_observados_somados_entre_execucoes": {
+        "MPC": 1320,
+        "MARL": 13284,
+        "Max-Pressure": 1330
+      }
+    },
+    {
+      "tls": "32319828",
+      "edge": "-4936412",
+      "MPC_s": 15.555102040816326,
+      "MARL_s": 1.6833673469387755,
+      "MaxPressure_s": 0.003061224489795918,
+      "veiculos_observados_somados_entre_execucoes": {
+        "MPC": 980,
+        "MARL": 9800,
+        "Max-Pressure": 980
+      }
+    },
+    {
+      "tls": "62426694",
+      "edge": "-28675494#1",
+      "MPC_s": 14.05,
+      "MARL_s": 3.4501785714285713,
+      "MaxPressure_s": 2.6375,
+      "veiculos_observados_somados_entre_execucoes": {
+        "MPC": 560,
+        "MARL": 5600,
+        "Max-Pressure": 560
+      }
+    },
+    {
+      "tls": "62426694",
+      "edge": "297047308",
+      "MPC_s": 10.50690002500995,
+      "MARL_s": 3.4919758709203,
+      "MaxPressure_s": 1.979836744499695,
+      "veiculos_observados_somados_entre_execucoes": {
+        "MPC": 686,
+        "MARL": 7093,
+        "Max-Pressure": 663
+      }
+    },
+    {
+      "tls": "62426694",
+      "edge": "8716807#6",
+      "MPC_s": 22.39659458551708,
+      "MARL_s": 2.0866989130177065,
+      "MaxPressure_s": 8.048529059572871,
+      "veiculos_observados_somados_entre_execucoes": {
+        "MPC": 2121,
+        "MARL": 21660,
+        "Max-Pressure": 2074
+      }
+    },
+    {
+      "tls": "cluster_1098574052_1098574061_247379905",
+      "edge": "-28675510#11",
+      "MPC_s": 25.85424836601307,
+      "MARL_s": 5.178692810457516,
+      "MaxPressure_s": 5.477124183006536,
+      "veiculos_observados_somados_entre_execucoes": {
+        "MPC": 1530,
+        "MARL": 15300,
+        "Max-Pressure": 1530
+      }
+    },
+    {
+      "tls": "cluster_1098574052_1098574061_247379905",
+      "edge": "22917421#5",
+      "MPC_s": 31.495650384421175,
+      "MARL_s": 10.32048933932861,
+      "MaxPressure_s": 7.58692544462234,
+      "veiculos_observados_somados_entre_execucoes": {
+        "MPC": 719,
+        "MARL": 8641,
+        "Max-Pressure": 918
+      }
+    },
+    {
+      "tls": "cluster_1098574052_1098574061_247379905",
+      "edge": "28675510#4",
+      "MPC_s": 13.579266025249767,
+      "MARL_s": 3.449766556555714,
+      "MaxPressure_s": 2.429804555476723,
+      "veiculos_observados_somados_entre_execucoes": {
+        "MPC": 2437,
+        "MARL": 24449,
+        "Max-Pressure": 2491
+      }
+    }
+  ],
+  "n_qps_completos": 331,
+  "latencia_construcao_solver_s": {
+    "media": 0.5590767235655353,
+    "p95": 0.7270440499851247,
+    "maximo": 1.1216418000112753
+  },
+  "ciclos_fisicos_observados_s": {
+    "n": 2488,
+    "minimo": 120,
+    "maximo": 120,
+    "media": 120
+  },
+  "marl_reducao_espera_vs_mpc_pct": 75.96396594606145,
+  "mpc_piora_espera_vs_original_pct": 26.661093253768065,
+  "fontes": [
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\mpc_cologne8\\20261114_comparacao_10sementes\\teste_seed1\\metricas.json",
+      "sha256": "4fe509a89e57ec6f218b7e5134e26334933912a84f803a9315fbe4cdd18c3d82"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\mpc_cologne8\\20261114_comparacao_10sementes\\teste_seed2\\metricas.json",
+      "sha256": "d8779851b7313189347a3eaaeef5eb50418db55e19257f2245a73365e20a59d4"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\mpc_cologne8\\20261114_comparacao_10sementes\\teste_seed3\\metricas.json",
+      "sha256": "77e25deaa981f45998f09006f0493779d8b4e74a4b2901a95ba988c53cb7f997"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\mpc_cologne8\\20261114_comparacao_10sementes\\teste_seed4\\metricas.json",
+      "sha256": "726a4de1de830237e5d6675abf1b325e50ffe0d6214feaa3c0669ace6eb43987"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\mpc_cologne8\\20261114_comparacao_10sementes\\teste_seed5\\metricas.json",
+      "sha256": "f957c3c374855661282d4c888b0383c909cb6d5b2f1b4aeb085b8b6223d3e8dd"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\mpc_cologne8\\20261114_comparacao_10sementes\\teste_seed6\\metricas.json",
+      "sha256": "bf171d2c6d33afc2db4b004b12741f881b413458f34c4b042b276aa1076178eb"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\mpc_cologne8\\20261114_comparacao_10sementes\\teste_seed7\\metricas.json",
+      "sha256": "c59209202cb23384869c8ee6d565c69f313bf38459a40ff1372b43a5303ab854"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\mpc_cologne8\\20261114_comparacao_10sementes\\teste_seed8\\metricas.json",
+      "sha256": "34aa3f5f6d7ccf688b9fbec03758a35ecabf7d701c16649fdedee2059e202986"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\mpc_cologne8\\20261114_comparacao_10sementes\\teste_seed9\\metricas.json",
+      "sha256": "76b7a765bf44d25c7a4e736c7d7be539b92721cc5bcbb3af94b8502f8b2e2203"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\mpc_cologne8\\20261114_comparacao_10sementes\\teste_seed10\\metricas.json",
+      "sha256": "e1ecd744f31f73ecc973d61ba3bdaeb4356754a7fd2c21ff2b88c0034d2e4883"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed0\\teste_final\\seed1\\metricas.json",
+      "sha256": "429b75ccf30d6bcd67a04e9175dff8fbdb8510bd70a88605a0caa08e7beb09dd"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed0\\teste_final\\seed2\\metricas.json",
+      "sha256": "4ca9dd03b81519277c1d950a92f0421fb7f7303d7bef7516d3163e1ab7e49c44"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed0\\teste_final\\seed3\\metricas.json",
+      "sha256": "2a44934c092bb19a85ba323cd7550895fb96612994870b6354afdfdff33c98bb"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed0\\teste_final\\seed4\\metricas.json",
+      "sha256": "0ab83631cdd880b1eeff426efc41171ee477313d32e1216913025effe02ac539"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed0\\teste_final\\seed5\\metricas.json",
+      "sha256": "3c930dcd6da84de9a73115d5dd74957fa7738296911b007cac430191f10c69f0"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed0\\teste_final\\seed6\\metricas.json",
+      "sha256": "0109c38959e3b3b71b4bf7be3bbf83d775fd280b2f57aac7cb142751ac0355a7"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed0\\teste_final\\seed7\\metricas.json",
+      "sha256": "31e8fe0c8bd4b88c656d2e8fc4b1b3802385f87996157cdd69c65aca39bf72ea"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed0\\teste_final\\seed8\\metricas.json",
+      "sha256": "6b48d1f1113c7f7124defb651520ee120b61d91a6ebe85236ea5dcab9abfea10"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed0\\teste_final\\seed9\\metricas.json",
+      "sha256": "91f6b98dc3344fcebb6451977a674264bceb663170ee4951d5493b507530de8e"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed0\\teste_final\\seed10\\metricas.json",
+      "sha256": "d71f073a6f66f6ab7e21dc6bc35097016d156731a926a36ac7ff05f418c5ed2f"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed1\\teste_final\\seed1\\metricas.json",
+      "sha256": "a1b765ff66c151312a9a161450353466ef827aa49ff98b37f78884216419a9ba"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed1\\teste_final\\seed2\\metricas.json",
+      "sha256": "68ac9b0d07972f89d27a511c45c55628a40af954443662e69b7824150285210b"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed1\\teste_final\\seed3\\metricas.json",
+      "sha256": "70fc4537baac04a253fb70c20fd86191ed618c6f95d213007e2657138b26a673"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed1\\teste_final\\seed4\\metricas.json",
+      "sha256": "73e56589e511750be3cad6332d9e8412dc62a2a4ede6e921cca9fb06946e688d"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed1\\teste_final\\seed5\\metricas.json",
+      "sha256": "f6ef0dfc45848574c2379fa6c87edffdfa573a3714f9e95d3677858468b3c5dc"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed1\\teste_final\\seed6\\metricas.json",
+      "sha256": "eefa0eaa6dcbe0897ff1255917770f7b0a41c1fa5ab318283fce73a3b6e8ca83"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed1\\teste_final\\seed7\\metricas.json",
+      "sha256": "caf8c0fb89cc95da791ee609c56d12fbff928a2a49fde73c099dd3cb144456e8"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed1\\teste_final\\seed8\\metricas.json",
+      "sha256": "2f78bc58c8bfcb253c2fec7c27044f32970396014c6078e65be5b2902046224b"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed1\\teste_final\\seed9\\metricas.json",
+      "sha256": "01d8e451c1beba1b45734fd5386b41727545fbdb786fa0a9eee8190039da8b75"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed1\\teste_final\\seed10\\metricas.json",
+      "sha256": "282ef6cbd7e6439e0659a7fc791f3d0461c46dd3b86e822eb060a30bfecb178e"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed2\\teste_final\\seed1\\metricas.json",
+      "sha256": "e0dcf01ebb7195ccd83df10d662180eed8f31474eb0504d2b7231c71cff3e4de"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed2\\teste_final\\seed2\\metricas.json",
+      "sha256": "858989eea9b11a95a97a8954ce4d7dfa2910c198c4b0950b0f5ad5e02a852cd1"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed2\\teste_final\\seed3\\metricas.json",
+      "sha256": "5e13f1bf662286092983dbad5e2452418af246ca7d27f2d5f182acea3fb30743"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed2\\teste_final\\seed4\\metricas.json",
+      "sha256": "dd185ce27e46c8a5ae16cb1f9d84fd368685249a9ef220f57942f6d8b9a20e22"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed2\\teste_final\\seed5\\metricas.json",
+      "sha256": "4485d5a1424ed994abf93065b7f795d684b87c36fbf9ef336a175a8d0cdf57c5"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed2\\teste_final\\seed6\\metricas.json",
+      "sha256": "9dfd7fb01643e32c99b78c4c021176d62730beb049d949b1217f43d259fb1ea1"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed2\\teste_final\\seed7\\metricas.json",
+      "sha256": "1ba809adfb1c4be6014de72ff4944bc787cd5e962724de601ce3e6417add427c"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed2\\teste_final\\seed8\\metricas.json",
+      "sha256": "fb9ca020a7efc19889e5affbfc53a144b37dd05c06f9fc58b7380a334c7624cb"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed2\\teste_final\\seed9\\metricas.json",
+      "sha256": "7ab2362078feaf53ce39cca32bde51adb7798b3ff391d5c29d0b7ea4c6a82413"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed2\\teste_final\\seed10\\metricas.json",
+      "sha256": "cab747c7b7c09edebe4f05d1a88fdc0e86e1df98678aa4a33804b9f0caaba456"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed3\\teste_final\\seed1\\metricas.json",
+      "sha256": "1e092c4058f6a2dc6cb1d2250966fd2c2d086e9dbf7ffa94d5140a3d19029a15"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed3\\teste_final\\seed2\\metricas.json",
+      "sha256": "8e6be4622c78d0b87208979624231c187af3932a6c88ab379446b66aa0b3bb3e"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed3\\teste_final\\seed3\\metricas.json",
+      "sha256": "0f3b51459478889064f321350f38687ea9eddc02ecab1dc3dca5327b56068d4e"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed3\\teste_final\\seed4\\metricas.json",
+      "sha256": "2407739953895f31122c0a26123deb32f4fe597342de3d0e5740e33c4379a886"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed3\\teste_final\\seed5\\metricas.json",
+      "sha256": "29e2e2a231e81eab4d56bd9ad491b8c98a90d1734ab50bb1bb25af162a01c52a"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed3\\teste_final\\seed6\\metricas.json",
+      "sha256": "3c7ad1396544dbaf9ceed83dfd9b9067507c22b534b8bf25538c60b9d7806601"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed3\\teste_final\\seed7\\metricas.json",
+      "sha256": "e92b4fb75f196135134a1a0ba606ee8bc71904545bfda0f835c162a4e7df3389"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed3\\teste_final\\seed8\\metricas.json",
+      "sha256": "4351010c336304b837e09309541999ca43fa658f34183ffcac3317cc2fb9e0dd"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed3\\teste_final\\seed9\\metricas.json",
+      "sha256": "0a6d7ef55501e9231da32682ff1736fed0e75ddabb873aad88204059b43fbebc"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed3\\teste_final\\seed10\\metricas.json",
+      "sha256": "848764adbefe3bf9c10bf508f29d964acb2c199aff61fab1c1f01066f0a7045f"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed4\\teste_final\\seed1\\metricas.json",
+      "sha256": "890646e3b269cdc52bd911f0bc15318ee3f3fd1c6857f4693726a8fdcfb1d7dc"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed4\\teste_final\\seed2\\metricas.json",
+      "sha256": "8d0f8553dd35080f408fd9608b1b3b4eee9f0e24b581439b7736655f5bf33f3a"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed4\\teste_final\\seed3\\metricas.json",
+      "sha256": "d8c87891fee95f0c5e2b235c71c9030d6c3d4c54a49679f764c23be52220c2b5"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed4\\teste_final\\seed4\\metricas.json",
+      "sha256": "0d6355ba6e4709580aa04b879342002ab0df559cf8d3b59cc22a19c7876c85f9"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed4\\teste_final\\seed5\\metricas.json",
+      "sha256": "6a712d0f4c1da19e1fa19373771ad8a1f8562e61d490f5b7830dc3e43be1804b"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed4\\teste_final\\seed6\\metricas.json",
+      "sha256": "64f875df8496774b701a94ae4759ec25a53eb0ee67288bad5463407b4a948be0"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed4\\teste_final\\seed7\\metricas.json",
+      "sha256": "33c10ae149e1c4b315b8d0e625444e80b6430c0db5394c205955933b3ff860a8"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed4\\teste_final\\seed8\\metricas.json",
+      "sha256": "1a107316dedde9103479a1beb480a14593b43e256d501c91515a7b0f5c1c87db"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed4\\teste_final\\seed9\\metricas.json",
+      "sha256": "d5fed8fc02aa40a3b781df417933334944ea2ce93b03f1b2e2336230cd6a0d54"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed4\\teste_final\\seed10\\metricas.json",
+      "sha256": "2807ebdc4d89d4912f63877234a4e8745e34af920e8e6ea84dc40264aaf59e84"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed5\\teste_final\\seed1\\metricas.json",
+      "sha256": "c695d70ec15b61e2c742082ead16fd88a1adf2fdf00deff7778d028da36a9230"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed5\\teste_final\\seed2\\metricas.json",
+      "sha256": "d7518552ba38fa1ec28772fcb3fe15dd48d6c7fd7d1b503e5a362f6226e0e0ab"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed5\\teste_final\\seed3\\metricas.json",
+      "sha256": "e94b60a60a1f40a6c1b701e6879703bd411b92b5ad98a4beefe2b683a19a3490"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed5\\teste_final\\seed4\\metricas.json",
+      "sha256": "2f7c374ea06094ea964308380b524578a1c27100c045efdf2c764931f0240a07"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed5\\teste_final\\seed5\\metricas.json",
+      "sha256": "233aec209969485af15c9d8b64c2407007a60a52ddbad37d08ed222d3751a354"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed5\\teste_final\\seed6\\metricas.json",
+      "sha256": "8a7b34784822329a500b646734570b7200195e1954ddc7c43dbe07a660381463"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed5\\teste_final\\seed7\\metricas.json",
+      "sha256": "ce68fa1203eeb3fb51a6ef70610f60cf3fad9baf80b358d19bf1948f3d839475"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed5\\teste_final\\seed8\\metricas.json",
+      "sha256": "0c109dd5e60e4702b01a71d8e2cd46ed396b0aae09b25b920a2fe3fbdd0d0cf5"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed5\\teste_final\\seed9\\metricas.json",
+      "sha256": "ea12d15c8521bce13ebf5007100ee402ebb51e4adedc2cfefe564ecfc017924b"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed5\\teste_final\\seed10\\metricas.json",
+      "sha256": "a6be97b3df2c7e8c0025595034ac519afed773c1562c5055ef0ea44ae5c2c107"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed6\\teste_final\\seed1\\metricas.json",
+      "sha256": "f78a28ce71163c1f0ff1ae0ea5e25ea47c54b5514a245f45a06baa7ca6172955"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed6\\teste_final\\seed2\\metricas.json",
+      "sha256": "16d8a6adda88dbc4da97bc87b6a3f4644403e042ebe02bcb7f632b6ccc15f7e0"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed6\\teste_final\\seed3\\metricas.json",
+      "sha256": "a3c322b717aa05336373048f90907febbfd4a07daf89d24dda3c5e1d019abdad"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed6\\teste_final\\seed4\\metricas.json",
+      "sha256": "9fe5a6fef8a4c51b1893d928b69d80558dfb145634a808a2f119f448d18a1a30"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed6\\teste_final\\seed5\\metricas.json",
+      "sha256": "b758233237e06508fa8fe603d1fe10d3a8f6163c7ecfadbc04ae93e4b9643a80"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed6\\teste_final\\seed6\\metricas.json",
+      "sha256": "8adc82dadb48aad7498acbea279645e0f096c5df1c4a6c15bc6211b4aee907f4"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed6\\teste_final\\seed7\\metricas.json",
+      "sha256": "dee6041fa080bdff25439cb29d06e52a643712e926a80414589017764e37638b"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed6\\teste_final\\seed8\\metricas.json",
+      "sha256": "e872fd0731d9c1ba527c1b4dc39acf47b01439f067fe03524188324029e9a5db"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed6\\teste_final\\seed9\\metricas.json",
+      "sha256": "6162ea751c4bca8b445a44ca42c92d95816864cd3505e49fdfea6e1f0baf04dc"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed6\\teste_final\\seed10\\metricas.json",
+      "sha256": "e1d136bf4747dab4f90c601a026c81d3fb7847f5261a2fbbfb8995f34dce68ac"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed7\\teste_final\\seed1\\metricas.json",
+      "sha256": "6bcdbbf6f44d09e1dbf4c5dbc6d7d5365a91f74f699d48fdf5590499e90b72d5"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed7\\teste_final\\seed2\\metricas.json",
+      "sha256": "bc8d70943e415035bcf5032b23bf425982c6a3686860c1d172cfe98bb6f96440"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed7\\teste_final\\seed3\\metricas.json",
+      "sha256": "06d393adce6045ca1712bda7e2ef0df6e6d1aa72a85241fa193f9a851b9981b5"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed7\\teste_final\\seed4\\metricas.json",
+      "sha256": "780a058c2ada6a74ee7336c600a2c6dce413691a91040e0b5fafab0fe9cc2630"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed7\\teste_final\\seed5\\metricas.json",
+      "sha256": "4348d864ce85f599ad8ac9ad5201ac8c7ae597511ac76471056f7542fee56437"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed7\\teste_final\\seed6\\metricas.json",
+      "sha256": "267a5558dec2adf2451387a7da06b55df7067873e87e2419dcb80bc1cc850b5b"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed7\\teste_final\\seed7\\metricas.json",
+      "sha256": "fc90e7f2c77be6456bfdde6a8c04a5d5f8329d336b101f32d3e0ee8fa752d98d"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed7\\teste_final\\seed8\\metricas.json",
+      "sha256": "ed8446d2768d8787d72abf978fa545214f8c534ed6b78204ec9d519fe97ddaed"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed7\\teste_final\\seed9\\metricas.json",
+      "sha256": "9dfb4d961587ec5ecb119c444aad3dddebcf852ad5d2c2aa5273d914232c9f89"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed7\\teste_final\\seed10\\metricas.json",
+      "sha256": "192f13b81af0331f9b2090db7370240da01108d76da9ae07dde24c192cf1db3b"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed8\\teste_final\\seed1\\metricas.json",
+      "sha256": "c1d73e2c0b4a2cf3104fed4c18811cd97856a9dbe29fcc5ab7c83e0cd8b533ca"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed8\\teste_final\\seed2\\metricas.json",
+      "sha256": "6d7b4bc443e1bddedcf77ca9b86f575094a37cd369bf4a5e8c98c8a9a80fb781"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed8\\teste_final\\seed3\\metricas.json",
+      "sha256": "8be7043bffb682b342ee0eae9ca31dfc2a15014c1f4cffcacccc9ddfdb27001a"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed8\\teste_final\\seed4\\metricas.json",
+      "sha256": "0149c0691444f9131f2a7582f4da8205a5e36af6b31fb7474f588940fb6fa77d"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed8\\teste_final\\seed5\\metricas.json",
+      "sha256": "ac9ab26ffa7e1616e53fca519b50158de1265918a360f5c74e7118ca192f4ae1"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed8\\teste_final\\seed6\\metricas.json",
+      "sha256": "973d75fced4135cbed985a5446aa74970c3cbaf61144e5a5be77758654ad1179"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed8\\teste_final\\seed7\\metricas.json",
+      "sha256": "987772a40260caedd0265cab7bd40acc9ed327b6353545a4886d9c6a78f1a8a6"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed8\\teste_final\\seed8\\metricas.json",
+      "sha256": "e80cebf9aff1bcafae44e25e3f03bcefdf8b4b2e0361e337c388772afdb11673"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed8\\teste_final\\seed9\\metricas.json",
+      "sha256": "6a91d771295b4a31c6becd5036bead1c3a5fd951b329afc168ad354fab409a6c"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed8\\teste_final\\seed10\\metricas.json",
+      "sha256": "7591dfe5f3ce512cd0a720a07065a3cb8e778fd63d230a27b2c1caf41a2b7b24"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed9\\teste_final\\seed1\\metricas.json",
+      "sha256": "8eb17cd31224cc8bdae4e608926b7fa6f80789aa9c04332254560f2c1eebdff6"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed9\\teste_final\\seed2\\metricas.json",
+      "sha256": "711b9ab3b02f6e3cfdc35598e71812ae947033fecdf7ae99f5f6eaba6878f5d4"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed9\\teste_final\\seed3\\metricas.json",
+      "sha256": "1424c628bc5e7950eecb13f8e1f64409f5d53c38513b449d5285348c26fa45cf"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed9\\teste_final\\seed4\\metricas.json",
+      "sha256": "b1baddeaab2779a8cefacde4a4fcabb9fc790308b84f3d1e2cd8320e3dddf667"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed9\\teste_final\\seed5\\metricas.json",
+      "sha256": "b2c04062ea688088683612f7de08abbde50656c0133f00cce17fbee158e77568"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed9\\teste_final\\seed6\\metricas.json",
+      "sha256": "c30691109d649b867e0812a860369eb8af716d07cf39944ae2f7f7abfde42804"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed9\\teste_final\\seed7\\metricas.json",
+      "sha256": "5531694a52f5c3b53c36e4e488ba7874e33964012d615e4b6a332ca6a5c2f24e"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed9\\teste_final\\seed8\\metricas.json",
+      "sha256": "8eeac8a9a80e0cb8946019fef5493e763c67e2855f7781df3dcdf1e00de90c7f"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed9\\teste_final\\seed9\\metricas.json",
+      "sha256": "dea983571403b1c62c53ad40708e1b880929f06b0429cc37828c1cafe8a547ad"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\modelo_seed9\\teste_final\\seed10\\metricas.json",
+      "sha256": "16c443141e9e626cd955c9e8d3f8804acc3ac4bd85b37e1db0ed5f01585748ce"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\comparadores\\max_pressure\\seed1\\metricas.json",
+      "sha256": "9955ecd581a2d107503a055f8c9cecf53bd6e35bfc1a731b84e9de5446ba57f5"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\comparadores\\max_pressure\\seed2\\metricas.json",
+      "sha256": "b354c8419ed39bc516bbe7aa956a5a0f8718d1736aa3681ef03049d49c96c12c"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\comparadores\\max_pressure\\seed3\\metricas.json",
+      "sha256": "40249392bbdfae66055ff06331e986e2734ab1bc3a26db044bd347b8ac70c667"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\comparadores\\max_pressure\\seed4\\metricas.json",
+      "sha256": "dc67eeb9bcf192137533137c587d7a4906468e271593920d9911ab329d428c84"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\comparadores\\max_pressure\\seed5\\metricas.json",
+      "sha256": "fdf0116969d416d7ba62fcef35aaa4883bdfbfd10b38fb231fa15960e5a48c65"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\comparadores\\max_pressure\\seed6\\metricas.json",
+      "sha256": "d4a665e76955aba07c1338fc91e965633672969cd5315b83ae3cdd36a5a802ea"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\comparadores\\max_pressure\\seed7\\metricas.json",
+      "sha256": "fae3cc66d5d408d0c362d1c36e4a413b6a6c7e7d9aa52756d9238981c0c2d5ae"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\comparadores\\max_pressure\\seed8\\metricas.json",
+      "sha256": "d6c8469d275314a6b7c613e277e6046b9b434dbaad2c83dbfcec3a511d34b53b"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\comparadores\\max_pressure\\seed9\\metricas.json",
+      "sha256": "c84098eb503aef8c19c9bd13e45830bc24ff46fc605d70e2b0741874fafa71d3"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\comparadores\\max_pressure\\seed10\\metricas.json",
+      "sha256": "ae11d4c4494a59f6dc17e5184ddac53f6023d398303251fc557cc5c4334de216"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\comparadores\\original_fixo\\seed1\\metricas.json",
+      "sha256": "4def2bd1daaf9944a030a019b30501db057edb27f42bee4a8a764f2a0de55e74"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\comparadores\\original_fixo\\seed2\\metricas.json",
+      "sha256": "07dd084eba6ae7faedb987cde5e7cce38bb734073d931e68f118e25efca13504"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\comparadores\\original_fixo\\seed3\\metricas.json",
+      "sha256": "4c5a38a15889845b0a39242821e9cb8752075a03f359fb2ffc7843ca4c7b13be"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\comparadores\\original_fixo\\seed4\\metricas.json",
+      "sha256": "a9ed17b3f65c8c747c96b89cee30418ba6c5967c5b613b4cc5ba11bdc99cdb29"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\comparadores\\original_fixo\\seed5\\metricas.json",
+      "sha256": "d458cfd28d4bdba9a452a002923b6400ca1845a93a58b178344d496d24031f14"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\comparadores\\original_fixo\\seed6\\metricas.json",
+      "sha256": "0d2934abf58aaff00978faa396496b64a432da46b452dec8a43a616724c5ce9a"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\comparadores\\original_fixo\\seed7\\metricas.json",
+      "sha256": "1681876b5dadbf9708165d5b613f8e029a3ffb18f480b49eecd0749c4cd916e9"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\comparadores\\original_fixo\\seed8\\metricas.json",
+      "sha256": "6526162919578f8c6e0c465fc59cae021bae4bf1db4740575abdcb0ae54e52b1"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\comparadores\\original_fixo\\seed9\\metricas.json",
+      "sha256": "b6aad81b3a05e56b0bab4e916630bdf9ed12e6f1a373e7a761d7f26d5c0967dd"
+    },
+    {
+      "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\marl_cologne8\\20261113T011843Z_continuo_10seeds_9f8d757b\\comparadores\\original_fixo\\seed10\\metricas.json",
+      "sha256": "baa50806851443d68bc6ee8fba66c97238d4ce01813aa86db36faf8318a08026"
+    }
+  ]
+}

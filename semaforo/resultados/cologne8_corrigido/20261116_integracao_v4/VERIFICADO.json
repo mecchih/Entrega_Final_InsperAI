@@ -1,0 +1,51 @@
+{
+  "status": "CONFERIDO",
+  "episodios_treino": 2,
+  "avaliacoes_sem_alterar_pesos_replay_rng": 1,
+  "n_atores": 9,
+  "atualizacoes_todos_atores": true,
+  "retomada_completa_conferida": true,
+  "aquecimento_ensaio": 64,
+  "aquecimento_rodada_principal": 2000,
+  "historico": [
+    {
+      "rodada": 1,
+      "contatos": 0,
+      "fora_area": 0,
+      "gradientes": [
+        312,
+        424,
+        351,
+        334,
+        341,
+        380,
+        359,
+        320,
+        97
+      ]
+    },
+    {
+      "rodada": 2,
+      "contatos": 0,
+      "fora_area": 0,
+      "gradientes": [
+        645,
+        842,
+        697,
+        669,
+        702,
+        807,
+        723,
+        653,
+        236
+      ]
+    }
+  ],
+  "pesos_ensaio_nao_reutilizados_no_treino": true,
+  "fontes": {
+    "agente_marl_cologne.py": "b7905a9bfcde57f0a9a4924eec9768a3167baec00551001fa2e8afc46328c74d",
+    "ambiente_piloto_supervisor.py": "f4a283fb204b21f6e81165502a2963f1c9adf21375a9615d92a35c2c8ac50c87",
+    "treinar_cologne8_corrigido.py": "e94834752a94ee222683ac62fa34296c1ee97480d49598ccb60784fe2e447a39",
+    "validar_integracao.py": "2906f07c70aee3a3f34e4d5435304757975a42ca4a57e34dae0d6f63113a2cd6"
+  }
+}

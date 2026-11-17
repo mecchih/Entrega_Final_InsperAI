@@ -1,0 +1,185 @@
+{
+  "variante": "com_supervisor",
+  "semente": 2,
+  "episodios": 100,
+  "n_atores": 9,
+  "melhor_ep": 100,
+  "melhor_score": [
+    53,
+    0,
+    14.277487705435151
+  ],
+  "checkpoint": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\piloto_supervisor_cologne8\\20261115_pareado_3x100_reinicio\\com_supervisor_seed2\\politica_ep0100.pt",
+  "sha256_checkpoint": "08a2c87181fd20693cb90d9b0826d56a3fede6f197f145abd14f7ebee9719747",
+  "validacoes": [
+    {
+      "episodio": 25,
+      "score": [
+        71,
+        0,
+        16.091104738485846
+      ],
+      "melhorou": true,
+      "metricas": [
+        {
+          "espera": 13.4541010320478,
+          "p95": 55.0,
+          "colisoes": 12,
+          "nao_concluidas": 0,
+          "concluidas": 1841
+        },
+        {
+          "espera": 18.69702354509107,
+          "p95": 70.0,
+          "colisoes": 39,
+          "nao_concluidas": 0,
+          "concluidas": 2251
+        },
+        {
+          "espera": 16.12218963831867,
+          "p95": 59.0,
+          "colisoes": 20,
+          "nao_concluidas": 0,
+          "concluidas": 2046
+        }
+      ]
+    },
+    {
+      "episodio": 50,
+      "score": [
+        81,
+        0,
+        14.577134505469477
+      ],
+      "melhorou": false,
+      "metricas": [
+        {
+          "espera": 11.334057577403586,
+          "p95": 41.0,
+          "colisoes": 16,
+          "nao_concluidas": 0,
+          "concluidas": 1841
+        },
+        {
+          "espera": 18.083074189249224,
+          "p95": 76.0,
+          "colisoes": 38,
+          "nao_concluidas": 0,
+          "concluidas": 2251
+        },
+        {
+          "espera": 14.314271749755621,
+          "p95": 56.75,
+          "colisoes": 27,
+          "nao_concluidas": 0,
+          "concluidas": 2046
+        }
+      ]
+    },
+    {
+      "episodio": 75,
+      "score": [
+        69,
+        0,
+        13.746079824279093
+      ],
+      "melhorou": true,
+      "metricas": [
+        {
+          "espera": 10.185768604019554,
+          "p95": 43.0,
+          "colisoes": 12,
+          "nao_concluidas": 0,
+          "concluidas": 1841
+        },
+        {
+          "espera": 17.02265659706797,
+          "p95": 67.0,
+          "colisoes": 34,
+          "nao_concluidas": 0,
+          "concluidas": 2251
+        },
+        {
+          "espera": 14.029814271749755,
+          "p95": 56.0,
+          "colisoes": 23,
+          "nao_concluidas": 0,
+          "concluidas": 2046
+        }
+      ]
+    },
+    {
+      "episodio": 100,
+      "score": [
+        53,
+        0,
+        14.277487705435151
+      ],
+      "melhorou": true,
+      "metricas": [
+        {
+          "espera": 10.350353068984248,
+          "p95": 37.0,
+          "colisoes": 9,
+          "nao_concluidas": 0,
+          "concluidas": 1841
+        },
+        {
+          "espera": 19.407818747223455,
+          "p95": 81.5,
+          "colisoes": 23,
+          "nao_concluidas": 0,
+          "concluidas": 2251
+        },
+        {
+          "espera": 13.074291300097752,
+          "p95": 53.0,
+          "colisoes": 21,
+          "nao_concluidas": 0,
+          "concluidas": 2046
+        }
+      ]
+    }
+  ],
+  "teste": [
+    {
+      "espera": 9.257496740547587,
+      "p95": 36.0,
+      "colisoes": 18,
+      "nao_concluidas": 0,
+      "concluidas": 1534
+    },
+    {
+      "espera": 23.847928068803753,
+      "p95": 112.15000000000009,
+      "colisoes": 48,
+      "nao_concluidas": 0,
+      "concluidas": 2558
+    },
+    {
+      "espera": 10.059628543499512,
+      "p95": 36.0,
+      "colisoes": 21,
+      "nao_concluidas": 0,
+      "concluidas": 2046
+    },
+    {
+      "espera": 14.001332741003997,
+      "p95": 52.5,
+      "colisoes": 37,
+      "nao_concluidas": 0,
+      "concluidas": 2251
+    }
+  ],
+  "gradientes": [
+    31045,
+    43299,
+    40010,
+    32785,
+    35774,
+    45343,
+    33209,
+    32348,
+    11226
+  ]
+}

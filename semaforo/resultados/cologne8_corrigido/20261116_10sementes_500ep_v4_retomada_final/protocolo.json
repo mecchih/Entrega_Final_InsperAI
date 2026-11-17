@@ -1,0 +1,58 @@
+{
+  "formato": "smartflow_cologne8_corrigido_v4",
+  "episodios": 500,
+  "sementes": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "max_processos": 3,
+  "sumo_home": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\tools\\sumo-win64-1.28.0",
+  "rede": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\cologne8_corrigido\\20261116_rede_sem_espera_interna_v2\\cologne8.net.xml",
+  "rede_sha256": "2a765570c0984b7c357963fa632d4d89c20f046b4578dbf163332b89f7dca249",
+  "auditoria": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\cologne8_corrigido\\AUDITORIA_FINAL_20261116.json",
+  "auditoria_sha256": "6a169cb753455f04458e1da411e3a4d11d5d7ce70ba8ef957148f91ca672a658",
+  "inicio_utc": "2026-11-16T18:50:49.455673+00:00",
+  "fontes": {
+    "treinar_cologne8_corrigido.py": "d8e5a6995f6c694a14122a025d0eb6fd59208c78d9998287067ac7f961c7c849",
+    "relatar_cologne8_corrigido.py": "54b6af3a1053166cf55f99b8750ff781511be1248b31d4e1da9035056e21de3e",
+    "treinar_piloto_supervisor.py": "506d60c2a410dd8b98b0c4b58029f0d5f9cd3980c8ff2e52eba3b14fe23b8d0a",
+    "ambiente_piloto_supervisor.py": "f4a283fb204b21f6e81165502a2963f1c9adf21375a9615d92a35c2c8ac50c87",
+    "agente_marl_cologne.py": "b7905a9bfcde57f0a9a4924eec9768a3167baec00551001fa2e8afc46328c74d",
+    "esquema_dqn_cologne3.py": "15f7d8fbeaf5468ed248befac2e1d6a6820637b03540e5e84e2a909ca6a78cd4",
+    "demandas_piloto_supervisor.py": "9d20c8b62e822f311f81b2654207e4a49d4a899d6ac7f28028f415d1ea02cae0"
+  },
+  "checkpoints": "1,10,25,50 e multiplos de 100; ultimo; pausa solicitada; saidas exclusivas",
+  "validacao": "5 demandas novas a cada 25 episodios; selecao pendencias, contatos, espera+insercao",
+  "teste": "10 demandas novas reservadas, seeds SUMO 20101..20110; sem selecao por teste",
+  "n_atores": 9,
+  "termina_por_colisao": false,
+  "colisao_bruta": -10000,
+  "escala_aprendizado": 1000.0,
+  "limite": "Copia derivada com contactos residuais possiveis; nao comparar medias diretamente ao piloto anterior.",
+  "retomada_seletiva": {
+    "origem": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\cologne8_corrigido\\20261116_130813_10sementes_500ep_v4_retomada",
+    "sementes_reutilizadas": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "semente_pendente": 9,
+    "proximo_episodio": 202,
+    "max_processos_retomada": 1,
+    "parametros_aprendizado_inalterados": true
+  }
+}

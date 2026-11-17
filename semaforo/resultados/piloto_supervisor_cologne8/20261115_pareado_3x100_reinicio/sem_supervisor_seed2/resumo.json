@@ -1,0 +1,184 @@
+{
+  "variante": "sem_supervisor",
+  "semente": 2,
+  "episodios": 100,
+  "n_atores": 8,
+  "melhor_ep": 50,
+  "melhor_score": [
+    56,
+    0,
+    15.39711749138572
+  ],
+  "checkpoint": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\piloto_supervisor_cologne8\\20261115_pareado_3x100_reinicio\\sem_supervisor_seed2\\politica_ep0050.pt",
+  "sha256_checkpoint": "e8ad68dc6862fb43d66b83f3e66f4dfe0014130a9de22e2a17207c7a0959998a",
+  "validacoes": [
+    {
+      "episodio": 25,
+      "score": [
+        78,
+        0,
+        16.147875518792752
+      ],
+      "melhorou": true,
+      "metricas": [
+        {
+          "espera": 12.827810972297664,
+          "p95": 49.0,
+          "colisoes": 13,
+          "nao_concluidas": 0,
+          "concluidas": 1841
+        },
+        {
+          "espera": 18.86361617059085,
+          "p95": 75.0,
+          "colisoes": 33,
+          "nao_concluidas": 0,
+          "concluidas": 2251
+        },
+        {
+          "espera": 16.752199413489738,
+          "p95": 64.0,
+          "colisoes": 32,
+          "nao_concluidas": 0,
+          "concluidas": 2046
+        }
+      ]
+    },
+    {
+      "episodio": 50,
+      "score": [
+        56,
+        0,
+        15.39711749138572
+      ],
+      "melhorou": true,
+      "metricas": [
+        {
+          "espera": 11.793047256925584,
+          "p95": 46.0,
+          "colisoes": 8,
+          "nao_concluidas": 0,
+          "concluidas": 1841
+        },
+        {
+          "espera": 20.185695246557085,
+          "p95": 81.5,
+          "colisoes": 32,
+          "nao_concluidas": 0,
+          "concluidas": 2251
+        },
+        {
+          "espera": 14.212609970674487,
+          "p95": 60.0,
+          "colisoes": 16,
+          "nao_concluidas": 0,
+          "concluidas": 2046
+        }
+      ]
+    },
+    {
+      "episodio": 75,
+      "score": [
+        85,
+        0,
+        13.878745881621745
+      ],
+      "melhorou": false,
+      "metricas": [
+        {
+          "espera": 10.280282455187399,
+          "p95": 39.0,
+          "colisoes": 11,
+          "nao_concluidas": 0,
+          "concluidas": 1841
+        },
+        {
+          "espera": 17.218125277654377,
+          "p95": 64.0,
+          "colisoes": 43,
+          "nao_concluidas": 0,
+          "concluidas": 2251
+        },
+        {
+          "espera": 14.137829912023461,
+          "p95": 55.0,
+          "colisoes": 31,
+          "nao_concluidas": 0,
+          "concluidas": 2046
+        }
+      ]
+    },
+    {
+      "episodio": 100,
+      "score": [
+        87,
+        0,
+        13.141739030748797
+      ],
+      "melhorou": false,
+      "metricas": [
+        {
+          "espera": 9.692015209125476,
+          "p95": 39.0,
+          "colisoes": 11,
+          "nao_concluidas": 0,
+          "concluidas": 1841
+        },
+        {
+          "espera": 16.389604620168814,
+          "p95": 65.0,
+          "colisoes": 41,
+          "nao_concluidas": 0,
+          "concluidas": 2251
+        },
+        {
+          "espera": 13.343597262952102,
+          "p95": 56.0,
+          "colisoes": 35,
+          "nao_concluidas": 0,
+          "concluidas": 2046
+        }
+      ]
+    }
+  ],
+  "teste": [
+    {
+      "espera": 10.670795306388527,
+      "p95": 42.34999999999991,
+      "colisoes": 14,
+      "nao_concluidas": 0,
+      "concluidas": 1534
+    },
+    {
+      "espera": 21.95035183737295,
+      "p95": 97.0,
+      "colisoes": 63,
+      "nao_concluidas": 0,
+      "concluidas": 2558
+    },
+    {
+      "espera": 10.423264907135875,
+      "p95": 40.75,
+      "colisoes": 14,
+      "nao_concluidas": 0,
+      "concluidas": 2046
+    },
+    {
+      "espera": 15.349178143047535,
+      "p95": 58.0,
+      "colisoes": 36,
+      "nao_concluidas": 0,
+      "concluidas": 2251
+    }
+  ],
+  "gradientes": [
+    31680,
+    40674,
+    33319,
+    32497,
+    36608,
+    41467,
+    34931,
+    33033
+  ]
+}

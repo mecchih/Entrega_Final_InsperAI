@@ -1,0 +1,40 @@
+{
+  "original": "semaforo\\scripts\\ambiente_marl_cologne.py",
+  "sha256_original": "9b06f483d9bfe41a2c56e0621410f20e8e90be1a1532b7d428003ea48cffae57",
+  "copia": "semaforo\\scripts\\ambiente_comparacao_mpc.py",
+  "sha256_copia": "479ecd12e7627c667004ce1b7b444093d96d2190d6651a8bfea545a3e94b776f",
+  "substituicoes": [
+    [
+      "          modo=\"hierarquico\", detalhar=False):",
+      "          modo=\"hierarquico\", detalhar=False, controlador_externo=None):"
+    ],
+    [
+      "        while True:\n            if modo != \"original_fixo\":",
+      "        if controlador_externo:\n            controlador_externo.observar(conn, foto, agora)\n        while True:\n            if modo != \"original_fixo\":"
+    ],
+    [
+      "                locais, sup = estados(manifesto, foto, relogios, agora, orientacao)\n                # O supervisor",
+      "                if controlador_externo:\n                    controlador_externo.preparar(conn, foto, relogios, agora)\n                locais, sup = estados(manifesto, foto, relogios, agora, orientacao)\n                # O supervisor"
+    ],
+    [
+      "                    if modo == \"max_pressure\":\n                        qs = []",
+      "                    if modo == \"mpc_externo\":\n                        pedida, qs, explorou = controlador_externo.escolher(r, agora)\n                    elif modo == \"max_pressure\":\n                        qs = []"
+    ],
+    [
+      "                    if modo != \"max_pressure\":\n                        pendentes[i]",
+      "                    if modo not in (\"max_pressure\", \"mpc_externo\"):\n                        pendentes[i]"
+    ],
+    [
+      "                            \"fase_alvo\": r.verdes[executada], \"explorou\": explorou}) + \"\\n\")",
+      "                            \"fase_alvo\": r.verdes[executada], \"explorou\": explorou,\n                            \"controlador_externo\": controlador_externo.detalhes(r) if modo == \"mpc_externo\" else None}) + \"\\n\")"
+    ],
+    [
+      "            foto = sensores.ler()\n            custos =",
+      "            foto = sensores.ler()\n            if controlador_externo:\n                controlador_externo.observar(conn, foto, agora)\n            custos ="
+    ],
+    [
+      "        json_novo(pasta / \"metricas.json\", resultado)",
+      "        if controlador_externo and hasattr(controlador_externo, \"resumo\"):\n            resultado[\"controlador_externo\"] = controlador_externo.resumo()\n        json_novo(pasta / \"metricas.json\", resultado)"
+    ]
+  ]
+}

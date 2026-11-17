@@ -1,0 +1,59 @@
+{
+  "rodadas": [
+    {
+      "modo": "original_fixo",
+      "semente": 301,
+      "colisoes": 0,
+      "nao_concluidas": 0,
+      "espera": 33.38954056695992
+    },
+    {
+      "modo": "max_pressure",
+      "semente": 301,
+      "colisoes": 0,
+      "nao_concluidas": 0,
+      "espera": 19.050342130987293
+    },
+    {
+      "modo": "original_fixo",
+      "semente": 1001,
+      "colisoes": 1,
+      "nao_concluidas": 0,
+      "espera": 32.645161290322584
+    },
+    {
+      "modo": "max_pressure",
+      "semente": 1001,
+      "colisoes": 1,
+      "nao_concluidas": 0,
+      "espera": 18.213587487781037
+    },
+    {
+      "modo": "original_fixo",
+      "semente": 1002,
+      "colisoes": 0,
+      "nao_concluidas": 0,
+      "espera": 32.736559139784944
+    },
+    {
+      "modo": "max_pressure",
+      "semente": 1002,
+      "colisoes": 1,
+      "nao_concluidas": 0,
+      "espera": 19.707233626588465
+    }
+  ],
+  "derivacao": {
+    "fonte": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\referencias\\cologne8_sumo_rl_1.4.5\\sumo_rl\\nets\\RESCO\\cologne8\\cologne8.rou.xml",
+    "fonte_sha256": "25cab1cc0d98d91bc12176743b57bc9710cd18d712f46c221b54131ee35ca646",
+    "arquivo": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\resultados\\cologne8_corrigido\\20261116_auditoria_sem_espera_gap25\\demanda_derivada.rou.xml",
+    "sha256": "3bd9eb9d4d7a32bee512744b7e34ee2736a788864d2f6cfa40ea565bb7eb8da4",
+    "perfil": "gap_veicular",
+    "alteracoes_vtype": {
+      "minGap": "2.5"
+    },
+    "inalterados": "rede, fases, viagens, OD, horarios, comprimento, minGap, tau, deteccao de colisoes"
+  },
+  "sem_contatos_nas_condicoes_auditadas": false,
+  "limite": "Copia comportamental derivada; ausencia observada de contatos nao garante seguranca universal."
+}

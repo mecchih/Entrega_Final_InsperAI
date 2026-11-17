@@ -1,0 +1,29 @@
+{
+  "episodios": 100,
+  "sementes": [
+    0,
+    1,
+    2
+  ],
+  "variantes": [
+    "com_supervisor",
+    "sem_supervisor"
+  ],
+  "sumo_home": "C:\\Users\\Ana Paula\\Documents\\ChatGPT\\Insper AI\\tools\\sumo-win64-1.28.0",
+  "max_processos": 3,
+  "inicio_utc": "2026-11-16T01:30:49.514702+00:00",
+  "fontes": {
+    "treinar_piloto_supervisor.py": "12cc95877e104acc700fc80bd1908de591444b51ca9149cbce58c98a28d33a1e",
+    "demandas_piloto_supervisor.py": "9d20c8b62e822f311f81b2654207e4a49d4a899d6ac7f28028f415d1ea02cae0",
+    "ambiente_piloto_supervisor.py": "dea48552b7d9034ce13d94d56639d583711edd527e6cd95dbe0d530c103cbf4d",
+    "agente_marl_cologne.py": "b7905a9bfcde57f0a9a4924eec9768a3167baec00551001fa2e8afc46328c74d",
+    "esquema_dqn_cologne3.py": "15f7d8fbeaf5468ed248befac2e1d6a6820637b03540e5e84e2a909ca6a78cd4"
+  },
+  "recompensa_local_comum": "-(fila_local+excesso_local)/100 por segundo; sem adicional prioritario",
+  "colisao": -10000,
+  "termina_por_colisao": false,
+  "sem_supervisor": "oito redes; canais de orientacao constantes no one-hot neutro desde o treino",
+  "comparacao": "mesma capacidade e inicializacao das oito redes locais; mesma sequencia de demandas/seed SUMO",
+  "avaliacao": "validacao a cada 25; selecao colisao, censura, espera; teste reservado sem escolha de pesos",
+  "ambiente": "SUMO/rede/vType originais. Contatos persistem tambem no programa original; comparacao de eficiencia condicional, nao de seguranca fisica."
+}
