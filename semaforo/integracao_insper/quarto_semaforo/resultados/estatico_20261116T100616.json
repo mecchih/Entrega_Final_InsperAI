@@ -1,0 +1,182 @@
+{
+  "id": "cluster_13529541823_13529541824_300058941_300063845_#2more",
+  "tipo_programa": "actuated",
+  "fases": [
+    [
+      "GGGGggggrrrrrrGGGGggGgggg",
+      42,
+      5,
+      50
+    ],
+    [
+      "yyyyyyyyrrrrrryyyyyyyyyyy",
+      3,
+      -1,
+      -1
+    ],
+    [
+      "rrrrrrrrGGGGGGrrrrrrrrrrr",
+      42,
+      5,
+      50
+    ],
+    [
+      "rrrrrrrryyyyyyrrrrrrrrrrr",
+      3,
+      -1,
+      -1
+    ]
+  ],
+  "n_links": 25,
+  "n_configuracoes_verde": 2,
+  "verdes": [
+    "GGGGggggrrrrrrGGGGggGgggg",
+    "rrrrrrrrGGGGGGrrrrrrrrrrr"
+  ],
+  "entradas": {
+    "944842828#1": {
+      "links": 4,
+      "nome": "Avenida Hélio Pellegrino",
+      "faixas": 3,
+      "comprimento_m": 11.6,
+      "classes": [
+        "bicycle",
+        "bus",
+        "passenger"
+      ]
+    },
+    "-844386170#0": {
+      "links": 4,
+      "nome": "Ciclovia Hélio Pelegrino",
+      "faixas": 1,
+      "comprimento_m": 0.2,
+      "classes": [
+        "bicycle"
+      ]
+    },
+    "234368026#1": {
+      "links": 6,
+      "nome": "Rua Ribeirão Claro",
+      "faixas": 2,
+      "comprimento_m": 27.5,
+      "classes": [
+        "bicycle",
+        "bus",
+        "passenger"
+      ]
+    },
+    "124962719#1": {
+      "links": 7,
+      "nome": "Avenida Hélio Pellegrino",
+      "faixas": 3,
+      "comprimento_m": 80.5,
+      "classes": [
+        "bicycle",
+        "bus",
+        "passenger"
+      ]
+    },
+    "-384350451#0": {
+      "links": 4,
+      "nome": "Ciclovia Faria Lima",
+      "faixas": 1,
+      "comprimento_m": 0.2,
+      "classes": [
+        "bicycle"
+      ]
+    }
+  },
+  "links_por_classe": {
+    "veiculos": 17,
+    "so_bicicleta": 8
+  },
+  "nos_fundidos": "cluster de 6 nos do OSM (4 listados no id + '#2more')",
+  "vias_que_saem": [
+    "1474793669#0",
+    "1474793670#0",
+    "Avenida Hélio Pellegrino",
+    "Ciclovia Faria Lima",
+    "Ciclovia Hélio Pelegrino",
+    "Rua Ribeirão Claro"
+  ],
+  "distancia_da_quata_m": 27.5,
+  "rotas_validacao_221_225": {
+    "veiculos": 2190.6,
+    "corredor": 2001.8,
+    "passam_pelo_4o": 1327.2,
+    "entram_no_4o_por_124962719#1": 117.0,
+    "entram_no_4o_por_-384350451#0": 0.0,
+    "entram_no_4o_por_-844386170#0": 0.0,
+    "entram_no_4o_por_944842828#1": 51.2,
+    "corredor_seguem_para_o_4o": 1179.4,
+    "unidade": "veiculos por semente (media)"
+  },
+  "destinos_apos_o_4o": {
+    "Avenida Hélio Pellegrino (369907174#1)": 711.2,
+    "Rua Ribeirão Claro (369907175#0)": 340.6,
+    "Avenida Hélio Pellegrino (944842828#3)": 100.8,
+    "termina": 30.4
+  },
+  "bloqueio_saida_registros_validacao": {
+    "A_col": {
+      "episodios": 150,
+      "bloqueio_s_medio": 74.8,
+      "bloqueio_max_s": 110,
+      "fracao_do_tempo_de_controle_%": 2.07
+    },
+    "A_col_v5": {
+      "episodios": 150,
+      "bloqueio_s_medio": 69.7,
+      "bloqueio_max_s": 113,
+      "fracao_do_tempo_de_controle_%": 1.93
+    },
+    "A_v1": {
+      "episodios": 150,
+      "bloqueio_s_medio": 74.6,
+      "bloqueio_max_s": 114,
+      "fracao_do_tempo_de_controle_%": 2.06
+    },
+    "B_col_s15": {
+      "episodios": 150,
+      "bloqueio_s_medio": 77.1,
+      "bloqueio_max_s": 130,
+      "fracao_do_tempo_de_controle_%": 2.14
+    },
+    "B_col_s30": {
+      "episodios": 150,
+      "bloqueio_s_medio": 76.6,
+      "bloqueio_max_s": 112,
+      "fracao_do_tempo_de_controle_%": 2.11
+    },
+    "B_v1": {
+      "episodios": 150,
+      "bloqueio_s_medio": 75.3,
+      "bloqueio_max_s": 117,
+      "fracao_do_tempo_de_controle_%": 2.07
+    },
+    "baseline_atuado_eq_v10": {
+      "episodios": 5,
+      "bloqueio_s_medio": 53.0,
+      "bloqueio_max_s": 62,
+      "fracao_do_tempo_de_controle_%": 1.48
+    },
+    "baseline_atuado_eq_v5": {
+      "episodios": 5,
+      "bloqueio_s_medio": 39.4,
+      "bloqueio_max_s": 48,
+      "fracao_do_tempo_de_controle_%": 1.09
+    },
+    "baseline_max_pressure_v10": {
+      "episodios": 5,
+      "bloqueio_s_medio": 57.8,
+      "bloqueio_max_s": 73,
+      "fracao_do_tempo_de_controle_%": 1.39
+    },
+    "baseline_original": {
+      "episodios": 5,
+      "bloqueio_s_medio": 40.8,
+      "bloqueio_max_s": 54,
+      "fracao_do_tempo_de_controle_%": 1.14
+    }
+  }
+}
