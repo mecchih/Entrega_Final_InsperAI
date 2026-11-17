@@ -2,8 +2,16 @@
 
 Projeto final do Insper AI: controle de semáforos com **Double DQN** e com uma arquitetura **Multi-Agent** (agentes locais e supervisor), avaliado em simulação no **SUMO** em três ambientes. Os ambientes têm demandas e métricas diferentes, e **seus resultados não são comparáveis entre si**.
 
-O material para a apresentação (tabelas, gráficos e resumos por etapa) está em [`entrega_final/`](entrega_final/README.md).
+## Entrega final
 
+A documentação e os materiais utilizados na apresentação do projeto estão organizados na pasta [`entrega_final/`](entrega_final/README.md).
+
+Nela, também estão disponíveis:
+
+- **[Artigo científico (PDF)](entrega_final/artigos/)** — Localizado em `entrega_final/artigos/`. Contém a metodologia, os experimentos, os resultados e as conclusões da pesquisa.
+- **[Apresentação final (PowerPoint)](entrega_final/apresentacao/)** — Localizada em `entrega_final/apresentacao/`. Contém os slides da apresentação final, incluindo a demonstração do simulador SUMO.
+
+As demais tabelas, gráficos, análises e resumos de cada etapa do projeto também podem ser encontrados na pasta [`entrega_final/`](entrega_final/README.md).
 ## 1. Objetivo
 
 Verificar se um agente que aprende por reforço consegue reduzir a espera dos veículos em relação aos controladores tradicionais (tempo fixo, Max-Pressure e o programa atuado do próprio cenário), sem violar regras de segurança. O caminho foi de um cruzamento isolado até redes reais.
