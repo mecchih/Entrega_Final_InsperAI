@@ -1,0 +1,245 @@
+{
+  "hashes_cenario_inalterados": {
+    "build.bat": "5c17e317484b518d79152382d7fa376237c841bb710ac48010889ea4fb994e0c",
+    "edgeData.xml": "d634daa7d619550c23f3038bd165c5804fe3e685946e1465ccf93831fca3f3fd",
+    "osm.net.xml.gz": "e7480355b189c8ef8b2f0f2a53a1888773ae46f67ce52fe66546ab14e23abb85",
+    "osm.netccfg": "c047ad56450fd434be5788d0e3c1bad432a70f3d5d59c651467f57b3f5170495",
+    "osm.ogcfg": "9b55c851a62183a939e2a88266ba9d4ffd5cb65339e4e637a33d7cc4b8c172d8",
+    "osm.passenger.trips.xml": "bc04adb37b21918c23410067610e4345f50ad3737c872e98fee74efb8be0ecd6",
+    "osm.poly.xml.gz": "d393d46673f87c2360ef259486f39ea884b08e31a29e66cf9a2ea9e52ebdb049",
+    "osm.polycfg": "cd55ae346a4f9382805909f12209ecd6f629b0a30cf74d9b2e4ce8456a339b03",
+    "osm.sumocfg": "779c7fe996451966f107e5bc29456a562544b5927b3bf18aa1250f10d5a95ce6",
+    "osm.view.xml": "51d96963d903cbf3bf0d9e7718593c5dc76e5abc023a9821c101c9b4cc214734",
+    "osm_bbox.osm.xml.gz": "862007dba944146adc8580fb4ecdf232d0fbb88f382a884da3e90a0e36d0f7f7",
+    "output.add.xml": "b51b3f34953c5cc4791b684a189420de0d5a0e934194a059f9a4e33bfbe10868",
+    "run.bat": "3477f82c8510cd9143c011ecb1d2f565df426ebb419a78efbbe3af19f47be8af",
+    "stats.xml": "1c1a35180fb82aaedc8e021d228663045fbcb6a49d53d65fde4b08caa29a8950",
+    "tripinfos.xml": "105dd6843255f637f0e42dee7fa5e66c8a2c375ca577e45aefb780543c1bae45"
+  },
+  "rodadas": [
+    {
+      "politica": "dqn_inicial",
+      "semente": 1,
+      "aprovado": false,
+      "protecao_verde_maximo": false,
+      "falhas": [
+        "94 teletransportes",
+        "viagens nao concluidas"
+      ],
+      "espera_media_s": 314.611,
+      "concluidas": 262,
+      "colisoes": 1,
+      "colisoes_nos_controlados": 0,
+      "locais_colisoes": [
+        "5087305044"
+      ],
+      "teleportes": 94,
+      "intervencoes_verde_maximo": {
+        "476455095": 0,
+        "40278305": 0,
+        "40278183": 0
+      },
+      "atendidos": {
+        "476455095": 13,
+        "40278305": 13,
+        "40278183": 38
+      },
+      "como_assumiu": {
+        "476455095": "assumir_verde_em_curso",
+        "40278305": "assumir_verde_em_curso",
+        "40278183": "assumir_verde_em_curso"
+      },
+      "verdes": {
+        "476455095": {
+          "n": 0
+        },
+        "40278305": {
+          "n": 0
+        },
+        "40278183": {
+          "n": 0
+        }
+      },
+      "amarelos": {
+        "476455095": {
+          "n": 0
+        },
+        "40278305": {
+          "n": 0
+        },
+        "40278183": {
+          "n": 0
+        }
+      },
+      "vermelhos_gerais": {
+        "476455095": {
+          "n": 0
+        },
+        "40278305": {
+          "n": 0
+        },
+        "40278183": {
+          "n": 0
+        }
+      }
+    },
+    {
+      "politica": "dqn_inicial",
+      "semente": 2,
+      "aprovado": false,
+      "protecao_verde_maximo": false,
+      "falhas": [
+        "93 teletransportes",
+        "viagens nao concluidas"
+      ],
+      "espera_media_s": 301.316,
+      "concluidas": 266,
+      "colisoes": 0,
+      "colisoes_nos_controlados": 0,
+      "locais_colisoes": [],
+      "teleportes": 93,
+      "intervencoes_verde_maximo": {
+        "476455095": 0,
+        "40278305": 0,
+        "40278183": 0
+      },
+      "atendidos": {
+        "476455095": 14,
+        "40278305": 13,
+        "40278183": 38
+      },
+      "como_assumiu": {
+        "476455095": "assumir_amarelo_em_curso",
+        "40278305": "assumir_verde_em_curso",
+        "40278183": "assumir_verde_em_curso"
+      },
+      "verdes": {
+        "476455095": {
+          "n": 0
+        },
+        "40278305": {
+          "n": 0
+        },
+        "40278183": {
+          "n": 0
+        }
+      },
+      "amarelos": {
+        "476455095": {
+          "n": 1,
+          "min": 3,
+          "max": 3,
+          "media": 3.0
+        },
+        "40278305": {
+          "n": 0
+        },
+        "40278183": {
+          "n": 0
+        }
+      },
+      "vermelhos_gerais": {
+        "476455095": {
+          "n": 1,
+          "min": 2,
+          "max": 2,
+          "media": 2.0
+        },
+        "40278305": {
+          "n": 0
+        },
+        "40278183": {
+          "n": 0
+        }
+      }
+    },
+    {
+      "politica": "dqn_inicial",
+      "semente": 3,
+      "aprovado": false,
+      "protecao_verde_maximo": false,
+      "falhas": [
+        "57 teletransportes",
+        "viagens nao concluidas"
+      ],
+      "espera_media_s": 209.195,
+      "concluidas": 272,
+      "colisoes": 0,
+      "colisoes_nos_controlados": 0,
+      "locais_colisoes": [],
+      "teleportes": 57,
+      "intervencoes_verde_maximo": {
+        "476455095": 0,
+        "40278305": 0,
+        "40278183": 0
+      },
+      "atendidos": {
+        "476455095": 14,
+        "40278305": 42,
+        "40278183": 36
+      },
+      "como_assumiu": {
+        "476455095": "assumir_amarelo_em_curso",
+        "40278305": "assumir_verde_em_curso",
+        "40278183": "assumir_verde_em_curso"
+      },
+      "verdes": {
+        "476455095": {
+          "n": 0
+        },
+        "40278305": {
+          "n": 1,
+          "min": 10,
+          "max": 10,
+          "media": 10.0
+        },
+        "40278183": {
+          "n": 1,
+          "min": 10,
+          "max": 10,
+          "media": 10.0
+        }
+      },
+      "amarelos": {
+        "476455095": {
+          "n": 1,
+          "min": 3,
+          "max": 3,
+          "media": 3.0
+        },
+        "40278305": {
+          "n": 1,
+          "min": 3,
+          "max": 3,
+          "media": 3.0
+        },
+        "40278183": {
+          "n": 1,
+          "min": 3,
+          "max": 3,
+          "media": 3.0
+        }
+      },
+      "vermelhos_gerais": {
+        "476455095": {
+          "n": 1,
+          "min": 2,
+          "max": 2,
+          "media": 2.0
+        },
+        "40278305": {
+          "n": 1,
+          "min": 2,
+          "max": 2,
+          "media": 2.0
+        },
+        "40278183": {
+          "n": 1,
+          "min": 2,
+          "max": 2,
+          "media": 2.0
+        }
+      }
+    }
+  ]
+}
