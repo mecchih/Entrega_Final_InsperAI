@@ -1,0 +1,251 @@
+{
+  "semente": 1,
+  "iteracao_escolhida": 2,
+  "criterio_selecao": "igual ao MARL: colisoes, nao concluidas, espera (validacao 201/202)",
+  "professor": {
+    "tipo": "atuado",
+    "verde_maximo": 40,
+    "distancia_m": 20.0,
+    "espera_validacao_s": 10.195503421309873
+  },
+  "episodios_bc": 20,
+  "iteracoes_dagger": 3,
+  "episodios_por_iteracao": 10,
+  "sementes_trafego_treino": [
+    1017,
+    1075,
+    1176,
+    1182,
+    1208,
+    1232,
+    1237,
+    1250,
+    1516,
+    1768,
+    1819,
+    1837,
+    1965,
+    1990,
+    2100,
+    2522,
+    2719,
+    2774,
+    2792,
+    2816,
+    2874,
+    2891,
+    2909,
+    3089,
+    3181,
+    3373,
+    3428,
+    3600,
+    3831,
+    4109,
+    4122,
+    4193,
+    4409,
+    4457,
+    4545,
+    4587,
+    4648,
+    4682,
+    4765,
+    4868,
+    4996,
+    5058,
+    5061,
+    5322,
+    5435,
+    5529,
+    5558,
+    5662,
+    5842,
+    5976
+  ],
+  "historico": [
+    {
+      "iteracao_dagger": 1,
+      "exemplos": [
+        14727,
+        15375,
+        23007,
+        14417,
+        18109,
+        20341,
+        17215,
+        16297
+      ],
+      "acuracia_treino": [
+        0.8553676919942962,
+        0.9001626016260162,
+        0.9998261398704742,
+        0.850454324755497,
+        0.9264454138825998,
+        0.9541812103633056,
+        0.9278536160325298,
+        0.8980180401300852
+      ],
+      "validacao_espera_s": 13.26270772238514,
+      "criterio": [
+        56,
+        0,
+        13.26270772238514
+      ],
+      "validacao": [
+        {
+          "semente": 201,
+          "espera_s": 11.649071358748778,
+          "p95_s": 50.0,
+          "espera_max_s": 141.0,
+          "duracao_viagem_s": 91.886119257087,
+          "colisoes": 29,
+          "nao_concluidas": 0,
+          "fila_media_rede": 6.208474135690148,
+          "fila_max_rede": 39,
+          "intervencoes": 55,
+          "trocas": 719,
+          "terminado_naturalmente": true,
+          "fim_sumo": 29047
+        },
+        {
+          "semente": 202,
+          "espera_s": 14.876344086021506,
+          "p95_s": 65.5,
+          "espera_max_s": 204.0,
+          "duracao_viagem_s": 97.03910068426198,
+          "colisoes": 27,
+          "nao_concluidas": 0,
+          "fila_media_rede": 8.005249343832022,
+          "fila_max_rede": 46,
+          "intervencoes": 53,
+          "trocas": 735,
+          "terminado_naturalmente": true,
+          "fim_sumo": 29010
+        }
+      ]
+    },
+    {
+      "iteracao_dagger": 2,
+      "exemplos": [
+        19766,
+        20542,
+        30686,
+        19204,
+        24368,
+        27220,
+        23006,
+        21790
+      ],
+      "acuracia_treino": [
+        0.8556612364666599,
+        0.8992308441242333,
+        0.9998696473962068,
+        0.848625286398667,
+        0.9268713066316481,
+        0.953269654665687,
+        0.9254542293314787,
+        0.9033501606241395
+      ],
+      "validacao_espera_s": 17.714565004887586,
+      "criterio": [
+        35,
+        0,
+        17.714565004887586
+      ],
+      "validacao": [
+        {
+          "semente": 201,
+          "espera_s": 15.874389051808407,
+          "p95_s": 78.75,
+          "espera_max_s": 152.0,
+          "duracao_viagem_s": 98.7238514173998,
+          "colisoes": 10,
+          "nao_concluidas": 0,
+          "fila_media_rede": 8.461898569570872,
+          "fila_max_rede": 56,
+          "intervencoes": 52,
+          "trocas": 701,
+          "terminado_naturalmente": true,
+          "fim_sumo": 29045
+        },
+        {
+          "semente": 202,
+          "espera_s": 19.554740957966764,
+          "p95_s": 89.0,
+          "espera_max_s": 164.0,
+          "duracao_viagem_s": 102.55767350928642,
+          "colisoes": 25,
+          "nao_concluidas": 0,
+          "fila_media_rede": 10.521396692045156,
+          "fila_max_rede": 59,
+          "intervencoes": 45,
+          "trocas": 678,
+          "terminado_naturalmente": true,
+          "fim_sumo": 29009
+        }
+      ]
+    },
+    {
+      "iteracao_dagger": 3,
+      "exemplos": [
+        24636,
+        25634,
+        38312,
+        24060,
+        30566,
+        34490,
+        28708,
+        27162
+      ],
+      "acuracia_treino": [
+        0.8527764247442766,
+        0.8974799094952017,
+        0.9998694925871789,
+        0.8495428096425602,
+        0.929529542629065,
+        0.9510292838503914,
+        0.9239236449770099,
+        0.9002282600692143
+      ],
+      "validacao_espera_s": 17.775904203323556,
+      "criterio": [
+        38,
+        0,
+        17.775904203323556
+      ],
+      "validacao": [
+        {
+          "semente": 201,
+          "espera_s": 18.165689149560116,
+          "p95_s": 77.0,
+          "espera_max_s": 223.0,
+          "duracao_viagem_s": 100.31964809384164,
+          "colisoes": 24,
+          "nao_concluidas": 0,
+          "fila_media_rede": 9.640600725012947,
+          "fila_max_rede": 60,
+          "intervencoes": 54,
+          "trocas": 703,
+          "terminado_naturalmente": true,
+          "fim_sumo": 29062
+        },
+        {
+          "semente": 202,
+          "espera_s": 17.386119257087,
+          "p95_s": 86.75,
+          "espera_max_s": 185.0,
+          "duracao_viagem_s": 100.430596285435,
+          "colisoes": 14,
+          "nao_concluidas": 0,
+          "fila_media_rede": 9.36301549776727,
+          "fila_max_rede": 58,
+          "intervencoes": 44,
+          "trocas": 706,
+          "terminado_naturalmente": true,
+          "fim_sumo": 29007
+        }
+      ]
+    }
+  ]
+}
