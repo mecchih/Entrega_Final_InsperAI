@@ -1,0 +1,1793 @@
+{
+  "nivel": "intenso_c5_teste",
+  "sementes": [
+    291,
+    292
+  ],
+  "checkpoints_C": {
+    "1": "semaforo/integracao_insper/parameter_sharing/modelos_finais/C/s1_ep0075.pt"
+  },
+  "controlados": {
+    "C3": [
+      "476455095",
+      "40278305",
+      "40278183"
+    ],
+    "C5": [
+      "476455095",
+      "40278305",
+      "40278183",
+      "300058973",
+      "302806060"
+    ]
+  },
+  "config": {
+    "verde_minimo": 10,
+    "colisao": "atribuida",
+    "supervisor_s": 30
+  },
+  "mapeamento": {
+    "476455095": {
+      "entradas": [
+        "234368025#0",
+        "27579109#4"
+      ],
+      "nomes": [
+        "Rua Ribeirão Claro",
+        "Rua Gomes de Carvalho"
+      ],
+      "slot_principal": 0,
+      "fase_principal": 1,
+      "fase_transversal": 0,
+      "perm_obs": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "acao_real": {
+        "1": 1,
+        "0": 0
+      }
+    },
+    "40278305": {
+      "entradas": [
+        "1160862341#1",
+        "760437731"
+      ],
+      "nomes": [
+        "Rua Casa do Ator",
+        "Rua Ribeirão Claro"
+      ],
+      "slot_principal": 1,
+      "fase_principal": 0,
+      "fase_transversal": 1,
+      "perm_obs": [
+        1,
+        0,
+        3,
+        2,
+        5,
+        4,
+        6,
+        8,
+        7
+      ],
+      "acao_real": {
+        "1": 0,
+        "0": 1
+      }
+    },
+    "40278183": {
+      "entradas": [
+        "234368026#0",
+        "8547878#5"
+      ],
+      "nomes": [
+        "Rua Ribeirão Claro",
+        "Rua Quatá"
+      ],
+      "slot_principal": 0,
+      "fase_principal": 1,
+      "fase_transversal": 0,
+      "perm_obs": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "acao_real": {
+        "1": 1,
+        "0": 0
+      }
+    },
+    "300058973": {
+      "entradas": [
+        "236732321#1",
+        "944397962#1"
+      ],
+      "nomes": [
+        "Rua Fiandeiras",
+        "Rua Clodomiro Amazonas"
+      ],
+      "slot_principal": 0,
+      "fase_principal": 1,
+      "fase_transversal": 0,
+      "perm_obs": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "acao_real": {
+        "1": 1,
+        "0": 0
+      }
+    },
+    "302806060": {
+      "entradas": [
+        "27333553#0",
+        "8425893#0"
+      ],
+      "nomes": [
+        "Rua Fiandeiras",
+        "Rua Professor Atílio Innocenti"
+      ],
+      "slot_principal": 0,
+      "fase_principal": 0,
+      "fase_transversal": 1,
+      "perm_obs": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        4,
+        6,
+        7,
+        8
+      ],
+      "acao_real": {
+        "1": 0,
+        "0": 1
+      }
+    }
+  },
+  "por_episodio": {
+    "original": [
+      {
+        "semente": 291,
+        "valido": true,
+        "motivo_invalido": null,
+        "espera_corredor": {
+          "n": 1881,
+          "media": 15.39,
+          "p95": 53.0,
+          "max": 126
+        },
+        "espera_rede": {
+          "n": 2190,
+          "media": 42.944,
+          "p95": 126.0,
+          "max": 326.0
+        },
+        "fracao_concluida": 1.0,
+        "veiculos_gerados": 2190,
+        "teleportes": 0,
+        "colisoes": 0,
+        "colisoes_nos_controlados": 0,
+        "colisoes_nos_5": 0,
+        "colisoes_por_classe": {},
+        "violacoes": 0,
+        "cruzamentos": {
+          "476455095": {
+            "controlado": false,
+            "veiculos": 1031,
+            "espera_s": {
+              "n": 1031,
+              "media": 6.175,
+              "p95": 28.0,
+              "max": 76
+            },
+            "fila": {
+              "n": 3641,
+              "media": 1.749,
+              "p95": 7.0,
+              "max": 19
+            },
+            "colisoes": 0,
+            "aproximacoes": {
+              "234368025#0": {
+                "fila_media": 0.9473
+              },
+              "27579109#4": {
+                "fila_media": 0.8014
+              }
+            }
+          },
+          "40278305": {
+            "controlado": false,
+            "veiculos": 1314,
+            "espera_s": {
+              "n": 1314,
+              "media": 5.194,
+              "p95": 27.0,
+              "max": 83
+            },
+            "fila": {
+              "n": 3641,
+              "media": 1.874,
+              "p95": 7.0,
+              "max": 19
+            },
+            "colisoes": 0,
+            "aproximacoes": {
+              "1160862341#1": {
+                "fila_media": 0.7144
+              },
+              "760437731": {
+                "fila_media": 1.1601
+              }
+            }
+          },
+          "40278183": {
+            "controlado": false,
+            "veiculos": 1435,
+            "espera_s": {
+              "n": 1435,
+              "media": 10.981,
+              "p95": 43.0,
+              "max": 78
+            },
+            "fila": {
+              "n": 3641,
+              "media": 4.36,
+              "p95": 13.0,
+              "max": 24
+            },
+            "colisoes": 0,
+            "aproximacoes": {
+              "234368026#0": {
+                "fila_media": 2.777
+              },
+              "8547878#5": {
+                "fila_media": 1.5825
+              }
+            }
+          },
+          "300058973": {
+            "controlado": false,
+            "veiculos": 333,
+            "espera_s": {
+              "n": 333,
+              "media": 1.492,
+              "p95": 6.4,
+              "max": 12
+            },
+            "fila": {
+              "n": 3641,
+              "media": 0.137,
+              "p95": 1.0,
+              "max": 3
+            },
+            "colisoes": 0,
+            "aproximacoes": {
+              "236732321#1": {
+                "fila_media": 0.1332
+              },
+              "944397962#1": {
+                "fila_media": 0.0033
+              }
+            }
+          },
+          "302806060": {
+            "controlado": false,
+            "veiculos": 58,
+            "espera_s": {
+              "n": 58,
+              "media": 1.379,
+              "p95": 6.0,
+              "max": 7
+            },
+            "fila": {
+              "n": 3641,
+              "media": 0.022,
+              "p95": 0.0,
+              "max": 1
+            },
+            "colisoes": 0,
+            "aproximacoes": {
+              "27333553#0": {
+                "fila_media": 0.0126
+              },
+              "8425893#0": {
+                "fila_media": 0.0093
+              }
+            }
+          }
+        },
+        "bloqueio_saida_corredor_s": 25,
+        "trocas": {},
+        "outros_monitorados": 14,
+        "outros_com_erro": 0,
+        "presos_gt180s": 0
+      },
+      {
+        "semente": 292,
+        "valido": true,
+        "motivo_invalido": null,
+        "espera_corredor": {
+          "n": 1848,
+          "media": 12.215,
+          "p95": 41.0,
+          "max": 84
+        },
+        "espera_rede": {
+          "n": 2191,
+          "media": 38.634,
+          "p95": 122.0,
+          "max": 305.0
+        },
+        "fracao_concluida": 1.0,
+        "veiculos_gerados": 2191,
+        "teleportes": 0,
+        "colisoes": 0,
+        "colisoes_nos_controlados": 0,
+        "colisoes_nos_5": 0,
+        "colisoes_por_classe": {},
+        "violacoes": 0,
+        "cruzamentos": {
+          "476455095": {
+            "controlado": false,
+            "veiculos": 986,
+            "espera_s": {
+              "n": 986,
+              "media": 4.492,
+              "p95": 22.0,
+              "max": 47
+            },
+            "fila": {
+              "n": 3576,
+              "media": 1.239,
+              "p95": 5.0,
+              "max": 10
+            },
+            "colisoes": 0,
+            "aproximacoes": {
+              "234368025#0": {
+                "fila_media": 0.7394
+              },
+              "27579109#4": {
+                "fila_media": 0.4992
+              }
+            }
+          },
+          "40278305": {
+            "controlado": false,
+            "veiculos": 1263,
+            "espera_s": {
+              "n": 1263,
+              "media": 3.896,
+              "p95": 19.0,
+              "max": 48
+            },
+            "fila": {
+              "n": 3576,
+              "media": 1.376,
+              "p95": 4.0,
+              "max": 14
+            },
+            "colisoes": 0,
+            "aproximacoes": {
+              "1160862341#1": {
+                "fila_media": 0.7685
+              },
+              "760437731": {
+                "fila_media": 0.6077
+              }
+            }
+          },
+          "40278183": {
+            "controlado": false,
+            "veiculos": 1437,
+            "espera_s": {
+              "n": 1437,
+              "media": 9.203,
+              "p95": 33.0,
+              "max": 79
+            },
+            "fila": {
+              "n": 3576,
+              "media": 3.747,
+              "p95": 11.0,
+              "max": 25
+            },
+            "colisoes": 0,
+            "aproximacoes": {
+              "234368026#0": {
+                "fila_media": 2.1969
+              },
+              "8547878#5": {
+                "fila_media": 1.5503
+              }
+            }
+          },
+          "300058973": {
+            "controlado": false,
+            "veiculos": 374,
+            "espera_s": {
+              "n": 374,
+              "media": 1.735,
+              "p95": 6.0,
+              "max": 19
+            },
+            "fila": {
+              "n": 3576,
+              "media": 0.181,
+              "p95": 1.0,
+              "max": 4
+            },
+            "colisoes": 0,
+            "aproximacoes": {
+              "236732321#1": {
+                "fila_media": 0.1664
+              },
+              "944397962#1": {
+                "fila_media": 0.0151
+              }
+            }
+          },
+          "302806060": {
+            "controlado": false,
+            "veiculos": 53,
+            "espera_s": {
+              "n": 53,
+              "media": 0.925,
+              "p95": 5.0,
+              "max": 5
+            },
+            "fila": {
+              "n": 3576,
+              "media": 0.014,
+              "p95": 0.0,
+              "max": 1
+            },
+            "colisoes": 0,
+            "aproximacoes": {
+              "27333553#0": {
+                "fila_media": 0.0087
+              },
+              "8425893#0": {
+                "fila_media": 0.005
+              }
+            }
+          }
+        },
+        "bloqueio_saida_corredor_s": 35,
+        "trocas": {},
+        "outros_monitorados": 14,
+        "outros_com_erro": 0,
+        "presos_gt180s": 0
+      }
+    ],
+    "atuado3": [
+      {
+        "semente": 291,
+        "valido": true,
+        "motivo_invalido": null,
+        "espera_corredor": {
+          "n": 1881,
+          "media": 23.156,
+          "p95": 67.0,
+          "max": 259
+        },
+        "espera_rede": {
+          "n": 2190,
+          "media": 48.516,
+          "p95": 132.0,
+          "max": 275.0
+        },
+        "fracao_concluida": 1.0,
+        "veiculos_gerados": 2190,
+        "teleportes": 0,
+        "colisoes": 0,
+        "colisoes_nos_controlados": 0,
+        "colisoes_nos_5": 0,
+        "colisoes_por_classe": {},
+        "violacoes": 0,
+        "cruzamentos": {
+          "476455095": {
+            "controlado": true,
+            "veiculos": 1031,
+            "espera_s": {
+              "n": 1031,
+              "media": 8.845,
+              "p95": 33.5,
+              "max": 65
+            },
+            "fila": {
+              "n": 3645,
+              "media": 2.502,
+              "p95": 7.0,
+              "max": 12
+            },
+            "colisoes": 0,
+            "aproximacoes": {
+              "234368025#0": {
+                "fila_media": 1.4316
+              },
+              "27579109#4": {
+                "fila_media": 1.0708
+              }
+            }
+          },
+          "40278305": {
+            "controlado": true,
+            "veiculos": 1314,
+            "espera_s": {
+              "n": 1314,
+              "media": 7.184,
+              "p95": 27.35,
+              "max": 61
+            },
+            "fila": {
+              "n": 3645,
+              "media": 2.587,
+              "p95": 7.0,
+              "max": 14
+            },
+            "colisoes": 0,
+            "aproximacoes": {
+              "1160862341#1": {
+                "fila_media": 1.1215
+              },
+              "760437731": {
+                "fila_media": 1.4658
+              }
+            }
+          },
+          "40278183": {
+            "controlado": true,
+            "veiculos": 1435,
+            "espera_s": {
+              "n": 1435,
+              "media": 17.419,
+              "p95": 64.3,
+              "max": 259
+            },
+            "fila": {
+              "n": 3645,
+              "media": 6.938,
+              "p95": 19.0,
+              "max": 28
+            },
+            "colisoes": 0,
+            "aproximacoes": {
+              "234368026#0": {
+                "fila_media": 2.4239
+              },
+              "8547878#5": {
+                "fila_media": 4.5144
+              }
+            }
+          },
+          "300058973": {
+            "controlado": false,
+            "veiculos": 333,
+            "espera_s": {
+              "n": 333,
+              "media": 1.535,
+              "p95": 8.0,
+              "max": 15
+            },
+            "fila": {
+              "n": 3645,
+              "media": 0.14,
+              "p95": 1.0,
+              "max": 3
+            },
+            "colisoes": 0,
+            "aproximacoes": {
+              "236732321#1": {
+                "fila_media": 0.1333
+              },
+              "944397962#1": {
+                "fila_media": 0.0069
+              }
+            }
+          },
+          "302806060": {
+            "controlado": false,
+            "veiculos": 58,
+            "espera_s": {
+              "n": 58,
+              "media": 0.948,
+              "p95": 5.15,
+              "max": 7
+            },
+            "fila": {
+              "n": 3645,
+              "media": 0.015,
+              "p95": 0.0,
+              "max": 1
+            },
+            "colisoes": 0,
+            "aproximacoes": {
+              "27333553#0": {
+                "fila_media": 0.0071
+              },
+              "8425893#0": {
+                "fila_media": 0.008
+              }
+            }
+          }
+        },
+        "bloqueio_saida_corredor_s": 76,
+        "trocas": {
+          "476455095": 118,
+          "40278305": 113,
+          "40278183": 96
+        },
+        "outros_monitorados": 11,
+        "outros_com_erro": 0,
+        "presos_gt180s": 0
+      },
+      {
+        "semente": 292,
+        "valido": true,
+        "motivo_invalido": null,
+        "espera_corredor": {
+          "n": 1844,
+          "media": 26.909,
+          "p95": 85.85,
+          "max": 198
+        },
+        "espera_rede": {
+          "n": 2191,
+          "media": 51.058,
+          "p95": 137.0,
+          "max": 293.0
+        },
+        "fracao_concluida": 1.0,
+        "veiculos_gerados": 2191,
+        "teleportes": 0,
+        "colisoes": 0,
+        "colisoes_nos_controlados": 0,
+        "colisoes_nos_5": 0,
+        "colisoes_por_classe": {},
+        "violacoes": 0,
+        "cruzamentos": {
+          "476455095": {
+            "controlado": true,
+            "veiculos": 986,
+            "espera_s": {
+              "n": 986,
+              "media": 14.094,
+              "p95": 58.75,
+              "max": 177
+            },
+            "fila": {
+              "n": 3612,
+              "media": 3.847,
+              "p95": 14.0,
+              "max": 21
+            },
+            "colisoes": 0,
+            "aproximacoes": {
+              "234368025#0": {
+                "fila_media": 1.3585
+              },
+              "27579109#4": {
+                "fila_media": 2.4889
+              }
+            }
+          },
+          "40278305": {
+            "controlado": true,
+            "veiculos": 1263,
+            "espera_s": {
+              "n": 1263,
+              "media": 8.983,
+              "p95": 37.9,
+              "max": 108
+            },
+            "fila": {
+              "n": 3612,
+              "media": 3.141,
+              "p95": 10.0,
+              "max": 20
+            },
+            "colisoes": 0,
+            "aproximacoes": {
+              "1160862341#1": {
+                "fila_media": 1.5579
+              },
+              "760437731": {
+                "fila_media": 1.5833
+              }
+            }
+          },
+          "40278183": {
+            "controlado": true,
+            "veiculos": 1433,
+            "espera_s": {
+              "n": 1433,
+              "media": 17.012,
+              "p95": 61.0,
+              "max": 131
+            },
+            "fila": {
+              "n": 3612,
+              "media": 6.818,
+              "p95": 20.0,
+              "max": 34
+            },
+            "colisoes": 0,
+            "aproximacoes": {
+              "234368026#0": {
+                "fila_media": 3.2705
+              },
+              "8547878#5": {
+                "fila_media": 3.5473
+              }
+            }
+          },
+          "300058973": {
+            "controlado": false,
+            "veiculos": 374,
+            "espera_s": {
+              "n": 374,
+              "media": 1.497,
+              "p95": 7.0,
+              "max": 16
+            },
+            "fila": {
+              "n": 3612,
+              "media": 0.155,
+              "p95": 1.0,
+              "max": 5
+            },
+            "colisoes": 0,
+            "aproximacoes": {
+              "236732321#1": {
+                "fila_media": 0.1442
+              },
+              "944397962#1": {
+                "fila_media": 0.0108
+              }
+            }
+          },
+          "302806060": {
+            "controlado": false,
+            "veiculos": 53,
+            "espera_s": {
+              "n": 53,
+              "media": 1.189,
+              "p95": 6.0,
+              "max": 9
+            },
+            "fila": {
+              "n": 3612,
+              "media": 0.017,
+              "p95": 0.0,
+              "max": 2
+            },
+            "colisoes": 0,
+            "aproximacoes": {
+              "27333553#0": {
+                "fila_media": 0.0127
+              },
+              "8425893#0": {
+                "fila_media": 0.0047
+              }
+            }
+          }
+        },
+        "bloqueio_saida_corredor_s": 51,
+        "trocas": {
+          "476455095": 116,
+          "40278305": 114,
+          "40278183": 95
+        },
+        "outros_monitorados": 11,
+        "outros_com_erro": 0,
+        "presos_gt180s": 0
+      }
+    ],
+    "atuado5": [
+      {
+        "semente": 291,
+        "valido": true,
+        "motivo_invalido": null,
+        "espera_corredor": {
+          "n": 1882,
+          "media": 31.242,
+          "p95": 92.9,
+          "max": 261
+        },
+        "espera_rede": {
+          "n": 2190,
+          "media": 57.842,
+          "p95": 154.55,
+          "max": 291.0
+        },
+        "fracao_concluida": 1.0,
+        "veiculos_gerados": 2190,
+        "teleportes": 0,
+        "colisoes": 0,
+        "colisoes_nos_controlados": 0,
+        "colisoes_nos_5": 0,
+        "colisoes_por_classe": {},
+        "violacoes": 0,
+        "cruzamentos": {
+          "476455095": {
+            "controlado": true,
+            "veiculos": 1031,
+            "espera_s": {
+              "n": 1031,
+              "media": 20.283,
+              "p95": 80.0,
+              "max": 242
+            },
+            "fila": {
+              "n": 3682,
+              "media": 5.689,
+              "p95": 17.0,
+              "max": 25
+            },
+            "colisoes": 0,
+            "aproximacoes": {
+              "234368025#0": {
+                "fila_media": 1.9098
+              },
+              "27579109#4": {
+                "fila_media": 3.7792
+              }
+            }
+          },
+          "40278305": {
+            "controlado": true,
+            "veiculos": 1314,
+            "espera_s": {
+              "n": 1314,
+              "media": 9.25,
+              "p95": 41.0,
+              "max": 64
+            },
+            "fila": {
+              "n": 3682,
+              "media": 3.301,
+              "p95": 10.0,
+              "max": 20
+            },
+            "colisoes": 0,
+            "aproximacoes": {
+              "1160862341#1": {
+                "fila_media": 1.3998
+              },
+              "760437731": {
+                "fila_media": 1.9009
+              }
+            }
+          },
+          "40278183": {
+            "controlado": true,
+            "veiculos": 1436,
+            "espera_s": {
+              "n": 1436,
+              "media": 17.898,
+              "p95": 65.0,
+              "max": 150
+            },
+            "fila": {
+              "n": 3682,
+              "media": 7.054,
+              "p95": 18.0,
+              "max": 25
+            },
+            "colisoes": 0,
+            "aproximacoes": {
+              "234368026#0": {
+                "fila_media": 2.975
+              },
+              "8547878#5": {
+                "fila_media": 4.0793
+              }
+            }
+          },
+          "300058973": {
+            "controlado": true,
+            "veiculos": 333,
+            "espera_s": {
+              "n": 333,
+              "media": 1.102,
+              "p95": 9.4,
+              "max": 19
+            },
+            "fila": {
+              "n": 3682,
+              "media": 0.1,
+              "p95": 1.0,
+              "max": 4
+            },
+            "colisoes": 0,
+            "aproximacoes": {
+              "236732321#1": {
+                "fila_media": 0.0953
+              },
+              "944397962#1": {
+                "fila_media": 0.0043
+              }
+            }
+          },
+          "302806060": {
+            "controlado": true,
+            "veiculos": 58,
+            "espera_s": {
+              "n": 58,
+              "media": 1.5,
+              "p95": 12.0,
+              "max": 14
+            },
+            "fila": {
+              "n": 3682,
+              "media": 0.024,
+              "p95": 0.0,
+              "max": 1
+            },
+            "colisoes": 0,
+            "aproximacoes": {
+              "27333553#0": {
+                "fila_media": 0.0185
+              },
+              "8425893#0": {
+                "fila_media": 0.0052
+              }
+            }
+          }
+        },
+        "bloqueio_saida_corredor_s": 55,
+        "trocas": {
+          "476455095": 104,
+          "40278305": 109,
+          "40278183": 107,
+          "300058973": 42,
+          "302806060": 38
+        },
+        "outros_monitorados": 9,
+        "outros_com_erro": 0,
+        "presos_gt180s": 0
+      },
+      {
+        "semente": 292,
+        "valido": true,
+        "motivo_invalido": null,
+        "espera_corredor": {
+          "n": 1847,
+          "media": 19.931,
+          "p95": 58.0,
+          "max": 102
+        },
+        "espera_rede": {
+          "n": 2191,
+          "media": 45.556,
+          "p95": 121.5,
+          "max": 312.0
+        },
+        "fracao_concluida": 1.0,
+        "veiculos_gerados": 2191,
+        "teleportes": 0,
+        "colisoes": 0,
+        "colisoes_nos_controlados": 0,
+        "colisoes_nos_5": 0,
+        "colisoes_por_classe": {},
+        "violacoes": 0,
+        "cruzamentos": {
+          "476455095": {
+            "controlado": true,
+            "veiculos": 986,
+            "espera_s": {
+              "n": 986,
+              "media": 9.099,
+              "p95": 33.75,
+              "max": 60
+            },
+            "fila": {
+              "n": 3583,
+              "media": 2.504,
+              "p95": 8.0,
+              "max": 13
+            },
+            "colisoes": 0,
+            "aproximacoes": {
+              "234368025#0": {
+                "fila_media": 1.1775
+              },
+              "27579109#4": {
+                "fila_media": 1.3265
+              }
+            }
+          },
+          "40278305": {
+            "controlado": true,
+            "veiculos": 1263,
+            "espera_s": {
+              "n": 1263,
+              "media": 6.833,
+              "p95": 29.0,
+              "max": 64
+            },
+            "fila": {
+              "n": 3583,
+              "media": 2.409,
+              "p95": 7.0,
+              "max": 15
+            },
+            "colisoes": 0,
+            "aproximacoes": {
+              "1160862341#1": {
+                "fila_media": 1.2423
+              },
+              "760437731": {
+                "fila_media": 1.1663
+              }
+            }
+          },
+          "40278183": {
+            "controlado": true,
+            "veiculos": 1436,
+            "espera_s": {
+              "n": 1436,
+              "media": 13.377,
+              "p95": 50.0,
+              "max": 102
+            },
+            "fila": {
+              "n": 3583,
+              "media": 5.411,
+              "p95": 13.0,
+              "max": 22
+            },
+            "colisoes": 0,
+            "aproximacoes": {
+              "234368026#0": {
+                "fila_media": 2.3025
+              },
+              "8547878#5": {
+                "fila_media": 3.1086
+              }
+            }
+          },
+          "300058973": {
+            "controlado": true,
+            "veiculos": 374,
+            "espera_s": {
+              "n": 374,
+              "media": 1.152,
+              "p95": 10.0,
+              "max": 22
+            },
+            "fila": {
+              "n": 3583,
+              "media": 0.12,
+              "p95": 1.0,
+              "max": 6
+            },
+            "colisoes": 0,
+            "aproximacoes": {
+              "236732321#1": {
+                "fila_media": 0.1178
+              },
+              "944397962#1": {
+                "fila_media": 0.0025
+              }
+            }
+          },
+          "302806060": {
+            "controlado": true,
+            "veiculos": 53,
+            "espera_s": {
+              "n": 53,
+              "media": 0.755,
+              "p95": 5.0,
+              "max": 15
+            },
+            "fila": {
+              "n": 3583,
+              "media": 0.011,
+              "p95": 0.0,
+              "max": 1
+            },
+            "colisoes": 0,
+            "aproximacoes": {
+              "27333553#0": {
+                "fila_media": 0.0039
+              },
+              "8425893#0": {
+                "fila_media": 0.0073
+              }
+            }
+          }
+        },
+        "bloqueio_saida_corredor_s": 37,
+        "trocas": {
+          "476455095": 128,
+          "40278305": 124,
+          "40278183": 107,
+          "300058973": 41,
+          "302806060": 38
+        },
+        "outros_monitorados": 9,
+        "outros_com_erro": 0,
+        "presos_gt180s": 0
+      }
+    ],
+    "C3|1": [
+      {
+        "semente": 291,
+        "valido": true,
+        "motivo_invalido": null,
+        "espera_corredor": {
+          "n": 1883,
+          "media": 31.146,
+          "p95": 99.0,
+          "max": 194
+        },
+        "espera_rede": {
+          "n": 2190,
+          "media": 56.978,
+          "p95": 152.0,
+          "max": 294.0
+        },
+        "fracao_concluida": 1.0,
+        "veiculos_gerados": 2190,
+        "teleportes": 0,
+        "colisoes": 0,
+        "colisoes_nos_controlados": 0,
+        "colisoes_nos_5": 0,
+        "colisoes_por_classe": {},
+        "violacoes": 0,
+        "cruzamentos": {
+          "476455095": {
+            "controlado": true,
+            "veiculos": 1031,
+            "espera_s": {
+              "n": 1031,
+              "media": 20.274,
+              "p95": 87.5,
+              "max": 173
+            },
+            "fila": {
+              "n": 3684,
+              "media": 5.675,
+              "p95": 20.0,
+              "max": 29
+            },
+            "colisoes": 0,
+            "aproximacoes": {
+              "234368025#0": {
+                "fila_media": 2.6376
+              },
+              "27579109#4": {
+                "fila_media": 3.0375
+              }
+            }
+          },
+          "40278305": {
+            "controlado": true,
+            "veiculos": 1314,
+            "espera_s": {
+              "n": 1314,
+              "media": 8.762,
+              "p95": 38.0,
+              "max": 94
+            },
+            "fila": {
+              "n": 3684,
+              "media": 3.125,
+              "p95": 9.0,
+              "max": 18
+            },
+            "colisoes": 0,
+            "aproximacoes": {
+              "1160862341#1": {
+                "fila_media": 1.3732
+              },
+              "760437731": {
+                "fila_media": 1.7519
+              }
+            }
+          },
+          "40278183": {
+            "controlado": true,
+            "veiculos": 1437,
+            "espera_s": {
+              "n": 1437,
+              "media": 18.254,
+              "p95": 68.0,
+              "max": 172
+            },
+            "fila": {
+              "n": 3684,
+              "media": 7.21,
+              "p95": 17.0,
+              "max": 35
+            },
+            "colisoes": 0,
+            "aproximacoes": {
+              "234368026#0": {
+                "fila_media": 2.9821
+              },
+              "8547878#5": {
+                "fila_media": 4.228
+              }
+            }
+          },
+          "300058973": {
+            "controlado": false,
+            "veiculos": 333,
+            "espera_s": {
+              "n": 333,
+              "media": 1.393,
+              "p95": 6.4,
+              "max": 25
+            },
+            "fila": {
+              "n": 3684,
+              "media": 0.126,
+              "p95": 1.0,
+              "max": 5
+            },
+            "colisoes": 0,
+            "aproximacoes": {
+              "236732321#1": {
+                "fila_media": 0.1151
+              },
+              "944397962#1": {
+                "fila_media": 0.0109
+              }
+            }
+          },
+          "302806060": {
+            "controlado": false,
+            "veiculos": 58,
+            "espera_s": {
+              "n": 58,
+              "media": 1.138,
+              "p95": 6.0,
+              "max": 7
+            },
+            "fila": {
+              "n": 3684,
+              "media": 0.018,
+              "p95": 0.0,
+              "max": 1
+            },
+            "colisoes": 0,
+            "aproximacoes": {
+              "27333553#0": {
+                "fila_media": 0.0119
+              },
+              "8425893#0": {
+                "fila_media": 0.006
+              }
+            }
+          }
+        },
+        "bloqueio_saida_corredor_s": 105,
+        "trocas": {
+          "476455095": 100,
+          "40278305": 124,
+          "40278183": 108
+        },
+        "outros_monitorados": 11,
+        "outros_com_erro": 0,
+        "presos_gt180s": 0
+      },
+      {
+        "semente": 292,
+        "valido": true,
+        "motivo_invalido": null,
+        "espera_corredor": {
+          "n": 1851,
+          "media": 21.004,
+          "p95": 62.0,
+          "max": 182
+        },
+        "espera_rede": {
+          "n": 2191,
+          "media": 46.86,
+          "p95": 127.0,
+          "max": 266.0
+        },
+        "fracao_concluida": 1.0,
+        "veiculos_gerados": 2191,
+        "teleportes": 0,
+        "colisoes": 0,
+        "colisoes_nos_controlados": 0,
+        "colisoes_nos_5": 0,
+        "colisoes_por_classe": {},
+        "violacoes": 0,
+        "cruzamentos": {
+          "476455095": {
+            "controlado": true,
+            "veiculos": 986,
+            "espera_s": {
+              "n": 986,
+              "media": 9.217,
+              "p95": 39.0,
+              "max": 72
+            },
+            "fila": {
+              "n": 3557,
+              "media": 2.555,
+              "p95": 7.0,
+              "max": 12
+            },
+            "colisoes": 0,
+            "aproximacoes": {
+              "234368025#0": {
+                "fila_media": 1.5105
+              },
+              "27579109#4": {
+                "fila_media": 1.0444
+              }
+            }
+          },
+          "40278305": {
+            "controlado": true,
+            "veiculos": 1263,
+            "espera_s": {
+              "n": 1263,
+              "media": 6.595,
+              "p95": 28.0,
+              "max": 64
+            },
+            "fila": {
+              "n": 3557,
+              "media": 2.342,
+              "p95": 6.0,
+              "max": 14
+            },
+            "colisoes": 0,
+            "aproximacoes": {
+              "1160862341#1": {
+                "fila_media": 1.1732
+              },
+              "760437731": {
+                "fila_media": 1.1687
+              }
+            }
+          },
+          "40278183": {
+            "controlado": true,
+            "veiculos": 1440,
+            "espera_s": {
+              "n": 1440,
+              "media": 14.903,
+              "p95": 55.0,
+              "max": 182
+            },
+            "fila": {
+              "n": 3557,
+              "media": 6.125,
+              "p95": 15.0,
+              "max": 24
+            },
+            "colisoes": 0,
+            "aproximacoes": {
+              "234368026#0": {
+                "fila_media": 2.5361
+              },
+              "8547878#5": {
+                "fila_media": 3.589
+              }
+            }
+          },
+          "300058973": {
+            "controlado": false,
+            "veiculos": 374,
+            "espera_s": {
+              "n": 374,
+              "media": 1.62,
+              "p95": 7.35,
+              "max": 23
+            },
+            "fila": {
+              "n": 3557,
+              "media": 0.17,
+              "p95": 1.0,
+              "max": 4
+            },
+            "colisoes": 0,
+            "aproximacoes": {
+              "236732321#1": {
+                "fila_media": 0.1521
+              },
+              "944397962#1": {
+                "fila_media": 0.0183
+              }
+            }
+          },
+          "302806060": {
+            "controlado": false,
+            "veiculos": 53,
+            "espera_s": {
+              "n": 53,
+              "media": 1.283,
+              "p95": 5.4,
+              "max": 7
+            },
+            "fila": {
+              "n": 3557,
+              "media": 0.019,
+              "p95": 0.0,
+              "max": 2
+            },
+            "colisoes": 0,
+            "aproximacoes": {
+              "27333553#0": {
+                "fila_media": 0.0101
+              },
+              "8425893#0": {
+                "fila_media": 0.009
+              }
+            }
+          }
+        },
+        "bloqueio_saida_corredor_s": 78,
+        "trocas": {
+          "476455095": 102,
+          "40278305": 141,
+          "40278183": 119
+        },
+        "outros_monitorados": 11,
+        "outros_com_erro": 0,
+        "presos_gt180s": 0
+      }
+    ],
+    "C5|1": [
+      {
+        "semente": 291,
+        "valido": true,
+        "motivo_invalido": null,
+        "espera_corredor": {
+          "n": 1883,
+          "media": 25.616,
+          "p95": 72.9,
+          "max": 145
+        },
+        "espera_rede": {
+          "n": 2190,
+          "media": 51.084,
+          "p95": 133.0,
+          "max": 308.0
+        },
+        "fracao_concluida": 1.0,
+        "veiculos_gerados": 2190,
+        "teleportes": 0,
+        "colisoes": 0,
+        "colisoes_nos_controlados": 0,
+        "colisoes_nos_5": 0,
+        "colisoes_por_classe": {},
+        "violacoes": 0,
+        "cruzamentos": {
+          "476455095": {
+            "controlado": true,
+            "veiculos": 1031,
+            "espera_s": {
+              "n": 1031,
+              "media": 12.16,
+              "p95": 46.0,
+              "max": 103
+            },
+            "fila": {
+              "n": 3700,
+              "media": 3.388,
+              "p95": 10.0,
+              "max": 17
+            },
+            "colisoes": 0,
+            "aproximacoes": {
+              "234368025#0": {
+                "fila_media": 1.7643
+              },
+              "27579109#4": {
+                "fila_media": 1.6232
+              }
+            }
+          },
+          "40278305": {
+            "controlado": true,
+            "veiculos": 1314,
+            "espera_s": {
+              "n": 1314,
+              "media": 8.313,
+              "p95": 36.0,
+              "max": 89
+            },
+            "fila": {
+              "n": 3700,
+              "media": 2.952,
+              "p95": 9.0,
+              "max": 16
+            },
+            "colisoes": 0,
+            "aproximacoes": {
+              "1160862341#1": {
+                "fila_media": 1.4468
+              },
+              "760437731": {
+                "fila_media": 1.5054
+              }
+            }
+          },
+          "40278183": {
+            "controlado": true,
+            "veiculos": 1437,
+            "espera_s": {
+              "n": 1437,
+              "media": 17.241,
+              "p95": 59.0,
+              "max": 112
+            },
+            "fila": {
+              "n": 3700,
+              "media": 6.734,
+              "p95": 16.0,
+              "max": 26
+            },
+            "colisoes": 0,
+            "aproximacoes": {
+              "234368026#0": {
+                "fila_media": 3.1495
+              },
+              "8547878#5": {
+                "fila_media": 3.5846
+              }
+            }
+          },
+          "300058973": {
+            "controlado": true,
+            "veiculos": 333,
+            "espera_s": {
+              "n": 333,
+              "media": 2.108,
+              "p95": 14.4,
+              "max": 30
+            },
+            "fila": {
+              "n": 3700,
+              "media": 0.19,
+              "p95": 1.0,
+              "max": 3
+            },
+            "colisoes": 0,
+            "aproximacoes": {
+              "236732321#1": {
+                "fila_media": 0.1357
+              },
+              "944397962#1": {
+                "fila_media": 0.0541
+              }
+            }
+          },
+          "302806060": {
+            "controlado": true,
+            "veiculos": 58,
+            "espera_s": {
+              "n": 58,
+              "media": 4.276,
+              "p95": 23.45,
+              "max": 62
+            },
+            "fila": {
+              "n": 3700,
+              "media": 0.067,
+              "p95": 1.0,
+              "max": 3
+            },
+            "colisoes": 0,
+            "aproximacoes": {
+              "27333553#0": {
+                "fila_media": 0.0551
+              },
+              "8425893#0": {
+                "fila_media": 0.0119
+              }
+            }
+          }
+        },
+        "bloqueio_saida_corredor_s": 97,
+        "trocas": {
+          "476455095": 108,
+          "40278305": 124,
+          "40278183": 114,
+          "300058973": 127,
+          "302806060": 44
+        },
+        "outros_monitorados": 9,
+        "outros_com_erro": 0,
+        "presos_gt180s": 0
+      },
+      {
+        "semente": 292,
+        "valido": true,
+        "motivo_invalido": null,
+        "espera_corredor": {
+          "n": 1846,
+          "media": 18.447,
+          "p95": 56.75,
+          "max": 106
+        },
+        "espera_rede": {
+          "n": 2191,
+          "media": 45.203,
+          "p95": 124.0,
+          "max": 329.0
+        },
+        "fracao_concluida": 1.0,
+        "veiculos_gerados": 2191,
+        "teleportes": 0,
+        "colisoes": 0,
+        "colisoes_nos_controlados": 0,
+        "colisoes_nos_5": 0,
+        "colisoes_por_classe": {},
+        "violacoes": 0,
+        "cruzamentos": {
+          "476455095": {
+            "controlado": true,
+            "veiculos": 986,
+            "espera_s": {
+              "n": 986,
+              "media": 8.524,
+              "p95": 37.0,
+              "max": 66
+            },
+            "fila": {
+              "n": 3589,
+              "media": 2.342,
+              "p95": 6.0,
+              "max": 12
+            },
+            "colisoes": 0,
+            "aproximacoes": {
+              "234368025#0": {
+                "fila_media": 1.4154
+              },
+              "27579109#4": {
+                "fila_media": 0.9264
+              }
+            }
+          },
+          "40278305": {
+            "controlado": true,
+            "veiculos": 1263,
+            "espera_s": {
+              "n": 1263,
+              "media": 6.133,
+              "p95": 25.0,
+              "max": 66
+            },
+            "fila": {
+              "n": 3589,
+              "media": 2.158,
+              "p95": 6.0,
+              "max": 10
+            },
+            "colisoes": 0,
+            "aproximacoes": {
+              "1160862341#1": {
+                "fila_media": 1.0811
+              },
+              "760437731": {
+                "fila_media": 1.0772
+              }
+            }
+          },
+          "40278183": {
+            "controlado": true,
+            "veiculos": 1435,
+            "espera_s": {
+              "n": 1435,
+              "media": 12.475,
+              "p95": 48.3,
+              "max": 106
+            },
+            "fila": {
+              "n": 3589,
+              "media": 5.078,
+              "p95": 11.6,
+              "max": 17
+            },
+            "colisoes": 0,
+            "aproximacoes": {
+              "234368026#0": {
+                "fila_media": 2.0306
+              },
+              "8547878#5": {
+                "fila_media": 3.0471
+              }
+            }
+          },
+          "300058973": {
+            "controlado": true,
+            "veiculos": 374,
+            "espera_s": {
+              "n": 374,
+              "media": 1.837,
+              "p95": 14.0,
+              "max": 42
+            },
+            "fila": {
+              "n": 3589,
+              "media": 0.191,
+              "p95": 1.0,
+              "max": 3
+            },
+            "colisoes": 0,
+            "aproximacoes": {
+              "236732321#1": {
+                "fila_media": 0.1418
+              },
+              "944397962#1": {
+                "fila_media": 0.0496
+              }
+            }
+          },
+          "302806060": {
+            "controlado": true,
+            "veiculos": 53,
+            "espera_s": {
+              "n": 53,
+              "media": 3.604,
+              "p95": 26.4,
+              "max": 36
+            },
+            "fila": {
+              "n": 3589,
+              "media": 0.053,
+              "p95": 1.0,
+              "max": 1
+            },
+            "colisoes": 0,
+            "aproximacoes": {
+              "27333553#0": {
+                "fila_media": 0.051
+              },
+              "8425893#0": {
+                "fila_media": 0.0022
+              }
+            }
+          }
+        },
+        "bloqueio_saida_corredor_s": 48,
+        "trocas": {
+          "476455095": 106,
+          "40278305": 147,
+          "40278183": 119,
+          "300058973": 128,
+          "302806060": 47
+        },
+        "outros_monitorados": 9,
+        "outros_com_erro": 0,
+        "presos_gt180s": 0
+      }
+    ]
+  }
+}

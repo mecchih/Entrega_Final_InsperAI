@@ -1,0 +1,4967 @@
+{
+  "cenario": "semaforo\\cenarios\\insper",
+  "hashes_cenario": {
+    "build.bat": "5c17e317484b518d79152382d7fa376237c841bb710ac48010889ea4fb994e0c",
+    "edgeData.xml": "d634daa7d619550c23f3038bd165c5804fe3e685946e1465ccf93831fca3f3fd",
+    "osm.net.xml.gz": "e7480355b189c8ef8b2f0f2a53a1888773ae46f67ce52fe66546ab14e23abb85",
+    "osm.netccfg": "c047ad56450fd434be5788d0e3c1bad432a70f3d5d59c651467f57b3f5170495",
+    "osm.ogcfg": "9b55c851a62183a939e2a88266ba9d4ffd5cb65339e4e637a33d7cc4b8c172d8",
+    "osm.passenger.trips.xml": "bc04adb37b21918c23410067610e4345f50ad3737c872e98fee74efb8be0ecd6",
+    "osm.poly.xml.gz": "d393d46673f87c2360ef259486f39ea884b08e31a29e66cf9a2ea9e52ebdb049",
+    "osm.polycfg": "cd55ae346a4f9382805909f12209ecd6f629b0a30cf74d9b2e4ce8456a339b03",
+    "osm.sumocfg": "779c7fe996451966f107e5bc29456a562544b5927b3bf18aa1250f10d5a95ce6",
+    "osm.view.xml": "51d96963d903cbf3bf0d9e7718593c5dc76e5abc023a9821c101c9b4cc214734",
+    "osm_bbox.osm.xml.gz": "862007dba944146adc8580fb4ecdf232d0fbb88f382a884da3e90a0e36d0f7f7",
+    "output.add.xml": "b51b3f34953c5cc4791b684a189420de0d5a0e934194a059f9a4e33bfbe10868",
+    "run.bat": "3477f82c8510cd9143c011ecb1d2f565df426ebb419a78efbbe3af19f47be8af",
+    "stats.xml": "1c1a35180fb82aaedc8e021d228663045fbcb6a49d53d65fde4b08caa29a8950",
+    "tripinfos.xml": "105dd6843255f637f0e42dee7fa5e66c8a2c375ca577e45aefb780543c1bae45"
+  },
+  "rede": {
+    "total_semaforos": 14,
+    "ids": [
+      "2577302612",
+      "2577302625",
+      "299169962",
+      "300058973",
+      "302806060",
+      "40278183",
+      "40278305",
+      "476455095",
+      "cluster_13529541823_13529541824_300058941_300063845_#2more",
+      "cluster_1389167570_1389167571_3876525275",
+      "cluster_1389167593_302805923_4715928040",
+      "cluster_2577302635_302805867",
+      "joinedS_1389167582_1389167591_1550389898_1550389899_#8more",
+      "joinedS_2577302624_2577302626_cluster_2577302628_304693561_6359625545_6501405791"
+    ],
+    "controlados": {
+      "476455095": {
+        "nome": "Rua Gomes de Carvalho x Rua Ribeirao Claro",
+        "xy": [
+          848.62,
+          224.18
+        ],
+        "tipo_programa": "actuated",
+        "programa": "0",
+        "offset": "0",
+        "fases": [
+          {
+            "state": "GGGGrrrr",
+            "duration": 42.0,
+            "minDur": 5.0,
+            "maxDur": 50.0
+          },
+          {
+            "state": "yyyyrrrr",
+            "duration": 3.0,
+            "minDur": null,
+            "maxDur": null
+          },
+          {
+            "state": "rrrrGGGG",
+            "duration": 42.0,
+            "minDur": 5.0,
+            "maxDur": 50.0
+          },
+          {
+            "state": "rrrryyyy",
+            "duration": 3.0,
+            "minDur": null,
+            "maxDur": null
+          }
+        ],
+        "links": [
+          {
+            "link": 0,
+            "de": "27579109#4_0",
+            "para": "760437731_0",
+            "via": ":476455095_0_0",
+            "direcao": "r",
+            "rua_de": "Rua Gomes de Carvalho",
+            "rua_para": "Rua Ribeirão Claro"
+          },
+          {
+            "link": 1,
+            "de": "27579109#4_0",
+            "para": "234368022#0_0",
+            "via": ":476455095_1_0",
+            "direcao": "s",
+            "rua_de": "Rua Gomes de Carvalho",
+            "rua_para": "Rua Gomes de Carvalho"
+          },
+          {
+            "link": 2,
+            "de": "27579109#4_0",
+            "para": "234368022#0_1",
+            "via": ":476455095_1_1",
+            "direcao": "s",
+            "rua_de": "Rua Gomes de Carvalho",
+            "rua_para": "Rua Gomes de Carvalho"
+          },
+          {
+            "link": 3,
+            "de": "27579109#4_0",
+            "para": "234368022#0_2",
+            "via": ":476455095_1_2",
+            "direcao": "s",
+            "rua_de": "Rua Gomes de Carvalho",
+            "rua_para": "Rua Gomes de Carvalho"
+          },
+          {
+            "link": 4,
+            "de": "234368025#0_0",
+            "para": "760437731_0",
+            "via": ":476455095_4_0",
+            "direcao": "s",
+            "rua_de": "Rua Ribeirão Claro",
+            "rua_para": "Rua Ribeirão Claro"
+          },
+          {
+            "link": 5,
+            "de": "234368025#0_1",
+            "para": "760437731_1",
+            "via": ":476455095_4_1",
+            "direcao": "s",
+            "rua_de": "Rua Ribeirão Claro",
+            "rua_para": "Rua Ribeirão Claro"
+          },
+          {
+            "link": 6,
+            "de": "234368025#0_1",
+            "para": "234368022#0_1",
+            "via": ":476455095_6_0",
+            "direcao": "l",
+            "rua_de": "Rua Ribeirão Claro",
+            "rua_para": "Rua Gomes de Carvalho"
+          },
+          {
+            "link": 7,
+            "de": "234368025#0_1",
+            "para": "234368022#0_2",
+            "via": ":476455095_6_1",
+            "direcao": "l",
+            "rua_de": "Rua Ribeirão Claro",
+            "rua_para": "Rua Gomes de Carvalho"
+          }
+        ],
+        "foes_request": {
+          "0": [
+            4,
+            5
+          ],
+          "1": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "2": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "3": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "4": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "5": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "6": [
+            1,
+            2,
+            3
+          ],
+          "7": [
+            1,
+            2,
+            3
+          ]
+        },
+        "entradas": [
+          {
+            "edge": "234368025#0",
+            "nome": "Rua Ribeirão Claro",
+            "comprimento_m": 214.8,
+            "faixas": 2,
+            "velocidade_ms": 13.89,
+            "prioridade": 10,
+            "tipo": "highway.tertiary",
+            "no_anterior": "302805872",
+            "tipo_no_anterior": "dead_end",
+            "area_montante_100m": [
+              {
+                "edge": "234368025#0",
+                "nome": "Rua Ribeirão Claro",
+                "comprimento_m": 214.8,
+                "faixas": 2,
+                "inicio_m": 0.0
+              }
+            ]
+          },
+          {
+            "edge": "27579109#4",
+            "nome": "Rua Gomes de Carvalho",
+            "comprimento_m": 37.7,
+            "faixas": 1,
+            "velocidade_ms": 11.11,
+            "prioridade": 3,
+            "tipo": "highway.residential",
+            "no_anterior": "5087305032",
+            "tipo_no_anterior": "priority",
+            "area_montante_100m": [
+              {
+                "edge": "27579109#4",
+                "nome": "Rua Gomes de Carvalho",
+                "comprimento_m": 37.7,
+                "faixas": 1,
+                "inicio_m": 0.0
+              },
+              {
+                "edge": "-522284925",
+                "nome": "Travessa Reverendo Álvaro Simões",
+                "comprimento_m": 19.8,
+                "faixas": 1,
+                "inicio_m": 37.7
+              },
+              {
+                "edge": "27579109#3",
+                "nome": "Rua Gomes de Carvalho",
+                "comprimento_m": 59.9,
+                "faixas": 1,
+                "inicio_m": 37.7
+              },
+              {
+                "edge": "-522284920#1",
+                "nome": "Travessa Reverendo Álvaro Simões",
+                "comprimento_m": 3.7,
+                "faixas": 1,
+                "inicio_m": 57.6
+              },
+              {
+                "edge": "522284920#0",
+                "nome": "Travessa Reverendo Álvaro Simões",
+                "comprimento_m": 1.0,
+                "faixas": 1,
+                "inicio_m": 57.6
+              },
+              {
+                "edge": "522284925",
+                "nome": "Travessa Reverendo Álvaro Simões",
+                "comprimento_m": 19.8,
+                "faixas": 1,
+                "inicio_m": 57.6
+              },
+              {
+                "edge": "-522284921",
+                "nome": "Rua Benedito Archangelo Nepomuceno",
+                "comprimento_m": 40.9,
+                "faixas": 1,
+                "inicio_m": 97.6
+              },
+              {
+                "edge": "27579109#2",
+                "nome": "Rua Gomes de Carvalho",
+                "comprimento_m": 36.1,
+                "faixas": 1,
+                "inicio_m": 97.6
+              },
+              {
+                "edge": "522284920#1",
+                "nome": "Travessa Reverendo Álvaro Simões",
+                "comprimento_m": 3.2,
+                "faixas": 1,
+                "inicio_m": 61.2
+              },
+              {
+                "edge": "-522284920#0",
+                "nome": "Travessa Reverendo Álvaro Simões",
+                "comprimento_m": 1.0,
+                "faixas": 1,
+                "inicio_m": 58.6
+              }
+            ]
+          }
+        ],
+        "saidas": [
+          {
+            "edge": "234368022#0",
+            "nome": "Rua Gomes de Carvalho",
+            "comprimento_m": 941.8,
+            "faixas": 3,
+            "proximo_no": "302805851",
+            "tipo_proximo_no": "dead_end"
+          },
+          {
+            "edge": "760437731",
+            "nome": "Rua Ribeirão Claro",
+            "comprimento_m": 96.0,
+            "faixas": 2,
+            "proximo_no": "40278305",
+            "tipo_proximo_no": "traffic_light"
+          }
+        ],
+        "foes_traci": {
+          "0": [
+            4,
+            5
+          ],
+          "1": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "2": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "3": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "4": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "5": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "6": [
+            1,
+            2,
+            3
+          ],
+          "7": [
+            1,
+            2,
+            3
+          ]
+        },
+        "foes_request_igual_traci": true
+      },
+      "40278305": {
+        "nome": "Rua Casa do Ator x Rua Ribeirao Claro",
+        "xy": [
+          897.53,
+          324.98
+        ],
+        "tipo_programa": "actuated",
+        "programa": "0",
+        "offset": "0",
+        "fases": [
+          {
+            "state": "GGGrr",
+            "duration": 42.0,
+            "minDur": 5.0,
+            "maxDur": 50.0
+          },
+          {
+            "state": "yyyrr",
+            "duration": 3.0,
+            "minDur": null,
+            "maxDur": null
+          },
+          {
+            "state": "rrrGG",
+            "duration": 42.0,
+            "minDur": 5.0,
+            "maxDur": 50.0
+          },
+          {
+            "state": "rrryy",
+            "duration": 3.0,
+            "minDur": null,
+            "maxDur": null
+          }
+        ],
+        "links": [
+          {
+            "link": 0,
+            "de": "760437731_0",
+            "para": "760437730#0_0",
+            "via": ":40278305_0_0",
+            "direcao": "r",
+            "rua_de": "Rua Ribeirão Claro",
+            "rua_para": "Rua Casa do Ator"
+          },
+          {
+            "link": 1,
+            "de": "760437731_0",
+            "para": "234368026#0_0",
+            "via": ":40278305_1_0",
+            "direcao": "s",
+            "rua_de": "Rua Ribeirão Claro",
+            "rua_para": "Rua Ribeirão Claro"
+          },
+          {
+            "link": 2,
+            "de": "760437731_1",
+            "para": "234368026#0_1",
+            "via": ":40278305_1_1",
+            "direcao": "s",
+            "rua_de": "Rua Ribeirão Claro",
+            "rua_para": "Rua Ribeirão Claro"
+          },
+          {
+            "link": 3,
+            "de": "1160862341#1_0",
+            "para": "760437730#0_0",
+            "via": ":40278305_3_0",
+            "direcao": "s",
+            "rua_de": "Rua Casa do Ator",
+            "rua_para": "Rua Casa do Ator"
+          },
+          {
+            "link": 4,
+            "de": "1160862341#1_1",
+            "para": "234368026#0_1",
+            "via": ":40278305_4_0",
+            "direcao": "l",
+            "rua_de": "Rua Casa do Ator",
+            "rua_para": "Rua Ribeirão Claro"
+          }
+        ],
+        "foes_request": {
+          "0": [
+            3
+          ],
+          "1": [
+            3,
+            4
+          ],
+          "2": [
+            3,
+            4
+          ],
+          "3": [
+            0,
+            1,
+            2
+          ],
+          "4": [
+            1,
+            2
+          ]
+        },
+        "entradas": [
+          {
+            "edge": "1160862341#1",
+            "nome": "Rua Casa do Ator",
+            "comprimento_m": 49.9,
+            "faixas": 2,
+            "velocidade_ms": 11.11,
+            "prioridade": 3,
+            "tipo": "highway.residential",
+            "no_anterior": "7299610037",
+            "tipo_no_anterior": "priority",
+            "area_montante_100m": [
+              {
+                "edge": "1160862341#1",
+                "nome": "Rua Casa do Ator",
+                "comprimento_m": 49.9,
+                "faixas": 2,
+                "inicio_m": 0.0
+              },
+              {
+                "edge": "1160862341#0",
+                "nome": "Rua Casa do Ator",
+                "comprimento_m": 147.1,
+                "faixas": 2,
+                "inicio_m": 49.9
+              },
+              {
+                "edge": "781831516",
+                "nome": "",
+                "comprimento_m": 47.3,
+                "faixas": 1,
+                "inicio_m": 49.9
+              },
+              {
+                "edge": "-781831516",
+                "nome": "",
+                "comprimento_m": 47.5,
+                "faixas": 1,
+                "inicio_m": 97.2
+              }
+            ]
+          },
+          {
+            "edge": "760437731",
+            "nome": "Rua Ribeirão Claro",
+            "comprimento_m": 96.0,
+            "faixas": 2,
+            "velocidade_ms": 13.89,
+            "prioridade": 10,
+            "tipo": "highway.tertiary",
+            "no_anterior": "476455095",
+            "tipo_no_anterior": "traffic_light",
+            "area_montante_100m": [
+              {
+                "edge": "760437731",
+                "nome": "Rua Ribeirão Claro",
+                "comprimento_m": 96.0,
+                "faixas": 2,
+                "inicio_m": 0.0,
+                "para_em_semaforo": "476455095"
+              }
+            ]
+          }
+        ],
+        "saidas": [
+          {
+            "edge": "234368026#0",
+            "nome": "Rua Ribeirão Claro",
+            "comprimento_m": 97.3,
+            "faixas": 2,
+            "proximo_no": "40278183",
+            "tipo_proximo_no": "traffic_light"
+          },
+          {
+            "edge": "760437730#0",
+            "nome": "Rua Casa do Ator",
+            "comprimento_m": 60.0,
+            "faixas": 1,
+            "proximo_no": "5087305027",
+            "tipo_proximo_no": "priority"
+          }
+        ],
+        "foes_traci": {
+          "0": [
+            3
+          ],
+          "1": [
+            3,
+            4
+          ],
+          "2": [
+            3,
+            4
+          ],
+          "3": [
+            0,
+            1,
+            2
+          ],
+          "4": [
+            1,
+            2
+          ]
+        },
+        "foes_request_igual_traci": true
+      },
+      "40278183": {
+        "nome": "Rua Quata x Rua Ribeirao Claro",
+        "xy": [
+          946.59,
+          425.36
+        ],
+        "tipo_programa": "actuated",
+        "programa": "0",
+        "offset": "0",
+        "fases": [
+          {
+            "state": "GGGrrr",
+            "duration": 42.0,
+            "minDur": 5.0,
+            "maxDur": 50.0
+          },
+          {
+            "state": "yyyrrr",
+            "duration": 3.0,
+            "minDur": null,
+            "maxDur": null
+          },
+          {
+            "state": "rrrGGG",
+            "duration": 42.0,
+            "minDur": 5.0,
+            "maxDur": 50.0
+          },
+          {
+            "state": "rrryyy",
+            "duration": 3.0,
+            "minDur": null,
+            "maxDur": null
+          }
+        ],
+        "links": [
+          {
+            "link": 0,
+            "de": "8547878#5_0",
+            "para": "234368026#1_0",
+            "via": ":40278183_0_0",
+            "direcao": "r",
+            "rua_de": "Rua Quatá",
+            "rua_para": "Rua Ribeirão Claro"
+          },
+          {
+            "link": 1,
+            "de": "8547878#5_0",
+            "para": "8547878#6_0",
+            "via": ":40278183_1_0",
+            "direcao": "s",
+            "rua_de": "Rua Quatá",
+            "rua_para": "Rua Quatá"
+          },
+          {
+            "link": 2,
+            "de": "8547878#5_1",
+            "para": "8547878#6_1",
+            "via": ":40278183_1_1",
+            "direcao": "s",
+            "rua_de": "Rua Quatá",
+            "rua_para": "Rua Quatá"
+          },
+          {
+            "link": 3,
+            "de": "234368026#0_0",
+            "para": "234368026#1_0",
+            "via": ":40278183_3_0",
+            "direcao": "s",
+            "rua_de": "Rua Ribeirão Claro",
+            "rua_para": "Rua Ribeirão Claro"
+          },
+          {
+            "link": 4,
+            "de": "234368026#0_1",
+            "para": "234368026#1_1",
+            "via": ":40278183_3_1",
+            "direcao": "s",
+            "rua_de": "Rua Ribeirão Claro",
+            "rua_para": "Rua Ribeirão Claro"
+          },
+          {
+            "link": 5,
+            "de": "234368026#0_1",
+            "para": "8547878#6_1",
+            "via": ":40278183_5_0",
+            "direcao": "l",
+            "rua_de": "Rua Ribeirão Claro",
+            "rua_para": "Rua Quatá"
+          }
+        ],
+        "foes_request": {
+          "0": [
+            3,
+            4
+          ],
+          "1": [
+            3,
+            4,
+            5
+          ],
+          "2": [
+            3,
+            4,
+            5
+          ],
+          "3": [
+            0,
+            1,
+            2
+          ],
+          "4": [
+            0,
+            1,
+            2
+          ],
+          "5": [
+            1,
+            2
+          ]
+        },
+        "entradas": [
+          {
+            "edge": "234368026#0",
+            "nome": "Rua Ribeirão Claro",
+            "comprimento_m": 97.3,
+            "faixas": 2,
+            "velocidade_ms": 13.89,
+            "prioridade": 10,
+            "tipo": "highway.tertiary",
+            "no_anterior": "40278305",
+            "tipo_no_anterior": "traffic_light",
+            "area_montante_100m": [
+              {
+                "edge": "234368026#0",
+                "nome": "Rua Ribeirão Claro",
+                "comprimento_m": 97.3,
+                "faixas": 2,
+                "inicio_m": 0.0,
+                "para_em_semaforo": "40278305"
+              }
+            ]
+          },
+          {
+            "edge": "8547878#5",
+            "nome": "Rua Quatá",
+            "comprimento_m": 7.1,
+            "faixas": 2,
+            "velocidade_ms": 11.11,
+            "prioridade": 3,
+            "tipo": "highway.residential",
+            "no_anterior": "5087305044",
+            "tipo_no_anterior": "priority",
+            "area_montante_100m": [
+              {
+                "edge": "8547878#5",
+                "nome": "Rua Quatá",
+                "comprimento_m": 7.1,
+                "faixas": 2,
+                "inicio_m": 0.0
+              },
+              {
+                "edge": "-522284928",
+                "nome": "",
+                "comprimento_m": 29.5,
+                "faixas": 1,
+                "inicio_m": 7.1
+              },
+              {
+                "edge": "8547878#4",
+                "nome": "Rua Quatá",
+                "comprimento_m": 22.7,
+                "faixas": 2,
+                "inicio_m": 7.1
+              },
+              {
+                "edge": "522284928",
+                "nome": "",
+                "comprimento_m": 32.6,
+                "faixas": 1,
+                "inicio_m": 36.6
+              },
+              {
+                "edge": "124962780",
+                "nome": "Rua Thereza de Capuá",
+                "comprimento_m": 30.6,
+                "faixas": 1,
+                "inicio_m": 29.8
+              },
+              {
+                "edge": "8547878#3",
+                "nome": "Rua Quatá",
+                "comprimento_m": 129.7,
+                "faixas": 2,
+                "inicio_m": 29.8
+              },
+              {
+                "edge": "369907174#1",
+                "nome": "Avenida Hélio Pellegrino",
+                "comprimento_m": 35.2,
+                "faixas": 3,
+                "inicio_m": 60.4,
+                "para_em_semaforo": "cluster_13529541823_13529541824_300058941_300063845_#2more"
+              }
+            ]
+          }
+        ],
+        "saidas": [
+          {
+            "edge": "234368026#1",
+            "nome": "Rua Ribeirão Claro",
+            "comprimento_m": 27.5,
+            "faixas": 2,
+            "proximo_no": "cluster_13529541823_13529541824_300058941_300063845_#2more",
+            "tipo_proximo_no": "traffic_light"
+          },
+          {
+            "edge": "8547878#6",
+            "nome": "Rua Quatá",
+            "comprimento_m": 632.4,
+            "faixas": 2,
+            "proximo_no": "302805957",
+            "tipo_proximo_no": "dead_end"
+          }
+        ],
+        "foes_traci": {
+          "0": [
+            3,
+            4
+          ],
+          "1": [
+            3,
+            4,
+            5
+          ],
+          "2": [
+            3,
+            4,
+            5
+          ],
+          "3": [
+            0,
+            1,
+            2
+          ],
+          "4": [
+            0,
+            1,
+            2
+          ],
+          "5": [
+            1,
+            2
+          ]
+        },
+        "foes_request_igual_traci": true
+      }
+    },
+    "distancias_retas_m": {
+      "476455095-40278305": 112.0,
+      "476455095-40278183": 223.8,
+      "40278305-40278183": 111.7
+    },
+    "rotas_entre_controlados": {
+      "476455095->40278305": {
+        "existe_rota": true,
+        "comprimento_m": 96.0,
+        "n_vias": 1,
+        "vias": [
+          "760437731"
+        ],
+        "ruas": [
+          "Rua Ribeirão Claro"
+        ],
+        "semaforos_atravessados_entre": [],
+        "ligacao_direta": true
+      },
+      "476455095->40278183": {
+        "existe_rota": true,
+        "comprimento_m": 193.3,
+        "n_vias": 2,
+        "vias": [
+          "760437731",
+          "234368026#0"
+        ],
+        "ruas": [
+          "Rua Ribeirão Claro"
+        ],
+        "semaforos_atravessados_entre": [
+          "40278305"
+        ],
+        "ligacao_direta": false
+      },
+      "40278305->476455095": {
+        "existe_rota": false
+      },
+      "40278305->40278183": {
+        "existe_rota": true,
+        "comprimento_m": 97.3,
+        "n_vias": 1,
+        "vias": [
+          "234368026#0"
+        ],
+        "ruas": [
+          "Rua Ribeirão Claro"
+        ],
+        "semaforos_atravessados_entre": [],
+        "ligacao_direta": true
+      },
+      "40278183->476455095": {
+        "existe_rota": false
+      },
+      "40278183->40278305": {
+        "existe_rota": false
+      }
+    },
+    "outros_semaforos": {
+      "2577302612": {
+        "tipo": "actuated",
+        "n_links": 1,
+        "n_fases": 3,
+        "nos": [
+          "2577302612"
+        ],
+        "distancia_ao_mais_proximo_m": 393.1,
+        "ligado_diretamente_a": []
+      },
+      "2577302625": {
+        "tipo": "actuated",
+        "n_links": 1,
+        "n_fases": 3,
+        "nos": [
+          "2577302625"
+        ],
+        "distancia_ao_mais_proximo_m": 407.4,
+        "ligado_diretamente_a": []
+      },
+      "299169962": {
+        "tipo": "actuated",
+        "n_links": 7,
+        "n_fases": 4,
+        "nos": [
+          "299169962"
+        ],
+        "distancia_ao_mais_proximo_m": 294.7,
+        "ligado_diretamente_a": []
+      },
+      "300058973": {
+        "tipo": "actuated",
+        "n_links": 6,
+        "n_fases": 4,
+        "nos": [
+          "300058973"
+        ],
+        "distancia_ao_mais_proximo_m": 222.4,
+        "ligado_diretamente_a": []
+      },
+      "302806060": {
+        "tipo": "actuated",
+        "n_links": 6,
+        "n_fases": 4,
+        "nos": [
+          "302806060"
+        ],
+        "distancia_ao_mais_proximo_m": 166.7,
+        "ligado_diretamente_a": []
+      },
+      "cluster_13529541823_13529541824_300058941_300063845_#2more": {
+        "tipo": "actuated",
+        "n_links": 25,
+        "n_fases": 4,
+        "nos": [
+          "cluster_13529541823_13529541824_300058941_300063845_#2more"
+        ],
+        "distancia_ao_mais_proximo_m": 52.4,
+        "ligado_diretamente_a": [
+          {
+            "de": "40278183",
+            "via": "234368026#1",
+            "comprimento_m": 27.5
+          }
+        ]
+      },
+      "cluster_1389167570_1389167571_3876525275": {
+        "tipo": "actuated",
+        "n_links": 20,
+        "n_fases": 4,
+        "nos": [
+          "cluster_1389167570_1389167571_3876525275"
+        ],
+        "distancia_ao_mais_proximo_m": 114.0,
+        "ligado_diretamente_a": []
+      },
+      "cluster_1389167593_302805923_4715928040": {
+        "tipo": "actuated",
+        "n_links": 19,
+        "n_fases": 4,
+        "nos": [
+          "cluster_1389167593_302805923_4715928040"
+        ],
+        "distancia_ao_mais_proximo_m": 162.4,
+        "ligado_diretamente_a": []
+      },
+      "cluster_2577302635_302805867": {
+        "tipo": "actuated",
+        "n_links": 7,
+        "n_fases": 6,
+        "nos": [
+          "cluster_2577302635_302805867"
+        ],
+        "distancia_ao_mais_proximo_m": 482.8,
+        "ligado_diretamente_a": []
+      },
+      "joinedS_1389167582_1389167591_1550389898_1550389899_#8more": {
+        "tipo": "actuated",
+        "n_links": 80,
+        "n_fases": 10,
+        "nos": [
+          "1389167582",
+          "1389167591",
+          "1550389898",
+          "1550389899",
+          "1550389900",
+          "1550389901",
+          "2577302587",
+          "2577302595",
+          "28621270",
+          "28636887",
+          "4715928049",
+          "cluster_4715928048_6856197180"
+        ],
+        "distancia_ao_mais_proximo_m": 406.4,
+        "ligado_diretamente_a": []
+      },
+      "joinedS_2577302624_2577302626_cluster_2577302628_304693561_6359625545_6501405791": {
+        "tipo": "actuated",
+        "n_links": 22,
+        "n_fases": 13,
+        "nos": [
+          "2577302624",
+          "2577302626",
+          "cluster_2577302628_304693561_6359625545_6501405791"
+        ],
+        "distancia_ao_mais_proximo_m": 414.0,
+        "ligado_diretamente_a": []
+      }
+    }
+  },
+  "rodadas_programa_original": {
+    "padrao": {
+      "semente": "padrao_do_sumo",
+      "fim_simulacao_s": 3822,
+      "duracao_real_s": 9.9,
+      "viagens_no_arquivo": 278,
+      "veiculos_inseridos": 278,
+      "pendentes_no_fim": 0,
+      "viagens": {
+        "registradas": 278,
+        "concluidas": 278,
+        "nao_concluidas": 0,
+        "espera_media_s": 33.906,
+        "perda_tempo_media_s": 56.836,
+        "duracao_media_s": 134.27,
+        "atraso_insercao_medio_s": 0.512
+      },
+      "estatisticas_sumo": {
+        "vehicles": {
+          "loaded": "278",
+          "inserted": "278",
+          "running": "0",
+          "waiting": "0"
+        },
+        "teleports": {
+          "total": "0",
+          "jam": "0",
+          "yield": "0",
+          "wrongLane": "0"
+        },
+        "safety": {
+          "collisions": "0",
+          "emergencyStops": "0",
+          "emergencyBraking": "0"
+        },
+        "vehicleTripStatistics": {
+          "count": "278",
+          "routeLength": "979.89",
+          "speed": "7.88",
+          "duration": "134.27",
+          "waitingTime": "33.91",
+          "timeLoss": "56.84",
+          "departDelay": "0.51",
+          "departDelayWaiting": "0.00",
+          "totalTravelTime": "37327.00",
+          "totalDepartDelay": "142.42"
+        }
+      },
+      "colisoes": {
+        "eventos": 0,
+        "lista": [],
+        "por_juncao": {}
+      },
+      "teleportes": {
+        "total": 0,
+        "lista": []
+      },
+      "veiculo_passos_em_parada_de_emergencia": 0,
+      "avisos_sumo": {
+        "total": 0,
+        "por_tipo": {},
+        "exemplos": {}
+      },
+      "por_semaforo": {
+        "476455095": {
+          "veiculos_planejados_na_insercao": 44,
+          "veiculos_observados_cruzando": 44,
+          "travessias": 44,
+          "por_link": {
+            "0": 31,
+            "1": 1,
+            "4": 10,
+            "5": 2
+          },
+          "por_aproximacao": {
+            "27579109#4": 32,
+            "234368025#0": 12
+          },
+          "luz_ao_cruzar": {
+            "G": 44
+          },
+          "travessias_aproximadas": 0,
+          "por_15min": {
+            "0": 15,
+            "15": 11,
+            "30": 9,
+            "45": 9
+          },
+          "parados_por_aproximacao": {
+            "234368025#0": {
+              "media": 0.002,
+              "max": 1
+            },
+            "27579109#4": {
+              "media": 0.014,
+              "max": 1
+            }
+          },
+          "programa_original": {
+            "programa": "0",
+            "tipo": 3,
+            "trocas": 948,
+            "duracoes_por_fase": {
+              "0:GGGGrrrr": {
+                "n": 236,
+                "min": 5,
+                "media": 5.1,
+                "max": 9
+              },
+              "1:yyyyrrrr": {
+                "n": 237,
+                "min": 3,
+                "media": 3.0,
+                "max": 3
+              },
+              "2:rrrrGGGG": {
+                "n": 237,
+                "min": 5,
+                "media": 5.02,
+                "max": 7
+              },
+              "3:rrrryyyy": {
+                "n": 237,
+                "min": 3,
+                "media": 3.0,
+                "max": 3
+              }
+            },
+            "erros": 0,
+            "primeiros_erros": []
+          },
+          "verificacao_original": {
+            "violacoes": 0,
+            "tipos": {},
+            "primeiras_violacoes": [],
+            "verdes": {
+              "n": 474,
+              "min": 5,
+              "max": 9,
+              "media": 5.06
+            },
+            "amarelos": {
+              "n": 474,
+              "min": 3,
+              "max": 3,
+              "media": 3.0
+            },
+            "vermelhos_gerais": {
+              "n": 0
+            }
+          },
+          "lon_lat": [
+            -46.67876495843957,
+            -23.60009799624882
+          ]
+        },
+        "40278305": {
+          "veiculos_planejados_na_insercao": 59,
+          "veiculos_observados_cruzando": 59,
+          "travessias": 59,
+          "por_link": {
+            "0": 16,
+            "1": 25,
+            "2": 7,
+            "3": 1,
+            "4": 10
+          },
+          "por_aproximacao": {
+            "760437731": 48,
+            "1160862341#1": 11
+          },
+          "luz_ao_cruzar": {
+            "G": 59
+          },
+          "travessias_aproximadas": 0,
+          "por_15min": {
+            "0": 16,
+            "15": 17,
+            "30": 11,
+            "45": 14,
+            "60": 1
+          },
+          "parados_por_aproximacao": {
+            "1160862341#1": {
+              "media": 0.001,
+              "max": 1
+            },
+            "760437731": {
+              "media": 0.007,
+              "max": 1
+            }
+          },
+          "programa_original": {
+            "programa": "0",
+            "tipo": 3,
+            "trocas": 947,
+            "duracoes_por_fase": {
+              "0:GGGrr": {
+                "n": 236,
+                "min": 5,
+                "media": 5.09,
+                "max": 8
+              },
+              "1:yyyrr": {
+                "n": 237,
+                "min": 3,
+                "media": 3.0,
+                "max": 3
+              },
+              "2:rrrGG": {
+                "n": 237,
+                "min": 5,
+                "media": 5.04,
+                "max": 9
+              },
+              "3:rrryy": {
+                "n": 236,
+                "min": 3,
+                "media": 3.0,
+                "max": 3
+              }
+            },
+            "erros": 0,
+            "primeiros_erros": []
+          },
+          "verificacao_original": {
+            "violacoes": 0,
+            "tipos": {},
+            "primeiras_violacoes": [],
+            "verdes": {
+              "n": 474,
+              "min": 5,
+              "max": 9,
+              "media": 5.07
+            },
+            "amarelos": {
+              "n": 473,
+              "min": 3,
+              "max": 3,
+              "media": 3.0
+            },
+            "vermelhos_gerais": {
+              "n": 0
+            }
+          },
+          "lon_lat": [
+            -46.67827417852004,
+            -23.59919306766609
+          ]
+        },
+        "40278183": {
+          "veiculos_planejados_na_insercao": 77,
+          "veiculos_observados_cruzando": 77,
+          "travessias": 77,
+          "por_link": {
+            "0": 15,
+            "1": 18,
+            "2": 1,
+            "3": 36,
+            "4": 4,
+            "5": 3
+          },
+          "por_aproximacao": {
+            "8547878#5": 34,
+            "234368026#0": 43
+          },
+          "luz_ao_cruzar": {
+            "G": 77
+          },
+          "travessias_aproximadas": 0,
+          "por_15min": {
+            "0": 18,
+            "15": 19,
+            "30": 16,
+            "45": 22,
+            "60": 2
+          },
+          "parados_por_aproximacao": {
+            "234368026#0": {
+              "media": 0.005,
+              "max": 1
+            },
+            "8547878#5": {
+              "media": 0.008,
+              "max": 1
+            }
+          },
+          "programa_original": {
+            "programa": "0",
+            "tipo": 3,
+            "trocas": 946,
+            "duracoes_por_fase": {
+              "0:GGGrrr": {
+                "n": 236,
+                "min": 5,
+                "media": 5.09,
+                "max": 9
+              },
+              "1:yyyrrr": {
+                "n": 237,
+                "min": 3,
+                "media": 3.0,
+                "max": 3
+              },
+              "2:rrrGGG": {
+                "n": 236,
+                "min": 5,
+                "media": 5.05,
+                "max": 8
+              },
+              "3:rrryyy": {
+                "n": 236,
+                "min": 3,
+                "media": 3.0,
+                "max": 3
+              }
+            },
+            "erros": 0,
+            "primeiros_erros": []
+          },
+          "verificacao_original": {
+            "violacoes": 0,
+            "tipos": {},
+            "primeiras_violacoes": [],
+            "verdes": {
+              "n": 473,
+              "min": 5,
+              "max": 9,
+              "media": 5.07
+            },
+            "amarelos": {
+              "n": 473,
+              "min": 3,
+              "max": 3,
+              "media": 3.0
+            },
+            "vermelhos_gerais": {
+              "n": 0
+            }
+          },
+          "lon_lat": [
+            -46.67778198429873,
+            -23.598291945052065
+          ]
+        }
+      },
+      "sequencias_entre_os_tres": {
+        "40278183": 35,
+        "476455095 > 40278305 > 40278183": 29,
+        "476455095 > 40278305": 14,
+        "40278305 > 40278183": 13,
+        "40278305": 3,
+        "476455095": 1
+      },
+      "veiculos_por_numero_de_controlados_cruzados": {
+        "1": 39,
+        "2": 27,
+        "3": 29
+      },
+      "sequencias_planejadas_na_insercao": {
+        "40278183": 35,
+        "476455095 > 40278305 > 40278183": 29,
+        "476455095 > 40278305": 14,
+        "40278305 > 40278183": 13,
+        "40278305": 3,
+        "476455095": 1
+      },
+      "veiculos_com_rota_observada_diferente_da_planejada": 0,
+      "tempo_entre_cruzamentos_s": {
+        "476455095->40278305": {
+          "n": 43,
+          "min": 7,
+          "media": 13.33,
+          "mediana": 13,
+          "max": 20
+        },
+        "40278305->40278183": {
+          "n": 42,
+          "min": 7,
+          "media": 12.4,
+          "mediana": 12.0,
+          "max": 18
+        }
+      },
+      "luz_ao_cruzar_nos_outros_11": {
+        "G": 1033,
+        "g": 28,
+        "y": 4
+      },
+      "problemas_rastreamento": {
+        "travessia_nao_mapeada": 22
+      },
+      "exemplos_nao_mapeados": [
+        {
+          "tempo": 109,
+          "veiculo": "veh3",
+          "de": "369907170#0_0",
+          "para": "369907170#2_0"
+        },
+        {
+          "tempo": 296,
+          "veiculo": "veh18",
+          "de": "369907169#0_0",
+          "para": ":1550389900_4_0"
+        },
+        {
+          "tempo": 300,
+          "veiculo": "veh18",
+          "de": "369907170#0_0",
+          "para": "369907170#2_0"
+        },
+        {
+          "tempo": 370,
+          "veiculo": "veh20",
+          "de": "944842828#1_1",
+          "para": ":cluster_13529541823_13529541824_300058941_300063845_#2more_1_0"
+        },
+        {
+          "tempo": 1595,
+          "veiculo": "veh115",
+          "de": "369907170#0_0",
+          "para": "369907170#2_0"
+        },
+        {
+          "tempo": 1661,
+          "veiculo": "veh122",
+          "de": "369907170#0_0",
+          "para": "369907170#2_0"
+        },
+        {
+          "tempo": 1675,
+          "veiculo": "veh121",
+          "de": "942962257#2_1",
+          "para": ":1550389901_1_1"
+        },
+        {
+          "tempo": 1731,
+          "veiculo": "veh126",
+          "de": "369907170#0_1",
+          "para": "369907170#2_1"
+        },
+        {
+          "tempo": 1845,
+          "veiculo": "veh135",
+          "de": "369907171#0_0",
+          "para": ":1550389901_3_0"
+        },
+        {
+          "tempo": 1934,
+          "veiculo": "veh133",
+          "de": "251521749_1",
+          "para": ":1550389901_1_0"
+        },
+        {
+          "tempo": 2186,
+          "veiculo": "veh163",
+          "de": "369907170#0_0",
+          "para": "369907170#2_0"
+        },
+        {
+          "tempo": 2376,
+          "veiculo": "veh182",
+          "de": "369907170#0_0",
+          "para": "369907170#2_0"
+        },
+        {
+          "tempo": 2446,
+          "veiculo": "veh183",
+          "de": "471339603#3_0",
+          "para": ":1550389898_4_0"
+        },
+        {
+          "tempo": 2450,
+          "veiculo": "veh183",
+          "de": "369907170#0_0",
+          "para": "369907170#2_0"
+        },
+        {
+          "tempo": 2464,
+          "veiculo": "veh180",
+          "de": "942962257#2_0",
+          "para": ":1550389901_1_0"
+        },
+        {
+          "tempo": 2792,
+          "veiculo": "veh200",
+          "de": "942962257#2_0",
+          "para": ":1550389901_1_0"
+        },
+        {
+          "tempo": 2901,
+          "veiculo": "veh218",
+          "de": "369907170#0_0",
+          "para": "369907170#2_0"
+        },
+        {
+          "tempo": 2986,
+          "veiculo": "veh227",
+          "de": "369907170#0_0",
+          "para": "369907170#2_0"
+        },
+        {
+          "tempo": 3245,
+          "veiculo": "veh237",
+          "de": "942962257#2_0",
+          "para": ":1550389901_1_0"
+        },
+        {
+          "tempo": 3294,
+          "veiculo": "veh249",
+          "de": "369907170#3_0",
+          "para": ":2577302626_0_1"
+        }
+      ],
+      "outros_semaforos_programa_original": {
+        "2577302612": {
+          "programa": "0",
+          "tipo": 3,
+          "trocas": 881,
+          "duracoes_por_fase": {
+            "0:G": {
+              "n": 293,
+              "min": 5,
+              "media": 5.0,
+              "max": 5
+            },
+            "1:y": {
+              "n": 294,
+              "min": 3,
+              "media": 3.0,
+              "max": 3
+            },
+            "2:r": {
+              "n": 293,
+              "min": 5,
+              "media": 5.0,
+              "max": 5
+            }
+          },
+          "erros": 0,
+          "primeiros_erros": []
+        },
+        "2577302625": {
+          "programa": "0",
+          "tipo": 3,
+          "trocas": 881,
+          "duracoes_por_fase": {
+            "0:G": {
+              "n": 293,
+              "min": 5,
+              "media": 5.0,
+              "max": 5
+            },
+            "1:y": {
+              "n": 294,
+              "min": 3,
+              "media": 3.0,
+              "max": 3
+            },
+            "2:r": {
+              "n": 293,
+              "min": 5,
+              "media": 5.0,
+              "max": 5
+            }
+          },
+          "erros": 0,
+          "primeiros_erros": []
+        },
+        "299169962": {
+          "programa": "0",
+          "tipo": 3,
+          "trocas": 939,
+          "duracoes_por_fase": {
+            "0:GGGGrrr": {
+              "n": 234,
+              "min": 5,
+              "media": 5.14,
+              "max": 12
+            },
+            "1:yyyyrrr": {
+              "n": 235,
+              "min": 3,
+              "media": 3.0,
+              "max": 3
+            },
+            "2:rrrrGGG": {
+              "n": 235,
+              "min": 5,
+              "media": 5.13,
+              "max": 11
+            },
+            "3:rrrryyy": {
+              "n": 234,
+              "min": 3,
+              "media": 3.0,
+              "max": 3
+            }
+          },
+          "erros": 0,
+          "primeiros_erros": []
+        },
+        "300058973": {
+          "programa": "0",
+          "tipo": 3,
+          "trocas": 945,
+          "duracoes_por_fase": {
+            "0:GGGrrr": {
+              "n": 236,
+              "min": 5,
+              "media": 5.04,
+              "max": 10
+            },
+            "1:yyyrrr": {
+              "n": 236,
+              "min": 3,
+              "media": 3.0,
+              "max": 3
+            },
+            "2:rrrGGG": {
+              "n": 236,
+              "min": 5,
+              "media": 5.12,
+              "max": 10
+            },
+            "3:rrryyy": {
+              "n": 236,
+              "min": 3,
+              "media": 3.0,
+              "max": 3
+            }
+          },
+          "erros": 0,
+          "primeiros_erros": []
+        },
+        "302806060": {
+          "programa": "0",
+          "tipo": 3,
+          "trocas": 952,
+          "duracoes_por_fase": {
+            "0:GGGrrr": {
+              "n": 237,
+              "min": 5,
+              "media": 5.02,
+              "max": 8
+            },
+            "1:yyyrrr": {
+              "n": 238,
+              "min": 3,
+              "media": 3.0,
+              "max": 3
+            },
+            "2:rrrGGG": {
+              "n": 238,
+              "min": 5,
+              "media": 5.02,
+              "max": 8
+            },
+            "3:rrryyy": {
+              "n": 238,
+              "min": 3,
+              "media": 3.0,
+              "max": 3
+            }
+          },
+          "erros": 0,
+          "primeiros_erros": []
+        },
+        "cluster_13529541823_13529541824_300058941_300063845_#2more": {
+          "programa": "0",
+          "tipo": 3,
+          "trocas": 935,
+          "duracoes_por_fase": {
+            "0:GGGGggggrrrrrrGGGGggGgggg": {
+              "n": 233,
+              "min": 5,
+              "media": 5.22,
+              "max": 13
+            },
+            "1:yyyyyyyyrrrrrryyyyyyyyyyy": {
+              "n": 234,
+              "min": 3,
+              "media": 3.0,
+              "max": 3
+            },
+            "2:rrrrrrrrGGGGGGrrrrrrrrrrr": {
+              "n": 234,
+              "min": 5,
+              "media": 5.11,
+              "max": 9
+            },
+            "3:rrrrrrrryyyyyyrrrrrrrrrrr": {
+              "n": 233,
+              "min": 3,
+              "media": 3.0,
+              "max": 3
+            }
+          },
+          "erros": 0,
+          "primeiros_erros": []
+        },
+        "cluster_1389167570_1389167571_3876525275": {
+          "programa": "0",
+          "tipo": 3,
+          "trocas": 951,
+          "duracoes_por_fase": {
+            "0:rrrrrGGGGGggggGGGggg": {
+              "n": 237,
+              "min": 5,
+              "media": 5.05,
+              "max": 9
+            },
+            "1:rrrrryyyyyyyyyyyyyyy": {
+              "n": 238,
+              "min": 3,
+              "media": 3.0,
+              "max": 3
+            },
+            "2:GGGGGrrrrrrrrrrrrrrr": {
+              "n": 238,
+              "min": 5,
+              "media": 5.01,
+              "max": 6
+            },
+            "3:yyyyyrrrrrrrrrrrrrrr": {
+              "n": 237,
+              "min": 3,
+              "media": 3.0,
+              "max": 3
+            }
+          },
+          "erros": 0,
+          "primeiros_erros": []
+        },
+        "cluster_1389167593_302805923_4715928040": {
+          "programa": "0",
+          "tipo": 3,
+          "trocas": 942,
+          "duracoes_por_fase": {
+            "0:gggrrrrGGGGGggggGGG": {
+              "n": 235,
+              "min": 5,
+              "media": 5.12,
+              "max": 8
+            },
+            "1:yyyrrrryyyyyyyyyyyy": {
+              "n": 236,
+              "min": 3,
+              "media": 3.0,
+              "max": 3
+            },
+            "2:rrrGGGGrrrrrrrrrrrr": {
+              "n": 235,
+              "min": 5,
+              "media": 5.09,
+              "max": 9
+            },
+            "3:rrryyyyrrrrrrrrrrrr": {
+              "n": 235,
+              "min": 3,
+              "media": 3.0,
+              "max": 3
+            }
+          },
+          "erros": 0,
+          "primeiros_erros": []
+        },
+        "cluster_2577302635_302805867": {
+          "programa": "0",
+          "tipo": 3,
+          "trocas": 944,
+          "duracoes_por_fase": {
+            "0:rrrGGGG": {
+              "n": 157,
+              "min": 5,
+              "media": 5.12,
+              "max": 8
+            },
+            "1:rrryyyy": {
+              "n": 158,
+              "min": 3,
+              "media": 3.0,
+              "max": 3
+            },
+            "2:gGGrrrr": {
+              "n": 157,
+              "min": 5,
+              "media": 5.03,
+              "max": 7
+            },
+            "3:yGGrrrr": {
+              "n": 157,
+              "min": 3,
+              "media": 3.0,
+              "max": 3
+            },
+            "4:rGGrrrr": {
+              "n": 157,
+              "min": 5,
+              "media": 5.12,
+              "max": 9
+            },
+            "5:ryyrrrr": {
+              "n": 157,
+              "min": 3,
+              "media": 3.0,
+              "max": 3
+            }
+          },
+          "erros": 0,
+          "primeiros_erros": []
+        },
+        "joinedS_1389167582_1389167591_1550389898_1550389899_#8more": {
+          "programa": "0",
+          "tipo": 3,
+          "trocas": 588,
+          "duracoes_por_fase": {
+            "0:GgGGGGGGGGrrrrrrrGGGGgrrrrGGrrrGGGGGGGrrrrrrGGGrrrrrrrrrrrrrGGGrrrrrrrrrrrrrGGGG": {
+              "n": 58,
+              "min": 5,
+              "media": 5.03,
+              "max": 7
+            },
+            "1:yyGGGGGGGGrrrrrrryyyyyrrrrGGrrrGGGGGGGrrrrrrGGGrrrrrrrrrrrrrGyyrrrrrrrrrrrrryyyy": {
+              "n": 59,
+              "min": 6,
+              "media": 6.0,
+              "max": 6
+            },
+            "2:rrGGGGGGGGrrrGGGGrrrrrrrrrGGrrrGGGGGGGrrrrrrGGGrrrrrrGGgrrrrGggGGGGrrrrrrrrrrrrr": {
+              "n": 59,
+              "min": 5,
+              "media": 6.37,
+              "max": 16
+            },
+            "3:rrGGGGGyyyrrryyyyrrrrrrrrryyrrrGGGyyyyrrrrrryyyrrrrrryyyrrrrGggGyyyrrrrrrrrrrrrr": {
+              "n": 59,
+              "min": 6,
+              "media": 6.0,
+              "max": 6
+            },
+            "4:rrGGGGGrrrrrrrrrrGGGrrGGGGrrrrrGGGrrrrrrGGGGrrrrrrrrrrrrrrrrGGGGgggGGGgrrrrrrrrr": {
+              "n": 59,
+              "min": 5,
+              "media": 8.12,
+              "max": 15
+            },
+            "5:rrGGGGGrrrrrrrrrrGGGrryyyyrrrrrGGGrrrrrryyyyrrrrrrrrrrrrrrrrGGGyyyyyyyyrrrrrrrrr": {
+              "n": 59,
+              "min": 6,
+              "media": 6.0,
+              "max": 6
+            },
+            "6:rrGGGGGrrrGGGrrrrGGGrrrrrrGGrrrGGGrrrrGGrrrrGGGGGGrrrrrrrrrrGGGrrrrrrrrGGGGGrrrr": {
+              "n": 59,
+              "min": 5,
+              "media": 7.95,
+              "max": 18
+            },
+            "7:rrGGGGGrrryyyrrrrGGGrrrrrrGGrrryyyrrrryyrrrrGGGyyyrrrrrrrrrryyyrrrrrrrryyyyyrrrr": {
+              "n": 59,
+              "min": 6,
+              "media": 6.0,
+              "max": 6
+            },
+            "8:rrGGGGGrrrrrrrrrrGGGrrrrrrGGGGGrrrrrrrrrrrrrGGGrrrGGGrrrGGGGrrrGGGGrrrrrrrrrrrrr": {
+              "n": 58,
+              "min": 5,
+              "media": 7.47,
+              "max": 14
+            },
+            "9:rrGGGGGrrrrrrrrrrGGGrrrrrrGGyyyrrrrrrrrrrrrrGGGrrryyyrrryyyyrrryyyyrrrrrrrrrrrrr": {
+              "n": 58,
+              "min": 6,
+              "media": 6.0,
+              "max": 6
+            }
+          },
+          "erros": 0,
+          "primeiros_erros": []
+        },
+        "joinedS_2577302624_2577302626_cluster_2577302628_304693561_6359625545_6501405791": {
+          "programa": "0",
+          "tipo": 3,
+          "trocas": 984,
+          "duracoes_por_fase": {
+            "0:GGGGgrrGGGrrrrrrrrrrrr": {
+              "n": 75,
+              "min": 5,
+              "media": 5.0,
+              "max": 5
+            },
+            "1:yyyyyrryyyrrrrrrrrrrrr": {
+              "n": 76,
+              "min": 3,
+              "media": 3.0,
+              "max": 3
+            },
+            "2:rrrrrGGrrrrrrrrrrrrGGr": {
+              "n": 76,
+              "min": 5,
+              "media": 6.28,
+              "max": 11
+            },
+            "3:rrrrryyrrrrrrrrrrrryyr": {
+              "n": 76,
+              "min": 3,
+              "media": 3.0,
+              "max": 3
+            },
+            "4:GGGrrrrrrrGGGrrrrrrrrr": {
+              "n": 76,
+              "min": 5,
+              "media": 5.13,
+              "max": 8
+            },
+            "5:yyyrrrrrrryyyrrrrrrrrr": {
+              "n": 76,
+              "min": 3,
+              "media": 3.0,
+              "max": 3
+            },
+            "6:rrrrrrrrrrrrrrrrrrrrrr": {
+              "n": 76,
+              "min": 1,
+              "media": 1.0,
+              "max": 1
+            },
+            "7:GGGrrrrrrrrrrGGGGGrrrr": {
+              "n": 76,
+              "min": 5,
+              "media": 5.04,
+              "max": 7
+            },
+            "8:yyyrrrrrrrrrryyyyyrrrr": {
+              "n": 76,
+              "min": 3,
+              "media": 3.0,
+              "max": 3
+            },
+            "9:rrrrrrrrrrrrrrrrrrGrrr": {
+              "n": 75,
+              "min": 5,
+              "media": 5.0,
+              "max": 5
+            },
+            "10:rrrrrrrrrrrrrrrrrryrrr": {
+              "n": 75,
+              "min": 3,
+              "media": 3.0,
+              "max": 3
+            },
+            "11:rrrrrrrrrrrrrrrrrrrrrG": {
+              "n": 75,
+              "min": 5,
+              "media": 5.0,
+              "max": 5
+            },
+            "12:rrrrrrrrrrrrrrrrrrrrry": {
+              "n": 75,
+              "min": 3,
+              "media": 3.0,
+              "max": 3
+            }
+          },
+          "erros": 0,
+          "primeiros_erros": []
+        }
+      }
+    },
+    "1": {
+      "semente": 1,
+      "fim_simulacao_s": 3895,
+      "duracao_real_s": 10.0,
+      "viagens_no_arquivo": 278,
+      "veiculos_inseridos": 278,
+      "pendentes_no_fim": 0,
+      "viagens": {
+        "registradas": 278,
+        "concluidas": 278,
+        "nao_concluidas": 0,
+        "espera_media_s": 33.784,
+        "perda_tempo_media_s": 57.002,
+        "duracao_media_s": 134.108,
+        "atraso_insercao_medio_s": 0.494
+      },
+      "estatisticas_sumo": {
+        "vehicles": {
+          "loaded": "278",
+          "inserted": "278",
+          "running": "0",
+          "waiting": "0"
+        },
+        "teleports": {
+          "total": "0",
+          "jam": "0",
+          "yield": "0",
+          "wrongLane": "0"
+        },
+        "safety": {
+          "collisions": "1",
+          "emergencyStops": "0",
+          "emergencyBraking": "0"
+        },
+        "vehicleTripStatistics": {
+          "count": "278",
+          "routeLength": "979.96",
+          "speed": "7.86",
+          "duration": "134.11",
+          "waitingTime": "33.78",
+          "timeLoss": "57.00",
+          "departDelay": "0.49",
+          "departDelayWaiting": "0.00",
+          "totalTravelTime": "37282.00",
+          "totalDepartDelay": "137.42"
+        }
+      },
+      "colisoes": {
+        "eventos": 1,
+        "lista": [
+          {
+            "tempo": 1517,
+            "veiculos": [
+              "veh109",
+              "veh116"
+            ],
+            "tipo": "junction",
+            "faixa": ":1550389898_0_2",
+            "posicao": 3.95
+          }
+        ],
+        "por_juncao": {
+          "1550389898": 1
+        }
+      },
+      "teleportes": {
+        "total": 0,
+        "lista": []
+      },
+      "veiculo_passos_em_parada_de_emergencia": 0,
+      "avisos_sumo": {
+        "total": 1,
+        "por_tipo": {
+          "Warning: Vehicle junction collision with vehicle stage=move.": 1
+        },
+        "exemplos": {
+          "Warning: Vehicle junction collision with vehicle stage=move.": [
+            "Warning: Vehicle 'veh109'; junction collision with vehicle 'veh116', lane=':1550389898_0_2', gap=-1.00, time=1516.00, stage=move."
+          ]
+        }
+      },
+      "por_semaforo": {
+        "476455095": {
+          "veiculos_planejados_na_insercao": 44,
+          "veiculos_observados_cruzando": 44,
+          "travessias": 44,
+          "por_link": {
+            "0": 31,
+            "1": 1,
+            "4": 10,
+            "5": 2
+          },
+          "por_aproximacao": {
+            "27579109#4": 32,
+            "234368025#0": 12
+          },
+          "luz_ao_cruzar": {
+            "G": 44
+          },
+          "travessias_aproximadas": 0,
+          "por_15min": {
+            "0": 15,
+            "15": 11,
+            "30": 9,
+            "45": 9
+          },
+          "parados_por_aproximacao": {
+            "234368025#0": {
+              "media": 0.003,
+              "max": 1
+            },
+            "27579109#4": {
+              "media": 0.013,
+              "max": 1
+            }
+          },
+          "programa_original": {
+            "programa": "0",
+            "tipo": 3,
+            "trocas": 968,
+            "duracoes_por_fase": {
+              "0:GGGGrrrr": {
+                "n": 241,
+                "min": 5,
+                "media": 5.07,
+                "max": 9
+              },
+              "1:yyyyrrrr": {
+                "n": 242,
+                "min": 3,
+                "media": 3.0,
+                "max": 3
+              },
+              "2:rrrrGGGG": {
+                "n": 242,
+                "min": 5,
+                "media": 5.02,
+                "max": 8
+              },
+              "3:rrrryyyy": {
+                "n": 242,
+                "min": 3,
+                "media": 3.0,
+                "max": 3
+              }
+            },
+            "erros": 0,
+            "primeiros_erros": []
+          },
+          "verificacao_original": {
+            "violacoes": 0,
+            "tipos": {},
+            "primeiras_violacoes": [],
+            "verdes": {
+              "n": 484,
+              "min": 5,
+              "max": 9,
+              "media": 5.05
+            },
+            "amarelos": {
+              "n": 484,
+              "min": 3,
+              "max": 3,
+              "media": 3.0
+            },
+            "vermelhos_gerais": {
+              "n": 0
+            }
+          },
+          "lon_lat": [
+            -46.67876495843957,
+            -23.60009799624882
+          ]
+        },
+        "40278305": {
+          "veiculos_planejados_na_insercao": 59,
+          "veiculos_observados_cruzando": 59,
+          "travessias": 59,
+          "por_link": {
+            "0": 16,
+            "1": 25,
+            "2": 7,
+            "3": 1,
+            "4": 10
+          },
+          "por_aproximacao": {
+            "760437731": 48,
+            "1160862341#1": 11
+          },
+          "luz_ao_cruzar": {
+            "G": 59
+          },
+          "travessias_aproximadas": 0,
+          "por_15min": {
+            "0": 16,
+            "15": 17,
+            "30": 11,
+            "45": 15
+          },
+          "parados_por_aproximacao": {
+            "1160862341#1": {
+              "media": 0.004,
+              "max": 1
+            },
+            "760437731": {
+              "media": 0.006,
+              "max": 2
+            }
+          },
+          "programa_original": {
+            "programa": "0",
+            "tipo": 3,
+            "trocas": 968,
+            "duracoes_por_fase": {
+              "0:GGGrr": {
+                "n": 241,
+                "min": 5,
+                "media": 5.06,
+                "max": 9
+              },
+              "1:yyyrr": {
+                "n": 242,
+                "min": 3,
+                "media": 3.0,
+                "max": 3
+              },
+              "2:rrrGG": {
+                "n": 242,
+                "min": 5,
+                "media": 5.01,
+                "max": 8
+              },
+              "3:rrryy": {
+                "n": 242,
+                "min": 3,
+                "media": 3.0,
+                "max": 3
+              }
+            },
+            "erros": 0,
+            "primeiros_erros": []
+          },
+          "verificacao_original": {
+            "violacoes": 0,
+            "tipos": {},
+            "primeiras_violacoes": [],
+            "verdes": {
+              "n": 484,
+              "min": 5,
+              "max": 9,
+              "media": 5.04
+            },
+            "amarelos": {
+              "n": 484,
+              "min": 3,
+              "max": 3,
+              "media": 3.0
+            },
+            "vermelhos_gerais": {
+              "n": 0
+            }
+          },
+          "lon_lat": [
+            -46.67827417852004,
+            -23.59919306766609
+          ]
+        },
+        "40278183": {
+          "veiculos_planejados_na_insercao": 77,
+          "veiculos_observados_cruzando": 77,
+          "travessias": 77,
+          "por_link": {
+            "0": 15,
+            "1": 18,
+            "2": 1,
+            "3": 36,
+            "4": 4,
+            "5": 3
+          },
+          "por_aproximacao": {
+            "8547878#5": 34,
+            "234368026#0": 43
+          },
+          "luz_ao_cruzar": {
+            "G": 76,
+            "y": 1
+          },
+          "travessias_aproximadas": 0,
+          "por_15min": {
+            "0": 19,
+            "15": 18,
+            "30": 16,
+            "45": 23,
+            "60": 1
+          },
+          "parados_por_aproximacao": {
+            "234368026#0": {
+              "media": 0.004,
+              "max": 1
+            },
+            "8547878#5": {
+              "media": 0.004,
+              "max": 1
+            }
+          },
+          "programa_original": {
+            "programa": "0",
+            "tipo": 3,
+            "trocas": 969,
+            "duracoes_por_fase": {
+              "0:GGGrrr": {
+                "n": 242,
+                "min": 5,
+                "media": 5.05,
+                "max": 9
+              },
+              "1:yyyrrr": {
+                "n": 242,
+                "min": 3,
+                "media": 3.0,
+                "max": 3
+              },
+              "2:rrrGGG": {
+                "n": 242,
+                "min": 5,
+                "media": 5.02,
+                "max": 7
+              },
+              "3:rrryyy": {
+                "n": 242,
+                "min": 3,
+                "media": 3.0,
+                "max": 3
+              }
+            },
+            "erros": 0,
+            "primeiros_erros": []
+          },
+          "verificacao_original": {
+            "violacoes": 0,
+            "tipos": {},
+            "primeiras_violacoes": [],
+            "verdes": {
+              "n": 485,
+              "min": 5,
+              "max": 9,
+              "media": 5.04
+            },
+            "amarelos": {
+              "n": 484,
+              "min": 3,
+              "max": 3,
+              "media": 3.0
+            },
+            "vermelhos_gerais": {
+              "n": 0
+            }
+          },
+          "lon_lat": [
+            -46.67778198429873,
+            -23.598291945052065
+          ]
+        }
+      },
+      "sequencias_entre_os_tres": {
+        "40278183": 35,
+        "476455095 > 40278305 > 40278183": 29,
+        "476455095 > 40278305": 14,
+        "40278305 > 40278183": 13,
+        "40278305": 3,
+        "476455095": 1
+      },
+      "veiculos_por_numero_de_controlados_cruzados": {
+        "1": 39,
+        "2": 27,
+        "3": 29
+      },
+      "sequencias_planejadas_na_insercao": {
+        "40278183": 35,
+        "476455095 > 40278305 > 40278183": 29,
+        "476455095 > 40278305": 14,
+        "40278305 > 40278183": 13,
+        "40278305": 3,
+        "476455095": 1
+      },
+      "veiculos_com_rota_observada_diferente_da_planejada": 0,
+      "tempo_entre_cruzamentos_s": {
+        "476455095->40278305": {
+          "n": 43,
+          "min": 8,
+          "media": 12.93,
+          "mediana": 13,
+          "max": 19
+        },
+        "40278305->40278183": {
+          "n": 42,
+          "min": 7,
+          "media": 11.64,
+          "mediana": 11.0,
+          "max": 20
+        }
+      },
+      "luz_ao_cruzar_nos_outros_11": {
+        "G": 1028,
+        "g": 28,
+        "y": 1
+      },
+      "problemas_rastreamento": {
+        "travessia_nao_mapeada": 18
+      },
+      "exemplos_nao_mapeados": [
+        {
+          "tempo": 173,
+          "veiculo": "veh6",
+          "de": "369907169#0_0",
+          "para": ":1550389900_4_0"
+        },
+        {
+          "tempo": 176,
+          "veiculo": "veh6",
+          "de": "369907170#0_0",
+          "para": "369907170#2_0"
+        },
+        {
+          "tempo": 560,
+          "veiculo": "veh39",
+          "de": "471339603#3_0",
+          "para": ":1550389898_4_0"
+        },
+        {
+          "tempo": 688,
+          "veiculo": "veh42",
+          "de": "369907170#0_0",
+          "para": "369907170#2_0"
+        },
+        {
+          "tempo": 820,
+          "veiculo": "veh61",
+          "de": "369907171#0_1",
+          "para": ":1550389901_3_1"
+        },
+        {
+          "tempo": 1478,
+          "veiculo": "veh107",
+          "de": "369907170#0_0",
+          "para": "369907170#2_0"
+        },
+        {
+          "tempo": 1531,
+          "veiculo": "veh108",
+          "de": "369907171#0_0",
+          "para": ":1550389901_3_0"
+        },
+        {
+          "tempo": 1547,
+          "veiculo": "veh117",
+          "de": "369907170#0_1",
+          "para": "369907170#2_1"
+        },
+        {
+          "tempo": 1680,
+          "veiculo": "veh121",
+          "de": "942962257#2_1",
+          "para": ":1550389901_1_1"
+        },
+        {
+          "tempo": 1941,
+          "veiculo": "veh146",
+          "de": "369907170#0_0",
+          "para": "369907170#2_0"
+        },
+        {
+          "tempo": 2010,
+          "veiculo": "veh152",
+          "de": "944842828#1_1",
+          "para": ":cluster_13529541823_13529541824_300058941_300063845_#2more_1_0"
+        },
+        {
+          "tempo": 2578,
+          "veiculo": "veh193",
+          "de": "369907169#0_0",
+          "para": ":1550389900_4_0"
+        },
+        {
+          "tempo": 2581,
+          "veiculo": "veh193",
+          "de": "369907170#0_0",
+          "para": "369907170#2_0"
+        },
+        {
+          "tempo": 3030,
+          "veiculo": "veh227",
+          "de": "369907170#0_0",
+          "para": "369907170#2_0"
+        },
+        {
+          "tempo": 3040,
+          "veiculo": "veh218",
+          "de": "942962257#2_1",
+          "para": ":1550389901_1_1"
+        },
+        {
+          "tempo": 3399,
+          "veiculo": "veh258",
+          "de": "369907170#0_1",
+          "para": "369907170#2_0"
+        },
+        {
+          "tempo": 3459,
+          "veiculo": "veh259",
+          "de": "369907170#0_0",
+          "para": "369907170#2_0"
+        },
+        {
+          "tempo": 3616,
+          "veiculo": "veh273",
+          "de": "944842828#1_1",
+          "para": ":cluster_13529541823_13529541824_300058941_300063845_#2more_1_0"
+        }
+      ],
+      "outros_semaforos_programa_original": {
+        "2577302612": {
+          "programa": "0",
+          "tipo": 3,
+          "trocas": 898,
+          "duracoes_por_fase": {
+            "0:G": {
+              "n": 299,
+              "min": 5,
+              "media": 5.0,
+              "max": 5
+            },
+            "1:y": {
+              "n": 299,
+              "min": 3,
+              "media": 3.0,
+              "max": 3
+            },
+            "2:r": {
+              "n": 299,
+              "min": 5,
+              "media": 5.0,
+              "max": 5
+            }
+          },
+          "erros": 0,
+          "primeiros_erros": []
+        },
+        "2577302625": {
+          "programa": "0",
+          "tipo": 3,
+          "trocas": 898,
+          "duracoes_por_fase": {
+            "0:G": {
+              "n": 299,
+              "min": 5,
+              "media": 5.0,
+              "max": 5
+            },
+            "1:y": {
+              "n": 299,
+              "min": 3,
+              "media": 3.0,
+              "max": 3
+            },
+            "2:r": {
+              "n": 299,
+              "min": 5,
+              "media": 5.0,
+              "max": 5
+            }
+          },
+          "erros": 0,
+          "primeiros_erros": []
+        },
+        "299169962": {
+          "programa": "0",
+          "tipo": 3,
+          "trocas": 960,
+          "duracoes_por_fase": {
+            "0:GGGGrrr": {
+              "n": 239,
+              "min": 5,
+              "media": 5.09,
+              "max": 10
+            },
+            "1:yyyyrrr": {
+              "n": 240,
+              "min": 3,
+              "media": 3.0,
+              "max": 3
+            },
+            "2:rrrrGGG": {
+              "n": 240,
+              "min": 5,
+              "media": 5.12,
+              "max": 11
+            },
+            "3:rrrryyy": {
+              "n": 240,
+              "min": 3,
+              "media": 3.0,
+              "max": 3
+            }
+          },
+          "erros": 0,
+          "primeiros_erros": []
+        },
+        "300058973": {
+          "programa": "0",
+          "tipo": 3,
+          "trocas": 968,
+          "duracoes_por_fase": {
+            "0:GGGrrr": {
+              "n": 241,
+              "min": 5,
+              "media": 5.02,
+              "max": 8
+            },
+            "1:yyyrrr": {
+              "n": 242,
+              "min": 3,
+              "media": 3.0,
+              "max": 3
+            },
+            "2:rrrGGG": {
+              "n": 242,
+              "min": 5,
+              "media": 5.05,
+              "max": 8
+            },
+            "3:rrryyy": {
+              "n": 242,
+              "min": 3,
+              "media": 3.0,
+              "max": 3
+            }
+          },
+          "erros": 0,
+          "primeiros_erros": []
+        },
+        "302806060": {
+          "programa": "0",
+          "tipo": 3,
+          "trocas": 970,
+          "duracoes_por_fase": {
+            "0:GGGrrr": {
+              "n": 242,
+              "min": 5,
+              "media": 5.03,
+              "max": 8
+            },
+            "1:yyyrrr": {
+              "n": 243,
+              "min": 3,
+              "media": 3.0,
+              "max": 3
+            },
+            "2:rrrGGG": {
+              "n": 242,
+              "min": 5,
+              "media": 5.01,
+              "max": 6
+            },
+            "3:rrryyy": {
+              "n": 242,
+              "min": 3,
+              "media": 3.0,
+              "max": 3
+            }
+          },
+          "erros": 0,
+          "primeiros_erros": []
+        },
+        "cluster_13529541823_13529541824_300058941_300063845_#2more": {
+          "programa": "0",
+          "tipo": 3,
+          "trocas": 961,
+          "duracoes_por_fase": {
+            "0:GGGGggggrrrrrrGGGGggGgggg": {
+              "n": 240,
+              "min": 5,
+              "media": 5.14,
+              "max": 9
+            },
+            "1:yyyyyyyyrrrrrryyyyyyyyyyy": {
+              "n": 240,
+              "min": 3,
+              "media": 3.0,
+              "max": 3
+            },
+            "2:rrrrrrrrGGGGGGrrrrrrrrrrr": {
+              "n": 240,
+              "min": 5,
+              "media": 5.06,
+              "max": 8
+            },
+            "3:rrrrrrrryyyyyyrrrrrrrrrrr": {
+              "n": 240,
+              "min": 3,
+              "media": 3.0,
+              "max": 3
+            }
+          },
+          "erros": 0,
+          "primeiros_erros": []
+        },
+        "cluster_1389167570_1389167571_3876525275": {
+          "programa": "0",
+          "tipo": 3,
+          "trocas": 966,
+          "duracoes_por_fase": {
+            "0:rrrrrGGGGGggggGGGggg": {
+              "n": 241,
+              "min": 5,
+              "media": 5.06,
+              "max": 8
+            },
+            "1:rrrrryyyyyyyyyyyyyyy": {
+              "n": 242,
+              "min": 3,
+              "media": 3.0,
+              "max": 3
+            },
+            "2:GGGGGrrrrrrrrrrrrrrr": {
+              "n": 241,
+              "min": 5,
+              "media": 5.07,
+              "max": 9
+            },
+            "3:yyyyyrrrrrrrrrrrrrrr": {
+              "n": 241,
+              "min": 3,
+              "media": 3.0,
+              "max": 3
+            }
+          },
+          "erros": 0,
+          "primeiros_erros": []
+        },
+        "cluster_1389167593_302805923_4715928040": {
+          "programa": "0",
+          "tipo": 3,
+          "trocas": 959,
+          "duracoes_por_fase": {
+            "0:gggrrrrGGGGGggggGGG": {
+              "n": 239,
+              "min": 5,
+              "media": 5.13,
+              "max": 8
+            },
+            "1:yyyrrrryyyyyyyyyyyy": {
+              "n": 240,
+              "min": 3,
+              "media": 3.0,
+              "max": 3
+            },
+            "2:rrrGGGGrrrrrrrrrrrr": {
+              "n": 240,
+              "min": 5,
+              "media": 5.1,
+              "max": 13
+            },
+            "3:rrryyyyrrrrrrrrrrrr": {
+              "n": 239,
+              "min": 3,
+              "media": 3.0,
+              "max": 3
+            }
+          },
+          "erros": 0,
+          "primeiros_erros": []
+        },
+        "cluster_2577302635_302805867": {
+          "programa": "0",
+          "tipo": 3,
+          "trocas": 964,
+          "duracoes_por_fase": {
+            "0:rrrGGGG": {
+              "n": 160,
+              "min": 5,
+              "media": 5.11,
+              "max": 9
+            },
+            "1:rrryyyy": {
+              "n": 161,
+              "min": 3,
+              "media": 3.0,
+              "max": 3
+            },
+            "2:gGGrrrr": {
+              "n": 161,
+              "min": 5,
+              "media": 5.04,
+              "max": 7
+            },
+            "3:yGGrrrr": {
+              "n": 161,
+              "min": 3,
+              "media": 3.0,
+              "max": 3
+            },
+            "4:rGGrrrr": {
+              "n": 160,
+              "min": 5,
+              "media": 5.08,
+              "max": 9
+            },
+            "5:ryyrrrr": {
+              "n": 160,
+              "min": 3,
+              "media": 3.0,
+              "max": 3
+            }
+          },
+          "erros": 0,
+          "primeiros_erros": []
+        },
+        "joinedS_1389167582_1389167591_1550389898_1550389899_#8more": {
+          "programa": "0",
+          "tipo": 3,
+          "trocas": 607,
+          "duracoes_por_fase": {
+            "0:GgGGGGGGGGrrrrrrrGGGGgrrrrGGrrrGGGGGGGrrrrrrGGGrrrrrrrrrrrrrGGGrrrrrrrrrrrrrGGGG": {
+              "n": 60,
+              "min": 5,
+              "media": 5.05,
+              "max": 6
+            },
+            "1:yyGGGGGGGGrrrrrrryyyyyrrrrGGrrrGGGGGGGrrrrrrGGGrrrrrrrrrrrrrGyyrrrrrrrrrrrrryyyy": {
+              "n": 61,
+              "min": 6,
+              "media": 6.0,
+              "max": 6
+            },
+            "2:rrGGGGGGGGrrrGGGGrrrrrrrrrGGrrrGGGGGGGrrrrrrGGGrrrrrrGGgrrrrGggGGGGrrrrrrrrrrrrr": {
+              "n": 61,
+              "min": 5,
+              "media": 6.21,
+              "max": 10
+            },
+            "3:rrGGGGGyyyrrryyyyrrrrrrrrryyrrrGGGyyyyrrrrrryyyrrrrrryyyrrrrGggGyyyrrrrrrrrrrrrr": {
+              "n": 61,
+              "min": 6,
+              "media": 6.0,
+              "max": 6
+            },
+            "4:rrGGGGGrrrrrrrrrrGGGrrGGGGrrrrrGGGrrrrrrGGGGrrrrrrrrrrrrrrrrGGGGgggGGGgrrrrrrrrr": {
+              "n": 61,
+              "min": 5,
+              "media": 7.84,
+              "max": 15
+            },
+            "5:rrGGGGGrrrrrrrrrrGGGrryyyyrrrrrGGGrrrrrryyyyrrrrrrrrrrrrrrrrGGGyyyyyyyyrrrrrrrrr": {
+              "n": 61,
+              "min": 6,
+              "media": 6.0,
+              "max": 6
+            },
+            "6:rrGGGGGrrrGGGrrrrGGGrrrrrrGGrrrGGGrrrrGGrrrrGGGGGGrrrrrrrrrrGGGrrrrrrrrGGGGGrrrr": {
+              "n": 61,
+              "min": 5,
+              "media": 7.75,
+              "max": 16
+            },
+            "7:rrGGGGGrrryyyrrrrGGGrrrrrrGGrrryyyrrrryyrrrrGGGyyyrrrrrrrrrryyyrrrrrrrryyyyyrrrr": {
+              "n": 60,
+              "min": 6,
+              "media": 6.0,
+              "max": 6
+            },
+            "8:rrGGGGGrrrrrrrrrrGGGrrrrrrGGGGGrrrrrrrrrrrrrGGGrrrGGGrrrGGGGrrrGGGGrrrrrrrrrrrrr": {
+              "n": 60,
+              "min": 5,
+              "media": 7.27,
+              "max": 12
+            },
+            "9:rrGGGGGrrrrrrrrrrGGGrrrrrrGGyyyrrrrrrrrrrrrrGGGrrryyyrrryyyyrrryyyyrrrrrrrrrrrrr": {
+              "n": 60,
+              "min": 6,
+              "media": 6.0,
+              "max": 6
+            }
+          },
+          "erros": 0,
+          "primeiros_erros": []
+        },
+        "joinedS_2577302624_2577302626_cluster_2577302628_304693561_6359625545_6501405791": {
+          "programa": "0",
+          "tipo": 3,
+          "trocas": 1004,
+          "duracoes_por_fase": {
+            "0:GGGGgrrGGGrrrrrrrrrrrr": {
+              "n": 77,
+              "min": 5,
+              "media": 5.0,
+              "max": 5
+            },
+            "1:yyyyyrryyyrrrrrrrrrrrr": {
+              "n": 78,
+              "min": 3,
+              "media": 3.0,
+              "max": 3
+            },
+            "2:rrrrrGGrrrrrrrrrrrrGGr": {
+              "n": 78,
+              "min": 5,
+              "media": 6.14,
+              "max": 10
+            },
+            "3:rrrrryyrrrrrrrrrrrryyr": {
+              "n": 77,
+              "min": 3,
+              "media": 3.0,
+              "max": 3
+            },
+            "4:GGGrrrrrrrGGGrrrrrrrrr": {
+              "n": 77,
+              "min": 5,
+              "media": 5.1,
+              "max": 8
+            },
+            "5:yyyrrrrrrryyyrrrrrrrrr": {
+              "n": 77,
+              "min": 3,
+              "media": 3.0,
+              "max": 3
+            },
+            "6:rrrrrrrrrrrrrrrrrrrrrr": {
+              "n": 77,
+              "min": 1,
+              "media": 1.0,
+              "max": 1
+            },
+            "7:GGGrrrrrrrrrrGGGGGrrrr": {
+              "n": 77,
+              "min": 5,
+              "media": 5.12,
+              "max": 10
+            },
+            "8:yyyrrrrrrrrrryyyyyrrrr": {
+              "n": 77,
+              "min": 3,
+              "media": 3.0,
+              "max": 3
+            },
+            "9:rrrrrrrrrrrrrrrrrrGrrr": {
+              "n": 77,
+              "min": 5,
+              "media": 5.0,
+              "max": 5
+            },
+            "10:rrrrrrrrrrrrrrrrrryrrr": {
+              "n": 77,
+              "min": 3,
+              "media": 3.0,
+              "max": 3
+            },
+            "11:rrrrrrrrrrrrrrrrrrrrrG": {
+              "n": 77,
+              "min": 5,
+              "media": 5.0,
+              "max": 5
+            },
+            "12:rrrrrrrrrrrrrrrrrrrrry": {
+              "n": 77,
+              "min": 3,
+              "media": 3.0,
+              "max": 3
+            }
+          },
+          "erros": 0,
+          "primeiros_erros": []
+        }
+      }
+    },
+    "2": {
+      "semente": 2,
+      "fim_simulacao_s": 3820,
+      "duracao_real_s": 10.1,
+      "viagens_no_arquivo": 278,
+      "veiculos_inseridos": 278,
+      "pendentes_no_fim": 0,
+      "viagens": {
+        "registradas": 278,
+        "concluidas": 278,
+        "nao_concluidas": 0,
+        "espera_media_s": 33.964,
+        "perda_tempo_media_s": 56.639,
+        "duracao_media_s": 135.306,
+        "atraso_insercao_medio_s": 0.519
+      },
+      "estatisticas_sumo": {
+        "vehicles": {
+          "loaded": "278",
+          "inserted": "278",
+          "running": "0",
+          "waiting": "0"
+        },
+        "teleports": {
+          "total": "0",
+          "jam": "0",
+          "yield": "0",
+          "wrongLane": "0"
+        },
+        "safety": {
+          "collisions": "1",
+          "emergencyStops": "0",
+          "emergencyBraking": "0"
+        },
+        "vehicleTripStatistics": {
+          "count": "278",
+          "routeLength": "979.95",
+          "speed": "7.79",
+          "duration": "135.31",
+          "waitingTime": "33.96",
+          "timeLoss": "56.64",
+          "departDelay": "0.52",
+          "departDelayWaiting": "0.00",
+          "totalTravelTime": "37615.00",
+          "totalDepartDelay": "144.42"
+        }
+      },
+      "colisoes": {
+        "eventos": 1,
+        "lista": [
+          {
+            "tempo": 1514,
+            "veiculos": [
+              "veh109",
+              "veh116"
+            ],
+            "tipo": "junction",
+            "faixa": ":1550389898_0_2",
+            "posicao": 4.04
+          }
+        ],
+        "por_juncao": {
+          "1550389898": 1
+        }
+      },
+      "teleportes": {
+        "total": 0,
+        "lista": []
+      },
+      "veiculo_passos_em_parada_de_emergencia": 0,
+      "avisos_sumo": {
+        "total": 1,
+        "por_tipo": {
+          "Warning: Vehicle junction collision with vehicle stage=move.": 1
+        },
+        "exemplos": {
+          "Warning: Vehicle junction collision with vehicle stage=move.": [
+            "Warning: Vehicle 'veh109'; junction collision with vehicle 'veh116', lane=':1550389898_0_2', gap=-1.00, time=1513.00, stage=move."
+          ]
+        }
+      },
+      "por_semaforo": {
+        "476455095": {
+          "veiculos_planejados_na_insercao": 44,
+          "veiculos_observados_cruzando": 44,
+          "travessias": 44,
+          "por_link": {
+            "0": 31,
+            "1": 1,
+            "4": 10,
+            "5": 2
+          },
+          "por_aproximacao": {
+            "27579109#4": 32,
+            "234368025#0": 12
+          },
+          "luz_ao_cruzar": {
+            "G": 44
+          },
+          "travessias_aproximadas": 0,
+          "por_15min": {
+            "0": 15,
+            "15": 11,
+            "30": 9,
+            "45": 9
+          },
+          "parados_por_aproximacao": {
+            "234368025#0": {
+              "media": 0.003,
+              "max": 1
+            },
+            "27579109#4": {
+              "media": 0.008,
+              "max": 1
+            }
+          },
+          "programa_original": {
+            "programa": "0",
+            "tipo": 3,
+            "trocas": 948,
+            "duracoes_por_fase": {
+              "0:GGGGrrrr": {
+                "n": 236,
+                "min": 5,
+                "media": 5.11,
+                "max": 9
+              },
+              "1:yyyyrrrr": {
+                "n": 237,
+                "min": 3,
+                "media": 3.0,
+                "max": 3
+              },
+              "2:rrrrGGGG": {
+                "n": 237,
+                "min": 5,
+                "media": 5.0,
+                "max": 5
+              },
+              "3:rrrryyyy": {
+                "n": 237,
+                "min": 3,
+                "media": 3.0,
+                "max": 3
+              }
+            },
+            "erros": 0,
+            "primeiros_erros": []
+          },
+          "verificacao_original": {
+            "violacoes": 0,
+            "tipos": {},
+            "primeiras_violacoes": [],
+            "verdes": {
+              "n": 474,
+              "min": 5,
+              "max": 9,
+              "media": 5.05
+            },
+            "amarelos": {
+              "n": 474,
+              "min": 3,
+              "max": 3,
+              "media": 3.0
+            },
+            "vermelhos_gerais": {
+              "n": 0
+            }
+          },
+          "lon_lat": [
+            -46.67876495843957,
+            -23.60009799624882
+          ]
+        },
+        "40278305": {
+          "veiculos_planejados_na_insercao": 59,
+          "veiculos_observados_cruzando": 59,
+          "travessias": 59,
+          "por_link": {
+            "0": 16,
+            "1": 25,
+            "2": 7,
+            "3": 1,
+            "4": 10
+          },
+          "por_aproximacao": {
+            "760437731": 48,
+            "1160862341#1": 11
+          },
+          "luz_ao_cruzar": {
+            "G": 59
+          },
+          "travessias_aproximadas": 0,
+          "por_15min": {
+            "0": 16,
+            "15": 17,
+            "30": 11,
+            "45": 15
+          },
+          "parados_por_aproximacao": {
+            "1160862341#1": {
+              "media": 0.001,
+              "max": 1
+            },
+            "760437731": {
+              "media": 0.01,
+              "max": 1
+            }
+          },
+          "programa_original": {
+            "programa": "0",
+            "tipo": 3,
+            "trocas": 947,
+            "duracoes_por_fase": {
+              "0:GGGrr": {
+                "n": 236,
+                "min": 5,
+                "media": 5.08,
+                "max": 9
+              },
+              "1:yyyrr": {
+                "n": 237,
+                "min": 3,
+                "media": 3.0,
+                "max": 3
+              },
+              "2:rrrGG": {
+                "n": 237,
+                "min": 5,
+                "media": 5.04,
+                "max": 9
+              },
+              "3:rrryy": {
+                "n": 236,
+                "min": 3,
+                "media": 3.0,
+                "max": 3
+              }
+            },
+            "erros": 0,
+            "primeiros_erros": []
+          },
+          "verificacao_original": {
+            "violacoes": 0,
+            "tipos": {},
+            "primeiras_violacoes": [],
+            "verdes": {
+              "n": 474,
+              "min": 5,
+              "max": 9,
+              "media": 5.06
+            },
+            "amarelos": {
+              "n": 473,
+              "min": 3,
+              "max": 3,
+              "media": 3.0
+            },
+            "vermelhos_gerais": {
+              "n": 0
+            }
+          },
+          "lon_lat": [
+            -46.67827417852004,
+            -23.59919306766609
+          ]
+        },
+        "40278183": {
+          "veiculos_planejados_na_insercao": 77,
+          "veiculos_observados_cruzando": 76,
+          "travessias": 76,
+          "por_link": {
+            "0": 15,
+            "1": 16,
+            "2": 2,
+            "3": 36,
+            "4": 4,
+            "5": 3
+          },
+          "por_aproximacao": {
+            "8547878#5": 33,
+            "234368026#0": 43
+          },
+          "luz_ao_cruzar": {
+            "G": 75,
+            "y": 1
+          },
+          "travessias_aproximadas": 0,
+          "por_15min": {
+            "0": 19,
+            "15": 18,
+            "30": 15,
+            "45": 22,
+            "60": 2
+          },
+          "parados_por_aproximacao": {
+            "234368026#0": {
+              "media": 0.005,
+              "max": 2
+            },
+            "8547878#5": {
+              "media": 0.007,
+              "max": 1
+            }
+          },
+          "programa_original": {
+            "programa": "0",
+            "tipo": 3,
+            "trocas": 942,
+            "duracoes_por_fase": {
+              "0:GGGrrr": {
+                "n": 235,
+                "min": 5,
+                "media": 5.1,
+                "max": 10
+              },
+              "1:yyyrrr": {
+                "n": 236,
+                "min": 3,
+                "media": 3.0,
+                "max": 3
+              },
+              "2:rrrGGG": {
+                "n": 235,
+                "min": 5,
+                "media": 5.11,
+                "max": 9
+              },
+              "3:rrryyy": {
+                "n": 235,
+                "min": 3,
+                "media": 3.0,
+                "max": 3
+              }
+            },
+            "erros": 0,
+            "primeiros_erros": []
+          },
+          "verificacao_original": {
+            "violacoes": 0,
+            "tipos": {},
+            "primeiras_violacoes": [],
+            "verdes": {
+              "n": 471,
+              "min": 5,
+              "max": 10,
+              "media": 5.1
+            },
+            "amarelos": {
+              "n": 471,
+              "min": 3,
+              "max": 3,
+              "media": 3.0
+            },
+            "vermelhos_gerais": {
+              "n": 0
+            }
+          },
+          "lon_lat": [
+            -46.67778198429873,
+            -23.598291945052065
+          ]
+        }
+      },
+      "sequencias_entre_os_tres": {
+        "40278183": 34,
+        "476455095 > 40278305 > 40278183": 29,
+        "476455095 > 40278305": 14,
+        "40278305 > 40278183": 13,
+        "40278305": 3,
+        "476455095": 1
+      },
+      "veiculos_por_numero_de_controlados_cruzados": {
+        "1": 38,
+        "2": 27,
+        "3": 29
+      },
+      "sequencias_planejadas_na_insercao": {
+        "40278183": 35,
+        "476455095 > 40278305 > 40278183": 29,
+        "476455095 > 40278305": 14,
+        "40278305 > 40278183": 13,
+        "40278305": 3,
+        "476455095": 1
+      },
+      "veiculos_com_rota_observada_diferente_da_planejada": 1,
+      "tempo_entre_cruzamentos_s": {
+        "476455095->40278305": {
+          "n": 43,
+          "min": 8,
+          "media": 13.56,
+          "mediana": 13,
+          "max": 20
+        },
+        "40278305->40278183": {
+          "n": 42,
+          "min": 7,
+          "media": 12.14,
+          "mediana": 11.0,
+          "max": 20
+        }
+      },
+      "luz_ao_cruzar_nos_outros_11": {
+        "G": 1037,
+        "g": 28
+      },
+      "problemas_rastreamento": {
+        "travessia_nao_mapeada": 21
+      },
+      "exemplos_nao_mapeados": [
+        {
+          "tempo": 91,
+          "veiculo": "veh4",
+          "de": "944842829#2_0",
+          "para": ":2577302595_1_0"
+        },
+        {
+          "tempo": 154,
+          "veiculo": "veh5",
+          "de": "369907171#0_1",
+          "para": ":1550389901_3_0"
+        },
+        {
+          "tempo": 177,
+          "veiculo": "veh6",
+          "de": "369907170#0_0",
+          "para": "369907170#2_0"
+        },
+        {
+          "tempo": 683,
+          "veiculo": "veh42",
+          "de": "369907170#0_0",
+          "para": "369907170#2_0"
+        },
+        {
+          "tempo": 811,
+          "veiculo": "veh57",
+          "de": "944842829#2_1",
+          "para": ":2577302595_1_1"
+        },
+        {
+          "tempo": 1197,
+          "veiculo": "veh87",
+          "de": "369907170#0_0",
+          "para": "369907170#2_0"
+        },
+        {
+          "tempo": 1338,
+          "veiculo": "veh86",
+          "de": "942962257#2_0",
+          "para": ":1550389901_1_0"
+        },
+        {
+          "tempo": 1352,
+          "veiculo": "veh104",
+          "de": "369907167#0_2",
+          "para": ":1550389898_0_2"
+        },
+        {
+          "tempo": 1504,
+          "veiculo": "veh111",
+          "de": "944842828#4_1",
+          "para": ":cluster_1389167570_1389167571_3876525275_5_0"
+        },
+        {
+          "tempo": 1542,
+          "veiculo": "veh117",
+          "de": "471339603#3_0",
+          "para": ":1550389898_4_0"
+        },
+        {
+          "tempo": 1545,
+          "veiculo": "veh115",
+          "de": "255845161_0",
+          "para": "369907169#1_0"
+        },
+        {
+          "tempo": 1609,
+          "veiculo": "veh122",
+          "de": "255845161_0",
+          "para": ":cluster_4715928048_6856197180_9_0"
+        },
+        {
+          "tempo": 1732,
+          "veiculo": "veh126",
+          "de": "369907170#0_0",
+          "para": "369907170#2_0"
+        },
+        {
+          "tempo": 1989,
+          "veiculo": "veh146",
+          "de": "369907170#0_0",
+          "para": "369907170#2_0"
+        },
+        {
+          "tempo": 1995,
+          "veiculo": "veh152",
+          "de": "944842828#1_1",
+          "para": ":cluster_13529541823_13529541824_300058941_300063845_#2more_1_0"
+        },
+        {
+          "tempo": 2180,
+          "veiculo": "veh163",
+          "de": "369907169#0_0",
+          "para": ":1550389900_4_0"
+        },
+        {
+          "tempo": 2183,
+          "veiculo": "veh163",
+          "de": "369907170#0_0",
+          "para": "369907170#2_0"
+        },
+        {
+          "tempo": 2206,
+          "veiculo": "veh168",
+          "de": "236732321#1_1",
+          "para": ":300058973_3_0"
+        },
+        {
+          "tempo": 3538,
+          "veiculo": "veh265",
+          "de": "369907169#0_0",
+          "para": ":1550389900_4_0"
+        },
+        {
+          "tempo": 3541,
+          "veiculo": "veh265",
+          "de": "369907170#0_0",
+          "para": "369907170#2_0"
+        }
+      ],
+      "outros_semaforos_programa_original": {
+        "2577302612": {
+          "programa": "0",
+          "tipo": 3,
+          "trocas": 881,
+          "duracoes_por_fase": {
+            "0:G": {
+              "n": 293,
+              "min": 5,
+              "media": 5.0,
+              "max": 5
+            },
+            "1:y": {
+              "n": 294,
+              "min": 3,
+              "media": 3.0,
+              "max": 3
+            },
+            "2:r": {
+              "n": 293,
+              "min": 5,
+              "media": 5.0,
+              "max": 5
+            }
+          },
+          "erros": 0,
+          "primeiros_erros": []
+        },
+        "2577302625": {
+          "programa": "0",
+          "tipo": 3,
+          "trocas": 881,
+          "duracoes_por_fase": {
+            "0:G": {
+              "n": 293,
+              "min": 5,
+              "media": 5.0,
+              "max": 5
+            },
+            "1:y": {
+              "n": 294,
+              "min": 3,
+              "media": 3.0,
+              "max": 3
+            },
+            "2:r": {
+              "n": 293,
+              "min": 5,
+              "media": 5.0,
+              "max": 5
+            }
+          },
+          "erros": 0,
+          "primeiros_erros": []
+        },
+        "299169962": {
+          "programa": "0",
+          "tipo": 3,
+          "trocas": 941,
+          "duracoes_por_fase": {
+            "0:GGGGrrr": {
+              "n": 235,
+              "min": 5,
+              "media": 5.07,
+              "max": 8
+            },
+            "1:yyyyrrr": {
+              "n": 235,
+              "min": 3,
+              "media": 3.0,
+              "max": 3
+            },
+            "2:rrrrGGG": {
+              "n": 235,
+              "min": 5,
+              "media": 5.15,
+              "max": 11
+            },
+            "3:rrrryyy": {
+              "n": 235,
+              "min": 3,
+              "media": 3.0,
+              "max": 3
+            }
+          },
+          "erros": 0,
+          "primeiros_erros": []
+        },
+        "300058973": {
+          "programa": "0",
+          "tipo": 3,
+          "trocas": 945,
+          "duracoes_por_fase": {
+            "0:GGGrrr": {
+              "n": 236,
+              "min": 5,
+              "media": 5.03,
+              "max": 8
+            },
+            "1:yyyrrr": {
+              "n": 236,
+              "min": 3,
+              "media": 3.0,
+              "max": 3
+            },
+            "2:rrrGGG": {
+              "n": 236,
+              "min": 5,
+              "media": 5.12,
+              "max": 11
+            },
+            "3:rrryyy": {
+              "n": 236,
+              "min": 3,
+              "media": 3.0,
+              "max": 3
+            }
+          },
+          "erros": 0,
+          "primeiros_erros": []
+        },
+        "302806060": {
+          "programa": "0",
+          "tipo": 3,
+          "trocas": 950,
+          "duracoes_por_fase": {
+            "0:GGGrrr": {
+              "n": 237,
+              "min": 5,
+              "media": 5.04,
+              "max": 8
+            },
+            "1:yyyrrr": {
+              "n": 238,
+              "min": 3,
+              "media": 3.0,
+              "max": 3
+            },
+            "2:rrrGGG": {
+              "n": 237,
+              "min": 5,
+              "media": 5.03,
+              "max": 8
+            },
+            "3:rrryyy": {
+              "n": 237,
+              "min": 3,
+              "media": 3.0,
+              "max": 3
+            }
+          },
+          "erros": 0,
+          "primeiros_erros": []
+        },
+        "cluster_13529541823_13529541824_300058941_300063845_#2more": {
+          "programa": "0",
+          "tipo": 3,
+          "trocas": 936,
+          "duracoes_por_fase": {
+            "0:GGGGggggrrrrrrGGGGggGgggg": {
+              "n": 233,
+              "min": 5,
+              "media": 5.16,
+              "max": 11
+            },
+            "1:yyyyyyyyrrrrrryyyyyyyyyyy": {
+              "n": 234,
+              "min": 3,
+              "media": 3.0,
+              "max": 3
+            },
+            "2:rrrrrrrrGGGGGGrrrrrrrrrrr": {
+              "n": 234,
+              "min": 5,
+              "media": 5.15,
+              "max": 10
+            },
+            "3:rrrrrrrryyyyyyrrrrrrrrrrr": {
+              "n": 234,
+              "min": 3,
+              "media": 3.0,
+              "max": 3
+            }
+          },
+          "erros": 0,
+          "primeiros_erros": []
+        },
+        "cluster_1389167570_1389167571_3876525275": {
+          "programa": "0",
+          "tipo": 3,
+          "trocas": 946,
+          "duracoes_por_fase": {
+            "0:rrrrrGGGGGggggGGGggg": {
+              "n": 236,
+              "min": 5,
+              "media": 5.11,
+              "max": 9
+            },
+            "1:rrrrryyyyyyyyyyyyyyy": {
+              "n": 237,
+              "min": 3,
+              "media": 3.0,
+              "max": 3
+            },
+            "2:GGGGGrrrrrrrrrrrrrrr": {
+              "n": 236,
+              "min": 5,
+              "media": 5.03,
+              "max": 9
+            },
+            "3:yyyyyrrrrrrrrrrrrrrr": {
+              "n": 236,
+              "min": 3,
+              "media": 3.0,
+              "max": 3
+            }
+          },
+          "erros": 0,
+          "primeiros_erros": []
+        },
+        "cluster_1389167593_302805923_4715928040": {
+          "programa": "0",
+          "tipo": 3,
+          "trocas": 945,
+          "duracoes_por_fase": {
+            "0:gggrrrrGGGGGggggGGG": {
+              "n": 236,
+              "min": 5,
+              "media": 5.14,
+              "max": 8
+            },
+            "1:yyyrrrryyyyyyyyyyyy": {
+              "n": 236,
+              "min": 3,
+              "media": 3.0,
+              "max": 3
+            },
+            "2:rrrGGGGrrrrrrrrrrrr": {
+              "n": 236,
+              "min": 5,
+              "media": 5.03,
+              "max": 8
+            },
+            "3:rrryyyyrrrrrrrrrrrr": {
+              "n": 236,
+              "min": 3,
+              "media": 3.0,
+              "max": 3
+            }
+          },
+          "erros": 0,
+          "primeiros_erros": []
+        },
+        "cluster_2577302635_302805867": {
+          "programa": "0",
+          "tipo": 3,
+          "trocas": 944,
+          "duracoes_por_fase": {
+            "0:rrrGGGG": {
+              "n": 157,
+              "min": 5,
+              "media": 5.11,
+              "max": 9
+            },
+            "1:rrryyyy": {
+              "n": 158,
+              "min": 3,
+              "media": 3.0,
+              "max": 3
+            },
+            "2:gGGrrrr": {
+              "n": 157,
+              "min": 5,
+              "media": 5.1,
+              "max": 9
+            },
+            "3:yGGrrrr": {
+              "n": 157,
+              "min": 3,
+              "media": 3.0,
+              "max": 3
+            },
+            "4:rGGrrrr": {
+              "n": 157,
+              "min": 5,
+              "media": 5.04,
+              "max": 8
+            },
+            "5:ryyrrrr": {
+              "n": 157,
+              "min": 3,
+              "media": 3.0,
+              "max": 3
+            }
+          },
+          "erros": 0,
+          "primeiros_erros": []
+        },
+        "joinedS_1389167582_1389167591_1550389898_1550389899_#8more": {
+          "programa": "0",
+          "tipo": 3,
+          "trocas": 590,
+          "duracoes_por_fase": {
+            "0:GgGGGGGGGGrrrrrrrGGGGgrrrrGGrrrGGGGGGGrrrrrrGGGrrrrrrrrrrrrrGGGrrrrrrrrrrrrrGGGG": {
+              "n": 58,
+              "min": 5,
+              "media": 5.02,
+              "max": 6
+            },
+            "1:yyGGGGGGGGrrrrrrryyyyyrrrrGGrrrGGGGGGGrrrrrrGGGrrrrrrrrrrrrrGyyrrrrrrrrrrrrryyyy": {
+              "n": 59,
+              "min": 6,
+              "media": 6.0,
+              "max": 6
+            },
+            "2:rrGGGGGGGGrrrGGGGrrrrrrrrrGGrrrGGGGGGGrrrrrrGGGrrrrrrGGgrrrrGggGGGGrrrrrrrrrrrrr": {
+              "n": 59,
+              "min": 5,
+              "media": 6.44,
+              "max": 16
+            },
+            "3:rrGGGGGyyyrrryyyyrrrrrrrrryyrrrGGGyyyyrrrrrryyyrrrrrryyyrrrrGggGyyyrrrrrrrrrrrrr": {
+              "n": 59,
+              "min": 6,
+              "media": 6.0,
+              "max": 6
+            },
+            "4:rrGGGGGrrrrrrrrrrGGGrrGGGGrrrrrGGGrrrrrrGGGGrrrrrrrrrrrrrrrrGGGGgggGGGgrrrrrrrrr": {
+              "n": 59,
+              "min": 5,
+              "media": 8.22,
+              "max": 19
+            },
+            "5:rrGGGGGrrrrrrrrrrGGGrryyyyrrrrrGGGrrrrrryyyyrrrrrrrrrrrrrrrrGGGyyyyyyyyrrrrrrrrr": {
+              "n": 59,
+              "min": 6,
+              "media": 6.0,
+              "max": 6
+            },
+            "6:rrGGGGGrrrGGGrrrrGGGrrrrrrGGrrrGGGrrrrGGrrrrGGGGGGrrrrrrrrrrGGGrrrrrrrrGGGGGrrrr": {
+              "n": 59,
+              "min": 5,
+              "media": 7.73,
+              "max": 16
+            },
+            "7:rrGGGGGrrryyyrrrrGGGrrrrrrGGrrryyyrrrryyrrrrGGGyyyrrrrrrrrrryyyrrrrrrrryyyyyrrrr": {
+              "n": 59,
+              "min": 6,
+              "media": 6.0,
+              "max": 6
+            },
+            "8:rrGGGGGrrrrrrrrrrGGGrrrrrrGGGGGrrrrrrrrrrrrrGGGrrrGGGrrrGGGGrrrGGGGrrrrrrrrrrrrr": {
+              "n": 59,
+              "min": 5,
+              "media": 7.27,
+              "max": 16
+            },
+            "9:rrGGGGGrrrrrrrrrrGGGrrrrrrGGyyyrrrrrrrrrrrrrGGGrrryyyrrryyyyrrryyyyrrrrrrrrrrrrr": {
+              "n": 59,
+              "min": 6,
+              "media": 6.0,
+              "max": 6
+            }
+          },
+          "erros": 0,
+          "primeiros_erros": []
+        },
+        "joinedS_2577302624_2577302626_cluster_2577302628_304693561_6359625545_6501405791": {
+          "programa": "0",
+          "tipo": 3,
+          "trocas": 978,
+          "duracoes_por_fase": {
+            "0:GGGGgrrGGGrrrrrrrrrrrr": {
+              "n": 75,
+              "min": 5,
+              "media": 5.04,
+              "max": 8
+            },
+            "1:yyyyyrryyyrrrrrrrrrrrr": {
+              "n": 76,
+              "min": 3,
+              "media": 3.0,
+              "max": 3
+            },
+            "2:rrrrrGGrrrrrrrrrrrrGGr": {
+              "n": 76,
+              "min": 5,
+              "media": 6.38,
+              "max": 14
+            },
+            "3:rrrrryyrrrrrrrrrrrryyr": {
+              "n": 75,
+              "min": 3,
+              "media": 3.0,
+              "max": 3
+            },
+            "4:GGGrrrrrrrGGGrrrrrrrrr": {
+              "n": 75,
+              "min": 5,
+              "media": 5.09,
+              "max": 8
+            },
+            "5:yyyrrrrrrryyyrrrrrrrrr": {
+              "n": 75,
+              "min": 3,
+              "media": 3.0,
+              "max": 3
+            },
+            "6:rrrrrrrrrrrrrrrrrrrrrr": {
+              "n": 75,
+              "min": 1,
+              "media": 1.0,
+              "max": 1
+            },
+            "7:GGGrrrrrrrrrrGGGGGrrrr": {
+              "n": 75,
+              "min": 5,
+              "media": 5.19,
+              "max": 10
+            },
+            "8:yyyrrrrrrrrrryyyyyrrrr": {
+              "n": 75,
+              "min": 3,
+              "media": 3.0,
+              "max": 3
+            },
+            "9:rrrrrrrrrrrrrrrrrrGrrr": {
+              "n": 75,
+              "min": 5,
+              "media": 5.0,
+              "max": 5
+            },
+            "10:rrrrrrrrrrrrrrrrrryrrr": {
+              "n": 75,
+              "min": 3,
+              "media": 3.0,
+              "max": 3
+            },
+            "11:rrrrrrrrrrrrrrrrrrrrrG": {
+              "n": 75,
+              "min": 5,
+              "media": 5.0,
+              "max": 5
+            },
+            "12:rrrrrrrrrrrrrrrrrrrrry": {
+              "n": 75,
+              "min": 3,
+              "media": 3.0,
+              "max": 3
+            }
+          },
+          "erros": 0,
+          "primeiros_erros": []
+        }
+      }
+    },
+    "3": {
+      "semente": 3,
+      "fim_simulacao_s": 3860,
+      "duracao_real_s": 10.3,
+      "viagens_no_arquivo": 278,
+      "veiculos_inseridos": 278,
+      "pendentes_no_fim": 0,
+      "viagens": {
+        "registradas": 278,
+        "concluidas": 278,
+        "nao_concluidas": 0,
+        "espera_media_s": 34.155,
+        "perda_tempo_media_s": 56.774,
+        "duracao_media_s": 134.824,
+        "atraso_insercao_medio_s": 0.509
+      },
+      "estatisticas_sumo": {
+        "vehicles": {
+          "loaded": "278",
+          "inserted": "278",
+          "running": "0",
+          "waiting": "0"
+        },
+        "teleports": {
+          "total": "0",
+          "jam": "0",
+          "yield": "0",
+          "wrongLane": "0"
+        },
+        "safety": {
+          "collisions": "0",
+          "emergencyStops": "0",
+          "emergencyBraking": "0"
+        },
+        "vehicleTripStatistics": {
+          "count": "278",
+          "routeLength": "979.95",
+          "speed": "7.89",
+          "duration": "134.82",
+          "waitingTime": "34.15",
+          "timeLoss": "56.77",
+          "departDelay": "0.51",
+          "departDelayWaiting": "0.00",
+          "totalTravelTime": "37481.00",
+          "totalDepartDelay": "141.42"
+        }
+      },
+      "colisoes": {
+        "eventos": 0,
+        "lista": [],
+        "por_juncao": {}
+      },
+      "teleportes": {
+        "total": 0,
+        "lista": []
+      },
+      "veiculo_passos_em_parada_de_emergencia": 0,
+      "avisos_sumo": {
+        "total": 0,
+        "por_tipo": {},
+        "exemplos": {}
+      },
+      "por_semaforo": {
+        "476455095": {
+          "veiculos_planejados_na_insercao": 44,
+          "veiculos_observados_cruzando": 43,
+          "travessias": 43,
+          "por_link": {
+            "0": 31,
+            "1": 1,
+            "4": 10,
+            "5": 1
+          },
+          "por_aproximacao": {
+            "27579109#4": 32,
+            "234368025#0": 11
+          },
+          "luz_ao_cruzar": {
+            "G": 43
+          },
+          "travessias_aproximadas": 0,
+          "por_15min": {
+            "0": 14,
+            "15": 11,
+            "30": 9,
+            "45": 9
+          },
+          "parados_por_aproximacao": {
+            "234368025#0": {
+              "media": 0.003,
+              "max": 1
+            },
+            "27579109#4": {
+              "media": 0.011,
+              "max": 2
+            }
+          },
+          "programa_original": {
+            "programa": "0",
+            "tipo": 3,
+            "trocas": 958,
+            "duracoes_por_fase": {
+              "0:GGGGrrrr": {
+                "n": 239,
+                "min": 5,
+                "media": 5.08,
+                "max": 8
+              },
+              "1:yyyyrrrr": {
+                "n": 240,
+                "min": 3,
+                "media": 3.0,
+                "max": 3
+              },
+              "2:rrrrGGGG": {
+                "n": 239,
+                "min": 5,
+                "media": 5.03,
+                "max": 9
+              },
+              "3:rrrryyyy": {
+                "n": 239,
+                "min": 3,
+                "media": 3.0,
+                "max": 3
+              }
+            },
+            "erros": 0,
+            "primeiros_erros": []
+          },
+          "verificacao_original": {
+            "violacoes": 0,
+            "tipos": {},
+            "primeiras_violacoes": [],
+            "verdes": {
+              "n": 479,
+              "min": 5,
+              "max": 9,
+              "media": 5.05
+            },
+            "amarelos": {
+              "n": 479,
+              "min": 3,
+              "max": 3,
+              "media": 3.0
+            },
+            "vermelhos_gerais": {
+              "n": 0
+            }
+          },
+          "lon_lat": [
+            -46.67876495843957,
+            -23.60009799624882
+          ]
+        },
+        "40278305": {
+          "veiculos_planejados_na_insercao": 59,
+          "veiculos_observados_cruzando": 59,
+          "travessias": 59,
+          "por_link": {
+            "0": 16,
+            "1": 25,
+            "2": 7,
+            "3": 1,
+            "4": 10
+          },
+          "por_aproximacao": {
+            "760437731": 48,
+            "1160862341#1": 11
+          },
+          "luz_ao_cruzar": {
+            "G": 59
+          },
+          "travessias_aproximadas": 0,
+          "por_15min": {
+            "0": 16,
+            "15": 17,
+            "30": 11,
+            "45": 15
+          },
+          "parados_por_aproximacao": {
+            "1160862341#1": {
+              "media": 0.004,
+              "max": 1
+            },
+            "760437731": {
+              "media": 0.011,
+              "max": 1
+            }
+          },
+          "programa_original": {
+            "programa": "0",
+            "tipo": 3,
+            "trocas": 958,
+            "duracoes_por_fase": {
+              "0:GGGrr": {
+                "n": 239,
+                "min": 5,
+                "media": 5.08,
+                "max": 9
+              },
+              "1:yyyrr": {
+                "n": 240,
+                "min": 3,
+                "media": 3.0,
+                "max": 3
+              },
+              "2:rrrGG": {
+                "n": 239,
+                "min": 5,
+                "media": 5.02,
+                "max": 8
+              },
+              "3:rrryy": {
+                "n": 239,
+                "min": 3,
+                "media": 3.0,
+                "max": 3
+              }
+            },
+            "erros": 0,
+            "primeiros_erros": []
+          },
+          "verificacao_original": {
+            "violacoes": 0,
+            "tipos": {},
+            "primeiras_violacoes": [],
+            "verdes": {
+              "n": 479,
+              "min": 5,
+              "max": 9,
+              "media": 5.05
+            },
+            "amarelos": {
+              "n": 479,
+              "min": 3,
+              "max": 3,
+              "media": 3.0
+            },
+            "vermelhos_gerais": {
+              "n": 0
+            }
+          },
+          "lon_lat": [
+            -46.67827417852004,
+            -23.59919306766609
+          ]
+        },
+        "40278183": {
+          "veiculos_planejados_na_insercao": 77,
+          "veiculos_observados_cruzando": 77,
+          "travessias": 77,
+          "por_link": {
+            "0": 15,
+            "1": 17,
+            "2": 2,
+            "3": 36,
+            "4": 4,
+            "5": 3
+          },
+          "por_aproximacao": {
+            "8547878#5": 34,
+            "234368026#0": 43
+          },
+          "luz_ao_cruzar": {
+            "G": 77
+          },
+          "travessias_aproximadas": 0,
+          "por_15min": {
+            "0": 19,
+            "15": 18,
+            "30": 16,
+            "45": 23,
+            "60": 1
+          },
+          "parados_por_aproximacao": {
+            "234368026#0": {
+              "media": 0.007,
+              "max": 2
+            },
+            "8547878#5": {
+              "media": 0.011,
+              "max": 1
+            }
+          },
+          "programa_original": {
+            "programa": "0",
+            "tipo": 3,
+            "trocas": 953,
+            "duracoes_por_fase": {
+              "0:GGGrrr": {
+                "n": 238,
+                "min": 5,
+                "media": 5.15,
+                "max": 9
+              },
+              "1:yyyrrr": {
+                "n": 238,
+                "min": 3,
+                "media": 3.0,
+                "max": 3
+              },
+              "2:rrrGGG": {
+                "n": 238,
+                "min": 5,
+                "media": 5.05,
+                "max": 9
+              },
+              "3:rrryyy": {
+                "n": 238,
+                "min": 3,
+                "media": 3.0,
+                "max": 3
+              }
+            },
+            "erros": 0,
+            "primeiros_erros": []
+          },
+          "verificacao_original": {
+            "violacoes": 0,
+            "tipos": {},
+            "primeiras_violacoes": [],
+            "verdes": {
+              "n": 477,
+              "min": 5,
+              "max": 9,
+              "media": 5.1
+            },
+            "amarelos": {
+              "n": 476,
+              "min": 3,
+              "max": 3,
+              "media": 3.0
+            },
+            "vermelhos_gerais": {
+              "n": 0
+            }
+          },
+          "lon_lat": [
+            -46.67778198429873,
+            -23.598291945052065
+          ]
+        }
+      },
+      "sequencias_entre_os_tres": {
+        "40278183": 35,
+        "476455095 > 40278305 > 40278183": 28,
+        "476455095 > 40278305": 14,
+        "40278305 > 40278183": 14,
+        "40278305": 3,
+        "476455095": 1
+      },
+      "veiculos_por_numero_de_controlados_cruzados": {
+        "1": 39,
+        "2": 28,
+        "3": 28
+      },
+      "sequencias_planejadas_na_insercao": {
+        "40278183": 35,
+        "476455095 > 40278305 > 40278183": 29,
+        "476455095 > 40278305": 14,
+        "40278305 > 40278183": 13,
+        "40278305": 3,
+        "476455095": 1
+      },
+      "veiculos_com_rota_observada_diferente_da_planejada": 1,
+      "tempo_entre_cruzamentos_s": {
+        "476455095->40278305": {
+          "n": 42,
+          "min": 7,
+          "media": 13.14,
+          "mediana": 12.0,
+          "max": 21
+        },
+        "40278305->40278183": {
+          "n": 42,
+          "min": 7,
+          "media": 12.33,
+          "mediana": 12.0,
+          "max": 21
+        }
+      },
+      "luz_ao_cruzar_nos_outros_11": {
+        "G": 1025,
+        "g": 28
+      },
+      "problemas_rastreamento": {
+        "travessia_nao_mapeada": 22
+      },
+      "exemplos_nao_mapeados": [
+        {
+          "tempo": 173,
+          "veiculo": "veh6",
+          "de": "369907170#0_0",
+          "para": "369907170#2_0"
+        },
+        {
+          "tempo": 468,
+          "veiculo": "veh34",
+          "de": "234368025#0_1",
+          "para": ":476455095_4_0"
+        },
+        {
+          "tempo": 796,
+          "veiculo": "veh53",
+          "de": "369907167#0_2",
+          "para": ":1550389898_0_2"
+        },
+        {
+          "tempo": 813,
+          "veiculo": "veh61",
+          "de": "944842829#2_0",
+          "para": ":2577302595_1_0"
+        },
+        {
+          "tempo": 992,
+          "veiculo": "veh69",
+          "de": "369907170#0_0",
+          "para": "369907170#2_0"
+        },
+        {
+          "tempo": 1078,
+          "veiculo": "veh63",
+          "de": "942962257#2_0",
+          "para": ":1550389901_1_0"
+        },
+        {
+          "tempo": 1198,
+          "veiculo": "veh87",
+          "de": "369907170#0_0",
+          "para": "369907170#2_0"
+        },
+        {
+          "tempo": 1352,
+          "veiculo": "veh104",
+          "de": "369907167#0_2",
+          "para": ":1550389898_0_2"
+        },
+        {
+          "tempo": 1411,
+          "veiculo": "veh106",
+          "de": "942962257#2_0",
+          "para": ":1550389901_1_0"
+        },
+        {
+          "tempo": 1540,
+          "veiculo": "veh117",
+          "de": "471339603#3_1",
+          "para": ":1550389898_4_1"
+        },
+        {
+          "tempo": 1541,
+          "veiculo": "veh116",
+          "de": "369907170#0_0",
+          "para": "369907170#2_0"
+        },
+        {
+          "tempo": 1929,
+          "veiculo": "veh146",
+          "de": "471339603#3_0",
+          "para": ":1550389898_4_0"
+        },
+        {
+          "tempo": 1995,
+          "veiculo": "veh152",
+          "de": "944842828#1_1",
+          "para": ":cluster_13529541823_13529541824_300058941_300063845_#2more_1_0"
+        },
+        {
+          "tempo": 2051,
+          "veiculo": "veh151",
+          "de": "369907170#0_0",
+          "para": "369907170#2_0"
+        },
+        {
+          "tempo": 2442,
+          "veiculo": "veh183",
+          "de": "471339603#3_0",
+          "para": ":1550389898_4_1"
+        },
+        {
+          "tempo": 2446,
+          "veiculo": "veh183",
+          "de": "369907170#0_1",
+          "para": "369907170#2_1"
+        },
+        {
+          "tempo": 2579,
+          "veiculo": "veh193",
+          "de": "369907170#0_0",
+          "para": "369907170#2_0"
+        },
+        {
+          "tempo": 2594,
+          "veiculo": "veh183",
+          "de": "942962257#2_0",
+          "para": ":1550389901_1_0"
+        },
+        {
+          "tempo": 2987,
+          "veiculo": "veh227",
+          "de": "369907170#0_0",
+          "para": "369907170#2_0"
+        },
+        {
+          "tempo": 3250,
+          "veiculo": "veh244",
+          "de": "942962257#2_1",
+          "para": ":1550389901_1_1"
+        }
+      ],
+      "outros_semaforos_programa_original": {
+        "2577302612": {
+          "programa": "0",
+          "tipo": 3,
+          "trocas": 890,
+          "duracoes_por_fase": {
+            "0:G": {
+              "n": 296,
+              "min": 5,
+              "media": 5.0,
+              "max": 5
+            },
+            "1:y": {
+              "n": 297,
+              "min": 3,
+              "media": 3.0,
+              "max": 3
+            },
+            "2:r": {
+              "n": 296,
+              "min": 5,
+              "media": 5.0,
+              "max": 5
+            }
+          },
+          "erros": 0,
+          "primeiros_erros": []
+        },
+        "2577302625": {
+          "programa": "0",
+          "tipo": 3,
+          "trocas": 890,
+          "duracoes_por_fase": {
+            "0:G": {
+              "n": 296,
+              "min": 5,
+              "media": 5.0,
+              "max": 5
+            },
+            "1:y": {
+              "n": 297,
+              "min": 3,
+              "media": 3.0,
+              "max": 3
+            },
+            "2:r": {
+              "n": 296,
+              "min": 5,
+              "media": 5.0,
+              "max": 5
+            }
+          },
+          "erros": 0,
+          "primeiros_erros": []
+        },
+        "299169962": {
+          "programa": "0",
+          "tipo": 3,
+          "trocas": 952,
+          "duracoes_por_fase": {
+            "0:GGGGrrr": {
+              "n": 237,
+              "min": 5,
+              "media": 5.08,
+              "max": 9
+            },
+            "1:yyyyrrr": {
+              "n": 238,
+              "min": 3,
+              "media": 3.0,
+              "max": 3
+            },
+            "2:rrrrGGG": {
+              "n": 238,
+              "min": 5,
+              "media": 5.12,
+              "max": 11
+            },
+            "3:rrrryyy": {
+              "n": 238,
+              "min": 3,
+              "media": 3.0,
+              "max": 3
+            }
+          },
+          "erros": 0,
+          "primeiros_erros": []
+        },
+        "300058973": {
+          "programa": "0",
+          "tipo": 3,
+          "trocas": 957,
+          "duracoes_por_fase": {
+            "0:GGGrrr": {
+              "n": 239,
+              "min": 5,
+              "media": 5.02,
+              "max": 7
+            },
+            "1:yyyrrr": {
+              "n": 239,
+              "min": 3,
+              "media": 3.0,
+              "max": 3
+            },
+            "2:rrrGGG": {
+              "n": 239,
+              "min": 5,
+              "media": 5.11,
+              "max": 9
+            },
+            "3:rrryyy": {
+              "n": 239,
+              "min": 3,
+              "media": 3.0,
+              "max": 3
+            }
+          },
+          "erros": 0,
+          "primeiros_erros": []
+        },
+        "302806060": {
+          "programa": "0",
+          "tipo": 3,
+          "trocas": 961,
+          "duracoes_por_fase": {
+            "0:GGGrrr": {
+              "n": 240,
+              "min": 5,
+              "media": 5.03,
+              "max": 8
+            },
+            "1:yyyrrr": {
+              "n": 240,
+              "min": 3,
+              "media": 3.0,
+              "max": 3
+            },
+            "2:rrrGGG": {
+              "n": 240,
+              "min": 5,
+              "media": 5.03,
+              "max": 8
+            },
+            "3:rrryyy": {
+              "n": 240,
+              "min": 3,
+              "media": 3.0,
+              "max": 3
+            }
+          },
+          "erros": 0,
+          "primeiros_erros": []
+        },
+        "cluster_13529541823_13529541824_300058941_300063845_#2more": {
+          "programa": "0",
+          "tipo": 3,
+          "trocas": 953,
+          "duracoes_por_fase": {
+            "0:GGGGggggrrrrrrGGGGggGgggg": {
+              "n": 238,
+              "min": 5,
+              "media": 5.14,
+              "max": 9
+            },
+            "1:yyyyyyyyrrrrrryyyyyyyyyyy": {
+              "n": 238,
+              "min": 3,
+              "media": 3.0,
+              "max": 3
+            },
+            "2:rrrrrrrrGGGGGGrrrrrrrrrrr": {
+              "n": 238,
+              "min": 5,
+              "media": 5.05,
+              "max": 9
+            },
+            "3:rrrrrrrryyyyyyrrrrrrrrrrr": {
+              "n": 238,
+              "min": 3,
+              "media": 3.0,
+              "max": 3
+            }
+          },
+          "erros": 0,
+          "primeiros_erros": []
+        },
+        "cluster_1389167570_1389167571_3876525275": {
+          "programa": "0",
+          "tipo": 3,
+          "trocas": 955,
+          "duracoes_por_fase": {
+            "0:rrrrrGGGGGggggGGGggg": {
+              "n": 238,
+              "min": 5,
+              "media": 5.09,
+              "max": 8
+            },
+            "1:rrrrryyyyyyyyyyyyyyy": {
+              "n": 239,
+              "min": 3,
+              "media": 3.0,
+              "max": 3
+            },
+            "2:GGGGGrrrrrrrrrrrrrrr": {
+              "n": 239,
+              "min": 5,
+              "media": 5.06,
+              "max": 8
+            },
+            "3:yyyyyrrrrrrrrrrrrrrr": {
+              "n": 238,
+              "min": 3,
+              "media": 3.0,
+              "max": 3
+            }
+          },
+          "erros": 0,
+          "primeiros_erros": []
+        },
+        "cluster_1389167593_302805923_4715928040": {
+          "programa": "0",
+          "tipo": 3,
+          "trocas": 955,
+          "duracoes_por_fase": {
+            "0:gggrrrrGGGGGggggGGG": {
+              "n": 238,
+              "min": 5,
+              "media": 5.08,
+              "max": 9
+            },
+            "1:yyyrrrryyyyyyyyyyyy": {
+              "n": 239,
+              "min": 3,
+              "media": 3.0,
+              "max": 3
+            },
+            "2:rrrGGGGrrrrrrrrrrrr": {
+              "n": 239,
+              "min": 5,
+              "media": 5.07,
+              "max": 9
+            },
+            "3:rrryyyyrrrrrrrrrrrr": {
+              "n": 238,
+              "min": 3,
+              "media": 3.0,
+              "max": 3
+            }
+          },
+          "erros": 0,
+          "primeiros_erros": []
+        },
+        "cluster_2577302635_302805867": {
+          "programa": "0",
+          "tipo": 3,
+          "trocas": 952,
+          "duracoes_por_fase": {
+            "0:rrrGGGG": {
+              "n": 158,
+              "min": 5,
+              "media": 5.11,
+              "max": 9
+            },
+            "1:rrryyyy": {
+              "n": 159,
+              "min": 3,
+              "media": 3.0,
+              "max": 3
+            },
+            "2:gGGrrrr": {
+              "n": 159,
+              "min": 5,
+              "media": 5.07,
+              "max": 9
+            },
+            "3:yGGrrrr": {
+              "n": 159,
+              "min": 3,
+              "media": 3.0,
+              "max": 3
+            },
+            "4:rGGrrrr": {
+              "n": 158,
+              "min": 5,
+              "media": 5.13,
+              "max": 9
+            },
+            "5:ryyrrrr": {
+              "n": 158,
+              "min": 3,
+              "media": 3.0,
+              "max": 3
+            }
+          },
+          "erros": 0,
+          "primeiros_erros": []
+        },
+        "joinedS_1389167582_1389167591_1550389898_1550389899_#8more": {
+          "programa": "0",
+          "tipo": 3,
+          "trocas": 596,
+          "duracoes_por_fase": {
+            "0:GgGGGGGGGGrrrrrrrGGGGgrrrrGGrrrGGGGGGGrrrrrrGGGrrrrrrrrrrrrrGGGrrrrrrrrrrrrrGGGG": {
+              "n": 59,
+              "min": 5,
+              "media": 5.03,
+              "max": 7
+            },
+            "1:yyGGGGGGGGrrrrrrryyyyyrrrrGGrrrGGGGGGGrrrrrrGGGrrrrrrrrrrrrrGyyrrrrrrrrrrrrryyyy": {
+              "n": 60,
+              "min": 6,
+              "media": 6.0,
+              "max": 6
+            },
+            "2:rrGGGGGGGGrrrGGGGrrrrrrrrrGGrrrGGGGGGGrrrrrrGGGrrrrrrGGgrrrrGggGGGGrrrrrrrrrrrrr": {
+              "n": 60,
+              "min": 5,
+              "media": 6.32,
+              "max": 13
+            },
+            "3:rrGGGGGyyyrrryyyyrrrrrrrrryyrrrGGGyyyyrrrrrryyyrrrrrryyyrrrrGggGyyyrrrrrrrrrrrrr": {
+              "n": 60,
+              "min": 6,
+              "media": 6.0,
+              "max": 6
+            },
+            "4:rrGGGGGrrrrrrrrrrGGGrrGGGGrrrrrGGGrrrrrrGGGGrrrrrrrrrrrrrrrrGGGGgggGGGgrrrrrrrrr": {
+              "n": 60,
+              "min": 5,
+              "media": 8.02,
+              "max": 16
+            },
+            "5:rrGGGGGrrrrrrrrrrGGGrryyyyrrrrrGGGrrrrrryyyyrrrrrrrrrrrrrrrrGGGyyyyyyyyrrrrrrrrr": {
+              "n": 60,
+              "min": 6,
+              "media": 6.0,
+              "max": 6
+            },
+            "6:rrGGGGGrrrGGGrrrrGGGrrrrrrGGrrrGGGrrrrGGrrrrGGGGGGrrrrrrrrrrGGGrrrrrrrrGGGGGrrrr": {
+              "n": 59,
+              "min": 5,
+              "media": 7.93,
+              "max": 19
+            },
+            "7:rrGGGGGrrryyyrrrrGGGrrrrrrGGrrryyyrrrryyrrrrGGGyyyrrrrrrrrrryyyrrrrrrrryyyyyrrrr": {
+              "n": 59,
+              "min": 6,
+              "media": 6.0,
+              "max": 6
+            },
+            "8:rrGGGGGrrrrrrrrrrGGGrrrrrrGGGGGrrrrrrrrrrrrrGGGrrrGGGrrrGGGGrrrGGGGrrrrrrrrrrrrr": {
+              "n": 59,
+              "min": 5,
+              "media": 7.46,
+              "max": 14
+            },
+            "9:rrGGGGGrrrrrrrrrrGGGrrrrrrGGyyyrrrrrrrrrrrrrGGGrrryyyrrryyyyrrryyyyrrrrrrrrrrrrr": {
+              "n": 59,
+              "min": 6,
+              "media": 6.0,
+              "max": 6
+            }
+          },
+          "erros": 0,
+          "primeiros_erros": []
+        },
+        "joinedS_2577302624_2577302626_cluster_2577302628_304693561_6359625545_6501405791": {
+          "programa": "0",
+          "tipo": 3,
+          "trocas": 991,
+          "duracoes_por_fase": {
+            "0:GGGGgrrGGGrrrrrrrrrrrr": {
+              "n": 76,
+              "min": 5,
+              "media": 5.0,
+              "max": 5
+            },
+            "1:yyyyyrryyyrrrrrrrrrrrr": {
+              "n": 77,
+              "min": 3,
+              "media": 3.0,
+              "max": 3
+            },
+            "2:rrrrrGGrrrrrrrrrrrrGGr": {
+              "n": 77,
+              "min": 5,
+              "media": 6.23,
+              "max": 13
+            },
+            "3:rrrrryyrrrrrrrrrrrryyr": {
+              "n": 76,
+              "min": 3,
+              "media": 3.0,
+              "max": 3
+            },
+            "4:GGGrrrrrrrGGGrrrrrrrrr": {
+              "n": 76,
+              "min": 5,
+              "media": 5.14,
+              "max": 10
+            },
+            "5:yyyrrrrrrryyyrrrrrrrrr": {
+              "n": 76,
+              "min": 3,
+              "media": 3.0,
+              "max": 3
+            },
+            "6:rrrrrrrrrrrrrrrrrrrrrr": {
+              "n": 76,
+              "min": 1,
+              "media": 1.0,
+              "max": 1
+            },
+            "7:GGGrrrrrrrrrrGGGGGrrrr": {
+              "n": 76,
+              "min": 5,
+              "media": 5.18,
+              "max": 10
+            },
+            "8:yyyrrrrrrrrrryyyyyrrrr": {
+              "n": 76,
+              "min": 3,
+              "media": 3.0,
+              "max": 3
+            },
+            "9:rrrrrrrrrrrrrrrrrrGrrr": {
+              "n": 76,
+              "min": 5,
+              "media": 5.0,
+              "max": 5
+            },
+            "10:rrrrrrrrrrrrrrrrrryrrr": {
+              "n": 76,
+              "min": 3,
+              "media": 3.0,
+              "max": 3
+            },
+            "11:rrrrrrrrrrrrrrrrrrrrrG": {
+              "n": 76,
+              "min": 5,
+              "media": 5.0,
+              "max": 5
+            },
+            "12:rrrrrrrrrrrrrrrrrrrrry": {
+              "n": 76,
+              "min": 3,
+              "media": 3.0,
+              "max": 3
+            }
+          },
+          "erros": 0,
+          "primeiros_erros": []
+        }
+      }
+    }
+  },
+  "referencia_gui_do_usuario": {
+    "tripinfos_do_cenario": {
+      "registradas": 278,
+      "concluidas": 278,
+      "nao_concluidas": 0,
+      "espera_media_s": 33.906,
+      "perda_tempo_media_s": 56.836,
+      "duracao_media_s": 134.27,
+      "atraso_insercao_medio_s": 0.512
+    },
+    "stats_do_cenario": {
+      "vehicles": {
+        "loaded": "278",
+        "inserted": "278",
+        "running": "0",
+        "waiting": "0"
+      },
+      "teleports": {
+        "total": "0",
+        "jam": "0",
+        "yield": "0",
+        "wrongLane": "0"
+      },
+      "safety": {
+        "collisions": "0",
+        "emergencyStops": "0",
+        "emergencyBraking": "0"
+      },
+      "vehicleTripStatistics": {
+        "count": "278",
+        "routeLength": "979.89",
+        "speed": "7.88",
+        "duration": "134.27",
+        "waitingTime": "33.91",
+        "timeLoss": "56.84",
+        "departDelay": "0.51",
+        "departDelayWaiting": "-1.00",
+        "totalTravelTime": "37327.00",
+        "totalDepartDelay": "142.42"
+      }
+    }
+  },
+  "nota": "planejado = rota calculada pelo SUMO na insercao (trips sem rota fixa); observado = veiculo que efetivamente cruzou a linha de retencao de um link do semaforo"
+}

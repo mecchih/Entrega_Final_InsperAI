@@ -1,0 +1,4078 @@
+{
+ "casos": [
+  {
+   "cenario": "assimetrico",
+   "controlador": "DQN C seed1",
+   "seed": 3,
+   "metricas_identicas_a_avaliacao": true,
+   "carros_presos": [
+    {
+     "id": "f0_O_direita.145",
+     "aprox": "O",
+     "entrou_na_via_s": 3595,
+     "espera_registrada_s": 1180.0,
+     "ultimo_verde_da_aprox_s": 3614
+    }
+   ],
+   "fotos_finais": [
+    {
+     "t": 3720,
+     "estado": "rrrrrGGGGGrrrrrrrrrr",
+     "carros": [
+      {
+       "id": "f0_O_direita.145",
+       "faixa": "left0A0_0",
+       "posicao_m": 238.6,
+       "comprimento_faixa_m": 239.6,
+       "velocidade": 0.0,
+       "espera_s": 100.0
+      }
+     ]
+    },
+    {
+     "t": 3780,
+     "estado": "rrrrryyyyyrrrrrrrrrr",
+     "carros": [
+      {
+       "id": "f0_O_direita.145",
+       "faixa": "left0A0_0",
+       "posicao_m": 238.6,
+       "comprimento_faixa_m": 239.6,
+       "velocidade": 0.0,
+       "espera_s": 160.0
+      }
+     ]
+    },
+    {
+     "t": 3840,
+     "estado": "rrrrrGGGGGrrrrrrrrrr",
+     "carros": [
+      {
+       "id": "f0_O_direita.145",
+       "faixa": "left0A0_0",
+       "posicao_m": 238.6,
+       "comprimento_faixa_m": 239.6,
+       "velocidade": 0.0,
+       "espera_s": 220.0
+      }
+     ]
+    },
+    {
+     "t": 4740,
+     "estado": "rrrrryyyyyrrrrrrrrrr",
+     "carros": [
+      {
+       "id": "f0_O_direita.145",
+       "faixa": "left0A0_0",
+       "posicao_m": 238.6,
+       "comprimento_faixa_m": 239.6,
+       "velocidade": 0.0,
+       "espera_s": 1120.0
+      }
+     ]
+    }
+   ],
+   "ultimas_decisoes": [
+    {
+     "t": 4730,
+     "verde": "L",
+     "tempo_no_verde": 10,
+     "escolha": "L",
+     "filas": [
+      0,
+      0,
+      0,
+      1
+     ],
+     "carros": [
+      0,
+      0,
+      0,
+      1
+     ],
+     "sem_verde": [
+      1071,
+      0,
+      16,
+      1116
+     ],
+     "q": [
+      -0.8755,
+      0.0039,
+      -0.0436,
+      -0.171
+     ]
+    },
+    {
+     "t": 4735,
+     "verde": "L",
+     "tempo_no_verde": 15,
+     "escolha": "L",
+     "filas": [
+      0,
+      0,
+      0,
+      1
+     ],
+     "carros": [
+      0,
+      0,
+      0,
+      1
+     ],
+     "sem_verde": [
+      1076,
+      0,
+      21,
+      1121
+     ],
+     "q": [
+      -0.2836,
+      0.4447,
+      0.4348,
+      0.3581
+     ]
+    },
+    {
+     "t": 4740,
+     "verde": "L",
+     "tempo_no_verde": 20,
+     "escolha": "S",
+     "filas": [
+      0,
+      0,
+      0,
+      1
+     ],
+     "carros": [
+      0,
+      0,
+      0,
+      1
+     ],
+     "sem_verde": [
+      1081,
+      0,
+      26,
+      1126
+     ],
+     "q": [
+      0.3225,
+      0.8879,
+      0.903,
+      0.8734
+     ]
+    },
+    {
+     "t": 4755,
+     "verde": "S",
+     "tempo_no_verde": 10,
+     "escolha": "L",
+     "filas": [
+      0,
+      0,
+      0,
+      1
+     ],
+     "carros": [
+      0,
+      0,
+      0,
+      1
+     ],
+     "sem_verde": [
+      1096,
+      16,
+      0,
+      1141
+     ],
+     "q": [
+      -1.3118,
+      -0.0365,
+      -0.8495,
+      -0.5628
+     ]
+    },
+    {
+     "t": 4770,
+     "verde": "L",
+     "tempo_no_verde": 10,
+     "escolha": "L",
+     "filas": [
+      0,
+      0,
+      0,
+      1
+     ],
+     "carros": [
+      0,
+      0,
+      0,
+      1
+     ],
+     "sem_verde": [
+      1111,
+      0,
+      16,
+      1156
+     ],
+     "q": [
+      -0.8755,
+      0.0039,
+      -0.0436,
+      -0.171
+     ]
+    },
+    {
+     "t": 4775,
+     "verde": "L",
+     "tempo_no_verde": 15,
+     "escolha": "L",
+     "filas": [
+      0,
+      0,
+      0,
+      1
+     ],
+     "carros": [
+      0,
+      0,
+      0,
+      1
+     ],
+     "sem_verde": [
+      1116,
+      0,
+      21,
+      1161
+     ],
+     "q": [
+      -0.2836,
+      0.4447,
+      0.4348,
+      0.3581
+     ]
+    },
+    {
+     "t": 4780,
+     "verde": "L",
+     "tempo_no_verde": 20,
+     "escolha": "S",
+     "filas": [
+      0,
+      0,
+      0,
+      1
+     ],
+     "carros": [
+      0,
+      0,
+      0,
+      1
+     ],
+     "sem_verde": [
+      1121,
+      0,
+      26,
+      1166
+     ],
+     "q": [
+      0.3225,
+      0.8879,
+      0.903,
+      0.8734
+     ]
+    },
+    {
+     "t": 4795,
+     "verde": "S",
+     "tempo_no_verde": 10,
+     "escolha": "L",
+     "filas": [
+      0,
+      0,
+      0,
+      1
+     ],
+     "carros": [
+      0,
+      0,
+      0,
+      1
+     ],
+     "sem_verde": [
+      1136,
+      16,
+      0,
+      1181
+     ],
+     "q": [
+      -1.3118,
+      -0.0365,
+      -0.8495,
+      -0.5628
+     ]
+    }
+   ],
+   "ciclo_final": {
+    "tamanho_decisoes": 4,
+    "passos": [
+     {
+      "verde": "L",
+      "tempo_no_verde": 10,
+      "escolha": "L"
+     },
+     {
+      "verde": "L",
+      "tempo_no_verde": 15,
+      "escolha": "L"
+     },
+     {
+      "verde": "L",
+      "tempo_no_verde": 20,
+      "escolha": "S"
+     },
+     {
+      "verde": "S",
+      "tempo_no_verde": 10,
+      "escolha": "L"
+     }
+    ]
+   },
+   "verdes_no_escoamento_por_aprox": {
+    "O": 1,
+    "S": 30,
+    "L": 29,
+    "N": 1
+   },
+   "aprox_presa_recebeu_verde_depois_de_parar": false,
+   "maior_verde_no_escoamento_s": 20,
+   "intervencoes": 0,
+   "decisoes_que_deveriam_ter_acionado_a_regra_sem_acionar": [],
+   "metricas": {
+    "n_carros": 1832,
+    "veiculos_concluidos": 1831,
+    "veiculos_interrompidos": 1,
+    "veiculos_sem_atendimento": 1,
+    "veiculos_na_rede_no_fim": 1,
+    "veiculos_aguardando_entrada_no_fim": 0,
+    "escoamento_cortado": true,
+    "segundos_escoamento": 1200,
+    "espera_media": 24.198144104803493,
+    "espera_media_concluidos": 23.566903331512833,
+    "espera_max": 1180.0,
+    "espera_max_concluidos": 246.0,
+    "espera_p95": 93.0,
+    "espera_p95_concluidos": 93.0,
+    "verde_max_executado_total": 35
+   }
+  },
+  {
+   "cenario": "assimetrico",
+   "controlador": "DQN C seed1",
+   "seed": 6,
+   "metricas_identicas_a_avaliacao": true,
+   "carros_presos": [
+    {
+     "id": "f0_O_direita.155",
+     "aprox": "O",
+     "entrou_na_via_s": 3599,
+     "espera_registrada_s": 1171.0,
+     "ultimo_verde_da_aprox_s": 3624
+    }
+   ],
+   "fotos_finais": [
+    {
+     "t": 3720,
+     "estado": "rrrrryyyyyrrrrrrrrrr",
+     "carros": [
+      {
+       "id": "f0_O_direita.155",
+       "faixa": "left0A0_0",
+       "posicao_m": 238.6,
+       "comprimento_faixa_m": 239.6,
+       "velocidade": 0.0,
+       "espera_s": 90.0
+      }
+     ]
+    },
+    {
+     "t": 3780,
+     "estado": "rrrrrGGGGGrrrrrrrrrr",
+     "carros": [
+      {
+       "id": "f0_O_direita.155",
+       "faixa": "left0A0_0",
+       "posicao_m": 238.6,
+       "comprimento_faixa_m": 239.6,
+       "velocidade": 0.0,
+       "espera_s": 150.0
+      }
+     ]
+    },
+    {
+     "t": 3840,
+     "estado": "rrrrryyyyyrrrrrrrrrr",
+     "carros": [
+      {
+       "id": "f0_O_direita.155",
+       "faixa": "left0A0_0",
+       "posicao_m": 238.6,
+       "comprimento_faixa_m": 239.6,
+       "velocidade": 0.0,
+       "espera_s": 210.0
+      }
+     ]
+    },
+    {
+     "t": 4740,
+     "estado": "rrrrrGGGGGrrrrrrrrrr",
+     "carros": [
+      {
+       "id": "f0_O_direita.155",
+       "faixa": "left0A0_0",
+       "posicao_m": 238.6,
+       "comprimento_faixa_m": 239.6,
+       "velocidade": 0.0,
+       "espera_s": 1110.0
+      }
+     ]
+    }
+   ],
+   "ultimas_decisoes": [
+    {
+     "t": 4720,
+     "verde": "L",
+     "tempo_no_verde": 20,
+     "escolha": "S",
+     "filas": [
+      0,
+      0,
+      0,
+      1
+     ],
+     "carros": [
+      0,
+      0,
+      0,
+      1
+     ],
+     "sem_verde": [
+      1081,
+      0,
+      26,
+      1096
+     ],
+     "q": [
+      0.3225,
+      0.8879,
+      0.903,
+      0.8734
+     ]
+    },
+    {
+     "t": 4735,
+     "verde": "S",
+     "tempo_no_verde": 10,
+     "escolha": "L",
+     "filas": [
+      0,
+      0,
+      0,
+      1
+     ],
+     "carros": [
+      0,
+      0,
+      0,
+      1
+     ],
+     "sem_verde": [
+      1096,
+      16,
+      0,
+      1111
+     ],
+     "q": [
+      -1.3118,
+      -0.0365,
+      -0.8495,
+      -0.5628
+     ]
+    },
+    {
+     "t": 4750,
+     "verde": "L",
+     "tempo_no_verde": 10,
+     "escolha": "L",
+     "filas": [
+      0,
+      0,
+      0,
+      1
+     ],
+     "carros": [
+      0,
+      0,
+      0,
+      1
+     ],
+     "sem_verde": [
+      1111,
+      0,
+      16,
+      1126
+     ],
+     "q": [
+      -0.8755,
+      0.0039,
+      -0.0436,
+      -0.171
+     ]
+    },
+    {
+     "t": 4755,
+     "verde": "L",
+     "tempo_no_verde": 15,
+     "escolha": "L",
+     "filas": [
+      0,
+      0,
+      0,
+      1
+     ],
+     "carros": [
+      0,
+      0,
+      0,
+      1
+     ],
+     "sem_verde": [
+      1116,
+      0,
+      21,
+      1131
+     ],
+     "q": [
+      -0.2836,
+      0.4447,
+      0.4348,
+      0.3581
+     ]
+    },
+    {
+     "t": 4760,
+     "verde": "L",
+     "tempo_no_verde": 20,
+     "escolha": "S",
+     "filas": [
+      0,
+      0,
+      0,
+      1
+     ],
+     "carros": [
+      0,
+      0,
+      0,
+      1
+     ],
+     "sem_verde": [
+      1121,
+      0,
+      26,
+      1136
+     ],
+     "q": [
+      0.3225,
+      0.8879,
+      0.903,
+      0.8734
+     ]
+    },
+    {
+     "t": 4775,
+     "verde": "S",
+     "tempo_no_verde": 10,
+     "escolha": "L",
+     "filas": [
+      0,
+      0,
+      0,
+      1
+     ],
+     "carros": [
+      0,
+      0,
+      0,
+      1
+     ],
+     "sem_verde": [
+      1136,
+      16,
+      0,
+      1151
+     ],
+     "q": [
+      -1.3118,
+      -0.0365,
+      -0.8495,
+      -0.5628
+     ]
+    },
+    {
+     "t": 4790,
+     "verde": "L",
+     "tempo_no_verde": 10,
+     "escolha": "L",
+     "filas": [
+      0,
+      0,
+      0,
+      1
+     ],
+     "carros": [
+      0,
+      0,
+      0,
+      1
+     ],
+     "sem_verde": [
+      1151,
+      0,
+      16,
+      1166
+     ],
+     "q": [
+      -0.8755,
+      0.0039,
+      -0.0436,
+      -0.171
+     ]
+    },
+    {
+     "t": 4795,
+     "verde": "L",
+     "tempo_no_verde": 15,
+     "escolha": "L",
+     "filas": [
+      0,
+      0,
+      0,
+      1
+     ],
+     "carros": [
+      0,
+      0,
+      0,
+      1
+     ],
+     "sem_verde": [
+      1156,
+      0,
+      21,
+      1171
+     ],
+     "q": [
+      -0.2836,
+      0.4447,
+      0.4348,
+      0.3581
+     ]
+    }
+   ],
+   "ciclo_final": {
+    "tamanho_decisoes": 4,
+    "passos": [
+     {
+      "verde": "L",
+      "tempo_no_verde": 20,
+      "escolha": "S"
+     },
+     {
+      "verde": "S",
+      "tempo_no_verde": 10,
+      "escolha": "L"
+     },
+     {
+      "verde": "L",
+      "tempo_no_verde": 10,
+      "escolha": "L"
+     },
+     {
+      "verde": "L",
+      "tempo_no_verde": 15,
+      "escolha": "L"
+     }
+    ]
+   },
+   "verdes_no_escoamento_por_aprox": {
+    "L": 30,
+    "O": 1,
+    "N": 1,
+    "S": 29
+   },
+   "aprox_presa_recebeu_verde_depois_de_parar": false,
+   "maior_verde_no_escoamento_s": 20,
+   "intervencoes": 0,
+   "decisoes_que_deveriam_ter_acionado_a_regra_sem_acionar": [],
+   "metricas": {
+    "n_carros": 1810,
+    "veiculos_concluidos": 1809,
+    "veiculos_interrompidos": 1,
+    "veiculos_sem_atendimento": 1,
+    "veiculos_na_rede_no_fim": 1,
+    "veiculos_aguardando_entrada_no_fim": 0,
+    "escoamento_cortado": true,
+    "segundos_escoamento": 1200,
+    "espera_media": 21.95303867403315,
+    "espera_media_concluidos": 21.317855168601437,
+    "espera_max": 1171.0,
+    "espera_max_concluidos": 244.0,
+    "espera_p95": 88.0,
+    "espera_p95_concluidos": 87.0,
+    "verde_max_executado_total": 35
+   }
+  },
+  {
+   "cenario": "assimetrico",
+   "controlador": "DQN C seed2",
+   "seed": 2,
+   "metricas_identicas_a_avaliacao": true,
+   "carros_presos": [
+    {
+     "id": "f0_N_reto.113",
+     "aprox": "N",
+     "entrou_na_via_s": 3593,
+     "espera_registrada_s": 1183.0,
+     "ultimo_verde_da_aprox_s": 3569
+    }
+   ],
+   "fotos_finais": [
+    {
+     "t": 3660,
+     "estado": "rrrrrrrrrrrrrrrGGGGG",
+     "carros": [
+      {
+       "id": "f0_N_reto.113",
+       "faixa": "top0A0_0",
+       "posicao_m": 238.6,
+       "comprimento_faixa_m": 239.6,
+       "velocidade": 0.0,
+       "espera_s": 43.0
+      },
+      {
+       "id": "f0_O_direita.140",
+       "faixa": "A0bottom0_0",
+       "posicao_m": 234.5,
+       "comprimento_faixa_m": 239.6,
+       "velocidade": 12.6,
+       "espera_s": 0.0
+      },
+      {
+       "id": "f0_S_reto.121",
+       "faixa": "bottom0A0_0",
+       "posicao_m": 238.6,
+       "comprimento_faixa_m": 239.6,
+       "velocidade": 0.0,
+       "espera_s": 50.0
+      }
+     ]
+    },
+    {
+     "t": 3720,
+     "estado": "rrrrrGGGGGrrrrrrrrrr",
+     "carros": [
+      {
+       "id": "f0_N_reto.113",
+       "faixa": "top0A0_0",
+       "posicao_m": 238.6,
+       "comprimento_faixa_m": 239.6,
+       "velocidade": 0.0,
+       "espera_s": 103.0
+      }
+     ]
+    },
+    {
+     "t": 3780,
+     "estado": "rrrrrGGGGGrrrrrrrrrr",
+     "carros": [
+      {
+       "id": "f0_N_reto.113",
+       "faixa": "top0A0_0",
+       "posicao_m": 238.6,
+       "comprimento_faixa_m": 239.6,
+       "velocidade": 0.0,
+       "espera_s": 163.0
+      }
+     ]
+    },
+    {
+     "t": 4740,
+     "estado": "rrrrrGGGGGrrrrrrrrrr",
+     "carros": [
+      {
+       "id": "f0_N_reto.113",
+       "faixa": "top0A0_0",
+       "posicao_m": 238.6,
+       "comprimento_faixa_m": 239.6,
+       "velocidade": 0.0,
+       "espera_s": 1123.0
+      }
+     ]
+    }
+   ],
+   "ultimas_decisoes": [
+    {
+     "t": 4685,
+     "verde": "L",
+     "tempo_no_verde": 10,
+     "escolha": "S",
+     "filas": [
+      1,
+      0,
+      0,
+      0
+     ],
+     "carros": [
+      1,
+      0,
+      0,
+      0
+     ],
+     "sem_verde": [
+      1116,
+      0,
+      16,
+      1021
+     ],
+     "q": [
+      -2.0685,
+      -1.9262,
+      -1.5732,
+      -2.1324
+     ]
+    },
+    {
+     "t": 4700,
+     "verde": "S",
+     "tempo_no_verde": 10,
+     "escolha": "L",
+     "filas": [
+      1,
+      0,
+      0,
+      0
+     ],
+     "carros": [
+      1,
+      0,
+      0,
+      0
+     ],
+     "sem_verde": [
+      1131,
+      16,
+      0,
+      1036
+     ],
+     "q": [
+      -2.0203,
+      -1.5763,
+      -2.2461,
+      -2.0489
+     ]
+    },
+    {
+     "t": 4715,
+     "verde": "L",
+     "tempo_no_verde": 10,
+     "escolha": "S",
+     "filas": [
+      1,
+      0,
+      0,
+      0
+     ],
+     "carros": [
+      1,
+      0,
+      0,
+      0
+     ],
+     "sem_verde": [
+      1146,
+      0,
+      16,
+      1051
+     ],
+     "q": [
+      -2.0685,
+      -1.9262,
+      -1.5732,
+      -2.1324
+     ]
+    },
+    {
+     "t": 4730,
+     "verde": "S",
+     "tempo_no_verde": 10,
+     "escolha": "L",
+     "filas": [
+      1,
+      0,
+      0,
+      0
+     ],
+     "carros": [
+      1,
+      0,
+      0,
+      0
+     ],
+     "sem_verde": [
+      1161,
+      16,
+      0,
+      1066
+     ],
+     "q": [
+      -2.0203,
+      -1.5763,
+      -2.2461,
+      -2.0489
+     ]
+    },
+    {
+     "t": 4745,
+     "verde": "L",
+     "tempo_no_verde": 10,
+     "escolha": "S",
+     "filas": [
+      1,
+      0,
+      0,
+      0
+     ],
+     "carros": [
+      1,
+      0,
+      0,
+      0
+     ],
+     "sem_verde": [
+      1176,
+      0,
+      16,
+      1081
+     ],
+     "q": [
+      -2.0685,
+      -1.9262,
+      -1.5732,
+      -2.1324
+     ]
+    },
+    {
+     "t": 4760,
+     "verde": "S",
+     "tempo_no_verde": 10,
+     "escolha": "L",
+     "filas": [
+      1,
+      0,
+      0,
+      0
+     ],
+     "carros": [
+      1,
+      0,
+      0,
+      0
+     ],
+     "sem_verde": [
+      1191,
+      16,
+      0,
+      1096
+     ],
+     "q": [
+      -2.0203,
+      -1.5763,
+      -2.2461,
+      -2.0489
+     ]
+    },
+    {
+     "t": 4775,
+     "verde": "L",
+     "tempo_no_verde": 10,
+     "escolha": "S",
+     "filas": [
+      1,
+      0,
+      0,
+      0
+     ],
+     "carros": [
+      1,
+      0,
+      0,
+      0
+     ],
+     "sem_verde": [
+      1206,
+      0,
+      16,
+      1111
+     ],
+     "q": [
+      -2.0685,
+      -1.9262,
+      -1.5732,
+      -2.1324
+     ]
+    },
+    {
+     "t": 4790,
+     "verde": "S",
+     "tempo_no_verde": 10,
+     "escolha": "L",
+     "filas": [
+      1,
+      0,
+      0,
+      0
+     ],
+     "carros": [
+      1,
+      0,
+      0,
+      0
+     ],
+     "sem_verde": [
+      1221,
+      16,
+      0,
+      1126
+     ],
+     "q": [
+      -2.0203,
+      -1.5763,
+      -2.2461,
+      -2.0489
+     ]
+    }
+   ],
+   "ciclo_final": {
+    "tamanho_decisoes": 2,
+    "passos": [
+     {
+      "verde": "L",
+      "tempo_no_verde": 10,
+      "escolha": "S"
+     },
+     {
+      "verde": "S",
+      "tempo_no_verde": 10,
+      "escolha": "L"
+     }
+    ]
+   },
+   "verdes_no_escoamento_por_aprox": {
+    "O": 2,
+    "L": 39,
+    "S": 38
+   },
+   "aprox_presa_recebeu_verde_depois_de_parar": false,
+   "maior_verde_no_escoamento_s": 30,
+   "intervencoes": 0,
+   "decisoes_que_deveriam_ter_acionado_a_regra_sem_acionar": [],
+   "metricas": {
+    "n_carros": 1872,
+    "veiculos_concluidos": 1871,
+    "veiculos_interrompidos": 1,
+    "veiculos_sem_atendimento": 1,
+    "veiculos_na_rede_no_fim": 1,
+    "veiculos_aguardando_entrada_no_fim": 0,
+    "escoamento_cortado": true,
+    "segundos_escoamento": 1200,
+    "espera_media": 22.082264957264957,
+    "espera_media_concluidos": 21.461785141635488,
+    "espera_max": 1183.0,
+    "espera_max_concluidos": 278.0,
+    "espera_p95": 75.0,
+    "espera_p95_concluidos": 75.0,
+    "verde_max_executado_total": 35
+   }
+  },
+  {
+   "cenario": "assimetrico",
+   "controlador": "DQN C seed2",
+   "seed": 4,
+   "metricas_identicas_a_avaliacao": true,
+   "carros_presos": [
+    {
+     "id": "f0_N_reto.128",
+     "aprox": "N",
+     "entrou_na_via_s": 3585,
+     "espera_registrada_s": 1194.0,
+     "ultimo_verde_da_aprox_s": 3529
+    }
+   ],
+   "fotos_finais": [
+    {
+     "t": 3720,
+     "estado": "rrrrrGGGGGrrrrrrrrrr",
+     "carros": [
+      {
+       "id": "f0_N_reto.128",
+       "faixa": "top0A0_0",
+       "posicao_m": 238.6,
+       "comprimento_faixa_m": 239.6,
+       "velocidade": 0.0,
+       "espera_s": 114.0
+      }
+     ]
+    },
+    {
+     "t": 3780,
+     "estado": "rrrrrGGGGGrrrrrrrrrr",
+     "carros": [
+      {
+       "id": "f0_N_reto.128",
+       "faixa": "top0A0_0",
+       "posicao_m": 238.6,
+       "comprimento_faixa_m": 239.6,
+       "velocidade": 0.0,
+       "espera_s": 174.0
+      }
+     ]
+    },
+    {
+     "t": 3840,
+     "estado": "rrrrrGGGGGrrrrrrrrrr",
+     "carros": [
+      {
+       "id": "f0_N_reto.128",
+       "faixa": "top0A0_0",
+       "posicao_m": 238.6,
+       "comprimento_faixa_m": 239.6,
+       "velocidade": 0.0,
+       "espera_s": 234.0
+      }
+     ]
+    },
+    {
+     "t": 4740,
+     "estado": "rrrrrGGGGGrrrrrrrrrr",
+     "carros": [
+      {
+       "id": "f0_N_reto.128",
+       "faixa": "top0A0_0",
+       "posicao_m": 238.6,
+       "comprimento_faixa_m": 239.6,
+       "velocidade": 0.0,
+       "espera_s": 1134.0
+      }
+     ]
+    }
+   ],
+   "ultimas_decisoes": [
+    {
+     "t": 4690,
+     "verde": "L",
+     "tempo_no_verde": 10,
+     "escolha": "S",
+     "filas": [
+      1,
+      0,
+      0,
+      0
+     ],
+     "carros": [
+      1,
+      0,
+      0,
+      0
+     ],
+     "sem_verde": [
+      1161,
+      0,
+      16,
+      1036
+     ],
+     "q": [
+      -2.0685,
+      -1.9262,
+      -1.5732,
+      -2.1324
+     ]
+    },
+    {
+     "t": 4705,
+     "verde": "S",
+     "tempo_no_verde": 10,
+     "escolha": "L",
+     "filas": [
+      1,
+      0,
+      0,
+      0
+     ],
+     "carros": [
+      1,
+      0,
+      0,
+      0
+     ],
+     "sem_verde": [
+      1176,
+      16,
+      0,
+      1051
+     ],
+     "q": [
+      -2.0203,
+      -1.5763,
+      -2.2461,
+      -2.0489
+     ]
+    },
+    {
+     "t": 4720,
+     "verde": "L",
+     "tempo_no_verde": 10,
+     "escolha": "S",
+     "filas": [
+      1,
+      0,
+      0,
+      0
+     ],
+     "carros": [
+      1,
+      0,
+      0,
+      0
+     ],
+     "sem_verde": [
+      1191,
+      0,
+      16,
+      1066
+     ],
+     "q": [
+      -2.0685,
+      -1.9262,
+      -1.5732,
+      -2.1324
+     ]
+    },
+    {
+     "t": 4735,
+     "verde": "S",
+     "tempo_no_verde": 10,
+     "escolha": "L",
+     "filas": [
+      1,
+      0,
+      0,
+      0
+     ],
+     "carros": [
+      1,
+      0,
+      0,
+      0
+     ],
+     "sem_verde": [
+      1206,
+      16,
+      0,
+      1081
+     ],
+     "q": [
+      -2.0203,
+      -1.5763,
+      -2.2461,
+      -2.0489
+     ]
+    },
+    {
+     "t": 4750,
+     "verde": "L",
+     "tempo_no_verde": 10,
+     "escolha": "S",
+     "filas": [
+      1,
+      0,
+      0,
+      0
+     ],
+     "carros": [
+      1,
+      0,
+      0,
+      0
+     ],
+     "sem_verde": [
+      1221,
+      0,
+      16,
+      1096
+     ],
+     "q": [
+      -2.0685,
+      -1.9262,
+      -1.5732,
+      -2.1324
+     ]
+    },
+    {
+     "t": 4765,
+     "verde": "S",
+     "tempo_no_verde": 10,
+     "escolha": "L",
+     "filas": [
+      1,
+      0,
+      0,
+      0
+     ],
+     "carros": [
+      1,
+      0,
+      0,
+      0
+     ],
+     "sem_verde": [
+      1236,
+      16,
+      0,
+      1111
+     ],
+     "q": [
+      -2.0203,
+      -1.5763,
+      -2.2461,
+      -2.0489
+     ]
+    },
+    {
+     "t": 4780,
+     "verde": "L",
+     "tempo_no_verde": 10,
+     "escolha": "S",
+     "filas": [
+      1,
+      0,
+      0,
+      0
+     ],
+     "carros": [
+      1,
+      0,
+      0,
+      0
+     ],
+     "sem_verde": [
+      1251,
+      0,
+      16,
+      1126
+     ],
+     "q": [
+      -2.0685,
+      -1.9262,
+      -1.5732,
+      -2.1324
+     ]
+    },
+    {
+     "t": 4795,
+     "verde": "S",
+     "tempo_no_verde": 10,
+     "escolha": "L",
+     "filas": [
+      1,
+      0,
+      0,
+      0
+     ],
+     "carros": [
+      1,
+      0,
+      0,
+      0
+     ],
+     "sem_verde": [
+      1266,
+      16,
+      0,
+      1141
+     ],
+     "q": [
+      -2.0203,
+      -1.5763,
+      -2.2461,
+      -2.0489
+     ]
+    }
+   ],
+   "ciclo_final": {
+    "tamanho_decisoes": 2,
+    "passos": [
+     {
+      "verde": "L",
+      "tempo_no_verde": 10,
+      "escolha": "S"
+     },
+     {
+      "verde": "S",
+      "tempo_no_verde": 10,
+      "escolha": "L"
+     }
+    ]
+   },
+   "verdes_no_escoamento_por_aprox": {
+    "L": 39,
+    "S": 39,
+    "O": 1
+   },
+   "aprox_presa_recebeu_verde_depois_de_parar": false,
+   "maior_verde_no_escoamento_s": 15,
+   "intervencoes": 0,
+   "decisoes_que_deveriam_ter_acionado_a_regra_sem_acionar": [],
+   "metricas": {
+    "n_carros": 1915,
+    "veiculos_concluidos": 1914,
+    "veiculos_interrompidos": 1,
+    "veiculos_sem_atendimento": 1,
+    "veiculos_na_rede_no_fim": 1,
+    "veiculos_aguardando_entrada_no_fim": 0,
+    "escoamento_cortado": true,
+    "segundos_escoamento": 1200,
+    "espera_media": 21.640208877284596,
+    "espera_media_concluidos": 21.027690700104493,
+    "espera_max": 1194.0,
+    "espera_max_concluidos": 224.0,
+    "espera_p95": 68.0,
+    "espera_p95_concluidos": 67.0,
+    "verde_max_executado_total": 35
+   }
+  },
+  {
+   "cenario": "equilibrado",
+   "controlador": "DQN C seed1",
+   "seed": 3,
+   "metricas_identicas_a_avaliacao": true,
+   "carros_presos": [
+    {
+     "id": "f0_O_reto.308",
+     "aprox": "O",
+     "entrou_na_via_s": 3587,
+     "espera_registrada_s": 1183.0,
+     "ultimo_verde_da_aprox_s": 3614
+    }
+   ],
+   "fotos_finais": [
+    {
+     "t": 3720,
+     "estado": "rrrrrrrrrrGGGGGrrrrr",
+     "carros": [
+      {
+       "id": "f0_O_reto.308",
+       "faixa": "left0A0_0",
+       "posicao_m": 238.6,
+       "comprimento_faixa_m": 239.6,
+       "velocidade": 0.0,
+       "espera_s": 103.0
+      }
+     ]
+    },
+    {
+     "t": 3780,
+     "estado": "rrrrrGGGGGrrrrrrrrrr",
+     "carros": [
+      {
+       "id": "f0_O_reto.308",
+       "faixa": "left0A0_0",
+       "posicao_m": 238.6,
+       "comprimento_faixa_m": 239.6,
+       "velocidade": 0.0,
+       "espera_s": 163.0
+      }
+     ]
+    },
+    {
+     "t": 3840,
+     "estado": "rrrrrrrrrrGGGGGrrrrr",
+     "carros": [
+      {
+       "id": "f0_O_reto.308",
+       "faixa": "left0A0_0",
+       "posicao_m": 238.6,
+       "comprimento_faixa_m": 239.6,
+       "velocidade": 0.0,
+       "espera_s": 223.0
+      }
+     ]
+    },
+    {
+     "t": 4740,
+     "estado": "rrrrrGGGGGrrrrrrrrrr",
+     "carros": [
+      {
+       "id": "f0_O_reto.308",
+       "faixa": "left0A0_0",
+       "posicao_m": 238.6,
+       "comprimento_faixa_m": 239.6,
+       "velocidade": 0.0,
+       "espera_s": 1123.0
+      }
+     ]
+    }
+   ],
+   "ultimas_decisoes": [
+    {
+     "t": 4725,
+     "verde": "S",
+     "tempo_no_verde": 10,
+     "escolha": "L",
+     "filas": [
+      0,
+      0,
+      0,
+      1
+     ],
+     "carros": [
+      0,
+      0,
+      0,
+      1
+     ],
+     "sem_verde": [
+      1081,
+      16,
+      0,
+      1111
+     ],
+     "q": [
+      -1.3118,
+      -0.0365,
+      -0.8495,
+      -0.5628
+     ]
+    },
+    {
+     "t": 4740,
+     "verde": "L",
+     "tempo_no_verde": 10,
+     "escolha": "L",
+     "filas": [
+      0,
+      0,
+      0,
+      1
+     ],
+     "carros": [
+      0,
+      0,
+      0,
+      1
+     ],
+     "sem_verde": [
+      1096,
+      0,
+      16,
+      1126
+     ],
+     "q": [
+      -0.8755,
+      0.0039,
+      -0.0436,
+      -0.171
+     ]
+    },
+    {
+     "t": 4745,
+     "verde": "L",
+     "tempo_no_verde": 15,
+     "escolha": "L",
+     "filas": [
+      0,
+      0,
+      0,
+      1
+     ],
+     "carros": [
+      0,
+      0,
+      0,
+      1
+     ],
+     "sem_verde": [
+      1101,
+      0,
+      21,
+      1131
+     ],
+     "q": [
+      -0.2836,
+      0.4447,
+      0.4348,
+      0.3581
+     ]
+    },
+    {
+     "t": 4750,
+     "verde": "L",
+     "tempo_no_verde": 20,
+     "escolha": "S",
+     "filas": [
+      0,
+      0,
+      0,
+      1
+     ],
+     "carros": [
+      0,
+      0,
+      0,
+      1
+     ],
+     "sem_verde": [
+      1106,
+      0,
+      26,
+      1136
+     ],
+     "q": [
+      0.3225,
+      0.8879,
+      0.903,
+      0.8734
+     ]
+    },
+    {
+     "t": 4765,
+     "verde": "S",
+     "tempo_no_verde": 10,
+     "escolha": "L",
+     "filas": [
+      0,
+      0,
+      0,
+      1
+     ],
+     "carros": [
+      0,
+      0,
+      0,
+      1
+     ],
+     "sem_verde": [
+      1121,
+      16,
+      0,
+      1151
+     ],
+     "q": [
+      -1.3118,
+      -0.0365,
+      -0.8495,
+      -0.5628
+     ]
+    },
+    {
+     "t": 4780,
+     "verde": "L",
+     "tempo_no_verde": 10,
+     "escolha": "L",
+     "filas": [
+      0,
+      0,
+      0,
+      1
+     ],
+     "carros": [
+      0,
+      0,
+      0,
+      1
+     ],
+     "sem_verde": [
+      1136,
+      0,
+      16,
+      1166
+     ],
+     "q": [
+      -0.8755,
+      0.0039,
+      -0.0436,
+      -0.171
+     ]
+    },
+    {
+     "t": 4785,
+     "verde": "L",
+     "tempo_no_verde": 15,
+     "escolha": "L",
+     "filas": [
+      0,
+      0,
+      0,
+      1
+     ],
+     "carros": [
+      0,
+      0,
+      0,
+      1
+     ],
+     "sem_verde": [
+      1141,
+      0,
+      21,
+      1171
+     ],
+     "q": [
+      -0.2836,
+      0.4447,
+      0.4348,
+      0.3581
+     ]
+    },
+    {
+     "t": 4790,
+     "verde": "L",
+     "tempo_no_verde": 20,
+     "escolha": "S",
+     "filas": [
+      0,
+      0,
+      0,
+      1
+     ],
+     "carros": [
+      0,
+      0,
+      0,
+      1
+     ],
+     "sem_verde": [
+      1146,
+      0,
+      26,
+      1176
+     ],
+     "q": [
+      0.3225,
+      0.8879,
+      0.903,
+      0.8734
+     ]
+    }
+   ],
+   "ciclo_final": {
+    "tamanho_decisoes": 4,
+    "passos": [
+     {
+      "verde": "S",
+      "tempo_no_verde": 10,
+      "escolha": "L"
+     },
+     {
+      "verde": "L",
+      "tempo_no_verde": 10,
+      "escolha": "L"
+     },
+     {
+      "verde": "L",
+      "tempo_no_verde": 15,
+      "escolha": "L"
+     },
+     {
+      "verde": "L",
+      "tempo_no_verde": 20,
+      "escolha": "S"
+     }
+    ]
+   },
+   "verdes_no_escoamento_por_aprox": {
+    "O": 1,
+    "S": 30,
+    "N": 1,
+    "L": 29
+   },
+   "aprox_presa_recebeu_verde_depois_de_parar": false,
+   "maior_verde_no_escoamento_s": 20,
+   "intervencoes": 0,
+   "decisoes_que_deveriam_ter_acionado_a_regra_sem_acionar": [],
+   "metricas": {
+    "n_carros": 1776,
+    "veiculos_concluidos": 1775,
+    "veiculos_interrompidos": 1,
+    "veiculos_sem_atendimento": 1,
+    "veiculos_na_rede_no_fim": 1,
+    "veiculos_aguardando_entrada_no_fim": 0,
+    "escoamento_cortado": true,
+    "segundos_escoamento": 1200,
+    "espera_media": 25.40427927927928,
+    "espera_media_concluidos": 24.75211267605634,
+    "espera_max": 1183.0,
+    "espera_max_concluidos": 114.0,
+    "espera_p95": 65.0,
+    "espera_p95_concluidos": 64.0,
+    "verde_max_executado_total": 30
+   }
+  },
+  {
+   "cenario": "equilibrado",
+   "controlador": "DQN C seed1",
+   "seed": 6,
+   "metricas_identicas_a_avaliacao": true,
+   "carros_presos": [
+    {
+     "id": "f0_O_direita.92",
+     "aprox": "O",
+     "entrou_na_via_s": 3599,
+     "espera_registrada_s": 1178.0,
+     "ultimo_verde_da_aprox_s": 3614
+    }
+   ],
+   "fotos_finais": [
+    {
+     "t": 3720,
+     "estado": "rrrrrrrrrrGGGGGrrrrr",
+     "carros": [
+      {
+       "id": "f0_O_direita.92",
+       "faixa": "left0A0_0",
+       "posicao_m": 238.6,
+       "comprimento_faixa_m": 239.6,
+       "velocidade": 0.0,
+       "espera_s": 98.0
+      }
+     ]
+    },
+    {
+     "t": 3780,
+     "estado": "rrrrrGGGGGrrrrrrrrrr",
+     "carros": [
+      {
+       "id": "f0_O_direita.92",
+       "faixa": "left0A0_0",
+       "posicao_m": 238.6,
+       "comprimento_faixa_m": 239.6,
+       "velocidade": 0.0,
+       "espera_s": 158.0
+      }
+     ]
+    },
+    {
+     "t": 3840,
+     "estado": "rrrrrrrrrrGGGGGrrrrr",
+     "carros": [
+      {
+       "id": "f0_O_direita.92",
+       "faixa": "left0A0_0",
+       "posicao_m": 238.6,
+       "comprimento_faixa_m": 239.6,
+       "velocidade": 0.0,
+       "espera_s": 218.0
+      }
+     ]
+    },
+    {
+     "t": 4740,
+     "estado": "rrrrrGGGGGrrrrrrrrrr",
+     "carros": [
+      {
+       "id": "f0_O_direita.92",
+       "faixa": "left0A0_0",
+       "posicao_m": 238.6,
+       "comprimento_faixa_m": 239.6,
+       "velocidade": 0.0,
+       "espera_s": 1118.0
+      }
+     ]
+    }
+   ],
+   "ultimas_decisoes": [
+    {
+     "t": 4725,
+     "verde": "S",
+     "tempo_no_verde": 10,
+     "escolha": "L",
+     "filas": [
+      0,
+      0,
+      0,
+      1
+     ],
+     "carros": [
+      0,
+      0,
+      0,
+      1
+     ],
+     "sem_verde": [
+      1081,
+      16,
+      0,
+      1111
+     ],
+     "q": [
+      -1.3118,
+      -0.0365,
+      -0.8495,
+      -0.5628
+     ]
+    },
+    {
+     "t": 4740,
+     "verde": "L",
+     "tempo_no_verde": 10,
+     "escolha": "L",
+     "filas": [
+      0,
+      0,
+      0,
+      1
+     ],
+     "carros": [
+      0,
+      0,
+      0,
+      1
+     ],
+     "sem_verde": [
+      1096,
+      0,
+      16,
+      1126
+     ],
+     "q": [
+      -0.8755,
+      0.0039,
+      -0.0436,
+      -0.171
+     ]
+    },
+    {
+     "t": 4745,
+     "verde": "L",
+     "tempo_no_verde": 15,
+     "escolha": "L",
+     "filas": [
+      0,
+      0,
+      0,
+      1
+     ],
+     "carros": [
+      0,
+      0,
+      0,
+      1
+     ],
+     "sem_verde": [
+      1101,
+      0,
+      21,
+      1131
+     ],
+     "q": [
+      -0.2836,
+      0.4447,
+      0.4348,
+      0.3581
+     ]
+    },
+    {
+     "t": 4750,
+     "verde": "L",
+     "tempo_no_verde": 20,
+     "escolha": "S",
+     "filas": [
+      0,
+      0,
+      0,
+      1
+     ],
+     "carros": [
+      0,
+      0,
+      0,
+      1
+     ],
+     "sem_verde": [
+      1106,
+      0,
+      26,
+      1136
+     ],
+     "q": [
+      0.3225,
+      0.8879,
+      0.903,
+      0.8734
+     ]
+    },
+    {
+     "t": 4765,
+     "verde": "S",
+     "tempo_no_verde": 10,
+     "escolha": "L",
+     "filas": [
+      0,
+      0,
+      0,
+      1
+     ],
+     "carros": [
+      0,
+      0,
+      0,
+      1
+     ],
+     "sem_verde": [
+      1121,
+      16,
+      0,
+      1151
+     ],
+     "q": [
+      -1.3118,
+      -0.0365,
+      -0.8495,
+      -0.5628
+     ]
+    },
+    {
+     "t": 4780,
+     "verde": "L",
+     "tempo_no_verde": 10,
+     "escolha": "L",
+     "filas": [
+      0,
+      0,
+      0,
+      1
+     ],
+     "carros": [
+      0,
+      0,
+      0,
+      1
+     ],
+     "sem_verde": [
+      1136,
+      0,
+      16,
+      1166
+     ],
+     "q": [
+      -0.8755,
+      0.0039,
+      -0.0436,
+      -0.171
+     ]
+    },
+    {
+     "t": 4785,
+     "verde": "L",
+     "tempo_no_verde": 15,
+     "escolha": "L",
+     "filas": [
+      0,
+      0,
+      0,
+      1
+     ],
+     "carros": [
+      0,
+      0,
+      0,
+      1
+     ],
+     "sem_verde": [
+      1141,
+      0,
+      21,
+      1171
+     ],
+     "q": [
+      -0.2836,
+      0.4447,
+      0.4348,
+      0.3581
+     ]
+    },
+    {
+     "t": 4790,
+     "verde": "L",
+     "tempo_no_verde": 20,
+     "escolha": "S",
+     "filas": [
+      0,
+      0,
+      0,
+      1
+     ],
+     "carros": [
+      0,
+      0,
+      0,
+      1
+     ],
+     "sem_verde": [
+      1146,
+      0,
+      26,
+      1176
+     ],
+     "q": [
+      0.3225,
+      0.8879,
+      0.903,
+      0.8734
+     ]
+    }
+   ],
+   "ciclo_final": {
+    "tamanho_decisoes": 4,
+    "passos": [
+     {
+      "verde": "S",
+      "tempo_no_verde": 10,
+      "escolha": "L"
+     },
+     {
+      "verde": "L",
+      "tempo_no_verde": 10,
+      "escolha": "L"
+     },
+     {
+      "verde": "L",
+      "tempo_no_verde": 15,
+      "escolha": "L"
+     },
+     {
+      "verde": "L",
+      "tempo_no_verde": 20,
+      "escolha": "S"
+     }
+    ]
+   },
+   "verdes_no_escoamento_por_aprox": {
+    "O": 1,
+    "S": 30,
+    "N": 1,
+    "L": 29
+   },
+   "aprox_presa_recebeu_verde_depois_de_parar": false,
+   "maior_verde_no_escoamento_s": 20,
+   "intervencoes": 0,
+   "decisoes_que_deveriam_ter_acionado_a_regra_sem_acionar": [],
+   "metricas": {
+    "n_carros": 1750,
+    "veiculos_concluidos": 1749,
+    "veiculos_interrompidos": 1,
+    "veiculos_sem_atendimento": 1,
+    "veiculos_na_rede_no_fim": 1,
+    "veiculos_aguardando_entrada_no_fim": 0,
+    "escoamento_cortado": true,
+    "segundos_escoamento": 1200,
+    "espera_media": 24.19142857142857,
+    "espera_media_concluidos": 23.53173241852487,
+    "espera_max": 1178.0,
+    "espera_max_concluidos": 115.0,
+    "espera_p95": 64.0,
+    "espera_p95_concluidos": 64.0,
+    "verde_max_executado_total": 30
+   }
+  },
+  {
+   "cenario": "equilibrado",
+   "controlador": "DQN C seed2",
+   "seed": 7,
+   "metricas_identicas_a_avaliacao": true,
+   "carros_presos": [
+    {
+     "id": "f0_N_reto.322",
+     "aprox": "N",
+     "entrou_na_via_s": 3581,
+     "espera_registrada_s": 1195.0,
+     "ultimo_verde_da_aprox_s": 3594
+    },
+    {
+     "id": "f0_O_reto.314",
+     "aprox": "O",
+     "entrou_na_via_s": 3595,
+     "espera_registrada_s": 1179.0,
+     "ultimo_verde_da_aprox_s": 3639
+    }
+   ],
+   "fotos_finais": [
+    {
+     "t": 3720,
+     "estado": "rrrrrrrrrrGGGGGrrrrr",
+     "carros": [
+      {
+       "id": "f0_N_reto.322",
+       "faixa": "top0A0_0",
+       "posicao_m": 238.6,
+       "comprimento_faixa_m": 239.6,
+       "velocidade": 0.0,
+       "espera_s": 115.0
+      },
+      {
+       "id": "f0_O_reto.314",
+       "faixa": "left0A0_0",
+       "posicao_m": 239.1,
+       "comprimento_faixa_m": 239.6,
+       "velocidade": 0.0,
+       "espera_s": 78.0
+      }
+     ]
+    },
+    {
+     "t": 3780,
+     "estado": "rrrrrrrrrrGGGGGrrrrr",
+     "carros": [
+      {
+       "id": "f0_N_reto.322",
+       "faixa": "top0A0_0",
+       "posicao_m": 238.6,
+       "comprimento_faixa_m": 239.6,
+       "velocidade": 0.0,
+       "espera_s": 175.0
+      },
+      {
+       "id": "f0_O_reto.314",
+       "faixa": "left0A0_0",
+       "posicao_m": 239.1,
+       "comprimento_faixa_m": 239.6,
+       "velocidade": 0.0,
+       "espera_s": 138.0
+      }
+     ]
+    },
+    {
+     "t": 3840,
+     "estado": "rrrrrrrrrrGGGGGrrrrr",
+     "carros": [
+      {
+       "id": "f0_N_reto.322",
+       "faixa": "top0A0_0",
+       "posicao_m": 238.6,
+       "comprimento_faixa_m": 239.6,
+       "velocidade": 0.0,
+       "espera_s": 235.0
+      },
+      {
+       "id": "f0_O_reto.314",
+       "faixa": "left0A0_0",
+       "posicao_m": 239.1,
+       "comprimento_faixa_m": 239.6,
+       "velocidade": 0.0,
+       "espera_s": 198.0
+      }
+     ]
+    },
+    {
+     "t": 4740,
+     "estado": "rrrrrrrrrrGGGGGrrrrr",
+     "carros": [
+      {
+       "id": "f0_N_reto.322",
+       "faixa": "top0A0_0",
+       "posicao_m": 238.6,
+       "comprimento_faixa_m": 239.6,
+       "velocidade": 0.0,
+       "espera_s": 1135.0
+      },
+      {
+       "id": "f0_O_reto.314",
+       "faixa": "left0A0_0",
+       "posicao_m": 239.1,
+       "comprimento_faixa_m": 239.6,
+       "velocidade": 0.0,
+       "espera_s": 1098.0
+      }
+     ]
+    }
+   ],
+   "ultimas_decisoes": [
+    {
+     "t": 4690,
+     "verde": "S",
+     "tempo_no_verde": 10,
+     "escolha": "L",
+     "filas": [
+      1,
+      0,
+      0,
+      1
+     ],
+     "carros": [
+      1,
+      0,
+      0,
+      1
+     ],
+     "sem_verde": [
+      1096,
+      16,
+      0,
+      1051
+     ],
+     "q": [
+      -2.6666,
+      -2.2461,
+      -2.9599,
+      -2.2575
+     ]
+    },
+    {
+     "t": 4705,
+     "verde": "L",
+     "tempo_no_verde": 10,
+     "escolha": "S",
+     "filas": [
+      1,
+      0,
+      0,
+      1
+     ],
+     "carros": [
+      1,
+      0,
+      0,
+      1
+     ],
+     "sem_verde": [
+      1111,
+      0,
+      16,
+      1066
+     ],
+     "q": [
+      -2.8251,
+      -2.6631,
+      -2.3461,
+      -2.4431
+     ]
+    },
+    {
+     "t": 4720,
+     "verde": "S",
+     "tempo_no_verde": 10,
+     "escolha": "L",
+     "filas": [
+      1,
+      0,
+      0,
+      1
+     ],
+     "carros": [
+      1,
+      0,
+      0,
+      1
+     ],
+     "sem_verde": [
+      1126,
+      16,
+      0,
+      1081
+     ],
+     "q": [
+      -2.6666,
+      -2.2461,
+      -2.9599,
+      -2.2575
+     ]
+    },
+    {
+     "t": 4735,
+     "verde": "L",
+     "tempo_no_verde": 10,
+     "escolha": "S",
+     "filas": [
+      1,
+      0,
+      0,
+      1
+     ],
+     "carros": [
+      1,
+      0,
+      0,
+      1
+     ],
+     "sem_verde": [
+      1141,
+      0,
+      16,
+      1096
+     ],
+     "q": [
+      -2.8251,
+      -2.6631,
+      -2.3461,
+      -2.4431
+     ]
+    },
+    {
+     "t": 4750,
+     "verde": "S",
+     "tempo_no_verde": 10,
+     "escolha": "L",
+     "filas": [
+      1,
+      0,
+      0,
+      1
+     ],
+     "carros": [
+      1,
+      0,
+      0,
+      1
+     ],
+     "sem_verde": [
+      1156,
+      16,
+      0,
+      1111
+     ],
+     "q": [
+      -2.6666,
+      -2.2461,
+      -2.9599,
+      -2.2575
+     ]
+    },
+    {
+     "t": 4765,
+     "verde": "L",
+     "tempo_no_verde": 10,
+     "escolha": "S",
+     "filas": [
+      1,
+      0,
+      0,
+      1
+     ],
+     "carros": [
+      1,
+      0,
+      0,
+      1
+     ],
+     "sem_verde": [
+      1171,
+      0,
+      16,
+      1126
+     ],
+     "q": [
+      -2.8251,
+      -2.6631,
+      -2.3461,
+      -2.4431
+     ]
+    },
+    {
+     "t": 4780,
+     "verde": "S",
+     "tempo_no_verde": 10,
+     "escolha": "L",
+     "filas": [
+      1,
+      0,
+      0,
+      1
+     ],
+     "carros": [
+      1,
+      0,
+      0,
+      1
+     ],
+     "sem_verde": [
+      1186,
+      16,
+      0,
+      1141
+     ],
+     "q": [
+      -2.6666,
+      -2.2461,
+      -2.9599,
+      -2.2575
+     ]
+    },
+    {
+     "t": 4795,
+     "verde": "L",
+     "tempo_no_verde": 10,
+     "escolha": "S",
+     "filas": [
+      1,
+      0,
+      0,
+      1
+     ],
+     "carros": [
+      1,
+      0,
+      0,
+      1
+     ],
+     "sem_verde": [
+      1201,
+      0,
+      16,
+      1156
+     ],
+     "q": [
+      -2.8251,
+      -2.6631,
+      -2.3461,
+      -2.4431
+     ]
+    }
+   ],
+   "ciclo_final": {
+    "tamanho_decisoes": 2,
+    "passos": [
+     {
+      "verde": "S",
+      "tempo_no_verde": 10,
+      "escolha": "L"
+     },
+     {
+      "verde": "L",
+      "tempo_no_verde": 10,
+      "escolha": "S"
+     }
+    ]
+   },
+   "verdes_no_escoamento_por_aprox": {
+    "S": 39,
+    "L": 40,
+    "O": 1
+   },
+   "aprox_presa_recebeu_verde_depois_de_parar": true,
+   "maior_verde_no_escoamento_s": 10,
+   "intervencoes": 0,
+   "decisoes_que_deveriam_ter_acionado_a_regra_sem_acionar": [],
+   "metricas": {
+    "n_carros": 1814,
+    "veiculos_concluidos": 1812,
+    "veiculos_interrompidos": 2,
+    "veiculos_sem_atendimento": 2,
+    "veiculos_na_rede_no_fim": 2,
+    "veiculos_aguardando_entrada_no_fim": 0,
+    "escoamento_cortado": true,
+    "segundos_escoamento": 1200,
+    "espera_media": 24.752480705622933,
+    "espera_media_concluidos": 23.469646799116997,
+    "espera_max": 1195.0,
+    "espera_max_concluidos": 147.0,
+    "espera_p95": 63.0,
+    "espera_p95_concluidos": 63.0,
+    "verde_max_executado_total": 30
+   }
+  },
+  {
+   "cenario": "equilibrado",
+   "controlador": "DQN C seed2",
+   "seed": 8,
+   "metricas_identicas_a_avaliacao": true,
+   "carros_presos": [
+    {
+     "id": "f0_N_reto.326",
+     "aprox": "N",
+     "entrou_na_via_s": 3594,
+     "espera_registrada_s": 1184.0,
+     "ultimo_verde_da_aprox_s": 3609
+    }
+   ],
+   "fotos_finais": [
+    {
+     "t": 3720,
+     "estado": "rrrrrrrrrrGGGGGrrrrr",
+     "carros": [
+      {
+       "id": "f0_N_reto.326",
+       "faixa": "top0A0_0",
+       "posicao_m": 238.6,
+       "comprimento_faixa_m": 239.6,
+       "velocidade": 0.0,
+       "espera_s": 104.0
+      }
+     ]
+    },
+    {
+     "t": 3780,
+     "estado": "rrrrrrrrrrGGGGGrrrrr",
+     "carros": [
+      {
+       "id": "f0_N_reto.326",
+       "faixa": "top0A0_0",
+       "posicao_m": 238.6,
+       "comprimento_faixa_m": 239.6,
+       "velocidade": 0.0,
+       "espera_s": 164.0
+      }
+     ]
+    },
+    {
+     "t": 3840,
+     "estado": "rrrrrrrrrrGGGGGrrrrr",
+     "carros": [
+      {
+       "id": "f0_N_reto.326",
+       "faixa": "top0A0_0",
+       "posicao_m": 238.6,
+       "comprimento_faixa_m": 239.6,
+       "velocidade": 0.0,
+       "espera_s": 224.0
+      }
+     ]
+    },
+    {
+     "t": 4740,
+     "estado": "rrrrrrrrrrGGGGGrrrrr",
+     "carros": [
+      {
+       "id": "f0_N_reto.326",
+       "faixa": "top0A0_0",
+       "posicao_m": 238.6,
+       "comprimento_faixa_m": 239.6,
+       "velocidade": 0.0,
+       "espera_s": 1124.0
+      }
+     ]
+    }
+   ],
+   "ultimas_decisoes": [
+    {
+     "t": 4690,
+     "verde": "S",
+     "tempo_no_verde": 10,
+     "escolha": "L",
+     "filas": [
+      1,
+      0,
+      0,
+      0
+     ],
+     "carros": [
+      1,
+      0,
+      0,
+      0
+     ],
+     "sem_verde": [
+      1081,
+      16,
+      0,
+      1021
+     ],
+     "q": [
+      -2.0203,
+      -1.5763,
+      -2.2461,
+      -2.0489
+     ]
+    },
+    {
+     "t": 4705,
+     "verde": "L",
+     "tempo_no_verde": 10,
+     "escolha": "S",
+     "filas": [
+      1,
+      0,
+      0,
+      0
+     ],
+     "carros": [
+      1,
+      0,
+      0,
+      0
+     ],
+     "sem_verde": [
+      1096,
+      0,
+      16,
+      1036
+     ],
+     "q": [
+      -2.0685,
+      -1.9262,
+      -1.5732,
+      -2.1324
+     ]
+    },
+    {
+     "t": 4720,
+     "verde": "S",
+     "tempo_no_verde": 10,
+     "escolha": "L",
+     "filas": [
+      1,
+      0,
+      0,
+      0
+     ],
+     "carros": [
+      1,
+      0,
+      0,
+      0
+     ],
+     "sem_verde": [
+      1111,
+      16,
+      0,
+      1051
+     ],
+     "q": [
+      -2.0203,
+      -1.5763,
+      -2.2461,
+      -2.0489
+     ]
+    },
+    {
+     "t": 4735,
+     "verde": "L",
+     "tempo_no_verde": 10,
+     "escolha": "S",
+     "filas": [
+      1,
+      0,
+      0,
+      0
+     ],
+     "carros": [
+      1,
+      0,
+      0,
+      0
+     ],
+     "sem_verde": [
+      1126,
+      0,
+      16,
+      1066
+     ],
+     "q": [
+      -2.0685,
+      -1.9262,
+      -1.5732,
+      -2.1324
+     ]
+    },
+    {
+     "t": 4750,
+     "verde": "S",
+     "tempo_no_verde": 10,
+     "escolha": "L",
+     "filas": [
+      1,
+      0,
+      0,
+      0
+     ],
+     "carros": [
+      1,
+      0,
+      0,
+      0
+     ],
+     "sem_verde": [
+      1141,
+      16,
+      0,
+      1081
+     ],
+     "q": [
+      -2.0203,
+      -1.5763,
+      -2.2461,
+      -2.0489
+     ]
+    },
+    {
+     "t": 4765,
+     "verde": "L",
+     "tempo_no_verde": 10,
+     "escolha": "S",
+     "filas": [
+      1,
+      0,
+      0,
+      0
+     ],
+     "carros": [
+      1,
+      0,
+      0,
+      0
+     ],
+     "sem_verde": [
+      1156,
+      0,
+      16,
+      1096
+     ],
+     "q": [
+      -2.0685,
+      -1.9262,
+      -1.5732,
+      -2.1324
+     ]
+    },
+    {
+     "t": 4780,
+     "verde": "S",
+     "tempo_no_verde": 10,
+     "escolha": "L",
+     "filas": [
+      1,
+      0,
+      0,
+      0
+     ],
+     "carros": [
+      1,
+      0,
+      0,
+      0
+     ],
+     "sem_verde": [
+      1171,
+      16,
+      0,
+      1111
+     ],
+     "q": [
+      -2.0203,
+      -1.5763,
+      -2.2461,
+      -2.0489
+     ]
+    },
+    {
+     "t": 4795,
+     "verde": "L",
+     "tempo_no_verde": 10,
+     "escolha": "S",
+     "filas": [
+      1,
+      0,
+      0,
+      0
+     ],
+     "carros": [
+      1,
+      0,
+      0,
+      0
+     ],
+     "sem_verde": [
+      1186,
+      0,
+      16,
+      1126
+     ],
+     "q": [
+      -2.0685,
+      -1.9262,
+      -1.5732,
+      -2.1324
+     ]
+    }
+   ],
+   "ciclo_final": {
+    "tamanho_decisoes": 2,
+    "passos": [
+     {
+      "verde": "S",
+      "tempo_no_verde": 10,
+      "escolha": "L"
+     },
+     {
+      "verde": "L",
+      "tempo_no_verde": 10,
+      "escolha": "S"
+     }
+    ]
+   },
+   "verdes_no_escoamento_por_aprox": {
+    "N": 1,
+    "O": 2,
+    "L": 39,
+    "S": 38
+   },
+   "aprox_presa_recebeu_verde_depois_de_parar": false,
+   "maior_verde_no_escoamento_s": 10,
+   "intervencoes": 0,
+   "decisoes_que_deveriam_ter_acionado_a_regra_sem_acionar": [],
+   "metricas": {
+    "n_carros": 1795,
+    "veiculos_concluidos": 1794,
+    "veiculos_interrompidos": 1,
+    "veiculos_sem_atendimento": 1,
+    "veiculos_na_rede_no_fim": 1,
+    "veiculos_aguardando_entrada_no_fim": 0,
+    "escoamento_cortado": true,
+    "segundos_escoamento": 1200,
+    "espera_media": 24.8016713091922,
+    "espera_media_concluidos": 24.15551839464883,
+    "espera_max": 1184.0,
+    "espera_max_concluidos": 149.0,
+    "espera_p95": 65.0,
+    "espera_p95_concluidos": 65.0,
+    "verde_max_executado_total": 40
+   }
+  },
+  {
+   "cenario": "girado",
+   "controlador": "DQN C seed2",
+   "seed": 2,
+   "metricas_identicas_a_avaliacao": true,
+   "carros_presos": [
+    {
+     "id": "f0_N_reto.478",
+     "aprox": "N",
+     "entrou_na_via_s": 3594,
+     "espera_registrada_s": 1183.0,
+     "ultimo_verde_da_aprox_s": 3614
+    }
+   ],
+   "fotos_finais": [
+    {
+     "t": 3720,
+     "estado": "rrrrrrrrrrGGGGGrrrrr",
+     "carros": [
+      {
+       "id": "f0_N_reto.478",
+       "faixa": "top0A0_0",
+       "posicao_m": 238.6,
+       "comprimento_faixa_m": 239.6,
+       "velocidade": 0.0,
+       "espera_s": 103.0
+      }
+     ]
+    },
+    {
+     "t": 3780,
+     "estado": "rrrrrrrrrrGGGGGrrrrr",
+     "carros": [
+      {
+       "id": "f0_N_reto.478",
+       "faixa": "top0A0_0",
+       "posicao_m": 238.6,
+       "comprimento_faixa_m": 239.6,
+       "velocidade": 0.0,
+       "espera_s": 163.0
+      }
+     ]
+    },
+    {
+     "t": 3840,
+     "estado": "rrrrrrrrrrGGGGGrrrrr",
+     "carros": [
+      {
+       "id": "f0_N_reto.478",
+       "faixa": "top0A0_0",
+       "posicao_m": 238.6,
+       "comprimento_faixa_m": 239.6,
+       "velocidade": 0.0,
+       "espera_s": 223.0
+      }
+     ]
+    },
+    {
+     "t": 4740,
+     "estado": "rrrrrrrrrrGGGGGrrrrr",
+     "carros": [
+      {
+       "id": "f0_N_reto.478",
+       "faixa": "top0A0_0",
+       "posicao_m": 238.6,
+       "comprimento_faixa_m": 239.6,
+       "velocidade": 0.0,
+       "espera_s": 1123.0
+      }
+     ]
+    }
+   ],
+   "ultimas_decisoes": [
+    {
+     "t": 4685,
+     "verde": "S",
+     "tempo_no_verde": 10,
+     "escolha": "L",
+     "filas": [
+      1,
+      0,
+      0,
+      0
+     ],
+     "carros": [
+      1,
+      0,
+      0,
+      0
+     ],
+     "sem_verde": [
+      1071,
+      16,
+      0,
+      976
+     ],
+     "q": [
+      -2.0203,
+      -1.5763,
+      -2.2461,
+      -2.0489
+     ]
+    },
+    {
+     "t": 4700,
+     "verde": "L",
+     "tempo_no_verde": 10,
+     "escolha": "S",
+     "filas": [
+      1,
+      0,
+      0,
+      0
+     ],
+     "carros": [
+      1,
+      0,
+      0,
+      0
+     ],
+     "sem_verde": [
+      1086,
+      0,
+      16,
+      991
+     ],
+     "q": [
+      -2.0685,
+      -1.9262,
+      -1.5732,
+      -2.1324
+     ]
+    },
+    {
+     "t": 4715,
+     "verde": "S",
+     "tempo_no_verde": 10,
+     "escolha": "L",
+     "filas": [
+      1,
+      0,
+      0,
+      0
+     ],
+     "carros": [
+      1,
+      0,
+      0,
+      0
+     ],
+     "sem_verde": [
+      1101,
+      16,
+      0,
+      1006
+     ],
+     "q": [
+      -2.0203,
+      -1.5763,
+      -2.2461,
+      -2.0489
+     ]
+    },
+    {
+     "t": 4730,
+     "verde": "L",
+     "tempo_no_verde": 10,
+     "escolha": "S",
+     "filas": [
+      1,
+      0,
+      0,
+      0
+     ],
+     "carros": [
+      1,
+      0,
+      0,
+      0
+     ],
+     "sem_verde": [
+      1116,
+      0,
+      16,
+      1021
+     ],
+     "q": [
+      -2.0685,
+      -1.9262,
+      -1.5732,
+      -2.1324
+     ]
+    },
+    {
+     "t": 4745,
+     "verde": "S",
+     "tempo_no_verde": 10,
+     "escolha": "L",
+     "filas": [
+      1,
+      0,
+      0,
+      0
+     ],
+     "carros": [
+      1,
+      0,
+      0,
+      0
+     ],
+     "sem_verde": [
+      1131,
+      16,
+      0,
+      1036
+     ],
+     "q": [
+      -2.0203,
+      -1.5763,
+      -2.2461,
+      -2.0489
+     ]
+    },
+    {
+     "t": 4760,
+     "verde": "L",
+     "tempo_no_verde": 10,
+     "escolha": "S",
+     "filas": [
+      1,
+      0,
+      0,
+      0
+     ],
+     "carros": [
+      1,
+      0,
+      0,
+      0
+     ],
+     "sem_verde": [
+      1146,
+      0,
+      16,
+      1051
+     ],
+     "q": [
+      -2.0685,
+      -1.9262,
+      -1.5732,
+      -2.1324
+     ]
+    },
+    {
+     "t": 4775,
+     "verde": "S",
+     "tempo_no_verde": 10,
+     "escolha": "L",
+     "filas": [
+      1,
+      0,
+      0,
+      0
+     ],
+     "carros": [
+      1,
+      0,
+      0,
+      0
+     ],
+     "sem_verde": [
+      1161,
+      16,
+      0,
+      1066
+     ],
+     "q": [
+      -2.0203,
+      -1.5763,
+      -2.2461,
+      -2.0489
+     ]
+    },
+    {
+     "t": 4790,
+     "verde": "L",
+     "tempo_no_verde": 10,
+     "escolha": "S",
+     "filas": [
+      1,
+      0,
+      0,
+      0
+     ],
+     "carros": [
+      1,
+      0,
+      0,
+      0
+     ],
+     "sem_verde": [
+      1176,
+      0,
+      16,
+      1081
+     ],
+     "q": [
+      -2.0685,
+      -1.9262,
+      -1.5732,
+      -2.1324
+     ]
+    }
+   ],
+   "ciclo_final": {
+    "tamanho_decisoes": 2,
+    "passos": [
+     {
+      "verde": "S",
+      "tempo_no_verde": 10,
+      "escolha": "L"
+     },
+     {
+      "verde": "L",
+      "tempo_no_verde": 10,
+      "escolha": "S"
+     }
+    ]
+   },
+   "verdes_no_escoamento_por_aprox": {
+    "N": 1,
+    "O": 2,
+    "L": 37,
+    "S": 38
+   },
+   "aprox_presa_recebeu_verde_depois_de_parar": false,
+   "maior_verde_no_escoamento_s": 45,
+   "intervencoes": 0,
+   "decisoes_que_deveriam_ter_acionado_a_regra_sem_acionar": [],
+   "metricas": {
+    "n_carros": 1896,
+    "veiculos_concluidos": 1895,
+    "veiculos_interrompidos": 1,
+    "veiculos_sem_atendimento": 1,
+    "veiculos_na_rede_no_fim": 1,
+    "veiculos_aguardando_entrada_no_fim": 0,
+    "escoamento_cortado": true,
+    "segundos_escoamento": 1200,
+    "espera_media": 26.29061181434599,
+    "espera_media_concluidos": 25.680211081794194,
+    "espera_max": 1183.0,
+    "espera_max_concluidos": 264.0,
+    "espera_p95": 124.0,
+    "espera_p95_concluidos": 124.0,
+    "verde_max_executado_total": 45
+   }
+  },
+  {
+   "cenario": "pico",
+   "controlador": "DQN C seed1",
+   "seed": 1,
+   "metricas_identicas_a_avaliacao": true,
+   "carros_presos": [
+    {
+     "id": "f2_O_reto.80",
+     "aprox": "O",
+     "entrou_na_via_s": 3600,
+     "espera_registrada_s": 1176.0,
+     "ultimo_verde_da_aprox_s": 3629
+    }
+   ],
+   "fotos_finais": [
+    {
+     "t": 3660,
+     "estado": "rrrrrrrrrryyyyyrrrrr",
+     "carros": [
+      {
+       "id": "f2_O_reto.80",
+       "faixa": "left0A0_0",
+       "posicao_m": 238.6,
+       "comprimento_faixa_m": 239.6,
+       "velocidade": 0.0,
+       "espera_s": 29.0
+      }
+     ]
+    },
+    {
+     "t": 3720,
+     "estado": "rrrrrGGGGGrrrrrrrrrr",
+     "carros": [
+      {
+       "id": "f2_O_reto.80",
+       "faixa": "left0A0_0",
+       "posicao_m": 238.6,
+       "comprimento_faixa_m": 239.6,
+       "velocidade": 0.0,
+       "espera_s": 89.0
+      }
+     ]
+    },
+    {
+     "t": 3780,
+     "estado": "rrrrrrrrrryyyyyrrrrr",
+     "carros": [
+      {
+       "id": "f2_O_reto.80",
+       "faixa": "left0A0_0",
+       "posicao_m": 238.6,
+       "comprimento_faixa_m": 239.6,
+       "velocidade": 0.0,
+       "espera_s": 149.0
+      }
+     ]
+    },
+    {
+     "t": 4740,
+     "estado": "rrrrrrrrrryyyyyrrrrr",
+     "carros": [
+      {
+       "id": "f2_O_reto.80",
+       "faixa": "left0A0_0",
+       "posicao_m": 238.6,
+       "comprimento_faixa_m": 239.6,
+       "velocidade": 0.0,
+       "espera_s": 1109.0
+      }
+     ]
+    }
+   ],
+   "ultimas_decisoes": [
+    {
+     "t": 4720,
+     "verde": "L",
+     "tempo_no_verde": 15,
+     "escolha": "L",
+     "filas": [
+      0,
+      0,
+      0,
+      1
+     ],
+     "carros": [
+      0,
+      0,
+      0,
+      1
+     ],
+     "sem_verde": [
+      1076,
+      0,
+      21,
+      1091
+     ],
+     "q": [
+      -0.2836,
+      0.4447,
+      0.4348,
+      0.3581
+     ]
+    },
+    {
+     "t": 4725,
+     "verde": "L",
+     "tempo_no_verde": 20,
+     "escolha": "S",
+     "filas": [
+      0,
+      0,
+      0,
+      1
+     ],
+     "carros": [
+      0,
+      0,
+      0,
+      1
+     ],
+     "sem_verde": [
+      1081,
+      0,
+      26,
+      1096
+     ],
+     "q": [
+      0.3225,
+      0.8879,
+      0.903,
+      0.8734
+     ]
+    },
+    {
+     "t": 4740,
+     "verde": "S",
+     "tempo_no_verde": 10,
+     "escolha": "L",
+     "filas": [
+      0,
+      0,
+      0,
+      1
+     ],
+     "carros": [
+      0,
+      0,
+      0,
+      1
+     ],
+     "sem_verde": [
+      1096,
+      16,
+      0,
+      1111
+     ],
+     "q": [
+      -1.3118,
+      -0.0365,
+      -0.8495,
+      -0.5628
+     ]
+    },
+    {
+     "t": 4755,
+     "verde": "L",
+     "tempo_no_verde": 10,
+     "escolha": "L",
+     "filas": [
+      0,
+      0,
+      0,
+      1
+     ],
+     "carros": [
+      0,
+      0,
+      0,
+      1
+     ],
+     "sem_verde": [
+      1111,
+      0,
+      16,
+      1126
+     ],
+     "q": [
+      -0.8755,
+      0.0039,
+      -0.0436,
+      -0.171
+     ]
+    },
+    {
+     "t": 4760,
+     "verde": "L",
+     "tempo_no_verde": 15,
+     "escolha": "L",
+     "filas": [
+      0,
+      0,
+      0,
+      1
+     ],
+     "carros": [
+      0,
+      0,
+      0,
+      1
+     ],
+     "sem_verde": [
+      1116,
+      0,
+      21,
+      1131
+     ],
+     "q": [
+      -0.2836,
+      0.4447,
+      0.4348,
+      0.3581
+     ]
+    },
+    {
+     "t": 4765,
+     "verde": "L",
+     "tempo_no_verde": 20,
+     "escolha": "S",
+     "filas": [
+      0,
+      0,
+      0,
+      1
+     ],
+     "carros": [
+      0,
+      0,
+      0,
+      1
+     ],
+     "sem_verde": [
+      1121,
+      0,
+      26,
+      1136
+     ],
+     "q": [
+      0.3225,
+      0.8879,
+      0.903,
+      0.8734
+     ]
+    },
+    {
+     "t": 4780,
+     "verde": "S",
+     "tempo_no_verde": 10,
+     "escolha": "L",
+     "filas": [
+      0,
+      0,
+      0,
+      1
+     ],
+     "carros": [
+      0,
+      0,
+      0,
+      1
+     ],
+     "sem_verde": [
+      1136,
+      16,
+      0,
+      1151
+     ],
+     "q": [
+      -1.3118,
+      -0.0365,
+      -0.8495,
+      -0.5628
+     ]
+    },
+    {
+     "t": 4795,
+     "verde": "L",
+     "tempo_no_verde": 10,
+     "escolha": "L",
+     "filas": [
+      0,
+      0,
+      0,
+      1
+     ],
+     "carros": [
+      0,
+      0,
+      0,
+      1
+     ],
+     "sem_verde": [
+      1151,
+      0,
+      16,
+      1166
+     ],
+     "q": [
+      -0.8755,
+      0.0039,
+      -0.0436,
+      -0.171
+     ]
+    }
+   ],
+   "ciclo_final": {
+    "tamanho_decisoes": 4,
+    "passos": [
+     {
+      "verde": "L",
+      "tempo_no_verde": 15,
+      "escolha": "L"
+     },
+     {
+      "verde": "L",
+      "tempo_no_verde": 20,
+      "escolha": "S"
+     },
+     {
+      "verde": "S",
+      "tempo_no_verde": 10,
+      "escolha": "L"
+     },
+     {
+      "verde": "L",
+      "tempo_no_verde": 10,
+      "escolha": "L"
+     }
+    ]
+   },
+   "verdes_no_escoamento_por_aprox": {
+    "L": 30,
+    "O": 1,
+    "N": 1,
+    "S": 29
+   },
+   "aprox_presa_recebeu_verde_depois_de_parar": false,
+   "maior_verde_no_escoamento_s": 20,
+   "intervencoes": 0,
+   "decisoes_que_deveriam_ter_acionado_a_regra_sem_acionar": [],
+   "metricas": {
+    "n_carros": 1577,
+    "veiculos_concluidos": 1576,
+    "veiculos_interrompidos": 1,
+    "veiculos_sem_atendimento": 1,
+    "veiculos_na_rede_no_fim": 1,
+    "veiculos_aguardando_entrada_no_fim": 0,
+    "escoamento_cortado": true,
+    "segundos_escoamento": 1200,
+    "espera_media": 25.14457831325301,
+    "espera_media_concluidos": 24.414340101522843,
+    "espera_max": 1176.0,
+    "espera_max_concluidos": 128.0,
+    "espera_p95": 71.0,
+    "espera_p95_concluidos": 71.0,
+    "verde_max_executado_total": 30
+   }
+  },
+  {
+   "cenario": "pico",
+   "controlador": "DQN C seed2",
+   "seed": 5,
+   "metricas_identicas_a_avaliacao": true,
+   "carros_presos": [
+    {
+     "id": "f2_N_reto.59",
+     "aprox": "N",
+     "entrou_na_via_s": 3590,
+     "espera_registrada_s": 1189.0,
+     "ultimo_verde_da_aprox_s": 3579
+    },
+    {
+     "id": "f2_O_reto.89",
+     "aprox": "O",
+     "entrou_na_via_s": 3593,
+     "espera_registrada_s": 1179.0,
+     "ultimo_verde_da_aprox_s": 3624
+    }
+   ],
+   "fotos_finais": [
+    {
+     "t": 3660,
+     "estado": "rrrrrGGGGGrrrrrrrrrr",
+     "carros": [
+      {
+       "id": "f2_N_reto.59",
+       "faixa": "top0A0_0",
+       "posicao_m": 238.6,
+       "comprimento_faixa_m": 239.6,
+       "velocidade": 0.0,
+       "espera_s": 49.0
+      },
+      {
+       "id": "f2_O_reto.89",
+       "faixa": "left0A0_0",
+       "posicao_m": 238.6,
+       "comprimento_faixa_m": 239.6,
+       "velocidade": 0.0,
+       "espera_s": 33.0
+      }
+     ]
+    },
+    {
+     "t": 3720,
+     "estado": "rrrrrGGGGGrrrrrrrrrr",
+     "carros": [
+      {
+       "id": "f2_N_reto.59",
+       "faixa": "top0A0_0",
+       "posicao_m": 238.6,
+       "comprimento_faixa_m": 239.6,
+       "velocidade": 0.0,
+       "espera_s": 109.0
+      },
+      {
+       "id": "f2_O_reto.89",
+       "faixa": "left0A0_0",
+       "posicao_m": 238.6,
+       "comprimento_faixa_m": 239.6,
+       "velocidade": 0.0,
+       "espera_s": 93.0
+      }
+     ]
+    },
+    {
+     "t": 3780,
+     "estado": "rrrrrGGGGGrrrrrrrrrr",
+     "carros": [
+      {
+       "id": "f2_N_reto.59",
+       "faixa": "top0A0_0",
+       "posicao_m": 238.6,
+       "comprimento_faixa_m": 239.6,
+       "velocidade": 0.0,
+       "espera_s": 169.0
+      },
+      {
+       "id": "f2_O_reto.89",
+       "faixa": "left0A0_0",
+       "posicao_m": 238.6,
+       "comprimento_faixa_m": 239.6,
+       "velocidade": 0.0,
+       "espera_s": 153.0
+      }
+     ]
+    },
+    {
+     "t": 4740,
+     "estado": "rrrrrGGGGGrrrrrrrrrr",
+     "carros": [
+      {
+       "id": "f2_N_reto.59",
+       "faixa": "top0A0_0",
+       "posicao_m": 238.6,
+       "comprimento_faixa_m": 239.6,
+       "velocidade": 0.0,
+       "espera_s": 1129.0
+      },
+      {
+       "id": "f2_O_reto.89",
+       "faixa": "left0A0_0",
+       "posicao_m": 238.6,
+       "comprimento_faixa_m": 239.6,
+       "velocidade": 0.0,
+       "espera_s": 1113.0
+      }
+     ]
+    }
+   ],
+   "ultimas_decisoes": [
+    {
+     "t": 4690,
+     "verde": "L",
+     "tempo_no_verde": 10,
+     "escolha": "S",
+     "filas": [
+      1,
+      0,
+      0,
+      1
+     ],
+     "carros": [
+      1,
+      0,
+      0,
+      1
+     ],
+     "sem_verde": [
+      1111,
+      0,
+      16,
+      1066
+     ],
+     "q": [
+      -2.8251,
+      -2.6631,
+      -2.3461,
+      -2.4431
+     ]
+    },
+    {
+     "t": 4705,
+     "verde": "S",
+     "tempo_no_verde": 10,
+     "escolha": "L",
+     "filas": [
+      1,
+      0,
+      0,
+      1
+     ],
+     "carros": [
+      1,
+      0,
+      0,
+      1
+     ],
+     "sem_verde": [
+      1126,
+      16,
+      0,
+      1081
+     ],
+     "q": [
+      -2.6666,
+      -2.2461,
+      -2.9599,
+      -2.2575
+     ]
+    },
+    {
+     "t": 4720,
+     "verde": "L",
+     "tempo_no_verde": 10,
+     "escolha": "S",
+     "filas": [
+      1,
+      0,
+      0,
+      1
+     ],
+     "carros": [
+      1,
+      0,
+      0,
+      1
+     ],
+     "sem_verde": [
+      1141,
+      0,
+      16,
+      1096
+     ],
+     "q": [
+      -2.8251,
+      -2.6631,
+      -2.3461,
+      -2.4431
+     ]
+    },
+    {
+     "t": 4735,
+     "verde": "S",
+     "tempo_no_verde": 10,
+     "escolha": "L",
+     "filas": [
+      1,
+      0,
+      0,
+      1
+     ],
+     "carros": [
+      1,
+      0,
+      0,
+      1
+     ],
+     "sem_verde": [
+      1156,
+      16,
+      0,
+      1111
+     ],
+     "q": [
+      -2.6666,
+      -2.2461,
+      -2.9599,
+      -2.2575
+     ]
+    },
+    {
+     "t": 4750,
+     "verde": "L",
+     "tempo_no_verde": 10,
+     "escolha": "S",
+     "filas": [
+      1,
+      0,
+      0,
+      1
+     ],
+     "carros": [
+      1,
+      0,
+      0,
+      1
+     ],
+     "sem_verde": [
+      1171,
+      0,
+      16,
+      1126
+     ],
+     "q": [
+      -2.8251,
+      -2.6631,
+      -2.3461,
+      -2.4431
+     ]
+    },
+    {
+     "t": 4765,
+     "verde": "S",
+     "tempo_no_verde": 10,
+     "escolha": "L",
+     "filas": [
+      1,
+      0,
+      0,
+      1
+     ],
+     "carros": [
+      1,
+      0,
+      0,
+      1
+     ],
+     "sem_verde": [
+      1186,
+      16,
+      0,
+      1141
+     ],
+     "q": [
+      -2.6666,
+      -2.2461,
+      -2.9599,
+      -2.2575
+     ]
+    },
+    {
+     "t": 4780,
+     "verde": "L",
+     "tempo_no_verde": 10,
+     "escolha": "S",
+     "filas": [
+      1,
+      0,
+      0,
+      1
+     ],
+     "carros": [
+      1,
+      0,
+      0,
+      1
+     ],
+     "sem_verde": [
+      1201,
+      0,
+      16,
+      1156
+     ],
+     "q": [
+      -2.8251,
+      -2.6631,
+      -2.3461,
+      -2.4431
+     ]
+    },
+    {
+     "t": 4795,
+     "verde": "S",
+     "tempo_no_verde": 10,
+     "escolha": "L",
+     "filas": [
+      1,
+      0,
+      0,
+      1
+     ],
+     "carros": [
+      1,
+      0,
+      0,
+      1
+     ],
+     "sem_verde": [
+      1216,
+      16,
+      0,
+      1171
+     ],
+     "q": [
+      -2.6666,
+      -2.2461,
+      -2.9599,
+      -2.2575
+     ]
+    }
+   ],
+   "ciclo_final": {
+    "tamanho_decisoes": 2,
+    "passos": [
+     {
+      "verde": "L",
+      "tempo_no_verde": 10,
+      "escolha": "S"
+     },
+     {
+      "verde": "S",
+      "tempo_no_verde": 10,
+      "escolha": "L"
+     }
+    ]
+   },
+   "verdes_no_escoamento_por_aprox": {
+    "S": 40,
+    "O": 1,
+    "L": 39
+   },
+   "aprox_presa_recebeu_verde_depois_de_parar": false,
+   "maior_verde_no_escoamento_s": 10,
+   "intervencoes": 0,
+   "decisoes_que_deveriam_ter_acionado_a_regra_sem_acionar": [],
+   "metricas": {
+    "n_carros": 1549,
+    "veiculos_concluidos": 1547,
+    "veiculos_interrompidos": 2,
+    "veiculos_sem_atendimento": 2,
+    "veiculos_na_rede_no_fim": 2,
+    "veiculos_aguardando_entrada_no_fim": 0,
+    "escoamento_cortado": true,
+    "segundos_escoamento": 1200,
+    "espera_media": 23.836023240800518,
+    "espera_media_concluidos": 22.33613445378151,
+    "espera_max": 1189.0,
+    "espera_max_concluidos": 121.0,
+    "espera_p95": 62.0,
+    "espera_p95_concluidos": 62.0,
+    "verde_max_executado_total": 25
+   }
+  }
+ ],
+ "contagem": {
+  "n_carros_igual_entre_controladores_em_cada_cenario_semente": true,
+  "concluidos_mais_interrompidos_igual_n_carros": true,
+  "sem_atendimento_igual_interrompidos": true,
+  "rodadas_com_escoamento_cortado": 11
+ },
+ "total_carros_nao_atendidos": 13
+}

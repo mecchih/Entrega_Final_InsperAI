@@ -1,0 +1,23 @@
+{
+  "descricao": "Niveis de demanda do cenario Insper, escolhidos por calibracao progressiva com os programas semaforicos originais (sem IA). 'corredor' = viagens/h cujas rotas cruzam ao menos um dos tres semaforos (476455095, 40278305, 40278183); 'densidade_resto' = densidade do randomTrips equivalente para as demais viagens (12 = a da demanda original).",
+  "metodo": "semaforo/integracao_insper/gerar_demanda_insper.py: amostragem estratificada das viagens do mesmo randomTrips do build.bat, com correcao de origens em vias < 5 m",
+  "criterios": {
+    "moderado": "menor ponto em que os tres cruzamentos tem fila >= 1 em pelo menos 30% do tempo, com fila >= 5 em menos de 5% do tempo, sem trecho do corredor tomado pela fila (< 10 s), sem teletransporte nem veiculo preso",
+    "intenso": "maior ponto em que TODAS as sementes da calibracao (12) terminaram sem teletransporte e sem veiculo preso, com fila relevante (fila >= 5 em pelo menos 5% do tempo nos tres cruzamentos) e fila ocupando os trechos entre cruzamentos",
+    "saturado": "maior ponto em que TODAS as sementes da calibracao concluiram >= 99% das viagens, com teletransportes abaixo de 1% dos veiculos e fracao de parados na rede (pico de 5 min) abaixo de 0,7"
+  },
+  "calibracao": [
+    "semaforo/integracao_insper/resultados/20261115T215149Z_calibracao_demanda (varredura 1, antes da correcao de origem)",
+    "semaforo/integracao_insper/resultados/20261115T215440Z_calibracao_demanda (varredura 2, antes da correcao de origem)",
+    "semaforo/integracao_insper/resultados/20261115T220035Z_calibracao_demanda (varredura 3, com a correcao: 300 a 2800 veic/h, 2 sementes)",
+    "semaforo/integracao_insper/resultados/20261115T220530Z_calibracao_demanda (varredura 4, robustez: 1600 a 2600 veic/h, 10 sementes)"
+  ],
+  "historico": "Primeira escolha (intenso 2200, saturado 2600) validada em 20261115T220258Z_validacao_niveis: a semente 205 do intenso travou (38,7% concluidas, 452 teletransportes). A varredura 4 mostrou travamentos tambem em 2/10 sementes de 2600. Os niveis foram revistos para 2000 e 2400 com sementes novas; as demandas rejeitadas foram arquivadas em demandas_rejeitadas/ daquela validacao.",
+  "niveis": [
+    {"nivel": "original", "corredor": null, "densidade_resto": null, "sementes": [1, 2, 3, 4, 5],
+     "nota": "osm.passenger.trips.xml sem alteracao; as sementes variam so o SUMO"},
+    {"nivel": "moderado", "corredor": 1200, "densidade_resto": 12, "sementes": [101, 102, 103, 104, 105]},
+    {"nivel": "intenso", "corredor": 2000, "densidade_resto": 12, "sementes": [211, 212, 213, 214, 215]},
+    {"nivel": "saturado", "corredor": 2400, "densidade_resto": 12, "sementes": [311, 312, 313, 314, 315]}
+  ]
+}

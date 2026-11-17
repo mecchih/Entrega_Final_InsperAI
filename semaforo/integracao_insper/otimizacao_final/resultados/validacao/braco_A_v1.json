@@ -1,0 +1,1823 @@
+{
+  "braco": "A_v1",
+  "modelo": "independente",
+  "config": {
+    "verde_minimo": 10,
+    "colisao": "global",
+    "supervisor_s": 30
+  },
+  "anterior": "independente",
+  "criterio": {
+    "elegivel": "5/5 episodios de validacao validos, 0 violacoes de seguranca, 0 colisoes nos controlados, >= 99% de viagens concluidas e no maximo 1 teletransporte por episodio",
+    "ordem": "menor espera media no corredor (media das 5 sementes de validacao); empate < 2%: menor P95; depois menor bloqueio da saida; depois o checkpoint mais antigo",
+    "comparacao_de_bracos": "pareada por semente de modelo (mesma inicializacao e mesmas demandas de treino); uma mudanca so e considerada melhora com media melhor E melhora em >= 4 de 5 sementes"
+  },
+  "sementes_validacao": [
+    221,
+    222,
+    223,
+    224,
+    225
+  ],
+  "tabela": {
+    "1": {
+      "25": {
+        "episodios": 5,
+        "validos": 5,
+        "invalidos": [],
+        "espera_corredor_media": 20.402,
+        "espera_corredor_p95": 53.16,
+        "espera_rede_media": 44.773,
+        "espera_rede_p95": 120.2,
+        "fracao_concluida_min": 1.0,
+        "bloqueio_saida_corredor_s": 56.2,
+        "filas_media": {
+          "476455095": 3.076,
+          "40278305": 2.372,
+          "40278183": 5.136
+        },
+        "filas_max": {
+          "476455095": 14.2,
+          "40278305": 13.2,
+          "40278183": 22.8
+        },
+        "entreverdes_s": {
+          "476455095": 743.0,
+          "40278305": 709.0,
+          "40278183": 566.0
+        },
+        "trocas": {
+          "476455095": 148.4,
+          "40278305": 141.6,
+          "40278183": 112.8
+        },
+        "teleportes_por_episodio": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "colisoes": 0,
+        "colisoes_nos_controlados": 0,
+        "colisoes_por_classe": {},
+        "violacoes": 0,
+        "por_semente": {
+          "221": 19.114,
+          "222": 20.284,
+          "223": 20.46,
+          "224": 22.654,
+          "225": 19.496
+        },
+        "criterios_violados": []
+      },
+      "50": {
+        "episodios": 5,
+        "validos": 5,
+        "invalidos": [],
+        "espera_corredor_media": 21.285,
+        "espera_corredor_p95": 56.81,
+        "espera_rede_media": 45.992,
+        "espera_rede_p95": 123.9,
+        "fracao_concluida_min": 1.0,
+        "bloqueio_saida_corredor_s": 66.2,
+        "filas_media": {
+          "476455095": 3.136,
+          "40278305": 2.62,
+          "40278183": 5.263
+        },
+        "filas_max": {
+          "476455095": 15.2,
+          "40278305": 15.4,
+          "40278183": 25.4
+        },
+        "entreverdes_s": {
+          "476455095": 794.0,
+          "40278305": 705.0,
+          "40278183": 557.0
+        },
+        "trocas": {
+          "476455095": 158.8,
+          "40278305": 140.8,
+          "40278183": 111.0
+        },
+        "teleportes_por_episodio": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "colisoes": 0,
+        "colisoes_nos_controlados": 0,
+        "colisoes_por_classe": {},
+        "violacoes": 0,
+        "por_semente": {
+          "221": 21.574,
+          "222": 20.537,
+          "223": 21.492,
+          "224": 20.973,
+          "225": 21.848
+        },
+        "criterios_violados": []
+      },
+      "75": {
+        "episodios": 5,
+        "validos": 5,
+        "invalidos": [],
+        "espera_corredor_media": 22.531,
+        "espera_corredor_p95": 58.0,
+        "espera_rede_media": 47.782,
+        "espera_rede_p95": 126.4,
+        "fracao_concluida_min": 1.0,
+        "bloqueio_saida_corredor_s": 64.2,
+        "filas_media": {
+          "476455095": 3.93,
+          "40278305": 2.477,
+          "40278183": 5.24
+        },
+        "filas_max": {
+          "476455095": 18.8,
+          "40278305": 13.4,
+          "40278183": 20.8
+        },
+        "entreverdes_s": {
+          "476455095": 691.0,
+          "40278305": 633.0,
+          "40278183": 617.0
+        },
+        "trocas": {
+          "476455095": 138.0,
+          "40278305": 126.4,
+          "40278183": 123.0
+        },
+        "teleportes_por_episodio": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "colisoes": 0,
+        "colisoes_nos_controlados": 0,
+        "colisoes_por_classe": {},
+        "violacoes": 0,
+        "por_semente": {
+          "221": 22.78,
+          "222": 23.639,
+          "223": 22.686,
+          "224": 22.947,
+          "225": 20.601
+        },
+        "criterios_violados": []
+      },
+      "100": {
+        "episodios": 5,
+        "validos": 5,
+        "invalidos": [],
+        "espera_corredor_media": 24.551,
+        "espera_corredor_p95": 65.7,
+        "espera_rede_media": 49.624,
+        "espera_rede_p95": 128.9,
+        "fracao_concluida_min": 1.0,
+        "bloqueio_saida_corredor_s": 78.0,
+        "filas_media": {
+          "476455095": 3.593,
+          "40278305": 2.651,
+          "40278183": 6.569
+        },
+        "filas_max": {
+          "476455095": 18.2,
+          "40278305": 16.0,
+          "40278183": 26.0
+        },
+        "entreverdes_s": {
+          "476455095": 692.0,
+          "40278305": 649.0,
+          "40278183": 627.0
+        },
+        "trocas": {
+          "476455095": 138.2,
+          "40278305": 129.6,
+          "40278183": 125.0
+        },
+        "teleportes_por_episodio": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "colisoes": 0,
+        "colisoes_nos_controlados": 0,
+        "colisoes_por_classe": {},
+        "violacoes": 0,
+        "por_semente": {
+          "221": 22.007,
+          "222": 20.443,
+          "223": 30.976,
+          "224": 25.732,
+          "225": 23.595
+        },
+        "criterios_violados": []
+      },
+      "125": {
+        "episodios": 5,
+        "validos": 5,
+        "invalidos": [],
+        "espera_corredor_media": 24.809,
+        "espera_corredor_p95": 66.73,
+        "espera_rede_media": 49.043,
+        "espera_rede_p95": 127.2,
+        "fracao_concluida_min": 1.0,
+        "bloqueio_saida_corredor_s": 75.4,
+        "filas_media": {
+          "476455095": 3.57,
+          "40278305": 2.828,
+          "40278183": 6.422
+        },
+        "filas_max": {
+          "476455095": 20.2,
+          "40278305": 16.8,
+          "40278183": 26.8
+        },
+        "entreverdes_s": {
+          "476455095": 668.0,
+          "40278305": 635.0,
+          "40278183": 612.0
+        },
+        "trocas": {
+          "476455095": 133.4,
+          "40278305": 126.8,
+          "40278183": 122.0
+        },
+        "teleportes_por_episodio": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "colisoes": 0,
+        "colisoes_nos_controlados": 0,
+        "colisoes_por_classe": {},
+        "violacoes": 0,
+        "por_semente": {
+          "221": 25.873,
+          "222": 22.279,
+          "223": 27.472,
+          "224": 23.922,
+          "225": 24.499
+        },
+        "criterios_violados": []
+      },
+      "150": {
+        "episodios": 5,
+        "validos": 5,
+        "invalidos": [],
+        "espera_corredor_media": 24.435,
+        "espera_corredor_p95": 65.83,
+        "espera_rede_media": 49.627,
+        "espera_rede_p95": 131.12,
+        "fracao_concluida_min": 1.0,
+        "bloqueio_saida_corredor_s": 80.2,
+        "filas_media": {
+          "476455095": 2.863,
+          "40278305": 2.431,
+          "40278183": 7.386
+        },
+        "filas_max": {
+          "476455095": 14.2,
+          "40278305": 14.6,
+          "40278183": 26.6
+        },
+        "entreverdes_s": {
+          "476455095": 710.0,
+          "40278305": 687.0,
+          "40278183": 659.0
+        },
+        "trocas": {
+          "476455095": 141.8,
+          "40278305": 137.2,
+          "40278183": 131.4
+        },
+        "teleportes_por_episodio": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "colisoes": 0,
+        "colisoes_nos_controlados": 0,
+        "colisoes_por_classe": {},
+        "violacoes": 0,
+        "por_semente": {
+          "221": 19.798,
+          "222": 24.417,
+          "223": 29.161,
+          "224": 25.723,
+          "225": 23.075
+        },
+        "criterios_violados": []
+      }
+    },
+    "2": {
+      "25": {
+        "episodios": 5,
+        "validos": 5,
+        "invalidos": [],
+        "espera_corredor_media": 29.033,
+        "espera_corredor_p95": 79.75,
+        "espera_rede_media": 53.533,
+        "espera_rede_p95": 139.02,
+        "fracao_concluida_min": 1.0,
+        "bloqueio_saida_corredor_s": 77.6,
+        "filas_media": {
+          "476455095": 6.217,
+          "40278305": 2.85,
+          "40278183": 5.745
+        },
+        "filas_max": {
+          "476455095": 22.8,
+          "40278305": 15.8,
+          "40278183": 23.6
+        },
+        "entreverdes_s": {
+          "476455095": 609.0,
+          "40278305": 748.0,
+          "40278183": 626.0
+        },
+        "trocas": {
+          "476455095": 121.6,
+          "40278305": 149.4,
+          "40278183": 124.8
+        },
+        "teleportes_por_episodio": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "colisoes": 0,
+        "colisoes_nos_controlados": 0,
+        "colisoes_por_classe": {},
+        "violacoes": 0,
+        "por_semente": {
+          "221": 35.046,
+          "222": 25.3,
+          "223": 30.66,
+          "224": 28.07,
+          "225": 26.091
+        },
+        "criterios_violados": []
+      },
+      "50": {
+        "episodios": 5,
+        "validos": 5,
+        "invalidos": [],
+        "espera_corredor_media": 22.147,
+        "espera_corredor_p95": 56.6,
+        "espera_rede_media": 46.684,
+        "espera_rede_p95": 122.6,
+        "fracao_concluida_min": 1.0,
+        "bloqueio_saida_corredor_s": 83.8,
+        "filas_media": {
+          "476455095": 3.053,
+          "40278305": 2.331,
+          "40278183": 6.073
+        },
+        "filas_max": {
+          "476455095": 14.4,
+          "40278305": 13.8,
+          "40278183": 23.8
+        },
+        "entreverdes_s": {
+          "476455095": 711.0,
+          "40278305": 694.0,
+          "40278183": 631.0
+        },
+        "trocas": {
+          "476455095": 142.6,
+          "40278305": 138.6,
+          "40278183": 125.8
+        },
+        "teleportes_por_episodio": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "colisoes": 0,
+        "colisoes_nos_controlados": 0,
+        "colisoes_por_classe": {},
+        "violacoes": 0,
+        "por_semente": {
+          "221": 22.11,
+          "222": 19.977,
+          "223": 24.009,
+          "224": 22.968,
+          "225": 21.669
+        },
+        "criterios_violados": []
+      },
+      "75": {
+        "episodios": 5,
+        "validos": 5,
+        "invalidos": [],
+        "espera_corredor_media": 22.22,
+        "espera_corredor_p95": 60.2,
+        "espera_rede_media": 47.668,
+        "espera_rede_p95": 125.82,
+        "fracao_concluida_min": 1.0,
+        "bloqueio_saida_corredor_s": 87.2,
+        "filas_media": {
+          "476455095": 2.927,
+          "40278305": 2.304,
+          "40278183": 6.34
+        },
+        "filas_max": {
+          "476455095": 16.4,
+          "40278305": 14.4,
+          "40278183": 26.2
+        },
+        "entreverdes_s": {
+          "476455095": 598.0,
+          "40278305": 711.0,
+          "40278183": 651.0
+        },
+        "trocas": {
+          "476455095": 119.4,
+          "40278305": 142.0,
+          "40278183": 129.8
+        },
+        "teleportes_por_episodio": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "colisoes": 0,
+        "colisoes_nos_controlados": 0,
+        "colisoes_por_classe": {},
+        "violacoes": 0,
+        "por_semente": {
+          "221": 21.183,
+          "222": 22.273,
+          "223": 24.154,
+          "224": 20.918,
+          "225": 22.573
+        },
+        "criterios_violados": []
+      },
+      "100": {
+        "episodios": 5,
+        "validos": 5,
+        "invalidos": [],
+        "espera_corredor_media": 23.325,
+        "espera_corredor_p95": 63.8,
+        "espera_rede_media": 48.254,
+        "espera_rede_p95": 127.31,
+        "fracao_concluida_min": 1.0,
+        "bloqueio_saida_corredor_s": 83.2,
+        "filas_media": {
+          "476455095": 3.227,
+          "40278305": 2.497,
+          "40278183": 6.241
+        },
+        "filas_max": {
+          "476455095": 16.6,
+          "40278305": 15.4,
+          "40278183": 23.0
+        },
+        "entreverdes_s": {
+          "476455095": 572.0,
+          "40278305": 695.0,
+          "40278183": 615.0
+        },
+        "trocas": {
+          "476455095": 114.2,
+          "40278305": 138.8,
+          "40278183": 122.6
+        },
+        "teleportes_por_episodio": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "colisoes": 0,
+        "colisoes_nos_controlados": 0,
+        "colisoes_por_classe": {},
+        "violacoes": 0,
+        "por_semente": {
+          "221": 23.402,
+          "222": 26.351,
+          "223": 19.796,
+          "224": 22.223,
+          "225": 24.855
+        },
+        "criterios_violados": []
+      },
+      "125": {
+        "episodios": 5,
+        "validos": 5,
+        "invalidos": [],
+        "espera_corredor_media": 23.029,
+        "espera_corredor_p95": 59.8,
+        "espera_rede_media": 48.733,
+        "espera_rede_p95": 125.7,
+        "fracao_concluida_min": 1.0,
+        "bloqueio_saida_corredor_s": 96.4,
+        "filas_media": {
+          "476455095": 3.021,
+          "40278305": 2.431,
+          "40278183": 6.329
+        },
+        "filas_max": {
+          "476455095": 16.6,
+          "40278305": 14.8,
+          "40278183": 23.6
+        },
+        "entreverdes_s": {
+          "476455095": 629.0,
+          "40278305": 748.0,
+          "40278183": 662.0
+        },
+        "trocas": {
+          "476455095": 125.6,
+          "40278305": 149.4,
+          "40278183": 132.0
+        },
+        "teleportes_por_episodio": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "colisoes": 0,
+        "colisoes_nos_controlados": 0,
+        "colisoes_por_classe": {},
+        "violacoes": 0,
+        "por_semente": {
+          "221": 21.481,
+          "222": 24.18,
+          "223": 23.825,
+          "224": 23.858,
+          "225": 21.799
+        },
+        "criterios_violados": []
+      },
+      "150": {
+        "episodios": 5,
+        "validos": 5,
+        "invalidos": [],
+        "espera_corredor_media": 25.879,
+        "espera_corredor_p95": 72.33,
+        "espera_rede_media": 50.57,
+        "espera_rede_p95": 132.01,
+        "fracao_concluida_min": 1.0,
+        "bloqueio_saida_corredor_s": 80.8,
+        "filas_media": {
+          "476455095": 4.054,
+          "40278305": 2.858,
+          "40278183": 6.486
+        },
+        "filas_max": {
+          "476455095": 23.0,
+          "40278305": 18.6,
+          "40278183": 27.6
+        },
+        "entreverdes_s": {
+          "476455095": 681.6,
+          "40278305": 673.0,
+          "40278183": 625.0
+        },
+        "trocas": {
+          "476455095": 136.2,
+          "40278305": 134.4,
+          "40278183": 124.6
+        },
+        "teleportes_por_episodio": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "colisoes": 0,
+        "colisoes_nos_controlados": 0,
+        "colisoes_por_classe": {},
+        "violacoes": 0,
+        "por_semente": {
+          "221": 28.437,
+          "222": 23.878,
+          "223": 26.728,
+          "224": 25.528,
+          "225": 24.824
+        },
+        "criterios_violados": []
+      }
+    },
+    "3": {
+      "25": {
+        "episodios": 5,
+        "validos": 5,
+        "invalidos": [],
+        "espera_corredor_media": 27.639,
+        "espera_corredor_p95": 80.81,
+        "espera_rede_media": 52.107,
+        "espera_rede_p95": 135.7,
+        "fracao_concluida_min": 1.0,
+        "bloqueio_saida_corredor_s": 75.0,
+        "filas_media": {
+          "476455095": 5.211,
+          "40278305": 3.07,
+          "40278183": 5.981
+        },
+        "filas_max": {
+          "476455095": 21.4,
+          "40278305": 18.0,
+          "40278183": 26.8
+        },
+        "entreverdes_s": {
+          "476455095": 429.0,
+          "40278305": 779.0,
+          "40278183": 528.0
+        },
+        "trocas": {
+          "476455095": 85.6,
+          "40278305": 155.6,
+          "40278183": 105.2
+        },
+        "teleportes_por_episodio": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "colisoes": 2,
+        "colisoes_nos_controlados": 0,
+        "colisoes_por_classe": {
+          "externa_area_observacao": 2
+        },
+        "violacoes": 0,
+        "por_semente": {
+          "221": 27.457,
+          "222": 29.595,
+          "223": 27.973,
+          "224": 27.281,
+          "225": 25.887
+        },
+        "criterios_violados": []
+      },
+      "50": {
+        "episodios": 5,
+        "validos": 5,
+        "invalidos": [],
+        "espera_corredor_media": 22.876,
+        "espera_corredor_p95": 62.6,
+        "espera_rede_media": 47.765,
+        "espera_rede_p95": 128.3,
+        "fracao_concluida_min": 1.0,
+        "bloqueio_saida_corredor_s": 59.4,
+        "filas_media": {
+          "476455095": 3.08,
+          "40278305": 2.556,
+          "40278183": 6.23
+        },
+        "filas_max": {
+          "476455095": 15.8,
+          "40278305": 14.2,
+          "40278183": 28.0
+        },
+        "entreverdes_s": {
+          "476455095": 772.0,
+          "40278305": 709.0,
+          "40278183": 561.0
+        },
+        "trocas": {
+          "476455095": 154.8,
+          "40278305": 141.6,
+          "40278183": 111.8
+        },
+        "teleportes_por_episodio": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "colisoes": 1,
+        "colisoes_nos_controlados": 0,
+        "colisoes_por_classe": {
+          "externa_area_observacao": 1
+        },
+        "violacoes": 0,
+        "por_semente": {
+          "221": 23.541,
+          "222": 19.555,
+          "223": 26.659,
+          "224": 21.5,
+          "225": 23.124
+        },
+        "criterios_violados": []
+      },
+      "75": {
+        "episodios": 5,
+        "validos": 5,
+        "invalidos": [],
+        "espera_corredor_media": 22.628,
+        "espera_corredor_p95": 61.41,
+        "espera_rede_media": 47.949,
+        "espera_rede_p95": 127.8,
+        "fracao_concluida_min": 1.0,
+        "bloqueio_saida_corredor_s": 76.2,
+        "filas_media": {
+          "476455095": 2.933,
+          "40278305": 2.678,
+          "40278183": 6.125
+        },
+        "filas_max": {
+          "476455095": 16.6,
+          "40278305": 15.4,
+          "40278183": 25.4
+        },
+        "entreverdes_s": {
+          "476455095": 710.6,
+          "40278305": 711.0,
+          "40278183": 605.0
+        },
+        "trocas": {
+          "476455095": 142.0,
+          "40278305": 142.0,
+          "40278183": 120.6
+        },
+        "teleportes_por_episodio": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "colisoes": 0,
+        "colisoes_nos_controlados": 0,
+        "colisoes_por_classe": {},
+        "violacoes": 0,
+        "por_semente": {
+          "221": 20.495,
+          "222": 22.559,
+          "223": 25.98,
+          "224": 22.028,
+          "225": 22.078
+        },
+        "criterios_violados": []
+      },
+      "100": {
+        "episodios": 5,
+        "validos": 5,
+        "invalidos": [],
+        "espera_corredor_media": 21.568,
+        "espera_corredor_p95": 58.8,
+        "espera_rede_media": 46.708,
+        "espera_rede_p95": 124.4,
+        "fracao_concluida_min": 1.0,
+        "bloqueio_saida_corredor_s": 63.6,
+        "filas_media": {
+          "476455095": 3.01,
+          "40278305": 2.626,
+          "40278183": 5.606
+        },
+        "filas_max": {
+          "476455095": 17.8,
+          "40278305": 16.2,
+          "40278183": 23.4
+        },
+        "entreverdes_s": {
+          "476455095": 664.0,
+          "40278305": 705.0,
+          "40278183": 561.0
+        },
+        "trocas": {
+          "476455095": 132.6,
+          "40278305": 140.8,
+          "40278183": 111.8
+        },
+        "teleportes_por_episodio": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "colisoes": 0,
+        "colisoes_nos_controlados": 0,
+        "colisoes_por_classe": {},
+        "violacoes": 0,
+        "por_semente": {
+          "221": 17.969,
+          "222": 22.536,
+          "223": 20.535,
+          "224": 23.006,
+          "225": 23.792
+        },
+        "criterios_violados": []
+      },
+      "125": {
+        "episodios": 5,
+        "validos": 5,
+        "invalidos": [],
+        "espera_corredor_media": 24.835,
+        "espera_corredor_p95": 66.2,
+        "espera_rede_media": 49.716,
+        "espera_rede_p95": 129.1,
+        "fracao_concluida_min": 1.0,
+        "bloqueio_saida_corredor_s": 78.2,
+        "filas_media": {
+          "476455095": 3.465,
+          "40278305": 2.597,
+          "40278183": 6.739
+        },
+        "filas_max": {
+          "476455095": 18.0,
+          "40278305": 14.4,
+          "40278183": 24.6
+        },
+        "entreverdes_s": {
+          "476455095": 689.0,
+          "40278305": 731.0,
+          "40278183": 653.0
+        },
+        "trocas": {
+          "476455095": 137.6,
+          "40278305": 146.0,
+          "40278183": 130.2
+        },
+        "teleportes_por_episodio": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "colisoes": 0,
+        "colisoes_nos_controlados": 0,
+        "colisoes_por_classe": {},
+        "violacoes": 0,
+        "por_semente": {
+          "221": 21.957,
+          "222": 22.715,
+          "223": 28.917,
+          "224": 28.476,
+          "225": 22.11
+        },
+        "criterios_violados": []
+      },
+      "150": {
+        "episodios": 5,
+        "validos": 5,
+        "invalidos": [],
+        "espera_corredor_media": 21.755,
+        "espera_corredor_p95": 60.2,
+        "espera_rede_media": 46.569,
+        "espera_rede_p95": 123.0,
+        "fracao_concluida_min": 1.0,
+        "bloqueio_saida_corredor_s": 65.2,
+        "filas_media": {
+          "476455095": 3.096,
+          "40278305": 2.5,
+          "40278183": 5.658
+        },
+        "filas_max": {
+          "476455095": 20.4,
+          "40278305": 16.4,
+          "40278183": 23.4
+        },
+        "entreverdes_s": {
+          "476455095": 624.0,
+          "40278305": 744.0,
+          "40278183": 661.0
+        },
+        "trocas": {
+          "476455095": 124.6,
+          "40278305": 148.6,
+          "40278183": 131.8
+        },
+        "teleportes_por_episodio": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "colisoes": 0,
+        "colisoes_nos_controlados": 0,
+        "colisoes_por_classe": {},
+        "violacoes": 0,
+        "por_semente": {
+          "221": 24.148,
+          "222": 21.672,
+          "223": 22.023,
+          "224": 20.547,
+          "225": 20.386
+        },
+        "criterios_violados": []
+      }
+    },
+    "4": {
+      "25": {
+        "episodios": 5,
+        "validos": 5,
+        "invalidos": [],
+        "espera_corredor_media": 28.687,
+        "espera_corredor_p95": 75.4,
+        "espera_rede_media": 52.85,
+        "espera_rede_p95": 135.11,
+        "fracao_concluida_min": 1.0,
+        "bloqueio_saida_corredor_s": 73.4,
+        "filas_media": {
+          "476455095": 6.399,
+          "40278305": 2.476,
+          "40278183": 5.656
+        },
+        "filas_max": {
+          "476455095": 20.8,
+          "40278305": 14.8,
+          "40278183": 22.8
+        },
+        "entreverdes_s": {
+          "476455095": 601.0,
+          "40278305": 786.0,
+          "40278183": 584.0
+        },
+        "trocas": {
+          "476455095": 120.0,
+          "40278305": 157.0,
+          "40278183": 116.4
+        },
+        "teleportes_por_episodio": [
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "colisoes": 1,
+        "colisoes_nos_controlados": 0,
+        "colisoes_por_classe": {
+          "externa_area_observacao": 1
+        },
+        "violacoes": 0,
+        "por_semente": {
+          "221": 28.678,
+          "222": 28.681,
+          "223": 28.589,
+          "224": 32.891,
+          "225": 24.597
+        },
+        "criterios_violados": []
+      },
+      "50": {
+        "episodios": 5,
+        "validos": 5,
+        "invalidos": [],
+        "espera_corredor_media": 27.381,
+        "espera_corredor_p95": 75.23,
+        "espera_rede_media": 51.997,
+        "espera_rede_p95": 133.31,
+        "fracao_concluida_min": 1.0,
+        "bloqueio_saida_corredor_s": 66.0,
+        "filas_media": {
+          "476455095": 5.154,
+          "40278305": 3.008,
+          "40278183": 6.052
+        },
+        "filas_max": {
+          "476455095": 19.2,
+          "40278305": 15.0,
+          "40278183": 25.4
+        },
+        "entreverdes_s": {
+          "476455095": 642.0,
+          "40278305": 683.0,
+          "40278183": 586.0
+        },
+        "trocas": {
+          "476455095": 128.2,
+          "40278305": 136.6,
+          "40278183": 116.8
+        },
+        "teleportes_por_episodio": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "colisoes": 0,
+        "colisoes_nos_controlados": 0,
+        "colisoes_por_classe": {},
+        "violacoes": 0,
+        "por_semente": {
+          "221": 24.518,
+          "222": 29.377,
+          "223": 26.534,
+          "224": 28.447,
+          "225": 28.03
+        },
+        "criterios_violados": []
+      },
+      "75": {
+        "episodios": 5,
+        "validos": 5,
+        "invalidos": [],
+        "espera_corredor_media": 24.046,
+        "espera_corredor_p95": 64.12,
+        "espera_rede_media": 48.944,
+        "espera_rede_p95": 126.31,
+        "fracao_concluida_min": 1.0,
+        "bloqueio_saida_corredor_s": 80.0,
+        "filas_media": {
+          "476455095": 3.335,
+          "40278305": 2.567,
+          "40278183": 6.535
+        },
+        "filas_max": {
+          "476455095": 16.6,
+          "40278305": 16.8,
+          "40278183": 25.8
+        },
+        "entreverdes_s": {
+          "476455095": 651.0,
+          "40278305": 674.0,
+          "40278183": 662.0
+        },
+        "trocas": {
+          "476455095": 130.0,
+          "40278305": 134.6,
+          "40278183": 132.0
+        },
+        "teleportes_por_episodio": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "colisoes": 1,
+        "colisoes_nos_controlados": 0,
+        "colisoes_por_classe": {
+          "externa_area_observacao": 1
+        },
+        "violacoes": 0,
+        "por_semente": {
+          "221": 23.56,
+          "222": 23.692,
+          "223": 30.661,
+          "224": 21.332,
+          "225": 20.983
+        },
+        "criterios_violados": []
+      },
+      "100": {
+        "episodios": 5,
+        "validos": 5,
+        "invalidos": [],
+        "espera_corredor_media": 24.203,
+        "espera_corredor_p95": 66.95,
+        "espera_rede_media": 48.926,
+        "espera_rede_p95": 130.3,
+        "fracao_concluida_min": 1.0,
+        "bloqueio_saida_corredor_s": 65.2,
+        "filas_media": {
+          "476455095": 3.337,
+          "40278305": 2.602,
+          "40278183": 6.56
+        },
+        "filas_max": {
+          "476455095": 19.6,
+          "40278305": 15.2,
+          "40278183": 27.2
+        },
+        "entreverdes_s": {
+          "476455095": 664.0,
+          "40278305": 712.0,
+          "40278183": 616.0
+        },
+        "trocas": {
+          "476455095": 132.6,
+          "40278305": 142.2,
+          "40278183": 122.8
+        },
+        "teleportes_por_episodio": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "colisoes": 0,
+        "colisoes_nos_controlados": 0,
+        "colisoes_por_classe": {},
+        "violacoes": 0,
+        "por_semente": {
+          "221": 23.918,
+          "222": 22.421,
+          "223": 32.293,
+          "224": 22.248,
+          "225": 20.134
+        },
+        "criterios_violados": []
+      },
+      "125": {
+        "episodios": 5,
+        "validos": 5,
+        "invalidos": [],
+        "espera_corredor_media": 21.923,
+        "espera_corredor_p95": 58.74,
+        "espera_rede_media": 46.966,
+        "espera_rede_p95": 123.82,
+        "fracao_concluida_min": 1.0,
+        "bloqueio_saida_corredor_s": 70.8,
+        "filas_media": {
+          "476455095": 2.997,
+          "40278305": 2.386,
+          "40278183": 5.879
+        },
+        "filas_max": {
+          "476455095": 16.0,
+          "40278305": 15.0,
+          "40278183": 26.2
+        },
+        "entreverdes_s": {
+          "476455095": 637.0,
+          "40278305": 651.0,
+          "40278183": 611.0
+        },
+        "trocas": {
+          "476455095": 127.2,
+          "40278305": 130.0,
+          "40278183": 121.8
+        },
+        "teleportes_por_episodio": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "colisoes": 0,
+        "colisoes_nos_controlados": 0,
+        "colisoes_por_classe": {},
+        "violacoes": 0,
+        "por_semente": {
+          "221": 21.108,
+          "222": 20.882,
+          "223": 24.251,
+          "224": 21.319,
+          "225": 22.054
+        },
+        "criterios_violados": []
+      },
+      "150": {
+        "episodios": 5,
+        "validos": 5,
+        "invalidos": [],
+        "espera_corredor_media": 26.566,
+        "espera_corredor_p95": 71.05,
+        "espera_rede_media": 51.837,
+        "espera_rede_p95": 133.71,
+        "fracao_concluida_min": 1.0,
+        "bloqueio_saida_corredor_s": 93.0,
+        "filas_media": {
+          "476455095": 3.841,
+          "40278305": 2.986,
+          "40278183": 6.947
+        },
+        "filas_max": {
+          "476455095": 22.8,
+          "40278305": 15.4,
+          "40278183": 24.6
+        },
+        "entreverdes_s": {
+          "476455095": 626.6,
+          "40278305": 729.0,
+          "40278183": 677.0
+        },
+        "trocas": {
+          "476455095": 125.4,
+          "40278305": 145.6,
+          "40278183": 135.0
+        },
+        "teleportes_por_episodio": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "colisoes": 1,
+        "colisoes_nos_controlados": 0,
+        "colisoes_por_classe": {
+          "externa_area_observacao": 1
+        },
+        "violacoes": 0,
+        "por_semente": {
+          "221": 27.373,
+          "222": 30.98,
+          "223": 26.642,
+          "224": 24.947,
+          "225": 22.888
+        },
+        "criterios_violados": []
+      }
+    },
+    "5": {
+      "25": {
+        "episodios": 5,
+        "validos": 5,
+        "invalidos": [],
+        "espera_corredor_media": 23.495,
+        "espera_corredor_p95": 60.78,
+        "espera_rede_media": 47.925,
+        "espera_rede_p95": 124.21,
+        "fracao_concluida_min": 1.0,
+        "bloqueio_saida_corredor_s": 71.0,
+        "filas_media": {
+          "476455095": 4.146,
+          "40278305": 2.389,
+          "40278183": 5.635
+        },
+        "filas_max": {
+          "476455095": 14.8,
+          "40278305": 15.0,
+          "40278183": 23.6
+        },
+        "entreverdes_s": {
+          "476455095": 501.0,
+          "40278305": 650.0,
+          "40278183": 509.0
+        },
+        "trocas": {
+          "476455095": 100.0,
+          "40278305": 129.8,
+          "40278183": 101.4
+        },
+        "teleportes_por_episodio": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "colisoes": 0,
+        "colisoes_nos_controlados": 0,
+        "colisoes_por_classe": {},
+        "violacoes": 0,
+        "por_semente": {
+          "221": 22.442,
+          "222": 24.053,
+          "223": 24.542,
+          "224": 23.163,
+          "225": 23.275
+        },
+        "criterios_violados": []
+      },
+      "50": {
+        "episodios": 5,
+        "validos": 5,
+        "invalidos": [],
+        "espera_corredor_media": 22.947,
+        "espera_corredor_p95": 60.0,
+        "espera_rede_media": 48.17,
+        "espera_rede_p95": 126.21,
+        "fracao_concluida_min": 1.0,
+        "bloqueio_saida_corredor_s": 71.8,
+        "filas_media": {
+          "476455095": 3.402,
+          "40278305": 2.535,
+          "40278183": 5.793
+        },
+        "filas_max": {
+          "476455095": 15.6,
+          "40278305": 15.2,
+          "40278183": 23.8
+        },
+        "entreverdes_s": {
+          "476455095": 514.0,
+          "40278305": 712.0,
+          "40278183": 572.0
+        },
+        "trocas": {
+          "476455095": 102.6,
+          "40278305": 142.2,
+          "40278183": 114.0
+        },
+        "teleportes_por_episodio": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "colisoes": 0,
+        "colisoes_nos_controlados": 0,
+        "colisoes_por_classe": {},
+        "violacoes": 0,
+        "por_semente": {
+          "221": 21.495,
+          "222": 23.643,
+          "223": 26.386,
+          "224": 22.178,
+          "225": 21.031
+        },
+        "criterios_violados": []
+      },
+      "75": {
+        "episodios": 5,
+        "validos": 5,
+        "invalidos": [],
+        "espera_corredor_media": 22.883,
+        "espera_corredor_p95": 60.19,
+        "espera_rede_media": 47.454,
+        "espera_rede_p95": 124.91,
+        "fracao_concluida_min": 1.0,
+        "bloqueio_saida_corredor_s": 70.8,
+        "filas_media": {
+          "476455095": 3.408,
+          "40278305": 2.714,
+          "40278183": 5.745
+        },
+        "filas_max": {
+          "476455095": 16.2,
+          "40278305": 16.0,
+          "40278183": 24.0
+        },
+        "entreverdes_s": {
+          "476455095": 550.0,
+          "40278305": 758.0,
+          "40278183": 652.0
+        },
+        "trocas": {
+          "476455095": 109.8,
+          "40278305": 151.4,
+          "40278183": 130.0
+        },
+        "teleportes_por_episodio": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "colisoes": 0,
+        "colisoes_nos_controlados": 0,
+        "colisoes_por_classe": {},
+        "violacoes": 0,
+        "por_semente": {
+          "221": 24.394,
+          "222": 23.693,
+          "223": 23.443,
+          "224": 22.879,
+          "225": 20.005
+        },
+        "criterios_violados": []
+      },
+      "100": {
+        "episodios": 5,
+        "validos": 5,
+        "invalidos": [],
+        "espera_corredor_media": 25.422,
+        "espera_corredor_p95": 71.57,
+        "espera_rede_media": 50.362,
+        "espera_rede_p95": 133.1,
+        "fracao_concluida_min": 1.0,
+        "bloqueio_saida_corredor_s": 70.0,
+        "filas_media": {
+          "476455095": 3.627,
+          "40278305": 3.011,
+          "40278183": 6.516
+        },
+        "filas_max": {
+          "476455095": 20.0,
+          "40278305": 16.8,
+          "40278183": 27.4
+        },
+        "entreverdes_s": {
+          "476455095": 598.0,
+          "40278305": 702.0,
+          "40278183": 673.0
+        },
+        "trocas": {
+          "476455095": 119.4,
+          "40278305": 140.2,
+          "40278183": 134.2
+        },
+        "teleportes_por_episodio": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "colisoes": 0,
+        "colisoes_nos_controlados": 0,
+        "colisoes_por_classe": {},
+        "violacoes": 0,
+        "por_semente": {
+          "221": 29.851,
+          "222": 24.337,
+          "223": 24.986,
+          "224": 26.622,
+          "225": 21.316
+        },
+        "criterios_violados": []
+      },
+      "125": {
+        "episodios": 5,
+        "validos": 5,
+        "invalidos": [],
+        "espera_corredor_media": 22.892,
+        "espera_corredor_p95": 63.0,
+        "espera_rede_media": 48.141,
+        "espera_rede_p95": 125.91,
+        "fracao_concluida_min": 1.0,
+        "bloqueio_saida_corredor_s": 85.6,
+        "filas_media": {
+          "476455095": 3.094,
+          "40278305": 2.627,
+          "40278183": 6.169
+        },
+        "filas_max": {
+          "476455095": 17.2,
+          "40278305": 15.6,
+          "40278183": 24.6
+        },
+        "entreverdes_s": {
+          "476455095": 598.0,
+          "40278305": 728.0,
+          "40278183": 644.0
+        },
+        "trocas": {
+          "476455095": 119.4,
+          "40278305": 145.4,
+          "40278183": 128.4
+        },
+        "teleportes_por_episodio": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "colisoes": 1,
+        "colisoes_nos_controlados": 0,
+        "colisoes_por_classe": {
+          "externa_area_observacao": 1
+        },
+        "violacoes": 0,
+        "por_semente": {
+          "221": 24.257,
+          "222": 21.503,
+          "223": 26.67,
+          "224": 21.249,
+          "225": 20.783
+        },
+        "criterios_violados": []
+      },
+      "150": {
+        "episodios": 5,
+        "validos": 5,
+        "invalidos": [],
+        "espera_corredor_media": 20.306,
+        "espera_corredor_p95": 55.05,
+        "espera_rede_media": 45.037,
+        "espera_rede_p95": 120.71,
+        "fracao_concluida_min": 1.0,
+        "bloqueio_saida_corredor_s": 72.6,
+        "filas_media": {
+          "476455095": 2.569,
+          "40278305": 2.217,
+          "40278183": 5.694
+        },
+        "filas_max": {
+          "476455095": 14.0,
+          "40278305": 12.6,
+          "40278183": 23.2
+        },
+        "entreverdes_s": {
+          "476455095": 608.0,
+          "40278305": 724.0,
+          "40278183": 640.0
+        },
+        "trocas": {
+          "476455095": 121.4,
+          "40278305": 144.6,
+          "40278183": 127.6
+        },
+        "teleportes_por_episodio": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "colisoes": 0,
+        "colisoes_nos_controlados": 0,
+        "colisoes_por_classe": {},
+        "violacoes": 0,
+        "por_semente": {
+          "221": 20.823,
+          "222": 20.727,
+          "223": 19.502,
+          "224": 22.206,
+          "225": 18.273
+        },
+        "criterios_violados": []
+      }
+    }
+  },
+  "selecao": {
+    "1": {
+      "episodio": 25,
+      "elegivel": true,
+      "checkpoint": "C:\\Users\\mecch\\OneDrive - Insper - Instituto de Ensino e Pesquisa\\INSPER\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\integracao_insper\\resultados\\bateria_principal_20261116\\treinos\\independente_s1\\politica_ep0025.pt",
+      "validacao": {
+        "episodios": 5,
+        "validos": 5,
+        "invalidos": [],
+        "espera_corredor_media": 20.402,
+        "espera_corredor_p95": 53.16,
+        "espera_rede_media": 44.773,
+        "espera_rede_p95": 120.2,
+        "fracao_concluida_min": 1.0,
+        "bloqueio_saida_corredor_s": 56.2,
+        "filas_media": {
+          "476455095": 3.076,
+          "40278305": 2.372,
+          "40278183": 5.136
+        },
+        "filas_max": {
+          "476455095": 14.2,
+          "40278305": 13.2,
+          "40278183": 22.8
+        },
+        "entreverdes_s": {
+          "476455095": 743.0,
+          "40278305": 709.0,
+          "40278183": 566.0
+        },
+        "trocas": {
+          "476455095": 148.4,
+          "40278305": 141.6,
+          "40278183": 112.8
+        },
+        "teleportes_por_episodio": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "colisoes": 0,
+        "colisoes_nos_controlados": 0,
+        "colisoes_por_classe": {},
+        "violacoes": 0,
+        "por_semente": {
+          "221": 19.114,
+          "222": 20.284,
+          "223": 20.46,
+          "224": 22.654,
+          "225": 19.496
+        },
+        "criterios_violados": []
+      }
+    },
+    "2": {
+      "episodio": 50,
+      "elegivel": true,
+      "checkpoint": "C:\\Users\\mecch\\OneDrive - Insper - Instituto de Ensino e Pesquisa\\INSPER\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\integracao_insper\\resultados\\bateria_principal_20261116\\treinos\\independente_s2\\politica_ep0050.pt",
+      "validacao": {
+        "episodios": 5,
+        "validos": 5,
+        "invalidos": [],
+        "espera_corredor_media": 22.147,
+        "espera_corredor_p95": 56.6,
+        "espera_rede_media": 46.684,
+        "espera_rede_p95": 122.6,
+        "fracao_concluida_min": 1.0,
+        "bloqueio_saida_corredor_s": 83.8,
+        "filas_media": {
+          "476455095": 3.053,
+          "40278305": 2.331,
+          "40278183": 6.073
+        },
+        "filas_max": {
+          "476455095": 14.4,
+          "40278305": 13.8,
+          "40278183": 23.8
+        },
+        "entreverdes_s": {
+          "476455095": 711.0,
+          "40278305": 694.0,
+          "40278183": 631.0
+        },
+        "trocas": {
+          "476455095": 142.6,
+          "40278305": 138.6,
+          "40278183": 125.8
+        },
+        "teleportes_por_episodio": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "colisoes": 0,
+        "colisoes_nos_controlados": 0,
+        "colisoes_por_classe": {},
+        "violacoes": 0,
+        "por_semente": {
+          "221": 22.11,
+          "222": 19.977,
+          "223": 24.009,
+          "224": 22.968,
+          "225": 21.669
+        },
+        "criterios_violados": []
+      }
+    },
+    "3": {
+      "episodio": 100,
+      "elegivel": true,
+      "checkpoint": "C:\\Users\\mecch\\OneDrive - Insper - Instituto de Ensino e Pesquisa\\INSPER\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\integracao_insper\\resultados\\bateria_principal_20261116\\treinos\\independente_s3\\politica_ep0100.pt",
+      "validacao": {
+        "episodios": 5,
+        "validos": 5,
+        "invalidos": [],
+        "espera_corredor_media": 21.568,
+        "espera_corredor_p95": 58.8,
+        "espera_rede_media": 46.708,
+        "espera_rede_p95": 124.4,
+        "fracao_concluida_min": 1.0,
+        "bloqueio_saida_corredor_s": 63.6,
+        "filas_media": {
+          "476455095": 3.01,
+          "40278305": 2.626,
+          "40278183": 5.606
+        },
+        "filas_max": {
+          "476455095": 17.8,
+          "40278305": 16.2,
+          "40278183": 23.4
+        },
+        "entreverdes_s": {
+          "476455095": 664.0,
+          "40278305": 705.0,
+          "40278183": 561.0
+        },
+        "trocas": {
+          "476455095": 132.6,
+          "40278305": 140.8,
+          "40278183": 111.8
+        },
+        "teleportes_por_episodio": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "colisoes": 0,
+        "colisoes_nos_controlados": 0,
+        "colisoes_por_classe": {},
+        "violacoes": 0,
+        "por_semente": {
+          "221": 17.969,
+          "222": 22.536,
+          "223": 20.535,
+          "224": 23.006,
+          "225": 23.792
+        },
+        "criterios_violados": []
+      }
+    },
+    "4": {
+      "episodio": 125,
+      "elegivel": true,
+      "checkpoint": "C:\\Users\\mecch\\OneDrive - Insper - Instituto de Ensino e Pesquisa\\INSPER\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\integracao_insper\\resultados\\bateria_principal_20261116\\treinos\\independente_s4\\politica_ep0125.pt",
+      "validacao": {
+        "episodios": 5,
+        "validos": 5,
+        "invalidos": [],
+        "espera_corredor_media": 21.923,
+        "espera_corredor_p95": 58.74,
+        "espera_rede_media": 46.966,
+        "espera_rede_p95": 123.82,
+        "fracao_concluida_min": 1.0,
+        "bloqueio_saida_corredor_s": 70.8,
+        "filas_media": {
+          "476455095": 2.997,
+          "40278305": 2.386,
+          "40278183": 5.879
+        },
+        "filas_max": {
+          "476455095": 16.0,
+          "40278305": 15.0,
+          "40278183": 26.2
+        },
+        "entreverdes_s": {
+          "476455095": 637.0,
+          "40278305": 651.0,
+          "40278183": 611.0
+        },
+        "trocas": {
+          "476455095": 127.2,
+          "40278305": 130.0,
+          "40278183": 121.8
+        },
+        "teleportes_por_episodio": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "colisoes": 0,
+        "colisoes_nos_controlados": 0,
+        "colisoes_por_classe": {},
+        "violacoes": 0,
+        "por_semente": {
+          "221": 21.108,
+          "222": 20.882,
+          "223": 24.251,
+          "224": 21.319,
+          "225": 22.054
+        },
+        "criterios_violados": []
+      }
+    },
+    "5": {
+      "episodio": 150,
+      "elegivel": true,
+      "checkpoint": "C:\\Users\\mecch\\OneDrive - Insper - Instituto de Ensino e Pesquisa\\INSPER\\Insper AI\\Entrega_Final_InsperAI\\semaforo\\integracao_insper\\resultados\\bateria_principal_20261116\\treinos\\independente_s5\\politica_ep0150.pt",
+      "validacao": {
+        "episodios": 5,
+        "validos": 5,
+        "invalidos": [],
+        "espera_corredor_media": 20.306,
+        "espera_corredor_p95": 55.05,
+        "espera_rede_media": 45.037,
+        "espera_rede_p95": 120.71,
+        "fracao_concluida_min": 1.0,
+        "bloqueio_saida_corredor_s": 72.6,
+        "filas_media": {
+          "476455095": 2.569,
+          "40278305": 2.217,
+          "40278183": 5.694
+        },
+        "filas_max": {
+          "476455095": 14.0,
+          "40278305": 12.6,
+          "40278183": 23.2
+        },
+        "entreverdes_s": {
+          "476455095": 608.0,
+          "40278305": 724.0,
+          "40278183": 640.0
+        },
+        "trocas": {
+          "476455095": 121.4,
+          "40278305": 144.6,
+          "40278183": 127.6
+        },
+        "teleportes_por_episodio": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "colisoes": 0,
+        "colisoes_nos_controlados": 0,
+        "colisoes_por_classe": {},
+        "violacoes": 0,
+        "por_semente": {
+          "221": 20.823,
+          "222": 20.727,
+          "223": 19.502,
+          "224": 22.206,
+          "225": 18.273
+        },
+        "criterios_violados": []
+      }
+    }
+  }
+}

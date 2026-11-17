@@ -17,6 +17,21 @@ __pycache__/
 # Caches gerados durante os relatorios Cologne8; evidencias permanecem versionadas.
 /semaforo/resultados/marl_cologne8/**/cache_matplotlib/
 
+# Registros detalhados da rodada principal MARL Cologne8: versionados dentro de
+# semaforo/resultados/pacotes_registros_cologne8/ (ver semaforo/PACOTES_REGISTROS_COLOGNE8.md).
+# Copias restauradas com restaurar_registros_cologne8.py ficam fora do commit.
+/semaforo/resultados/marl_cologne8/20261113T011843Z_continuo_10seeds_9f8d757b/modelo_seed*/episodios/ep*/metricas.json
+/semaforo/resultados/marl_cologne8/20261113T011843Z_continuo_10seeds_9f8d757b/modelo_seed*/episodios/ep*/sumo.log
+/semaforo/resultados/marl_cologne8/20261113T011843Z_continuo_10seeds_9f8d757b/modelo_seed*/episodios/ep*/execucao.json
+/semaforo/resultados/marl_cologne8/20261113T011843Z_continuo_10seeds_9f8d757b/modelo_seed*/episodios/ep*/decisoes.jsonl
+/semaforo/resultados/marl_cologne8/20261113T011843Z_continuo_10seeds_9f8d757b/modelo_seed*/episodios/ep*/fases.jsonl
+/semaforo/resultados/marl_cologne8/20261113T011843Z_continuo_10seeds_9f8d757b/modelo_seed*/validacao/ep*/resumo.json
+/semaforo/resultados/marl_cologne8/20261113T011843Z_continuo_10seeds_9f8d757b/modelo_seed*/validacao/ep*/seed*/metricas.json
+/semaforo/resultados/marl_cologne8/20261113T011843Z_continuo_10seeds_9f8d757b/modelo_seed*/validacao/ep*/seed*/sumo.log
+/semaforo/resultados/marl_cologne8/20261113T011843Z_continuo_10seeds_9f8d757b/modelo_seed*/validacao/ep*/seed*/execucao.json
+/semaforo/resultados/marl_cologne8/20261113T011843Z_continuo_10seeds_9f8d757b/modelo_seed*/teste_final/seed*/decisoes.jsonl
+/semaforo/resultados/marl_cologne8/20261113T011843Z_continuo_10seeds_9f8d757b/modelo_seed*/teste_final/seed*/fases.jsonl
+
 # Estados completos de retomada permanecem locais; politicas selecionadas seguem no Git/LFS.
 # Evita indexar copias volumosas do replay durante o treinamento.
 /semaforo/resultados/cologne8_corrigido/**/estado_ep*.pt
@@ -28,3 +43,21 @@ __pycache__/
 /semaforo/resultados/cologne8_corrigido/**/validacao/**/tripinfo.xml.gz
 /semaforo/resultados/piloto_supervisor_cologne8/**/episodios/**/tripinfo.xml.gz
 /semaforo/resultados/piloto_supervisor_cologne8/**/validacao/**/tripinfo.xml.gz
+
+# --- Integracao Insper (entrega final, 16/11/2026) ---
+# Vao para o Git: codigo, cenario OSM, demandas sinteticas, resumos agregados, relatorios,
+# graficos e as 30 politicas do teste final em semaforo/integracao_insper/modelos_finais/.
+# Ficam so na maquina local (ver semaforo/integracao_insper/ARTEFATOS_LOCAIS.md): episodios,
+# logs, checkpoints intermediarios, buffers de retomada (27-35 MB cada) e subpastas por semente.
+/semaforo/integracao_insper/**/resultados/**
+!/semaforo/integracao_insper/**/resultados/**/
+!/semaforo/integracao_insper/**/resultados/**/*.md
+!/semaforo/integracao_insper/**/resultados/**/*.png
+!/semaforo/integracao_insper/**/resultados/*.json
+!/semaforo/integracao_insper/**/resultados/*.jsonl
+!/semaforo/integracao_insper/**/resultados/*/*.json
+!/semaforo/integracao_insper/**/resultados/*/relatorio/*.json
+!/semaforo/integracao_insper/**/resultados/**/treinos/*/configuracao.json
+!/semaforo/integracao_insper/**/resultados/**/treinos/*/historico.jsonl
+!/semaforo/integracao_insper/**/resultados/**/treinos/*/resumo_treino.json
+/semaforo/integracao_insper/**/episodios/

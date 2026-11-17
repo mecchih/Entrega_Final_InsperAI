@@ -1,0 +1,1657 @@
+{
+  "niveis": {
+    "descricao": "Niveis de demanda do cenario Insper, escolhidos por calibracao progressiva com os programas semaforicos originais (sem IA). 'corredor' = viagens/h cujas rotas cruzam ao menos um dos tres semaforos (476455095, 40278305, 40278183); 'densidade_resto' = densidade do randomTrips equivalente para as demais viagens (12 = a da demanda original).",
+    "metodo": "semaforo/integracao_insper/gerar_demanda_insper.py: amostragem estratificada das viagens do mesmo randomTrips do build.bat, com correcao de origens em vias < 5 m",
+    "criterios": {
+      "moderado": "menor ponto da varredura em que os tres cruzamentos tem fila >= 1 em pelo menos 30% do tempo, com fila >= 5 em menos de 5% do tempo, sem trecho do corredor tomado pela fila (< 10 s), sem teletransporte nem veiculo preso",
+      "intenso": "maior ponto sem teletransporte e sem veiculo preso em que os tres cruzamentos tem fila >= 5 em pelo menos 15% do tempo e ha fila ocupando os trechos entre cruzamentos",
+      "saturado": "maior ponto em que todas as sementes concluem >= 99% das viagens, os teletransportes ficam abaixo de 1% dos veiculos e a fracao de veiculos parados na rede (pico de 5 min) fica abaixo de 0,7"
+    },
+    "calibracao": [
+      "semaforo/integracao_insper/resultados/20261115T215149Z_calibracao_demanda (varredura 1, antes da correcao de origem)",
+      "semaforo/integracao_insper/resultados/20261115T215440Z_calibracao_demanda (varredura 2, antes da correcao de origem)",
+      "semaforo/integracao_insper/resultados/20261115T220035Z_calibracao_demanda (varredura 3, com a correcao; base da escolha)"
+    ],
+    "niveis": [
+      {
+        "nivel": "original",
+        "corredor": null,
+        "densidade_resto": null,
+        "sementes": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "nota": "osm.passenger.trips.xml sem alteracao; as sementes variam so o SUMO"
+      },
+      {
+        "nivel": "moderado",
+        "corredor": 1200,
+        "densidade_resto": 12,
+        "sementes": [
+          101,
+          102,
+          103,
+          104,
+          105
+        ]
+      },
+      {
+        "nivel": "intenso",
+        "corredor": 2200,
+        "densidade_resto": 12,
+        "sementes": [
+          201,
+          202,
+          203,
+          204,
+          205
+        ]
+      },
+      {
+        "nivel": "saturado",
+        "corredor": 2600,
+        "densidade_resto": 12,
+        "sementes": [
+          301,
+          302,
+          303,
+          304,
+          305
+        ]
+      }
+    ]
+  },
+  "juncoes_com_colisao_preexistente": [
+    "1550389898"
+  ],
+  "tabela": {
+    "original": {
+      "sementes": 5,
+      "gerados": {
+        "media": 278.0,
+        "faixa": [
+          278,
+          278
+        ]
+      },
+      "concluidos": {
+        "media": 278.0,
+        "faixa": [
+          278,
+          278
+        ]
+      },
+      "fracao_concluida": {
+        "media": 1.0,
+        "faixa": [
+          1.0,
+          1.0
+        ]
+      },
+      "nao_atendidos_no_fim": {
+        "media": 0.0,
+        "faixa": [
+          0,
+          0
+        ]
+      },
+      "presos_gt180s": {
+        "media": 0.0,
+        "faixa": [
+          0,
+          0
+        ]
+      },
+      "pendentes_insercao_max": {
+        "media": 1.0,
+        "faixa": [
+          1,
+          1
+        ]
+      },
+      "corredor_veiculos": {
+        "media": 94.4,
+        "faixa": [
+          94,
+          95
+        ]
+      },
+      "corredor_2_ou_3": {
+        "media": 56.0,
+        "faixa": [
+          56,
+          56
+        ]
+      },
+      "corredor_3": {
+        "media": 28.8,
+        "faixa": [
+          28,
+          29
+        ]
+      },
+      "espera_corredor_media": {
+        "media": 2.522,
+        "faixa": [
+          1.755,
+          3.347
+        ]
+      },
+      "espera_corredor_p95": {
+        "media": 7.73,
+        "faixa": [
+          6.35,
+          9.0
+        ]
+      },
+      "espera_rede_media": {
+        "media": 33.985,
+        "faixa": [
+          33.435,
+          34.586
+        ]
+      },
+      "espera_rede_p95": {
+        "media": 106.05,
+        "faixa": [
+          99.75,
+          112.45
+        ]
+      },
+      "fracao_parados_rede_max5min": {
+        "media": 0.3,
+        "faixa": [
+          0.278,
+          0.315
+        ]
+      },
+      "fila_seguinte_media": {
+        "media": 0.046,
+        "faixa": [
+          0.037,
+          0.061
+        ]
+      },
+      "fila_seguinte_max": {
+        "media": 2.0,
+        "faixa": [
+          2,
+          2
+        ]
+      },
+      "fila_saida_corredor_max": {
+        "media": 1.6,
+        "faixa": [
+          1,
+          2
+        ]
+      },
+      "colisoes": {
+        "media": 0.8,
+        "faixa": [
+          0,
+          1
+        ]
+      },
+      "colisoes_por_juncao": {
+        "1550389898": 4
+      },
+      "teleportes": {
+        "media": 0.0,
+        "faixa": [
+          0,
+          0
+        ]
+      },
+      "teleportes_por_via": {},
+      "teleportes_por_motivo": {},
+      "476455095_veiculos": {
+        "media": 43.8,
+        "faixa": [
+          43,
+          44
+        ]
+      },
+      "476455095_menor_grupo": {
+        "media": 0.27,
+        "faixa": [
+          0.256,
+          0.273
+        ]
+      },
+      "476455095_fila_media": {
+        "media": 0.018,
+        "faixa": [
+          0.015,
+          0.022
+        ]
+      },
+      "476455095_fila_p95": {
+        "media": 0.0,
+        "faixa": [
+          0.0,
+          0.0
+        ]
+      },
+      "476455095_fila_max": {
+        "media": 1.4,
+        "faixa": [
+          1,
+          2
+        ]
+      },
+      "476455095_tempo_fila_ge1": {
+        "media": 0.017,
+        "faixa": [
+          0.015,
+          0.022
+        ]
+      },
+      "476455095_tempo_fila_ge5": {
+        "media": 0.0,
+        "faixa": [
+          0.0,
+          0.0
+        ]
+      },
+      "476455095_bloqueio_s": {
+        "media": 0.0,
+        "faixa": [
+          0,
+          0
+        ]
+      },
+      "476455095_parados_no_cruzamento": {
+        "media": 0.0,
+        "faixa": [
+          0,
+          0
+        ]
+      },
+      "40278305_veiculos": {
+        "media": 59.0,
+        "faixa": [
+          59,
+          59
+        ]
+      },
+      "40278305_menor_grupo": {
+        "media": 0.186,
+        "faixa": [
+          0.186,
+          0.186
+        ]
+      },
+      "40278305_fila_media": {
+        "media": 0.023,
+        "faixa": [
+          0.012,
+          0.034
+        ]
+      },
+      "40278305_fila_p95": {
+        "media": 0.0,
+        "faixa": [
+          0.0,
+          0.0
+        ]
+      },
+      "40278305_fila_max": {
+        "media": 1.6,
+        "faixa": [
+          1,
+          2
+        ]
+      },
+      "40278305_tempo_fila_ge1": {
+        "media": 0.023,
+        "faixa": [
+          0.012,
+          0.034
+        ]
+      },
+      "40278305_tempo_fila_ge5": {
+        "media": 0.0,
+        "faixa": [
+          0.0,
+          0.0
+        ]
+      },
+      "40278305_bloqueio_s": {
+        "media": 0.0,
+        "faixa": [
+          0,
+          0
+        ]
+      },
+      "40278305_parados_no_cruzamento": {
+        "media": 0.0,
+        "faixa": [
+          0,
+          0
+        ]
+      },
+      "40278183_veiculos": {
+        "media": 76.4,
+        "faixa": [
+          76,
+          77
+        ]
+      },
+      "40278183_menor_grupo": {
+        "media": 0.437,
+        "faixa": [
+          0.434,
+          0.442
+        ]
+      },
+      "40278183_fila_media": {
+        "media": 0.027,
+        "faixa": [
+          0.018,
+          0.039
+        ]
+      },
+      "40278183_fila_p95": {
+        "media": 0.0,
+        "faixa": [
+          0.0,
+          0.0
+        ]
+      },
+      "40278183_fila_max": {
+        "media": 1.6,
+        "faixa": [
+          1,
+          2
+        ]
+      },
+      "40278183_tempo_fila_ge1": {
+        "media": 0.027,
+        "faixa": [
+          0.018,
+          0.037
+        ]
+      },
+      "40278183_tempo_fila_ge5": {
+        "media": 0.0,
+        "faixa": [
+          0.0,
+          0.0
+        ]
+      },
+      "40278183_bloqueio_s": {
+        "media": 0.0,
+        "faixa": [
+          0,
+          0
+        ]
+      },
+      "40278183_parados_no_cruzamento": {
+        "media": 0.0,
+        "faixa": [
+          0,
+          0
+        ]
+      },
+      "trecho_760437731_cheio_s": {
+        "media": 0.0,
+        "faixa": [
+          0,
+          0
+        ]
+      },
+      "trecho_234368026#0_cheio_s": {
+        "media": 0.0,
+        "faixa": [
+          0,
+          0
+        ]
+      },
+      "trecho_234368026#1_cheio_s": {
+        "media": 0.0,
+        "faixa": [
+          0,
+          0
+        ]
+      },
+      "colisoes_em_juncoes_preexistentes": 4,
+      "colisoes_em_juncoes_novas": {}
+    },
+    "moderado": {
+      "sementes": 5,
+      "gerados": {
+        "media": 1389.4,
+        "faixa": [
+          1388,
+          1390
+        ]
+      },
+      "concluidos": {
+        "media": 1389.4,
+        "faixa": [
+          1388,
+          1390
+        ]
+      },
+      "fracao_concluida": {
+        "media": 1.0,
+        "faixa": [
+          1.0,
+          1.0
+        ]
+      },
+      "nao_atendidos_no_fim": {
+        "media": 0.0,
+        "faixa": [
+          0,
+          0
+        ]
+      },
+      "presos_gt180s": {
+        "media": 0.0,
+        "faixa": [
+          0,
+          0
+        ]
+      },
+      "pendentes_insercao_max": {
+        "media": 2.4,
+        "faixa": [
+          2,
+          3
+        ]
+      },
+      "corredor_veiculos": {
+        "media": 1193.6,
+        "faixa": [
+          1192,
+          1196
+        ]
+      },
+      "corredor_2_ou_3": {
+        "media": 752.8,
+        "faixa": [
+          733,
+          785
+        ]
+      },
+      "corredor_3": {
+        "media": 443.8,
+        "faixa": [
+          418,
+          480
+        ]
+      },
+      "espera_corredor_media": {
+        "media": 5.444,
+        "faixa": [
+          5.183,
+          5.629
+        ]
+      },
+      "espera_corredor_p95": {
+        "media": 17.6,
+        "faixa": [
+          16.0,
+          19.0
+        ]
+      },
+      "espera_rede_media": {
+        "media": 29.979,
+        "faixa": [
+          27.863,
+          30.783
+        ]
+      },
+      "espera_rede_p95": {
+        "media": 95.71,
+        "faixa": [
+          90.0,
+          99.55
+        ]
+      },
+      "fracao_parados_rede_max5min": {
+        "media": 0.264,
+        "faixa": [
+          0.243,
+          0.275
+        ]
+      },
+      "fila_seguinte_media": {
+        "media": 0.394,
+        "faixa": [
+          0.358,
+          0.425
+        ]
+      },
+      "fila_seguinte_max": {
+        "media": 5.6,
+        "faixa": [
+          4,
+          7
+        ]
+      },
+      "fila_saida_corredor_max": {
+        "media": 5.6,
+        "faixa": [
+          4,
+          7
+        ]
+      },
+      "colisoes": {
+        "media": 0.0,
+        "faixa": [
+          0,
+          0
+        ]
+      },
+      "colisoes_por_juncao": {},
+      "teleportes": {
+        "media": 0.0,
+        "faixa": [
+          0,
+          0
+        ]
+      },
+      "teleportes_por_via": {},
+      "teleportes_por_motivo": {},
+      "476455095_veiculos": {
+        "media": 648.8,
+        "faixa": [
+          612,
+          686
+        ]
+      },
+      "476455095_menor_grupo": {
+        "media": 0.316,
+        "faixa": [
+          0.288,
+          0.348
+        ]
+      },
+      "476455095_fila_media": {
+        "media": 0.44,
+        "faixa": [
+          0.391,
+          0.497
+        ]
+      },
+      "476455095_fila_p95": {
+        "media": 2.0,
+        "faixa": [
+          2.0,
+          2.0
+        ]
+      },
+      "476455095_fila_max": {
+        "media": 4.2,
+        "faixa": [
+          3,
+          5
+        ]
+      },
+      "476455095_tempo_fila_ge1": {
+        "media": 0.336,
+        "faixa": [
+          0.312,
+          0.368
+        ]
+      },
+      "476455095_tempo_fila_ge5": {
+        "media": 0.0,
+        "faixa": [
+          0.0,
+          0.001
+        ]
+      },
+      "476455095_bloqueio_s": {
+        "media": 0.0,
+        "faixa": [
+          0,
+          0
+        ]
+      },
+      "476455095_parados_no_cruzamento": {
+        "media": 0.0,
+        "faixa": [
+          0,
+          0
+        ]
+      },
+      "40278305_veiculos": {
+        "media": 820.6,
+        "faixa": [
+          803,
+          844
+        ]
+      },
+      "40278305_menor_grupo": {
+        "media": 0.223,
+        "faixa": [
+          0.21,
+          0.244
+        ]
+      },
+      "40278305_fila_media": {
+        "media": 0.509,
+        "faixa": [
+          0.464,
+          0.571
+        ]
+      },
+      "40278305_fila_p95": {
+        "media": 2.0,
+        "faixa": [
+          2.0,
+          2.0
+        ]
+      },
+      "40278305_fila_max": {
+        "media": 4.6,
+        "faixa": [
+          4,
+          5
+        ]
+      },
+      "40278305_tempo_fila_ge1": {
+        "media": 0.367,
+        "faixa": [
+          0.335,
+          0.403
+        ]
+      },
+      "40278305_tempo_fila_ge5": {
+        "media": 0.001,
+        "faixa": [
+          0.0,
+          0.001
+        ]
+      },
+      "40278305_bloqueio_s": {
+        "media": 0.0,
+        "faixa": [
+          0,
+          0
+        ]
+      },
+      "40278305_parados_no_cruzamento": {
+        "media": 0.0,
+        "faixa": [
+          0,
+          0
+        ]
+      },
+      "40278183_veiculos": {
+        "media": 920.8,
+        "faixa": [
+          907,
+          935
+        ]
+      },
+      "40278183_menor_grupo": {
+        "media": 0.326,
+        "faixa": [
+          0.301,
+          0.346
+        ]
+      },
+      "40278183_fila_media": {
+        "media": 0.877,
+        "faixa": [
+          0.826,
+          0.97
+        ]
+      },
+      "40278183_fila_p95": {
+        "media": 3.4,
+        "faixa": [
+          3.0,
+          4.0
+        ]
+      },
+      "40278183_fila_max": {
+        "media": 8.8,
+        "faixa": [
+          6,
+          13
+        ]
+      },
+      "40278183_tempo_fila_ge1": {
+        "media": 0.466,
+        "faixa": [
+          0.439,
+          0.488
+        ]
+      },
+      "40278183_tempo_fila_ge5": {
+        "media": 0.026,
+        "faixa": [
+          0.009,
+          0.044
+        ]
+      },
+      "40278183_bloqueio_s": {
+        "media": 8.6,
+        "faixa": [
+          7,
+          11
+        ]
+      },
+      "40278183_parados_no_cruzamento": {
+        "media": 0.0,
+        "faixa": [
+          0,
+          0
+        ]
+      },
+      "trecho_760437731_cheio_s": {
+        "media": 0.8,
+        "faixa": [
+          0,
+          2
+        ]
+      },
+      "trecho_234368026#0_cheio_s": {
+        "media": 1.8,
+        "faixa": [
+          0,
+          5
+        ]
+      },
+      "trecho_234368026#1_cheio_s": {
+        "media": 0.0,
+        "faixa": [
+          0,
+          0
+        ]
+      },
+      "colisoes_em_juncoes_preexistentes": 0,
+      "colisoes_em_juncoes_novas": {}
+    },
+    "intenso": {
+      "sementes": 5,
+      "gerados": {
+        "media": 2389.4,
+        "faixa": [
+          2388,
+          2391
+        ]
+      },
+      "concluidos": {
+        "media": 2096.4,
+        "faixa": [
+          924,
+          2391
+        ]
+      },
+      "fracao_concluida": {
+        "media": 0.877,
+        "faixa": [
+          0.387,
+          1.0
+        ]
+      },
+      "nao_atendidos_no_fim": {
+        "media": 290.8,
+        "faixa": [
+          0,
+          1454
+        ]
+      },
+      "presos_gt180s": {
+        "media": 160.2,
+        "faixa": [
+          0,
+          793
+        ]
+      },
+      "pendentes_insercao_max": {
+        "media": 240.2,
+        "faixa": [
+          5,
+          1125
+        ]
+      },
+      "corredor_veiculos": {
+        "media": 1879.8,
+        "faixa": [
+          652,
+          2191
+        ]
+      },
+      "corredor_2_ou_3": {
+        "media": 1163.8,
+        "faixa": [
+          278,
+          1388
+        ]
+      },
+      "corredor_3": {
+        "media": 665.6,
+        "faixa": [
+          150,
+          824
+        ]
+      },
+      "espera_corredor_media": {
+        "media": 140.615,
+        "faixa": [
+          14.552,
+          597.206
+        ]
+      },
+      "espera_corredor_p95": {
+        "media": 835.88,
+        "faixa": [
+          45.0,
+          3833.5
+        ]
+      },
+      "espera_rede_media": {
+        "media": 304.986,
+        "faixa": [
+          43.126,
+          1308.302
+        ]
+      },
+      "espera_rede_p95": {
+        "media": 919.72,
+        "faixa": [
+          119.0,
+          3989.0
+        ]
+      },
+      "fracao_parados_rede_max5min": {
+        "media": 0.508,
+        "faixa": [
+          0.317,
+          0.947
+        ]
+      },
+      "fila_seguinte_media": {
+        "media": 5.475,
+        "faixa": [
+          0.943,
+          23.186
+        ]
+      },
+      "fila_seguinte_max": {
+        "media": 13.2,
+        "faixa": [
+          7,
+          36
+        ]
+      },
+      "fila_saida_corredor_max": {
+        "media": 7.6,
+        "faixa": [
+          7,
+          8
+        ]
+      },
+      "colisoes": {
+        "media": 0.0,
+        "faixa": [
+          0,
+          0
+        ]
+      },
+      "colisoes_por_juncao": {},
+      "teleportes": {
+        "media": 90.6,
+        "faixa": [
+          0,
+          452
+        ]
+      },
+      "teleportes_por_via": {
+        "27579109#1": 14,
+        "8547878#4": 25,
+        "27579109#2": 15,
+        "124962780": 14,
+        "8547878#3": 28,
+        "234368026#1": 23,
+        "234368026#0": 24,
+        "27579109#4": 12,
+        "27579109#3": 11,
+        "-522284925": 7,
+        "8547878#5": 17,
+        ":5087305044_0": 3,
+        ":5087305032_0": 2,
+        "-522284921": 7,
+        "760437731": 29,
+        "234368025#0": 18,
+        "124962719#1": 23,
+        "1160862341#1": 12,
+        "124962719#0": 12,
+        "8547878#1": 13,
+        "522284923": 5,
+        ":40278305_1": 1,
+        ":302805949_1": 3,
+        "436646703": 12,
+        "128814152#2": 5,
+        "8547878#0": 11,
+        "1160862341#0": 6,
+        "128814152#1": 4,
+        "944842828#4": 5,
+        "27333553#0": 2,
+        ":40278183_1": 1,
+        "8425893#0": 3,
+        "369907168#0": 9,
+        ":1389167581_7": 6,
+        ":40278183_3": 3,
+        ":302805888_8": 1,
+        "255845159#0": 10,
+        ":476455095_0": 1,
+        "255845161": 5,
+        "471339603#3": 5,
+        "124962745#2": 5,
+        ":1389167587_0": 8,
+        "369915423#2": 4,
+        "369907170#4": 6,
+        ":302805888_1": 2,
+        ":1550389899_1": 6,
+        "471339603#0": 1,
+        "942962256": 1,
+        "128814153#1": 2,
+        "944842829#1": 3,
+        ":40278183_0": 1,
+        ":5087305044_3": 1,
+        ":2577302587_0": 3,
+        "369907174#2": 1,
+        "-522284928": 2
+      },
+      "teleportes_por_motivo": {
+        "waited too long (yield)": 234,
+        "waited too long (jam)": 175,
+        "waited too long (wrong lane)": 44
+      },
+      "476455095_veiculos": {
+        "media": 1003.6,
+        "faixa": [
+          290,
+          1208
+        ]
+      },
+      "476455095_menor_grupo": {
+        "media": 0.344,
+        "faixa": [
+          0.289,
+          0.462
+        ]
+      },
+      "476455095_fila_media": {
+        "media": 16.523,
+        "faixa": [
+          1.893,
+          58.025
+        ]
+      },
+      "476455095_fila_p95": {
+        "media": 28.4,
+        "faixa": [
+          5.0,
+          81.0
+        ]
+      },
+      "476455095_fila_max": {
+        "media": 34.6,
+        "faixa": [
+          9,
+          81
+        ]
+      },
+      "476455095_tempo_fila_ge1": {
+        "media": 0.87,
+        "faixa": [
+          0.741,
+          0.978
+        ]
+      },
+      "476455095_tempo_fila_ge5": {
+        "media": 0.519,
+        "faixa": [
+          0.092,
+          0.92
+        ]
+      },
+      "476455095_bloqueio_s": {
+        "media": 679.0,
+        "faixa": [
+          1,
+          2874
+        ]
+      },
+      "476455095_parados_no_cruzamento": {
+        "media": 118.2,
+        "faixa": [
+          0,
+          567
+        ]
+      },
+      "40278305_veiculos": {
+        "media": 1280.2,
+        "faixa": [
+          406,
+          1517
+        ]
+      },
+      "40278305_menor_grupo": {
+        "media": 0.263,
+        "faixa": [
+          0.208,
+          0.421
+        ]
+      },
+      "40278305_fila_media": {
+        "media": 10.878,
+        "faixa": [
+          2.361,
+          40.198
+        ]
+      },
+      "40278305_fila_p95": {
+        "media": 19.4,
+        "faixa": [
+          7.0,
+          56.0
+        ]
+      },
+      "40278305_fila_max": {
+        "media": 28.2,
+        "faixa": [
+          13,
+          64
+        ]
+      },
+      "40278305_tempo_fila_ge1": {
+        "media": 0.878,
+        "faixa": [
+          0.788,
+          0.976
+        ]
+      },
+      "40278305_tempo_fila_ge5": {
+        "media": 0.407,
+        "faixa": [
+          0.161,
+          0.892
+        ]
+      },
+      "40278305_bloqueio_s": {
+        "media": 713.8,
+        "faixa": [
+          39,
+          2929
+        ]
+      },
+      "40278305_parados_no_cruzamento": {
+        "media": 306.4,
+        "faixa": [
+          0,
+          1454
+        ]
+      },
+      "40278183_veiculos": {
+        "media": 1425.4,
+        "faixa": [
+          384,
+          1718
+        ]
+      },
+      "40278183_menor_grupo": {
+        "media": 0.338,
+        "faixa": [
+          0.321,
+          0.37
+        ]
+      },
+      "40278183_fila_media": {
+        "media": 18.773,
+        "faixa": [
+          4.886,
+          66.123
+        ]
+      },
+      "40278183_fila_p95": {
+        "media": 30.2,
+        "faixa": [
+          13.0,
+          81.0
+        ]
+      },
+      "40278183_fila_max": {
+        "media": 39.0,
+        "faixa": [
+          23,
+          81
+        ]
+      },
+      "40278183_tempo_fila_ge1": {
+        "media": 0.969,
+        "faixa": [
+          0.936,
+          1.0
+        ]
+      },
+      "40278183_tempo_fila_ge5": {
+        "media": 0.676,
+        "faixa": [
+          0.432,
+          0.974
+        ]
+      },
+      "40278183_bloqueio_s": {
+        "media": 629.6,
+        "faixa": [
+          38,
+          2924
+        ]
+      },
+      "40278183_parados_no_cruzamento": {
+        "media": 743.6,
+        "faixa": [
+          0,
+          3711
+        ]
+      },
+      "trecho_760437731_cheio_s": {
+        "media": 1045.2,
+        "faixa": [
+          1,
+          4543
+        ]
+      },
+      "trecho_234368026#0_cheio_s": {
+        "media": 1213.8,
+        "faixa": [
+          99,
+          4645
+        ]
+      },
+      "trecho_234368026#1_cheio_s": {
+        "media": 119.4,
+        "faixa": [
+          0,
+          597
+        ]
+      },
+      "colisoes_em_juncoes_preexistentes": 0,
+      "colisoes_em_juncoes_novas": {}
+    },
+    "saturado": {
+      "sementes": 5,
+      "gerados": {
+        "media": 2789.8,
+        "faixa": [
+          2789,
+          2791
+        ]
+      },
+      "concluidos": {
+        "media": 2789.8,
+        "faixa": [
+          2789,
+          2791
+        ]
+      },
+      "fracao_concluida": {
+        "media": 1.0,
+        "faixa": [
+          1.0,
+          1.0
+        ]
+      },
+      "nao_atendidos_no_fim": {
+        "media": 0.0,
+        "faixa": [
+          0,
+          0
+        ]
+      },
+      "presos_gt180s": {
+        "media": 53.6,
+        "faixa": [
+          12,
+          86
+        ]
+      },
+      "pendentes_insercao_max": {
+        "media": 200.4,
+        "faixa": [
+          113,
+          279
+        ]
+      },
+      "corredor_veiculos": {
+        "media": 2586.2,
+        "faixa": [
+          2582,
+          2588
+        ]
+      },
+      "corredor_2_ou_3": {
+        "media": 1634.8,
+        "faixa": [
+          1619,
+          1665
+        ]
+      },
+      "corredor_3": {
+        "media": 946.4,
+        "faixa": [
+          913,
+          977
+        ]
+      },
+      "espera_corredor_media": {
+        "media": 49.093,
+        "faixa": [
+          39.625,
+          57.701
+        ]
+      },
+      "espera_corredor_p95": {
+        "media": 169.68,
+        "faixa": [
+          132.0,
+          197.0
+        ]
+      },
+      "espera_rede_media": {
+        "media": 97.475,
+        "faixa": [
+          77.587,
+          118.312
+        ]
+      },
+      "espera_rede_p95": {
+        "media": 261.89,
+        "faixa": [
+          204.55,
+          304.6
+        ]
+      },
+      "fracao_parados_rede_max5min": {
+        "media": 0.548,
+        "faixa": [
+          0.509,
+          0.588
+        ]
+      },
+      "fila_seguinte_media": {
+        "media": 1.113,
+        "faixa": [
+          1.006,
+          1.279
+        ]
+      },
+      "fila_seguinte_max": {
+        "media": 7.0,
+        "faixa": [
+          6,
+          8
+        ]
+      },
+      "fila_saida_corredor_max": {
+        "media": 7.0,
+        "faixa": [
+          6,
+          8
+        ]
+      },
+      "colisoes": {
+        "media": 0.0,
+        "faixa": [
+          0,
+          0
+        ]
+      },
+      "colisoes_por_juncao": {},
+      "teleportes": {
+        "media": 6.2,
+        "faixa": [
+          1,
+          11
+        ]
+      },
+      "teleportes_por_via": {
+        "27579109#1": 22,
+        "27579109#2": 4,
+        "522284923": 4,
+        ":5087305033_0": 1
+      },
+      "teleportes_por_motivo": {
+        "waited too long (yield)": 26,
+        "waited too long (jam)": 5
+      },
+      "476455095_veiculos": {
+        "media": 1401.0,
+        "faixa": [
+          1372,
+          1454
+        ]
+      },
+      "476455095_menor_grupo": {
+        "media": 0.314,
+        "faixa": [
+          0.299,
+          0.326
+        ]
+      },
+      "476455095_fila_media": {
+        "media": 17.733,
+        "faixa": [
+          13.614,
+          20.497
+        ]
+      },
+      "476455095_fila_p95": {
+        "media": 30.0,
+        "faixa": [
+          27.0,
+          33.0
+        ]
+      },
+      "476455095_fila_max": {
+        "media": 37.0,
+        "faixa": [
+          34,
+          39
+        ]
+      },
+      "476455095_tempo_fila_ge1": {
+        "media": 0.997,
+        "faixa": [
+          0.992,
+          1.0
+        ]
+      },
+      "476455095_tempo_fila_ge5": {
+        "media": 0.963,
+        "faixa": [
+          0.893,
+          0.989
+        ]
+      },
+      "476455095_bloqueio_s": {
+        "media": 396.8,
+        "faixa": [
+          201,
+          538
+        ]
+      },
+      "476455095_parados_no_cruzamento": {
+        "media": 36.2,
+        "faixa": [
+          8,
+          104
+        ]
+      },
+      "40278305_veiculos": {
+        "media": 1787.0,
+        "faixa": [
+          1757,
+          1818
+        ]
+      },
+      "40278305_menor_grupo": {
+        "media": 0.23,
+        "faixa": [
+          0.209,
+          0.239
+        ]
+      },
+      "40278305_fila_media": {
+        "media": 6.778,
+        "faixa": [
+          5.148,
+          7.751
+        ]
+      },
+      "40278305_fila_p95": {
+        "media": 17.4,
+        "faixa": [
+          14.0,
+          19.0
+        ]
+      },
+      "40278305_fila_max": {
+        "media": 27.4,
+        "faixa": [
+          26,
+          33
+        ]
+      },
+      "40278305_tempo_fila_ge1": {
+        "media": 0.965,
+        "faixa": [
+          0.945,
+          0.986
+        ]
+      },
+      "40278305_tempo_fila_ge5": {
+        "media": 0.573,
+        "faixa": [
+          0.447,
+          0.653
+        ]
+      },
+      "40278305_bloqueio_s": {
+        "media": 359.4,
+        "faixa": [
+          242,
+          461
+        ]
+      },
+      "40278305_parados_no_cruzamento": {
+        "media": 24.0,
+        "faixa": [
+          1,
+          73
+        ]
+      },
+      "40278183_veiculos": {
+        "media": 1979.4,
+        "faixa": [
+          1967,
+          1993
+        ]
+      },
+      "40278183_menor_grupo": {
+        "media": 0.326,
+        "faixa": [
+          0.304,
+          0.346
+        ]
+      },
+      "40278183_fila_media": {
+        "media": 11.446,
+        "faixa": [
+          9.167,
+          15.105
+        ]
+      },
+      "40278183_fila_p95": {
+        "media": 23.8,
+        "faixa": [
+          20.0,
+          31.0
+        ]
+      },
+      "40278183_fila_max": {
+        "media": 35.6,
+        "faixa": [
+          29,
+          44
+        ]
+      },
+      "40278183_tempo_fila_ge1": {
+        "media": 0.994,
+        "faixa": [
+          0.988,
+          1.0
+        ]
+      },
+      "40278183_tempo_fila_ge5": {
+        "media": 0.845,
+        "faixa": [
+          0.779,
+          0.913
+        ]
+      },
+      "40278183_bloqueio_s": {
+        "media": 63.2,
+        "faixa": [
+          44,
+          85
+        ]
+      },
+      "40278183_parados_no_cruzamento": {
+        "media": 4.0,
+        "faixa": [
+          0,
+          7
+        ]
+      },
+      "trecho_760437731_cheio_s": {
+        "media": 493.2,
+        "faixa": [
+          270,
+          662
+        ]
+      },
+      "trecho_234368026#0_cheio_s": {
+        "media": 733.4,
+        "faixa": [
+          516,
+          1019
+        ]
+      },
+      "trecho_234368026#1_cheio_s": {
+        "media": 0.6,
+        "faixa": [
+          0,
+          2
+        ]
+      },
+      "colisoes_em_juncoes_preexistentes": 0,
+      "colisoes_em_juncoes_novas": {}
+    }
+  },
+  "consistencia_entre_sementes": {
+    "espera_corredor_media": [
+      {
+        "de": "original",
+        "para": "moderado",
+        "max_inferior": 3.347,
+        "min_superior": 5.183,
+        "sem_sobreposicao": true
+      },
+      {
+        "de": "moderado",
+        "para": "intenso",
+        "max_inferior": 5.629,
+        "min_superior": 14.552,
+        "sem_sobreposicao": true
+      },
+      {
+        "de": "intenso",
+        "para": "saturado",
+        "max_inferior": 597.206,
+        "min_superior": 39.625,
+        "sem_sobreposicao": false
+      }
+    ],
+    "476455095_fila_media": [
+      {
+        "de": "original",
+        "para": "moderado",
+        "max_inferior": 0.022,
+        "min_superior": 0.391,
+        "sem_sobreposicao": true
+      },
+      {
+        "de": "moderado",
+        "para": "intenso",
+        "max_inferior": 0.497,
+        "min_superior": 1.893,
+        "sem_sobreposicao": true
+      },
+      {
+        "de": "intenso",
+        "para": "saturado",
+        "max_inferior": 58.025,
+        "min_superior": 13.614,
+        "sem_sobreposicao": false
+      }
+    ],
+    "40278305_fila_media": [
+      {
+        "de": "original",
+        "para": "moderado",
+        "max_inferior": 0.034,
+        "min_superior": 0.464,
+        "sem_sobreposicao": true
+      },
+      {
+        "de": "moderado",
+        "para": "intenso",
+        "max_inferior": 0.571,
+        "min_superior": 2.361,
+        "sem_sobreposicao": true
+      },
+      {
+        "de": "intenso",
+        "para": "saturado",
+        "max_inferior": 40.198,
+        "min_superior": 5.148,
+        "sem_sobreposicao": false
+      }
+    ],
+    "40278183_fila_media": [
+      {
+        "de": "original",
+        "para": "moderado",
+        "max_inferior": 0.039,
+        "min_superior": 0.826,
+        "sem_sobreposicao": true
+      },
+      {
+        "de": "moderado",
+        "para": "intenso",
+        "max_inferior": 0.97,
+        "min_superior": 4.886,
+        "sem_sobreposicao": true
+      },
+      {
+        "de": "intenso",
+        "para": "saturado",
+        "max_inferior": 66.123,
+        "min_superior": 9.167,
+        "sem_sobreposicao": false
+      }
+    ]
+  },
+  "hashes_cenario_original": {
+    "build.bat": "5c17e317484b518d79152382d7fa376237c841bb710ac48010889ea4fb994e0c",
+    "edgeData.xml": "d634daa7d619550c23f3038bd165c5804fe3e685946e1465ccf93831fca3f3fd",
+    "osm.net.xml.gz": "e7480355b189c8ef8b2f0f2a53a1888773ae46f67ce52fe66546ab14e23abb85",
+    "osm.netccfg": "c047ad56450fd434be5788d0e3c1bad432a70f3d5d59c651467f57b3f5170495",
+    "osm.ogcfg": "9b55c851a62183a939e2a88266ba9d4ffd5cb65339e4e637a33d7cc4b8c172d8",
+    "osm.passenger.trips.xml": "bc04adb37b21918c23410067610e4345f50ad3737c872e98fee74efb8be0ecd6",
+    "osm.poly.xml.gz": "d393d46673f87c2360ef259486f39ea884b08e31a29e66cf9a2ea9e52ebdb049",
+    "osm.polycfg": "cd55ae346a4f9382805909f12209ecd6f629b0a30cf74d9b2e4ce8456a339b03",
+    "osm.sumocfg": "779c7fe996451966f107e5bc29456a562544b5927b3bf18aa1250f10d5a95ce6",
+    "osm.view.xml": "51d96963d903cbf3bf0d9e7718593c5dc76e5abc023a9821c101c9b4cc214734",
+    "osm_bbox.osm.xml.gz": "862007dba944146adc8580fb4ecdf232d0fbb88f382a884da3e90a0e36d0f7f7",
+    "output.add.xml": "b51b3f34953c5cc4791b684a189420de0d5a0e934194a059f9a4e33bfbe10868",
+    "run.bat": "3477f82c8510cd9143c011ecb1d2f565df426ebb419a78efbbe3af19f47be8af",
+    "stats.xml": "1c1a35180fb82aaedc8e021d228663045fbcb6a49d53d65fde4b08caa29a8950",
+    "tripinfos.xml": "105dd6843255f637f0e42dee7fa5e66c8a2c375ca577e45aefb780543c1bae45"
+  }
+}
